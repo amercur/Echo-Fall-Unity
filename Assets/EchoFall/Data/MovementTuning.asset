@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a55c315851daeb08040d911b01eadefb, type: 3}
+  m_Name: MovementTuning
+  m_EditorClassIdentifier: 
+  size: {x: 0.22, y: 0.4}
+  speed: 2.65
+  groundAcceleration: 22.0
+  airAcceleration: 12.5
+  wallSteerAcceleration: 24.0
+  gravity: 14.5
+  terminalSpeed: 8.3
+  jumpSpeed: 6.0
+  releasedJumpSpeed: 2.2
+  jumpBuffer: 0.14
+  coyoteTime: 0.105
+  wallSlideSpeed: 0.95
+  wallJumpSpeed: 5.7
+  wallPushSpeed: 2.45
+  wallGrace: 0.11
+  wallLock: 0.055
+  wallSteerTime: 0.35
+  dashSpeed: 7.2
+  dashDuration: 0.15
+  dashCooldown: 0.58
+  dashBuffer: 0.12
+  dropDuration: 0.23
+  dropNudge: 0.03
+  skin: 0.001

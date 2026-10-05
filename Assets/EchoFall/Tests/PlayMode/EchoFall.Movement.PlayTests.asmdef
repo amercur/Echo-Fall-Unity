@@ -1,0 +1,5 @@
+{
+  "name": "EchoFall.Movement.PlayTests",
+  "references": ["EchoFall.Movement", "Unity.InputSystem", "UnityEngine.UI"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

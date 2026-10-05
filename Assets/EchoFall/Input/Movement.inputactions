@@ -1,0 +1,270 @@
+{
+  "name": "Movement",
+  "maps": [
+    {
+      "name": "Movement",
+      "id": "30a85c7484f35e43f319349f34df64c2",
+      "actions": [
+        {
+          "name": "Move",
+          "type": "Value",
+          "id": "6bc362dbf494c61ea117fe3c71ca48a5",
+          "expectedControlType": "Vector2",
+          "processors": "",
+          "interactions": "",
+          "initialStateCheck": true
+        },
+        {
+          "name": "Jump",
+          "type": "Button",
+          "id": "101f693f72287a2819a364f64ca1c0ed",
+          "expectedControlType": "Button",
+          "processors": "",
+          "interactions": "",
+          "initialStateCheck": false
+        },
+        {
+          "name": "Dash",
+          "type": "Button",
+          "id": "3663598d5c5858b5a6040b1bbed4f187",
+          "expectedControlType": "Button",
+          "processors": "",
+          "interactions": "",
+          "initialStateCheck": false
+        },
+        {
+          "name": "Reset",
+          "type": "Button",
+          "id": "526d688f37a86d3c3f27d0c5016eb71d",
+          "expectedControlType": "Button",
+          "processors": "",
+          "interactions": "",
+          "initialStateCheck": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "",
+          "id": "48a3580d0c02815c42964944a93ed2e2",
+          "path": "2DVector",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Move",
+          "isComposite": true,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "Up",
+          "id": "0e3ef47f35456149aaf79374c31abdbd",
+          "path": "<Keyboard>/w",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Move",
+          "isComposite": false,
+          "isPartOfComposite": true
+        },
+        {
+          "name": "Down",
+          "id": "4e94d7473727d34a5b12243995c28fa4",
+          "path": "<Keyboard>/s",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Move",
+          "isComposite": false,
+          "isPartOfComposite": true
+        },
+        {
+          "name": "Left",
+          "id": "0e151b44c43533e110a8dd7860d1056a",
+          "path": "<Keyboard>/a",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Move",
+          "isComposite": false,
+          "isPartOfComposite": true
+        },
+        {
+          "name": "Right",
+          "id": "86f1ef927ac8c10340638c49bb92ea7f",
+          "path": "<Keyboard>/d",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Move",
+          "isComposite": false,
+          "isPartOfComposite": true
+        },
+        {
+          "name": "",
+          "id": "07dd1b919426e0db723839b482b70b86",
+          "path": "2DVector",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Move",
+          "isComposite": true,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "Up",
+          "id": "88ddc807b15d6cb2926c07e1ddbe73dc",
+          "path": "<Keyboard>/upArrow",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Move",
+          "isComposite": false,
+          "isPartOfComposite": true
+        },
+        {
+          "name": "Down",
+          "id": "faabff3603a32485852b4627aa2b6037",
+          "path": "<Keyboard>/downArrow",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Move",
+          "isComposite": false,
+          "isPartOfComposite": true
+        },
+        {
+          "name": "Left",
+          "id": "9fc1a0a043e36491ecbde704bb41d70c",
+          "path": "<Keyboard>/leftArrow",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Move",
+          "isComposite": false,
+          "isPartOfComposite": true
+        },
+        {
+          "name": "Right",
+          "id": "10f1c94d8ea2a914cb398fd4f24b6d9b",
+          "path": "<Keyboard>/rightArrow",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Move",
+          "isComposite": false,
+          "isPartOfComposite": true
+        },
+        {
+          "name": "",
+          "id": "6a3602f5f67e99798a1506c8d4513dd8",
+          "path": "<Gamepad>/leftStick",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Move",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "",
+          "id": "24107990a624580a898e2d714107d94b",
+          "path": "<Gamepad>/dpad",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Move",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "",
+          "id": "3475b25dfbfdd25152d9e9965d2a6ac7",
+          "path": "<Keyboard>/space",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Jump",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "",
+          "id": "38541677bbf28e711e51325e73e70f6e",
+          "path": "<Gamepad>/buttonSouth",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Jump",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "",
+          "id": "723656bb64fe1a4c150bbf65b3e1ae2d",
+          "path": "<Keyboard>/k",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Dash",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "",
+          "id": "b589fcb6e684900967d22b00ecb3f516",
+          "path": "<Keyboard>/leftShift",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Dash",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "",
+          "id": "d10dfdc97c3b52fa915c54bd59ec1f28",
+          "path": "<Keyboard>/rightShift",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Dash",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "",
+          "id": "a9b9ceb9114b8b51f9249e68603bb86a",
+          "path": "<Gamepad>/buttonEast",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Dash",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "",
+          "id": "621c0ed3d86a66a4fe94e23b427d92cc",
+          "path": "<Keyboard>/r",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Reset",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "",
+          "id": "0303645eb7fd32af42ce131f510446d4",
+          "path": "<Gamepad>/select",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Reset",
+          "isComposite": false,
+          "isPartOfComposite": false
+        }
+      ]
+    }
+  ],
+  "controlSchemes": []
+}

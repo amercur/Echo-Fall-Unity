@@ -1,0 +1,6 @@
+{
+  "name": "EchoFall.Movement.Tests",
+  "references": ["EchoFall.Movement", "EchoFall.Movement.Editor", "Unity.InputSystem"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

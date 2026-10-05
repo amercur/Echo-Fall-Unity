@@ -1,0 +1,5 @@
+{
+  "name": "EchoFall.Movement",
+  "rootNamespace": "EchoFall.Movement",
+  "references": ["Unity.InputSystem", "UnityEngine.UI"]
+}

@@ -1,0 +1,218 @@
+{
+  "success": true,
+  "command": "command run_tests",
+  "data": {
+    "command": "run_tests",
+    "parameters": {
+      "mode": "editor",
+      "filter": "EchoFall.Movement",
+      "timeout": "60"
+    },
+    "result": {
+      "Summary": {
+        "Total": 26,
+        "Passed": 26,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.AuthoredLabBelfryShaftCanBeClimbedWithoutUpgrades",
+          "Status": "Passed",
+          "Duration": 0.6073001,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.AuthoredLabHasConnectedPlayerValidMaterialsAndCameraBounds",
+          "Status": "Passed",
+          "Duration": 0.5664328,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.CameraStaysInsideBoundsAtDifferentAspectRatiosAndTracksHeight",
+          "Status": "Passed",
+          "Duration": 0.1024631,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.CoyoteJumpWorksOnlyInsideGraceWindow",
+          "Status": "Passed",
+          "Duration": 0.103224,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.DashCannotTunnelThroughThinSolidAndJumpCannotEnterCeiling",
+          "Status": "Passed",
+          "Duration": 0.1061242,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.ExactlyOneAirDashUntilLandingAndDashBufferSurvivesCooldown",
+          "Status": "Passed",
+          "Duration": 0.1054365,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.FixedMovementMatchesAcrossRenderRates",
+          "Status": "Passed",
+          "Duration": 0.1271927,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.GroundAccelerationAndBrakingMatchReference",
+          "Status": "Passed",
+          "Duration": 0.1133057,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.HazardReturnsToSafeFootingWithoutCombatOrDeathState",
+          "Status": "Passed",
+          "Duration": 0.0983732,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.HeldJumpRisesHigherAndUpDoesNotJump",
+          "Status": "Passed",
+          "Duration": 0.1068338,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.ImportedSpritesPreserveScalePivotAndAllFortyFrames",
+          "Status": "Passed",
+          "Duration": 0.1183898,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.JumpBufferFiresOnLandingAndExpiredBufferDoesNot",
+          "Status": "Passed",
+          "Duration": 0.1077574,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.OneWayAllowsRiseLandingAndDropButFloorRemainsSolid",
+          "Status": "Passed",
+          "Duration": 0.1148465,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.RoomLimitsConvertOriginalPlayerTopToFeet",
+          "Status": "Passed",
+          "Duration": 0.1475596,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.SameWallTapJumpsGainHeightAndRestoreAirDash(-1)",
+          "Status": "Passed",
+          "Duration": 0.1548401,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.SameWallTapJumpsGainHeightAndRestoreAirDash(1)",
+          "Status": "Passed",
+          "Duration": 0.1821559,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.SecondJumpInAirDoesNotGrantDoubleJump",
+          "Status": "Passed",
+          "Duration": 0.1244228,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.MovementTests.TapBetweenPhysicsTicksStaysShort",
+          "Status": "Passed",
+          "Duration": 0.1197981,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"run-brake\")",
+          "Status": "Passed",
+          "Duration": 0.129801,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"held-jump\")",
+          "Status": "Passed",
+          "Duration": 0.1452489,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"short-jump\")",
+          "Status": "Passed",
+          "Duration": 0.1525918,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"jump-dash\")",
+          "Status": "Passed",
+          "Duration": 0.1467417,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"platform-drop\")",
+          "Status": "Passed",
+          "Duration": 0.1454286,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"thin-wall\")",
+          "Status": "Passed",
+          "Duration": 0.153234,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"ceiling\")",
+          "Status": "Passed",
+          "Duration": 0.1341542,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"camera-travel\")",
+          "Status": "Passed",
+          "Duration": 0.1464561,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 8.24,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: EchoFall.Movement",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

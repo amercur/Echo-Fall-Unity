@@ -1,0 +1,46 @@
+# Unity generated state and local builds
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Bb]uilds/
+/[Bb]uild/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Local agent and editor configuration (not Unity project content)
+/.agents/
+/.codex/
+/.vscode/
+
+# Unity crash reports and local tooling caches
+/sysinfo.txt
+/crashlytics-build.properties
+/.gradle/
+/.idea/
+
+# Local credentials
+.env
+.env.*
+!.env.example
+
+# Generated IDE files
+*.csproj
+*.sln
+*.slnx
+*.user
+*.suo
+*.pidb
+*.pdb
+*.mdb
+*.booproj
+*.opendb
+*.VC.db
+.vs/
+
+# OS and Python generated files
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
