@@ -1,0 +1,11 @@
+{
+  "game.js": "c7d2aa38539f36f43591c3fad44ea2c5b4241b3a06e345b957fd9dcb50229050",
+  "data/world.json": "4794d6bcfc3c1124add7092b7e2a26ee936d7ac672ae8f5061bed8c50cc9f854",
+  "assets/art-manifest.js": "49f7fab3872e03937b0a963cdf5a71045dd6c95ee7d62ab7e45cd8523358ba2c",
+  "assets/ruin-arch.png": "0359d14429eaf4beb026bbbe405a61b61f0e67ced50fd25407ec014f34aca5d9",
+  "assets/ruin-ledge.png": "a437a48b30d6b1fa946e891c6fcb0e651e3e534b45a7da0ccd89780648c97a96",
+  "assets/choir-spire.png": "d1c0d640cbcfc8a3f18cbba76657f3e7a2e7ca159be8d552cd6474765214d7ed",
+  "assets/sentinel.png": "b081850f4633e54191ff2cb843f52c9398fc72d33b22568c6ed455104849f02f",
+  "assets/lancer.png": "c339ba307f0a32b1cda670fcc6f5357c5abe87033b466e5a6b164be5b31bd99a",
+  "assets/drone.png": "5a750416c1cd4ee20a7ab26214ad6dc5fd9ffbd6b1da7651fd39f2516c9f7dee"
+}

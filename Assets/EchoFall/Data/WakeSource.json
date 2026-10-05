@@ -1,0 +1,855 @@
+{
+  "rooms": [
+    {
+      "id": "wake",
+      "name": "THE WAKE / SIGNAL WELL",
+      "width": 1120,
+      "top": -80,
+      "bottom": 540,
+      "enemies": [
+        {
+          "x": 570,
+          "type": "sentinel",
+          "floor": 452,
+          "left": 520,
+          "right": 645,
+          "training": true
+        }
+      ],
+      "interactions": [
+        {
+          "id": "rest-wake",
+          "kind": "bench",
+          "x": 145,
+          "y": 425,
+          "label": "SIGNAL ANCHOR"
+        },
+        {
+          "id": "creature",
+          "kind": "creature",
+          "x": 900,
+          "y": 422,
+          "label": "THE WOUNDED"
+        },
+        {
+          "id": "wake-east",
+          "kind": "gate",
+          "x": 1060,
+          "y": 417,
+          "target": "procession",
+          "entry": "west",
+          "label": "PILGRIM CAUSEWAY"
+        },
+        {
+          "id": "wake-high",
+          "kind": "gate",
+          "x": 745,
+          "y": 147,
+          "target": "belfry",
+          "entry": "low",
+          "label": "CLIMB THE BELFRY"
+        },
+        {
+          "id": "wake-drain",
+          "kind": "gate",
+          "x": 700,
+          "y": 417,
+          "target": "cistern",
+          "entry": "west",
+          "label": "DESCEND TO THE CISTERN"
+        },
+        {
+          "id": "wake-return",
+          "kind": "gate",
+          "x": 935,
+          "y": 417,
+          "target": "observatory",
+          "entry": "west",
+          "label": "THE LONG WAY HOME",
+          "requires": "well-link"
+        },
+        {
+          "id": "first-transfer",
+          "kind": "mirror",
+          "x": 1010,
+          "y": 417,
+          "label": "THE TRANSFER GLASS"
+        }
+      ],
+      "tutorials": [
+        {
+          "x": 250,
+          "y": 315,
+          "text": "SPACE / JUMP    W + J / RISING CUT"
+        },
+        {
+          "x": 740,
+          "y": 95,
+          "text": "AN UPPER ROAD WAITS"
+        },
+        {
+          "x": 145,
+          "y": 332,
+          "text": "E / SIT AT THE SIGNAL ANCHOR"
+        },
+        {
+          "x": 555,
+          "y": 382,
+          "text": "THE PRACTICE WARDEN CANNOT TAKE YOUR LAST INTEGRITY"
+        }
+      ],
+      "ground": [
+        {
+          "x": 0,
+          "y": 452,
+          "w": 1120,
+          "h": 100
+        }
+      ],
+      "platforms": [
+        {
+          "x": 265,
+          "y": 362,
+          "w": 140,
+          "h": 20
+        },
+        {
+          "x": 455,
+          "y": 272,
+          "w": 145,
+          "h": 20
+        },
+        {
+          "x": 660,
+          "y": 182,
+          "w": 170,
+          "h": 20
+        }
+      ],
+      "solids": [],
+      "hazards": [],
+      "pogo": [],
+      "spawns": [
+        {
+          "id": "default",
+          "x": 121,
+          "y": 452
+        },
+        {
+          "id": "east",
+          "x": 1011,
+          "y": 452
+        },
+        {
+          "id": "high",
+          "x": 741,
+          "y": 182
+        },
+        {
+          "id": "drain",
+          "x": 701,
+          "y": 452
+        }
+      ],
+      "decor": [
+        {
+          "kind": "arch",
+          "x": 340,
+          "y": 452,
+          "scale": 0.52
+        }
+      ]
+    },
+    {
+      "id": "belfry",
+      "name": "THE BELFRY / BROKEN ASCENT",
+      "width": 970,
+      "top": -550,
+      "bottom": 540,
+      "enemies": [
+        {
+          "x": 690,
+          "type": "drone",
+          "floor": 160,
+          "left": 580,
+          "right": 820
+        }
+      ],
+      "interactions": [
+        {
+          "id": "belfry-low",
+          "kind": "gate",
+          "x": 65,
+          "y": 417,
+          "target": "wake",
+          "entry": "high",
+          "label": "RETURN TO THE WELL"
+        },
+        {
+          "id": "belfry-high",
+          "kind": "gate",
+          "x": 730,
+          "y": -395,
+          "target": "archive",
+          "entry": "west",
+          "label": "THE GLASS ARCHIVE"
+        },
+        {
+          "id": "belfry-cache",
+          "kind": "cache",
+          "x": 635,
+          "y": -120,
+          "label": "A RESONANCE VESSEL"
+        },
+        {
+          "id": "bell-secret",
+          "kind": "relic",
+          "x": 230,
+          "y": -380,
+          "label": "THE BELL KEEPER",
+          "story": "Before the Choir, this bell rang when someone made a choice. Its clapper is worn down to a thread."
+        },
+        {
+          "id": "form-needle",
+          "kind": "style",
+          "x": 290,
+          "y": -375,
+          "label": "BELLKEEPER FORM",
+          "style": "needle"
+        }
+      ],
+      "tutorials": [
+        {
+          "x": 435,
+          "y": 320,
+          "text": "HOLD TOWARD A WALL TO SLIDE"
+        },
+        {
+          "x": 435,
+          "y": 292,
+          "text": "SPACE / WALL JUMP \u2014 THEN TURN"
+        },
+        {
+          "x": 445,
+          "y": -270,
+          "text": "WALL JUMPS RESTORE YOUR AIR DASH"
+        }
+      ],
+      "ground": [
+        {
+          "x": 0,
+          "y": 452,
+          "w": 970,
+          "h": 100
+        }
+      ],
+      "platforms": [
+        {
+          "x": 165,
+          "y": -345,
+          "w": 165,
+          "h": 20
+        },
+        {
+          "x": 210,
+          "y": 355,
+          "w": 140,
+          "h": 20
+        },
+        {
+          "x": 335,
+          "y": -195,
+          "w": 155,
+          "h": 20
+        },
+        {
+          "x": 335,
+          "y": 255,
+          "w": 165,
+          "h": 20
+        },
+        {
+          "x": 570,
+          "y": -360,
+          "w": 230,
+          "h": 22
+        },
+        {
+          "x": 570,
+          "y": -85,
+          "w": 150,
+          "h": 20
+        },
+        {
+          "x": 570,
+          "y": 130,
+          "w": 140,
+          "h": 20
+        }
+      ],
+      "solids": [
+        {
+          "x": 345,
+          "y": -360,
+          "w": 28,
+          "h": 590
+        },
+        {
+          "x": 520,
+          "y": -490,
+          "w": 28,
+          "h": 740
+        }
+      ],
+      "hazards": [],
+      "pogo": [],
+      "spawns": [
+        {
+          "id": "default",
+          "x": 131,
+          "y": 452
+        },
+        {
+          "id": "low",
+          "x": 131,
+          "y": 452
+        },
+        {
+          "id": "high",
+          "x": 731,
+          "y": -360
+        }
+      ],
+      "decor": [
+        {
+          "kind": "spire",
+          "x": 820,
+          "y": 452,
+          "scale": 0.55
+        }
+      ]
+    },
+    {
+      "id": "cistern",
+      "name": "THE CISTERN / HOLLOW ROOTS",
+      "width": 1360,
+      "top": -80,
+      "bottom": 540,
+      "enemies": [
+        {
+          "x": 635,
+          "type": "drone",
+          "floor": 365,
+          "left": 540,
+          "right": 730
+        },
+        {
+          "x": 970,
+          "type": "drone",
+          "floor": 350,
+          "left": 870,
+          "right": 1060
+        }
+      ],
+      "interactions": [
+        {
+          "id": "cistern-west",
+          "kind": "gate",
+          "x": 70,
+          "y": 295,
+          "target": "wake",
+          "entry": "drain",
+          "label": "RETURN TO THE WELL"
+        },
+        {
+          "id": "sluice-lever",
+          "kind": "lever",
+          "x": 1210,
+          "y": 295,
+          "label": "OPEN THE SLUICE",
+          "flag": "sluice"
+        },
+        {
+          "id": "cistern-east",
+          "kind": "gate",
+          "x": 1300,
+          "y": 295,
+          "target": "procession",
+          "entry": "low",
+          "label": "THE LOWER CAUSEWAY",
+          "requires": "sluice"
+        },
+        {
+          "id": "cistern-cache",
+          "kind": "cache",
+          "x": 1040,
+          "y": 235,
+          "label": "A RESONANCE VESSEL"
+        },
+        {
+          "id": "pogo-secret",
+          "kind": "relic",
+          "x": 670,
+          "y": 200,
+          "label": "THE DROWNED ENGINEER",
+          "story": "The engineer left a note above the flood: machines repeat a command. People can decide to stop."
+        },
+        {
+          "id": "root-ascent",
+          "kind": "gate",
+          "x": 680,
+          "y": 200,
+          "target": "archive",
+          "entry": "root",
+          "label": "THE LIVING ROOT",
+          "memory": "mercy",
+          "blockedBy": "fire"
+        }
+      ],
+      "tutorials": [
+        {
+          "x": 180,
+          "y": 235,
+          "text": "HOLD S + J IN THE AIR / POGO"
+        },
+        {
+          "x": 700,
+          "y": 245,
+          "text": "BOUNCES REFRESH JUMP AND AIR DASH"
+        }
+      ],
+      "ground": [
+        {
+          "x": 0,
+          "y": 330,
+          "w": 310,
+          "h": 215
+        },
+        {
+          "x": 1140,
+          "y": 330,
+          "w": 220,
+          "h": 215
+        }
+      ],
+      "platforms": [
+        {
+          "x": 345,
+          "y": 300,
+          "w": 90,
+          "h": 20
+        },
+        {
+          "x": 605,
+          "y": 235,
+          "w": 130,
+          "h": 18
+        },
+        {
+          "x": 1000,
+          "y": 270,
+          "w": 100,
+          "h": 20
+        }
+      ],
+      "solids": [],
+      "hazards": [
+        {
+          "x": 310,
+          "y": 474,
+          "w": 830,
+          "h": 50
+        }
+      ],
+      "pogo": [
+        {
+          "x": 500,
+          "y": 407,
+          "w": 25,
+          "h": 25
+        },
+        {
+          "x": 670,
+          "y": 365,
+          "w": 25,
+          "h": 25
+        },
+        {
+          "x": 840,
+          "y": 400,
+          "w": 25,
+          "h": 25
+        }
+      ],
+      "spawns": [
+        {
+          "id": "default",
+          "x": 101,
+          "y": 330
+        },
+        {
+          "id": "west",
+          "x": 101,
+          "y": 330
+        },
+        {
+          "id": "east",
+          "x": 1281,
+          "y": 330
+        },
+        {
+          "id": "root",
+          "x": 666,
+          "y": 235
+        }
+      ],
+      "decor": [
+        {
+          "kind": "arch",
+          "x": 1190,
+          "y": 330,
+          "scale": 0.38
+        }
+      ]
+    },
+    {
+      "id": "archive",
+      "name": "THE GLASS ARCHIVE / UNFILED LIVES",
+      "width": 1160,
+      "top": -80,
+      "bottom": 540,
+      "enemies": [],
+      "interactions": [
+        {
+          "id": "archive-west",
+          "kind": "gate",
+          "x": 60,
+          "y": 417,
+          "target": "belfry",
+          "entry": "high",
+          "label": "THE BELFRY"
+        },
+        {
+          "id": "archive-echo",
+          "kind": "body",
+          "x": 480,
+          "y": 227,
+          "label": "THE SELF WHO WAITED",
+          "loop": "unknown"
+        },
+        {
+          "id": "archive-lever",
+          "kind": "lever",
+          "x": 980,
+          "y": 417,
+          "label": "UNLOCK THE ARCHIVE LIFT",
+          "flag": "archive-lift"
+        },
+        {
+          "id": "archive-east",
+          "kind": "gate",
+          "x": 1100,
+          "y": 417,
+          "target": "procession",
+          "entry": "high",
+          "label": "THE ARCHIVE LIFT",
+          "requires": "archive-lift",
+          "guard": "betrayal-guard"
+        },
+        {
+          "id": "archive-memory",
+          "kind": "gate",
+          "x": 805,
+          "y": 135,
+          "target": "lungs",
+          "entry": "archive",
+          "label": "THE BREATHING PASSAGE",
+          "memory": "defiance",
+          "blockedBy": "obedience"
+        },
+        {
+          "id": "archive-rest",
+          "kind": "bench",
+          "x": 600,
+          "y": 425,
+          "label": "SIGNAL ANCHOR"
+        },
+        {
+          "id": "root-descent",
+          "kind": "gate",
+          "x": 710,
+          "y": 417,
+          "target": "cistern",
+          "entry": "root",
+          "label": "THE LIVING ROOT",
+          "memory": "mercy",
+          "blockedBy": "fire"
+        }
+      ],
+      "tutorials": [
+        {
+          "x": 785,
+          "y": 80,
+          "text": "THE DOOR EXISTS IF YOU REMEMBER OPENING IT"
+        }
+      ],
+      "ground": [
+        {
+          "x": 0,
+          "y": 452,
+          "w": 1160,
+          "h": 100
+        }
+      ],
+      "platforms": [
+        {
+          "x": 220,
+          "y": 355,
+          "w": 120,
+          "h": 20
+        },
+        {
+          "x": 420,
+          "y": 260,
+          "w": 170,
+          "h": 20
+        },
+        {
+          "x": 740,
+          "y": 170,
+          "w": 150,
+          "h": 20
+        }
+      ],
+      "solids": [],
+      "hazards": [],
+      "pogo": [],
+      "spawns": [
+        {
+          "id": "default",
+          "x": 111,
+          "y": 452
+        },
+        {
+          "id": "west",
+          "x": 111,
+          "y": 452
+        },
+        {
+          "id": "east",
+          "x": 1061,
+          "y": 452
+        },
+        {
+          "id": "memory",
+          "x": 821,
+          "y": 170
+        },
+        {
+          "id": "root",
+          "x": 711,
+          "y": 452
+        }
+      ],
+      "decor": [
+        {
+          "kind": "arch",
+          "x": 490,
+          "y": 452,
+          "scale": 0.58
+        },
+        {
+          "kind": "spire",
+          "x": 950,
+          "y": 452,
+          "scale": 0.4
+        }
+      ]
+    },
+    {
+      "id": "procession",
+      "name": "PILGRIM CAUSEWAY / THE DIVIDED ROAD",
+      "width": 1590,
+      "top": -80,
+      "bottom": 540,
+      "enemies": [
+        {
+          "x": 560,
+          "type": "sentinel",
+          "floor": 452,
+          "left": 460,
+          "right": 660
+        },
+        {
+          "x": 980,
+          "type": "lancer",
+          "floor": 452,
+          "left": 880,
+          "right": 1080
+        },
+        {
+          "x": 1220,
+          "type": "drone",
+          "floor": 265,
+          "left": 1140,
+          "right": 1340
+        },
+        {
+          "x": 1050,
+          "type": "sentinel",
+          "floor": 452,
+          "left": 890,
+          "right": 1120
+        }
+      ],
+      "interactions": [
+        {
+          "id": "procession-west",
+          "kind": "gate",
+          "x": 60,
+          "y": 417,
+          "target": "wake",
+          "entry": "east",
+          "label": "THE SIGNAL WELL"
+        },
+        {
+          "id": "procession-high",
+          "kind": "gate",
+          "x": 700,
+          "y": 117,
+          "target": "archive",
+          "entry": "east",
+          "label": "THE ARCHIVE LIFT",
+          "requires": "archive-lift"
+        },
+        {
+          "id": "procession-low",
+          "kind": "gate",
+          "x": 400,
+          "y": 417,
+          "target": "cistern",
+          "entry": "east",
+          "label": "THE OPEN SLUICE",
+          "requires": "sluice"
+        },
+        {
+          "id": "door",
+          "kind": "door",
+          "x": 1180,
+          "y": 407,
+          "label": "THE FORBIDDEN DOOR"
+        },
+        {
+          "id": "procession-east",
+          "kind": "gate",
+          "x": 1530,
+          "y": 417,
+          "target": "king",
+          "entry": "west",
+          "label": "THE COURT OF CERTAINTY"
+        }
+      ],
+      "tutorials": [
+        {
+          "x": 580,
+          "y": 330,
+          "text": "F / DEFLECT \u2192 BUILD RESONANCE"
+        },
+        {
+          "x": 1020,
+          "y": 315,
+          "text": "RED ATTACK / JUMP OR RELEASE A CHARGED F"
+        },
+        {
+          "x": 1450,
+          "y": 315,
+          "text": "Q / IMPRINT A NEARBY FOE, THEN Q / DETONATE"
+        }
+      ],
+      "ground": [
+        {
+          "x": 0,
+          "y": 452,
+          "w": 1590,
+          "h": 100
+        }
+      ],
+      "platforms": [
+        {
+          "x": 220,
+          "y": 352,
+          "w": 140,
+          "h": 20
+        },
+        {
+          "x": 415,
+          "y": 252,
+          "w": 145,
+          "h": 20
+        },
+        {
+          "x": 620,
+          "y": 152,
+          "w": 170,
+          "h": 20
+        },
+        {
+          "x": 850,
+          "y": 252,
+          "w": 150,
+          "h": 20
+        },
+        {
+          "x": 1060,
+          "y": 352,
+          "w": 140,
+          "h": 20
+        }
+      ],
+      "solids": [],
+      "hazards": [],
+      "pogo": [],
+      "spawns": [
+        {
+          "id": "default",
+          "x": 111,
+          "y": 452
+        },
+        {
+          "id": "west",
+          "x": 111,
+          "y": 452
+        },
+        {
+          "id": "east",
+          "x": 1471,
+          "y": 452
+        },
+        {
+          "id": "high",
+          "x": 711,
+          "y": 152
+        },
+        {
+          "id": "low",
+          "x": 431,
+          "y": 452
+        }
+      ],
+      "decor": [
+        {
+          "kind": "arch",
+          "x": 780,
+          "y": 452,
+          "scale": 0.55
+        },
+        {
+          "kind": "spire",
+          "x": 1380,
+          "y": 452,
+          "scale": 0.52
+        }
+      ]
+    }
+  ]
+}

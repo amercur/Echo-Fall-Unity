@@ -2,7 +2,9 @@
 
 Analysis date: 2026-10-03. This document preserves the initial analysis and phased plan.
 
-Implementation follow-up (2026-10-04): Unity is **6000.5.8f1**. The existing Phase 1 movement lab has been repaired and verified with **26 passing EditMode tests and 4 passing PlayMode tests**, including original-game trajectory comparisons and a live Belfry climb. See [Phase1-Movement.md](Phase1-Movement.md) for evidence and the remaining hands-on/controller, physical 144 Hz, and standalone-build checks. The analysis below preserves the original pre-initialization snapshot. No Phase 2 work has begun.
+Implementation follow-up (2026-10-04): Unity is **6000.5.8f1**. The existing Phase 1 movement lab has been repaired and verified with **26 passing EditMode tests and 4 passing PlayMode tests**, including original-game trajectory comparisons and a live Belfry climb. See [Phase1-Movement.md](Phase1-Movement.md) for evidence and the remaining hands-on/controller, physical 144 Hz, and standalone-build checks. The analysis below preserves the original pre-initialization snapshot.
+
+Scope update (2026-10-05): At the user's request, Phase 2 now combines initial combat with a five-room Wake vertical slice and its first persistent memory loop, bringing forward selected scope from phases 3, 4, and 6 below. `WakeSlice` preserves MovementLab and connects Wake, Procession, Belfry, Cistern, and Archive. See [Phase2-WakeSlice.md](Phase2-WakeSlice.md) for controls, source adaptations, validation, memory consequences, and deferred work. The original phase descriptions remain as the full migration checklist; this slice does not imply their complete acceptance gates have passed.
 
 Original, read-only reference: `C:\Users\sivas\echo-fall`.
 Destination: `C:\Users\sivas\Downloads\Unity Projects\Echo-Fall`.

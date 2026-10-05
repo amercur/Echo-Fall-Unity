@@ -12,6 +12,7 @@ namespace EchoFall.Movement
     public sealed class MovementInput : MonoBehaviour
     {
         public InputActionAsset actions;
+        public bool allowReset = true;
         InputActionAsset instance;
         InputAction move, jump, dash, reset;
         bool jumpPressed, jumpReleased, dashPressed, resetPressed;
@@ -45,7 +46,7 @@ namespace EchoFall.Movement
                 move = Mathf.Abs(direction.x) > .3f ? Mathf.Sign(direction.x) : 0f,
                 down = direction.y < -.4f,
                 jumpPressed = jumpPressed, jumpReleased = jumpReleased,
-                dashPressed = dashPressed, resetPressed = resetPressed
+                dashPressed = dashPressed, resetPressed = resetPressed && allowReset
             };
             ClearEdges();
             return command;

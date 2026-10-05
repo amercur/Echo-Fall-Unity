@@ -1,0 +1,18 @@
+using UnityEngine;
+
+namespace EchoFall.Movement
+{
+    public sealed class SliceInteraction : MonoBehaviour
+    {
+        public string id, kind, label, story, target, entry, requires, memory, blockedBy, flag;
+        public float radius = .65f;
+        public bool Available(SliceSession session) => !session.Consumed.Contains(id);
+        public string LockReason(SliceSession session)
+        {
+            if (!string.IsNullOrEmpty(blockedBy) && session.Archive.Remembers(blockedBy)) return "EMBER has burned this route closed.";
+            if (!string.IsNullOrEmpty(memory) && !session.Archive.Remembers(memory)) return "A remembered MERCY gives this root a shape.";
+            if (!string.IsNullOrEmpty(requires) && !session.Flags.Contains(requires)) return "Open this shortcut from the far side.";
+            return null;
+        }
+    }
+}

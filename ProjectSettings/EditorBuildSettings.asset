@@ -6,8 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/EchoFall/Scenes/WakeSlice.unity
+    guid: 2e08237cf16df0540b77e24c4345c770
+  - enabled: 1
     path: Assets/EchoFall/Scenes/MovementLab.unity
     guid: 44fdffe092ae01ed00ad7f110f4a6fda
+  - enabled: 1
+    path: Assets/EchoFall/Scenes/Wake_wake.unity
+    guid: c476f050923bea645abd6a875d136ae6
+  - enabled: 1
+    path: Assets/EchoFall/Scenes/Wake_belfry.unity
+    guid: 761598a8c41d3c545a9c7d5c1932de37
+  - enabled: 1
+    path: Assets/EchoFall/Scenes/Wake_cistern.unity
+    guid: 29be9a2703b82f1498740facd760623b
+  - enabled: 1
+    path: Assets/EchoFall/Scenes/Wake_archive.unity
+    guid: e8dfee1d86aaa954ead79b3cd6e1e3ba
+  - enabled: 1
+    path: Assets/EchoFall/Scenes/Wake_procession.unity
+    guid: 75a654ceafb374c4c8513b41e35b131e
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02

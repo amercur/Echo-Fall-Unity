@@ -68,6 +68,22 @@ namespace EchoFall.Movement
             body.position = feet;
         }
 
+        public void EnterRoom(Vector2 feet)
+        {
+            Teleport(feet);
+            SafePosition = spawn = feet;
+        }
+
+        public void Pogo()
+        {
+            Velocity = new Vector2(Velocity.x, 5.35f);
+            AirDashUsed = false;
+            Grounded = false;
+            dashTime = 0;
+        }
+
+        public void RefreshAirOptions() => AirDashUsed = false;
+
         public void Simulate(float dt, MovementCommand command)
         {
             Initialize();
