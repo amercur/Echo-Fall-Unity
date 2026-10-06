@@ -44,3 +44,7 @@
 Thumbs.db
 __pycache__/
 *.pyc
+
+# Codex
+!.codex/
+!.codex/**
