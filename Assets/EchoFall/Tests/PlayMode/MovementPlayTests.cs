@@ -43,6 +43,37 @@ namespace EchoFall.Movement.Tests
 
         void Keys(params Key[] keys) => InputSystem.QueueStateEvent(keyboard, new KeyboardState(keys));
 
+        [UnityTest] public IEnumerator WandererLocomotionPosesTrackMotorWithoutChangingCollision()
+        {
+            var motor=Object.FindAnyObjectByType<PlayerMotor>(); var visual=motor.GetComponentInChildren<PlayerVisual>();
+            var box=motor.GetComponent<BoxCollider2D>(); Vector2 colliderSize=box.size; Vector3 playerScale=motor.transform.localScale;
+            motor.automaticSimulation=false;
+            Assert.That(visual.Pose,Is.EqualTo(WandererPose.Idle));
+            int idle=visual.FrameIndex;yield return new WaitForSeconds(.28f);Assert.That(visual.FrameIndex,Is.Not.EqualTo(idle));
+            for(int i=0;i<25;i++)motor.Simulate(MovementTuning.Step,new MovementCommand{move=1});
+            yield return null;yield return null;Assert.That(visual.Pose,Is.EqualTo(WandererPose.Run));
+            motor.Simulate(MovementTuning.Step,new MovementCommand{jumpPressed=true});
+            yield return null;yield return null;Assert.That(visual.Pose,Is.EqualTo(WandererPose.Rise));Assert.That(visual.FrameIndex,Is.EqualTo(20));
+            for(int i=0;i<150 && motor.Velocity.y>=0;i++)motor.Simulate(MovementTuning.Step,default);
+            yield return null;yield return null;Assert.That(visual.Pose,Is.EqualTo(WandererPose.Fall));Assert.That(visual.FrameIndex,Is.EqualTo(21));
+            for(int i=0;i<20;i++)motor.Simulate(MovementTuning.Step,default);
+            yield return null;yield return null;
+            for(int i=0;i<180 && !motor.Grounded;i++)motor.Simulate(MovementTuning.Step,default);
+            yield return null;yield return null;
+            Assert.That(visual.Pose,Is.EqualTo(WandererPose.Land));Assert.That(visual.transform.localScale.y,Is.LessThan(.34f));
+            motor.Simulate(MovementTuning.Step,new MovementCommand{move=1,dashPressed=true});
+            yield return null;yield return null;Assert.That(visual.Pose,Is.EqualTo(WandererPose.Dash));Assert.That(visual.LiveGhosts,Is.GreaterThan(0));
+            var wall=new GameObject("Presentation wall fixture");wall.layer=LayerMask.NameToLayer("EchoSolid");wall.transform.position=new Vector3(2.1f,2,0);
+            wall.AddComponent<BoxCollider2D>().size=new Vector2(.1f,4);Physics2D.SyncTransforms();
+            motor.EnterRoom(new Vector2(1.8f,2));yield return null;
+            for(int i=0;i<35;i++)motor.Simulate(MovementTuning.Step,new MovementCommand{move=1});
+            yield return null;yield return null;Assert.That(visual.Pose,Is.EqualTo(WandererPose.WallSlide));
+            int jumps=motor.WallJumpSequence;motor.Simulate(MovementTuning.Step,new MovementCommand{move=-1,jumpPressed=true});
+            yield return null;yield return null;Assert.That(motor.WallJumpSequence,Is.EqualTo(jumps+1));Assert.That(visual.Pose,Is.EqualTo(WandererPose.WallJump));
+            Assert.That(box.size,Is.EqualTo(colliderSize));Assert.That(motor.transform.localScale,Is.EqualTo(playerScale));
+            Object.Destroy(wall);LogAssert.NoUnexpectedReceived();
+        }
+
         [UnityTest]
         public IEnumerator SceneRunsWithNativeInputPhysicsSpritesAndCamera()
         {

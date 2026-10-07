@@ -1,0 +1,5 @@
+wake: all gameplay colliders preserved exactly
+belfry: all gameplay colliders preserved exactly
+cistern: all gameplay colliders preserved exactly
+archive: all gameplay colliders preserved exactly
+procession: all gameplay colliders preserved exactly

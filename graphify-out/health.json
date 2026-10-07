@@ -1,0 +1,222 @@
+{
+  "node_count": 1205,
+  "unverified_node_count": 0,
+  "raw_edge_count": 2161,
+  "non_object_edges": 0,
+  "missing_endpoint_edges": 0,
+  "dangling_endpoint_edges": 109,
+  "external_reference_edges": 3,
+  "self_loop_edges": 2,
+  "valid_candidate_edges": 2049,
+  "exact_duplicate_edges": 0,
+  "directed_unique_endpoint_pairs": 1924,
+  "directed_same_endpoint_collapsed_edges": 125,
+  "undirected_unique_endpoint_pairs": 1918,
+  "undirected_same_endpoint_collapsed_edges": 131,
+  "same_endpoint_group_count": 67,
+  "relation_variant_groups": 2,
+  "source_file_variant_groups": 0,
+  "source_location_variant_groups": 61,
+  "context_variant_groups": 19,
+  "post_build_graph_type": "Graph",
+  "post_build_node_count": 1234,
+  "post_build_edge_count": 2030,
+  "post_build_error": "",
+  "producer_suppression": {
+    "path": "C:\\Users\\sivas\\AppData\\Roaming\\uv\\tools\\graphifyy\\Lib\\site-packages\\graphify\\extract.py",
+    "total_sites": 12,
+    "sites": [
+      {
+        "line": 1685,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+      },
+      {
+        "line": 2218,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+      },
+      {
+        "line": 2220,
+        "name": "seen_doc_refs",
+        "tuple_arity": 0,
+        "sample": "seen_doc_refs: set[str] = set()"
+      },
+      {
+        "line": 2698,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = {n[\"id\"] for n in nodes}"
+      },
+      {
+        "line": 2845,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids = {n.get(\"id\") for n in nodes}"
+      },
+      {
+        "line": 3588,
+        "name": "seen_keys",
+        "tuple_arity": 0,
+        "sample": "seen_keys: set[tuple] = set()"
+      },
+      {
+        "line": 3761,
+        "name": "seen_keys",
+        "tuple_arity": 0,
+        "sample": "seen_keys: set[tuple] = set()"
+      },
+      {
+        "line": 5912,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = set()"
+      },
+      {
+        "line": 6020,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = set()"
+      },
+      {
+        "line": 6099,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = set()"
+      },
+      {
+        "line": 6614,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = set()"
+      },
+      {
+        "line": 6615,
+        "name": "seen_edges",
+        "tuple_arity": 4,
+        "sample": "seen_edges: set[tuple[str, str, str, str | None]] = set()"
+      }
+    ],
+    "error": ""
+  },
+  "examples": [
+    {
+      "source": "packages_packages_lock",
+      "target": "packages_packages_lock_json_ref_com_unity_modules_jsonserialize",
+      "edge_count": 13,
+      "relations": [
+        "imports"
+      ],
+      "source_files": [
+        "Packages/packages-lock.json"
+      ],
+      "source_locations": [
+        "L127",
+        "L245",
+        "L260",
+        "L273",
+        "L308",
+        "L356",
+        "L365",
+        "L399",
+        "L437",
+        "L538",
+        "L577",
+        "L595",
+        "L88"
+      ],
+      "contexts": [
+        "import"
+      ]
+    },
+    {
+      "source": "packages_packages_lock",
+      "target": "packages_packages_lock_json_ref_com_unity_modules_uielements",
+      "edge_count": 7,
+      "relations": [
+        "imports"
+      ],
+      "source_files": [
+        "Packages/packages-lock.json"
+      ],
+      "source_locations": [
+        "L12",
+        "L180",
+        "L220",
+        "L244",
+        "L39",
+        "L78",
+        "L98"
+      ],
+      "contexts": [
+        "import"
+      ]
+    },
+    {
+      "source": "packages_packages_lock",
+      "target": "packages_packages_lock_json_ref_com_unity_modules_animation",
+      "edge_count": 6,
+      "relations": [
+        "imports"
+      ],
+      "source_files": [
+        "Packages/packages-lock.json"
+      ],
+      "source_locations": [
+        "L11",
+        "L25",
+        "L376",
+        "L38",
+        "L472",
+        "L580"
+      ],
+      "contexts": [
+        "import"
+      ]
+    },
+    {
+      "source": "assets_echofall_scripts_playermotor_echofall_movement_playermotor",
+      "target": "assets_echofall_scripts_playermotor_cs_vector2",
+      "edge_count": 5,
+      "relations": [
+        "references"
+      ],
+      "source_files": [
+        "Assets/EchoFall/Scripts/PlayerMotor.cs"
+      ],
+      "source_locations": [
+        "L13",
+        "L14",
+        "L15",
+        "L24",
+        "L29"
+      ],
+      "contexts": [
+        "field"
+      ]
+    },
+    {
+      "source": "packages_packages_lock",
+      "target": "ref_com_unity_2d_common",
+      "edge_count": 5,
+      "relations": [
+        "imports"
+      ],
+      "source_files": [
+        "Packages/packages-lock.json"
+      ],
+      "source_locations": [
+        "L21",
+        "L49",
+        "L66",
+        "L8",
+        "L97"
+      ],
+      "contexts": [
+        "import"
+      ]
+    }
+  ]
+}

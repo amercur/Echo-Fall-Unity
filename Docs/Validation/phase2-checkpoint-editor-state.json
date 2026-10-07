@@ -1,0 +1,29 @@
+﻿{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "return new { playing = UnityEditor.EditorApplication.isPlaying, background = UnityEngine.Application.runInBackground, scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path, ephemeral = EchoFall.Movement.SliceSession.EphemeralSave, saveOverride = EchoFall.Movement.SliceSession.SavePathOverride };"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "playing": false,
+        "background": false,
+        "scene": "Assets/EchoFall/Scenes/WakeSlice.unity",
+        "ephemeral": false,
+        "saveOverride": null
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

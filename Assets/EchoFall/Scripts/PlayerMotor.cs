@@ -21,6 +21,9 @@ namespace EchoFall.Movement
         public bool Dashing => dashTime > 0;
         public float DashCooldown => dashCooldown;
         public int ResetCount { get; private set; }
+        // Presentation notifications only; animation never owns motor timing.
+        public int WallJumpSequence { get; private set; }
+        public int TeleportSequence { get; private set; }
         public Vector2 RenderPosition => Vector2.Lerp(previousPosition, Position,
             Application.isPlaying ? Mathf.Clamp01((Time.time - Time.fixedTime) / Time.fixedDeltaTime) : 1f);
 
@@ -58,6 +61,7 @@ namespace EchoFall.Movement
 
         public void Teleport(Vector2 feet)
         {
+            TeleportSequence++;
             Initialize();
             Position = previousPosition = feet;
             Velocity = Vector2.zero;
@@ -128,6 +132,7 @@ namespace EchoFall.Movement
             {
                 if (!Grounded && wallGrace > 0)
                 {
+                    WallJumpSequence++;
                     v = new Vector2(-lastWall * tuning.wallPushSpeed, tuning.wallJumpSpeed);
                     Facing = v.x > 0 ? 1 : -1;
                     wallLock = tuning.wallLock;

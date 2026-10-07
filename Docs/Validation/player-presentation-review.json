@@ -1,0 +1,199 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Tools/PlayerPresentationReview.cs",
+      "entry": "PlayerPresentationReview.CaptureAll"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 109,
+      "executeMs": 7070,
+      "assemblyName": "PipelineRunScript_PlayerPresentationReview_afb3ffc75401423498db2f65a5208f36",
+      "success": true,
+      "result": {
+        "firstFrame": 179,
+        "lastFrame": 672,
+        "captures": [
+          {
+            "name": "lab-idle",
+            "pose": "Idle",
+            "frame": 0,
+            "gameFrame": 201,
+            "ghosts": 0
+          },
+          {
+            "name": "movement-lab",
+            "pose": "Idle",
+            "frame": 0,
+            "gameFrame": 201,
+            "ghosts": 0
+          },
+          {
+            "name": "lab-run",
+            "pose": "Run",
+            "frame": 6,
+            "gameFrame": 206,
+            "ghosts": 0
+          },
+          {
+            "name": "lab-rise",
+            "pose": "Rise",
+            "frame": 20,
+            "gameFrame": 209,
+            "ghosts": 0
+          },
+          {
+            "name": "lab-fall",
+            "pose": "Fall",
+            "frame": 21,
+            "gameFrame": 212,
+            "ghosts": 0
+          },
+          {
+            "name": "lab-land",
+            "pose": "Land",
+            "frame": 21,
+            "gameFrame": 215,
+            "ghosts": 0
+          },
+          {
+            "name": "lab-dash",
+            "pose": "Dash",
+            "frame": 21,
+            "gameFrame": 228,
+            "ghosts": 3
+          },
+          {
+            "name": "lab-wall-slide",
+            "pose": "WallSlide",
+            "frame": 31,
+            "gameFrame": 233,
+            "ghosts": 0
+          },
+          {
+            "name": "lab-wall-jump",
+            "pose": "WallJump",
+            "frame": 20,
+            "gameFrame": 236,
+            "ghosts": 0
+          },
+          {
+            "name": "wake",
+            "pose": "Idle",
+            "frame": 0,
+            "gameFrame": 336,
+            "ghosts": 0
+          },
+          {
+            "name": "wake-attack",
+            "pose": "Attack",
+            "frame": 23,
+            "gameFrame": 339,
+            "ghosts": 0
+          },
+          {
+            "name": "belfry",
+            "pose": "Idle",
+            "frame": 0,
+            "gameFrame": 397,
+            "ghosts": 0
+          },
+          {
+            "name": "belfry-attack",
+            "pose": "Attack",
+            "frame": 23,
+            "gameFrame": 400,
+            "ghosts": 0
+          },
+          {
+            "name": "cistern",
+            "pose": "Idle",
+            "frame": 0,
+            "gameFrame": 453,
+            "ghosts": 0
+          },
+          {
+            "name": "cistern-attack",
+            "pose": "Attack",
+            "frame": 23,
+            "gameFrame": 457,
+            "ghosts": 0
+          },
+          {
+            "name": "archive",
+            "pose": "Idle",
+            "frame": 0,
+            "gameFrame": 506,
+            "ghosts": 0
+          },
+          {
+            "name": "archive-attack",
+            "pose": "Attack",
+            "frame": 23,
+            "gameFrame": 509,
+            "ghosts": 0
+          },
+          {
+            "name": "procession",
+            "pose": "Idle",
+            "frame": 0,
+            "gameFrame": 554,
+            "ghosts": 0
+          },
+          {
+            "name": "procession-attack",
+            "pose": "Attack",
+            "frame": 23,
+            "gameFrame": 557,
+            "ghosts": 0
+          },
+          {
+            "name": "guard",
+            "pose": "Guard",
+            "frame": 30,
+            "gameFrame": 559,
+            "ghosts": 0
+          },
+          {
+            "name": "deflect",
+            "pose": "Deflect",
+            "frame": 31,
+            "gameFrame": 561,
+            "ghosts": 0
+          },
+          {
+            "name": "hurt",
+            "pose": "Hurt",
+            "frame": 31,
+            "gameFrame": 563,
+            "ghosts": 0
+          },
+          {
+            "name": "transfer",
+            "pose": "Transfer",
+            "frame": 31,
+            "gameFrame": 573,
+            "ghosts": 0
+          },
+          {
+            "name": "death",
+            "pose": "Death",
+            "frame": 35,
+            "gameFrame": 628,
+            "ghosts": 0
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

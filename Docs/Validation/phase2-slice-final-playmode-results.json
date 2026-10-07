@@ -1,0 +1,76 @@
+{
+    "status":  "completed",
+    "duration":  15.58,
+    "summary":  {
+                    "total":  9,
+                    "passed":  9,
+                    "failed":  0,
+                    "skipped":  0,
+                    "inconclusive":  0
+                },
+    "results":  [
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.ChargedGuardCountersRedAndMatureImprintConsumesResonance",
+                        "Status":  "Passed",
+                        "Duration":  3.9603303,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.CompletedFiveRoomRunUsesGlassThenChangesTheNextWake",
+                        "Status":  "Passed",
+                        "Duration":  1.4375833,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.EnemyDamageBacktracksButTransferResetsRunState",
+                        "Status":  "Passed",
+                        "Duration":  1.4249272,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.FatalMercyStillTransfersExactlyOneDecisionAndEmberClosesRoots",
+                        "Status":  "Passed",
+                        "Duration":  1.4167844,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.FiveRoomsAndEveryOpenGateHaveValidSpawnsAndCollision",
+                        "Status":  "Passed",
+                        "Duration":  1.807129,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.MercyChangesCreatureAndCreatesActualRootCollisionNextLife",
+                        "Status":  "Passed",
+                        "Duration":  1.3905078,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.NativeInputMovementAttackAndPauseAreOperational",
+                        "Status":  "Passed",
+                        "Duration":  1.7994671,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.RememberedCreatureDoesNotBlockCompletionOfLaterLives",
+                        "Status":  "Passed",
+                        "Duration":  1.2112911,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.WhiteDeflectCompletesTrainingAndRedBypassesOrdinaryDash",
+                        "Status":  "Passed",
+                        "Duration":  1.0629456,
+                        "Message":  null,
+                        "StackTrace":  null
+                    }
+                ]
+}

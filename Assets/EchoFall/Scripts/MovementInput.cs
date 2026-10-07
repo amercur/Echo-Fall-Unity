@@ -16,6 +16,8 @@ namespace EchoFall.Movement
         InputActionAsset instance;
         InputAction move, jump, dash, reset;
         bool jumpPressed, jumpReleased, dashPressed, resetPressed;
+        public bool HasMovementIntent => (move != null && Mathf.Abs(move.ReadValue<Vector2>().x) > .3f) ||
+            jumpPressed || dashPressed || (jump != null && jump.IsPressed()) || (dash != null && dash.IsPressed());
 
         void OnEnable()
         {

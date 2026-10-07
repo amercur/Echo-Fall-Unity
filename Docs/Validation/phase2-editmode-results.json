@@ -1,0 +1,237 @@
+{
+    "status":  "completed",
+    "duration":  5.51,
+    "summary":  {
+                    "total":  32,
+                    "passed":  32,
+                    "failed":  0,
+                    "skipped":  0,
+                    "inconclusive":  0
+                },
+    "results":  [
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.AuthoredLabBelfryShaftCanBeClimbedWithoutUpgrades",
+                        "Status":  "Passed",
+                        "Duration":  0.625571,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.AuthoredLabHasConnectedPlayerValidMaterialsAndCameraBounds",
+                        "Status":  "Passed",
+                        "Duration":  0.5455399,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.CameraStaysInsideBoundsAtDifferentAspectRatiosAndTracksHeight",
+                        "Status":  "Passed",
+                        "Duration":  0.1441716,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.CoyoteJumpWorksOnlyInsideGraceWindow",
+                        "Status":  "Passed",
+                        "Duration":  0.1438506,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.DashCannotTunnelThroughThinSolidAndJumpCannotEnterCeiling",
+                        "Status":  "Passed",
+                        "Duration":  0.1426047,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.ExactlyOneAirDashUntilLandingAndDashBufferSurvivesCooldown",
+                        "Status":  "Passed",
+                        "Duration":  0.1552104,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.FixedMovementMatchesAcrossRenderRates",
+                        "Status":  "Passed",
+                        "Duration":  0.1621262,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.GroundAccelerationAndBrakingMatchReference",
+                        "Status":  "Passed",
+                        "Duration":  0.1538179,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.HazardReturnsToSafeFootingWithoutCombatOrDeathState",
+                        "Status":  "Passed",
+                        "Duration":  0.1630174,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.HeldJumpRisesHigherAndUpDoesNotJump",
+                        "Status":  "Passed",
+                        "Duration":  0.1596775,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.ImportedSpritesPreserveScalePivotAndAllFortyFrames",
+                        "Status":  "Passed",
+                        "Duration":  0.1692155,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.JumpBufferFiresOnLandingAndExpiredBufferDoesNot",
+                        "Status":  "Passed",
+                        "Duration":  0.1565775,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.OneWayAllowsRiseLandingAndDropButFloorRemainsSolid",
+                        "Status":  "Passed",
+                        "Duration":  0.1625661,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.RoomLimitsConvertOriginalPlayerTopToFeet",
+                        "Status":  "Passed",
+                        "Duration":  0.1622965,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.SameWallTapJumpsGainHeightAndRestoreAirDash(-1)",
+                        "Status":  "Passed",
+                        "Duration":  0.1739071,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.SameWallTapJumpsGainHeightAndRestoreAirDash(1)",
+                        "Status":  "Passed",
+                        "Duration":  0.1745353,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.SecondJumpInAirDoesNotGrantDoubleJump",
+                        "Status":  "Passed",
+                        "Duration":  0.1634631,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementTests.TapBetweenPhysicsTicksStaysShort",
+                        "Status":  "Passed",
+                        "Duration":  0.1551399,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"run-brake\")",
+                        "Status":  "Passed",
+                        "Duration":  0.1822145,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"held-jump\")",
+                        "Status":  "Passed",
+                        "Duration":  0.1686579,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"short-jump\")",
+                        "Status":  "Passed",
+                        "Duration":  0.1793274,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"jump-dash\")",
+                        "Status":  "Passed",
+                        "Duration":  0.175186,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"platform-drop\")",
+                        "Status":  "Passed",
+                        "Duration":  0.1781376,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"thin-wall\")",
+                        "Status":  "Passed",
+                        "Duration":  0.1785051,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"ceiling\")",
+                        "Status":  "Passed",
+                        "Duration":  0.1752537,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"camera-travel\")",
+                        "Status":  "Passed",
+                        "Duration":  0.181291,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SliceRuleTests.ArchiveTransferPreservesIdentityAndEmberOverridesRoots",
+                        "Status":  "Passed",
+                        "Duration":  0.0014436,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SliceRuleTests.InvalidArchiveNeverPassesValidation",
+                        "Status":  "Passed",
+                        "Duration":  0.0002898,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SliceRuleTests.SaveRoundTripAndCorruptPrimaryRecoversBackup",
+                        "Status":  "Passed",
+                        "Duration":  0.0317957,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SliceRuleTests.UnknownMemoryIsRejected(\"unknown\")",
+                        "Status":  "Passed",
+                        "Duration":  0.0012261,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SliceRuleTests.UnknownMemoryIsRejected(\"\")",
+                        "Status":  "Passed",
+                        "Duration":  0.0001194,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SliceRuleTests.UnknownMemoryIsRejected(null)",
+                        "Status":  "Passed",
+                        "Duration":  0.0000655,
+                        "Message":  null,
+                        "StackTrace":  null
+                    }
+                ]
+}

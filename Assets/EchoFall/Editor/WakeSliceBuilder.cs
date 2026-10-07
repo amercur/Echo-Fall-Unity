@@ -46,6 +46,7 @@ namespace EchoFall.Movement.Editor
             var others=EditorBuildSettings.scenes.Where(s=>!paths.Contains(s.path));
             EditorBuildSettings.scenes=paths.Select(p=>new EditorBuildSettingsScene(p,true)).Concat(others).ToArray();
             AssetDatabase.SaveAssets();
+            WakeVisualPass.Apply();
             Debug.Log("Wake slice authored: five connected source rooms, original movement prefab preserved.");
         }
         static void PrepareArt()
@@ -101,7 +102,7 @@ namespace EchoFall.Movement.Editor
         {
             var go=Group(name,parent); var line=go.gameObject.AddComponent<LineRenderer>(); line.sharedMaterial=unlit; line.startColor=line.endColor=color;
             line.startWidth=line.endWidth=width; line.sortingOrder=order; line.positionCount=points.Length; line.useWorldSpace=false;
-            line.SetPositions(points.Select(p=>(Vector3)p).ToArray());
+            line.SetPositions(points.Select(p=>go.InverseTransformPoint(p)).ToArray());
         }
         static void BuildRoom(Room data)
         {
@@ -156,7 +157,6 @@ namespace EchoFall.Movement.Editor
             }
             if(data.id=="cistern")
             {
-                CreateInteraction(new Item{id="cistern-record",kind="relic",x=660,y=200,label="RECORD / THE ROOT KEEPER",story="We built the channels to carry water. Something living found another use for them. A spared life may remember the road."},interactions);
                 var bridge=Group("MERCY — living root bridge",root); room.rootBridge=bridge;
                 // Remembered geometry is deliberately separate from the imported source collision.
                 Geometry(new RectData{x=420,y=310,w=570,h=15},"EchoPlatform",bridge,bridge,true);

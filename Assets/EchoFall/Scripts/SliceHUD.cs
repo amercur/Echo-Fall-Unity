@@ -10,6 +10,8 @@ namespace EchoFall.Movement
         public SliceSession session;
         Text title, subtitle, health, status, prompt, message, modalTitle, modalBody, loop, map;
         RectTransform root;
+        RectTransform safeFrame;
+        Image transition;
         GameObject modal, shade;
         readonly Button[] buttons = new Button[3];
         Font font;
@@ -21,6 +23,8 @@ namespace EchoFall.Movement
             var scaler = gameObject.AddComponent<CanvasScaler>(); scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1600,900); scaler.matchWidthOrHeight = .5f;
             gameObject.AddComponent<GraphicRaycaster>(); root = GetComponent<RectTransform>();
+            var safe=new GameObject("Camera safe frame",typeof(RectTransform)); safe.transform.SetParent(root,false);
+            safeFrame=safe.GetComponent<RectTransform>(); safeFrame.anchorMin=Vector2.zero; safeFrame.anchorMax=Vector2.one; safeFrame.offsetMin=safeFrame.offsetMax=Vector2.zero; root=safeFrame;
             if (FindAnyObjectByType<EventSystem>() == null) new GameObject("Slice UI input", typeof(EventSystem), typeof(InputSystemUIInputModule));
             Panel("Title backing", root, new Vector2(0,1), new Vector2(0,1), new Vector2(24,-24), new Vector2(680,96), new Color(.03f,.05f,.075f,.72f));
             title = Label(root,"THE WAKE",28,Color.white, new Vector2(0,1),new Vector2(48,-40),new Vector2(670,38));
@@ -31,7 +35,7 @@ namespace EchoFall.Movement
             health = Label(root,"",23,cyan,Vector2.zero,new Vector2(46,95),new Vector2(650,36));
             status = Label(root,"",13,new Color(.65f,.73f,.8f),Vector2.zero,new Vector2(46,56),new Vector2(650,25));
             prompt = Label(root,"",18,gold,new Vector2(.5f,0),new Vector2(-480,175),new Vector2(960,38)); prompt.alignment = TextAnchor.MiddleCenter;
-            message = Label(root,"",16,new Color(.8f,.86f,.88f),new Vector2(.5f,0),new Vector2(-490,224),new Vector2(980,56)); message.alignment = TextAnchor.MiddleCenter;
+            message = Label(root,"",15,new Color(.68f,.78f,.8f),new Vector2(0,1),new Vector2(49,-121),new Vector2(760,58)); message.alignment = TextAnchor.UpperLeft;
             var hint = Label(root,"E  INTERACT    ESC  CONTROLS\nR  TRANSFER",13,new Color(.56f,.67f,.72f),new Vector2(1,0),new Vector2(-340,84),new Vector2(290,55)); hint.alignment = TextAnchor.MiddleRight;
             shade = Panel("Modal shade",root,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero,new Color(.015f,.025f,.04f,.83f)).gameObject;
             modal = Panel("Memory panel",root,new Vector2(.5f,.5f),new Vector2(.5f,.5f),new Vector2(-450,-265),new Vector2(900,530),ink).gameObject;
@@ -45,6 +49,19 @@ namespace EchoFall.Movement
                 buttons[i] = rect.gameObject.AddComponent<Button>(); int index=i; buttons[i].onClick.AddListener(()=>session.ChooseOption(index));
                 var text = Label(rect,"",17,cyan,new Vector2(0,1),new Vector2(16,-6),new Vector2(780,32)); text.alignment=TextAnchor.MiddleLeft;
             }
+            transition=Panel("Room transition",root,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero,new Color(.012f,.022f,.032f,1)).GetComponent<Image>();
+        }
+        public System.Collections.IEnumerator FadeRoom(float opacity,float duration)
+        {
+            if(transition==null)yield break;
+            float start=transition.color.a,elapsed=0;
+            while(elapsed<duration)
+            {
+                elapsed+=Time.unscaledDeltaTime;
+                var color=transition.color; color.a=Mathf.Lerp(start,opacity,Mathf.SmoothStep(0,1,elapsed/duration)); transition.color=color;
+                yield return null;
+            }
+            var final=transition.color; final.a=opacity; transition.color=final;
         }
         RectTransform Panel(string name, Transform parent, Vector2 min, Vector2 max, Vector2 position, Vector2 size, Color color)
         {
@@ -61,15 +78,16 @@ namespace EchoFall.Movement
         void Update()
         {
             if(session==null)return;
+            if(Camera.main!=null && safeFrame!=null) { var viewport=Camera.main.rect; safeFrame.anchorMin=viewport.min; safeFrame.anchorMax=viewport.max; }
             if(session.Room!=null) { title.text=session.Room.title; subtitle.text=session.Room.subtitle; }
             loop.text="LIFE " + session.Archive.loop.ToString("00") + "   /   " + (session.Archive.active=="fire"?"EMBER":session.Archive.active.ToUpperInvariant());
             health.text="INTEGRITY   " + new string('◆',session.combat.Integrity) + new string('◇',6-session.combat.Integrity) + "    ·    RESONANCE  " + session.combat.Resonance;
             status.text="J  STRIKE   F  DEFLECT   Q  IMPRINT   H  MEND   C  MEMORY" + (session.combat.Fracture>0?"   FRACTURE "+session.combat.Fracture:"");
-            map.text="WAKE — PROCESSION\n   |          |\nBELFRY — ARCHIVE\n   CISTERN · "+session.Visited.Count+" / 5 visited";
+            map.text="THE FIRST RETURN\n"+session.Visited.Count+" / 5 PLACES WITNESSED";
             prompt.text=session.Playing && session.Nearest!=null ? "[ E / Y ]   "+session.Nearest.label : "";
             message.text=string.IsNullOrEmpty(session.CurrentMessage)?session.Objective:session.CurrentMessage;
             bool show=!session.Playing && session.Screen!=SliceScreen.Loading;
-            shade.SetActive(show || session.Screen==SliceScreen.Loading); modal.SetActive(show);
+            shade.SetActive(show); modal.SetActive(show);
             if(show)
             {
                 modalTitle.text=session.ModalTitle; modalBody.text=session.ModalBody;

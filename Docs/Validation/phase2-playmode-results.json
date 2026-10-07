@@ -1,3 +1,97 @@
 {
-    "status":  "running"
+    "status":  "completed",
+    "duration":  35.11,
+    "summary":  {
+                    "total":  12,
+                    "passed":  12,
+                    "failed":  0,
+                    "skipped":  0,
+                    "inconclusive":  0
+                },
+    "results":  [
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementPlayTests.BelfryClimbRunsInPlayModeAndCameraTracksSummit",
+                        "Status":  "Passed",
+                        "Duration":  13.9906781,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementPlayTests.FixedTrajectoryRunsAt30_60_144RenderTargets",
+                        "Status":  "Passed",
+                        "Duration":  3.72435,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementPlayTests.InputEdgesAreConsumedOnceAndUpDoesNotJump",
+                        "Status":  "Passed",
+                        "Duration":  0.7460371,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.MovementPlayTests.SceneRunsWithNativeInputPhysicsSpritesAndCamera",
+                        "Status":  "Passed",
+                        "Duration":  1.4432675,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.ChargedGuardCountersRedAndMatureImprintConsumesResonance",
+                        "Status":  "Passed",
+                        "Duration":  4.1140794,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.CompletedFiveRoomRunUsesGlassThenChangesTheNextWake",
+                        "Status":  "Passed",
+                        "Duration":  1.6852488,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.EnemyDamageBacktracksButTransferResetsRunState",
+                        "Status":  "Passed",
+                        "Duration":  1.5655827,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.FatalMercyStillTransfersExactlyOneDecisionAndEmberClosesRoots",
+                        "Status":  "Passed",
+                        "Duration":  1.5003184,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.FiveRoomsAndEveryOpenGateHaveValidSpawnsAndCollision",
+                        "Status":  "Passed",
+                        "Duration":  1.8909614,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.MercyChangesCreatureAndCreatesActualRootCollisionNextLife",
+                        "Status":  "Passed",
+                        "Duration":  1.3057938,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.NativeInputMovementAttackAndPauseAreOperational",
+                        "Status":  "Passed",
+                        "Duration":  1.8253755,
+                        "Message":  null,
+                        "StackTrace":  null
+                    },
+                    {
+                        "FullName":  "EchoFall.Movement.Tests.SlicePlayTests.WhiteDeflectCompletesTrainingAndRedBypassesOrdinaryDash",
+                        "Status":  "Passed",
+                        "Duration":  1.2340077,
+                        "Message":  null,
+                        "StackTrace":  null
+                    }
+                ]
 }

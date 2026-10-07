@@ -1,0 +1,72 @@
+{
+    "output":  null,
+    "diagnostics":  [
+
+                    ],
+    "success":  true,
+    "result":  [
+                   {
+                       "scene":  "WakeSlice",
+                       "objects":  6,
+                       "missingScripts":  0,
+                       "missingPrefabs":  0,
+                       "missingSprites":  0,
+                       "colliders":  1,
+                       "lights":  1
+                   },
+                   {
+                       "scene":  "MovementLab",
+                       "objects":  31,
+                       "missingScripts":  0,
+                       "missingPrefabs":  0,
+                       "missingSprites":  0,
+                       "colliders":  20,
+                       "lights":  0
+                   },
+                   {
+                       "scene":  "Wake_wake",
+                       "objects":  475,
+                       "missingScripts":  0,
+                       "missingPrefabs":  0,
+                       "missingSprites":  0,
+                       "colliders":  4,
+                       "lights":  12
+                   },
+                   {
+                       "scene":  "Wake_belfry",
+                       "objects":  528,
+                       "missingScripts":  0,
+                       "missingPrefabs":  0,
+                       "missingSprites":  0,
+                       "colliders":  10,
+                       "lights":  9
+                   },
+                   {
+                       "scene":  "Wake_cistern",
+                       "objects":  473,
+                       "missingScripts":  0,
+                       "missingPrefabs":  0,
+                       "missingSprites":  0,
+                       "colliders":  7,
+                       "lights":  14
+                   },
+                   {
+                       "scene":  "Wake_archive",
+                       "objects":  623,
+                       "missingScripts":  0,
+                       "missingPrefabs":  0,
+                       "missingSprites":  0,
+                       "colliders":  4,
+                       "lights":  13
+                   },
+                   {
+                       "scene":  "Wake_procession",
+                       "objects":  588,
+                       "missingScripts":  0,
+                       "missingPrefabs":  0,
+                       "missingSprites":  0,
+                       "colliders":  6,
+                       "lights":  11
+                   }
+               ]
+}
