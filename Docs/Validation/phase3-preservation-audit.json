@@ -1,0 +1,74 @@
+[
+    {
+        "path":  "Assets/EchoFall/Prefabs\\Player.prefab.meta",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Prefabs\\Player.prefab",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_wake.unity.meta",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_wake.unity",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_procession.unity.meta",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_procession.unity",
+        "unchanged":  false
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_cistern.unity.meta",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_cistern.unity",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_belfry.unity.meta",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_belfry.unity",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_archive.unity.meta",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_archive.unity",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\WakeSlice.unity.meta",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\WakeSlice.unity",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\MovementLab.unity.meta",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\MovementLab.unity",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\MovementTuning.cs.meta",
+        "unchanged":  true
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\MovementTuning.cs",
+        "unchanged":  true
+    }
+]

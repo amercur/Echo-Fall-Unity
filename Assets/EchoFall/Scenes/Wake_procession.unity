@@ -15189,7 +15189,7 @@ Transform:
   m_GameObject: {fileID: 685243298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.5, y: 0, z: 0}
+  m_LocalPosition: {x: 10.45, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15212,8 +15212,8 @@ MonoBehaviour:
   kind: sentinel
   training: 0
   hp: 7
-  left: 8.9
-  right: 11.2
+  left: 8.8
+  right: 10.8
   strain: 0
   frames:
   - {fileID: 778334186437190414, guid: 0ffe1c02a69639446a6b9b57234f595e, type: 3}
@@ -44812,8 +44812,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: EchoFall.Movement::EchoFall.Movement.SliceInteraction
   id: procession-east
-  kind: lore
-  label: SEALED / BEYOND THIS SLICE
+  kind: gate
+  label: THE COURT / FACE THE KING
   story: Beyond this threshold lies another chapter. Explore the five open rooms,
     then return to the transfer glass.
   target: king

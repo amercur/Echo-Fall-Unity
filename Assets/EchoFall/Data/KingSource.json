@@ -1,0 +1,89 @@
+{
+  "rooms": [
+    {
+      "id": "king",
+      "name": "THE COURT / A FUTURE WITHOUT CHOICE",
+      "width": 1280,
+      "top": -80,
+      "bottom": 540,
+      "enemies": [],
+      "interactions": [
+        {
+          "id": "king-west",
+          "kind": "gate",
+          "x": 65,
+          "y": 417,
+          "target": "procession",
+          "entry": "east",
+          "label": "THE CAUSEWAY"
+        },
+        {
+          "id": "king-east",
+          "kind": "gate",
+          "x": 1210,
+          "y": 417,
+          "target": "cradle",
+          "entry": "west",
+          "label": "DESCEND TO THE CRADLE",
+          "requires": "king"
+        }
+      ],
+      "ground": [
+        {
+          "x": 0,
+          "y": 452,
+          "w": 1280,
+          "h": 100
+        }
+      ],
+      "platforms": [
+        {
+          "x": 375,
+          "y": 342,
+          "w": 125,
+          "h": 20
+        },
+        {
+          "x": 950,
+          "y": 342,
+          "w": 125,
+          "h": 20
+        }
+      ],
+      "solids": [],
+      "hazards": [],
+      "pogo": [],
+      "spawns": [
+        {
+          "id": "default",
+          "x": 116,
+          "y": 452
+        },
+        {
+          "id": "west",
+          "x": 116,
+          "y": 452
+        },
+        {
+          "id": "east",
+          "x": 1181,
+          "y": 452
+        }
+      ],
+      "decor": [
+        {
+          "kind": "arch",
+          "x": 720,
+          "y": 452,
+          "scale": 0.8
+        },
+        {
+          "kind": "spire",
+          "x": 1080,
+          "y": 452,
+          "scale": 0.6
+        }
+      ]
+    }
+  ]
+}

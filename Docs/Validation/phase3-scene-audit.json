@@ -1,0 +1,72 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Tools/Phase3SceneAudit.cs",
+      "entry": "Phase3SceneAudit.Run"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 1610,
+      "executeMs": 5340,
+      "assemblyName": "PipelineRunScript_Phase3SceneAudit_a59d47537a474858802add776a4a713e",
+      "success": true,
+      "result": {
+        "scenes": [
+          {
+            "id": "WakeSlice",
+            "missingScripts": 0,
+            "missingSprites": 0
+          },
+          {
+            "id": "MovementLab",
+            "missingScripts": 0,
+            "missingSprites": 0
+          },
+          {
+            "id": "Wake_wake",
+            "missingScripts": 0,
+            "missingSprites": 0
+          },
+          {
+            "id": "Wake_belfry",
+            "missingScripts": 0,
+            "missingSprites": 0
+          },
+          {
+            "id": "Wake_cistern",
+            "missingScripts": 0,
+            "missingSprites": 0
+          },
+          {
+            "id": "Wake_archive",
+            "missingScripts": 0,
+            "missingSprites": 0
+          },
+          {
+            "id": "Wake_procession",
+            "missingScripts": 0,
+            "missingSprites": 0
+          },
+          {
+            "id": "Wake_king",
+            "missingScripts": 0,
+            "missingSprites": 0
+          }
+        ],
+        "kingFrames": 8,
+        "kingPixelsPerUnit": 100,
+        "missing": 0
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

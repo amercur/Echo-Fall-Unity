@@ -22,6 +22,7 @@ namespace EchoFall.Movement
             if (emberScar != null) emberScar.gameObject.SetActive(session.Archive.Remembers("fire"));
             foreach (var e in GetComponentsInChildren<SliceEnemy>())
             {
+                if(e is SliceKing king)king.RestorePrediction(session.KingStage,session.KingBreaks,session.KingStyle);
                 if (session.Defeated.Contains(e.id)) e.gameObject.SetActive(false);
                 else if (session.EnemyHealth.TryGetValue(e.id, out float hp)) e.hp = hp;
             }

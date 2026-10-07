@@ -32,6 +32,51 @@ namespace EchoFall.Movement.Editor
         static readonly Color Stone = new Color(.18f,.25f,.3f), Edge = new Color(.36f,.46f,.49f), Cyan = new Color(.35f,.86f,.81f), Gold = new Color(.88f,.66f,.37f);
         static Vector2 Point(float x,float y) => new Vector2(x/100,(452-y)/100);
 
+        // Incremental Phase 3 authoring: never rebuild the existing five-room composition.
+        [MenuItem("Echo Fall/Build Phase 3 Court")]
+        public static void BuildCourt()
+        {
+            if(EditorApplication.isPlaying)throw new InvalidOperationException("Stop Play Mode first.");
+            AssetDatabase.Refresh();
+            block=AssetDatabase.LoadAssetAtPath<Sprite>(Root+"/Art/Block.png");
+            lit=AssetDatabase.LoadAssetAtPath<Material>(Root+"/Materials/WakeLit.mat");
+            unlit=AssetDatabase.LoadAssetAtPath<Material>(Root+"/Materials/WakeUnlit.mat");
+            arch=AssetDatabase.LoadAssetAtPath<Sprite>(Root+"/Art/Wake/ruin-arch.png");
+            spire=AssetDatabase.LoadAssetAtPath<Sprite>(Root+"/Art/Wake/choir-spire.png");
+            ledge=AssetDatabase.LoadAssetAtPath<Sprite>(Root+"/Art/Wake/ruin-ledge.png");
+            SliceEnemyArt("king");
+            var data=JsonUtility.FromJson<Source>(File.ReadAllText(Root+"/Data/KingSource.json")).rooms[0];
+            BuildRoom(data);
+            var room=UnityEngine.Object.FindAnyObjectByType<SliceRoom>();
+            var end=room.GetComponentsInChildren<SliceInteraction>().First(i=>i.id=="king-east");
+            end.kind="victory";end.requires="king";end.label="A FUTURE UNMADE / TRANSFER";
+            end.story="The Court releases you. The deeper chapter remains beyond this milestone.";
+            var actor=Group("The King",room.transform);actor.position=new Vector2(9.27f,0);
+            var king=actor.gameObject.AddComponent<SliceKing>();king.id="king/boss";king.kind="king";king.hp=40;king.left=3.22f;king.right=10.67f;
+            king.frames=AssetDatabase.LoadAllAssetsAtPath(Root+"/Art/Wake/king.png").OfType<Sprite>().OrderBy(s=>s.name).ToArray();
+            king.visual=Sprite("Original King atlas",king.frames[0],actor.position,Vector2.one*.65f,Color.white,9,actor,false);
+            WakeVisualPass.ApplyCurrentRoom(room);
+            // Arena seals are visible at the same boundaries used by the motor clamp.
+            foreach(float x in new[]{2.65f,11.2f})
+            {
+                var seal=Group("Court seal",room.transform);seal.position=new Vector2(x,0);
+                var gate=seal.gameObject.AddComponent<SliceArenaSeal>();gate.king=king;
+            }
+            EditorSceneManager.SaveScene(room.gameObject.scene);
+            var procession=EditorSceneManager.OpenScene(Root+"/Scenes/Wake_procession.unity");
+            var gateToKing=UnityEngine.Object.FindObjectsByType<SliceInteraction>().First(i=>i.target=="king");
+            gateToKing.kind="gate";gateToKing.label="THE COURT / FACE THE KING";gateToKing.requires=gateToKing.memory=gateToKing.blockedBy=null;
+            // Existing source roster: one deliberate Sentinel/Lancer pair; no new swarm.
+            var lancer=UnityEngine.Object.FindObjectsByType<SliceEnemy>().First(e=>e.id=="procession/enemy-1");
+            var sentinel=UnityEngine.Object.FindObjectsByType<SliceEnemy>().First(e=>e.id=="procession/enemy-3");
+            sentinel.transform.position=new Vector2(lancer.transform.position.x+.65f,lancer.transform.position.y);
+            sentinel.left=lancer.left;sentinel.right=lancer.right;
+            EditorSceneManager.SaveScene(procession);
+            string path=Root+"/Scenes/Wake_king.unity";
+            if(!EditorBuildSettings.scenes.Any(s=>s.path==path))EditorBuildSettings.scenes=EditorBuildSettings.scenes.Concat(new[]{new EditorBuildSettingsScene(path,true)}).ToArray();
+            AssetDatabase.SaveAssets();EditorSceneManager.OpenScene(Root+"/Scenes/WakeSlice.unity");
+        }
+
         [MenuItem("Echo Fall/Build Wake Slice")]
         public static void Build()
         {

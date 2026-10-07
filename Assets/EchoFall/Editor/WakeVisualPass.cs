@@ -49,6 +49,12 @@ namespace EchoFall.Movement.Editor
             Debug.Log("Visual pass applied to five rooms and WakeSlice; gameplay geometry preserved.");
         }
         static string CollisionSignature(SliceRoom room) => string.Join("\n",room.GetComponentsInChildren<BoxCollider2D>(true).Select(c=>c.gameObject.layer+"|"+c.transform.position.ToString("R")+"|"+c.transform.lossyScale.ToString("R")+"|"+c.size.ToString("R")+"|"+c.offset.ToString("R")+"|"+c.isTrigger).OrderBy(s=>s));
+        public static void ApplyCurrentRoom(SliceRoom room)
+        {
+            Prepare();
+            if(!AssetDatabase.IsValidFolder(Root+"/Art/VisualMeshes/"+room.id))AssetDatabase.CreateFolder(Root+"/Art/VisualMeshes",room.id);
+            ApplyRoom(room);
+        }
         static void Prepare()
         {
             block=AssetDatabase.LoadAssetAtPath<Sprite>(Root+"/Art/Block.png");

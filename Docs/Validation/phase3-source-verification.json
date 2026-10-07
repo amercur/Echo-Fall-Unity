@@ -1,0 +1,67 @@
+[
+    {
+        "manifest":  "Docs/Validation/phase2-source-hashes.json",
+        "path":  "game.js",
+        "unchanged":  true
+    },
+    {
+        "manifest":  "Docs/Validation/phase2-source-hashes.json",
+        "path":  "data/world.json",
+        "unchanged":  true
+    },
+    {
+        "manifest":  "Docs/Validation/phase2-source-hashes.json",
+        "path":  "assets/art-manifest.js",
+        "unchanged":  true
+    },
+    {
+        "manifest":  "Docs/Validation/phase2-source-hashes.json",
+        "path":  "assets/ruin-arch.png",
+        "unchanged":  true
+    },
+    {
+        "manifest":  "Docs/Validation/phase2-source-hashes.json",
+        "path":  "assets/ruin-ledge.png",
+        "unchanged":  true
+    },
+    {
+        "manifest":  "Docs/Validation/phase2-source-hashes.json",
+        "path":  "assets/choir-spire.png",
+        "unchanged":  true
+    },
+    {
+        "manifest":  "Docs/Validation/phase2-source-hashes.json",
+        "path":  "assets/sentinel.png",
+        "unchanged":  true
+    },
+    {
+        "manifest":  "Docs/Validation/phase2-source-hashes.json",
+        "path":  "assets/lancer.png",
+        "unchanged":  true
+    },
+    {
+        "manifest":  "Docs/Validation/phase2-source-hashes.json",
+        "path":  "assets/drone.png",
+        "unchanged":  true
+    },
+    {
+        "manifest":  "Docs/Validation/phase3-source-hashes.json",
+        "path":  "game.js",
+        "unchanged":  true
+    },
+    {
+        "manifest":  "Docs/Validation/phase3-source-hashes.json",
+        "path":  "data/world.json",
+        "unchanged":  true
+    },
+    {
+        "manifest":  "Docs/Validation/phase3-source-hashes.json",
+        "path":  "assets/art-manifest.js",
+        "unchanged":  true
+    },
+    {
+        "manifest":  "Docs/Validation/phase3-source-hashes.json",
+        "path":  "assets/king.png",
+        "unchanged":  true
+    }
+]

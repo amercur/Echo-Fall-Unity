@@ -313,25 +313,6 @@
       "source_location": "L5"
     },
     {
-      "id": "assets_echofall_scripts_slicepogo_echofall_movement_slicepogo",
-      "label": "SlicePogo",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "SliceEnemy",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "EchoFall.Movement",
-        "scope_chain": [
-          "s19"
-        ]
-      },
-      "norm_label": "slicepogo",
-      "source_file": "Assets/EchoFall/Scripts/SlicePogo.cs",
-      "source_location": "L2"
-    },
-    {
       "id": "assets_echofall_scripts_sliceprojectile_echofall_movement_sliceprojectile",
       "label": "SliceProjectile",
       "_callable": true,
@@ -793,25 +774,6 @@
       "source_location": "L8"
     },
     {
-      "id": "assets_echofall_scripts_sliceplayerpresentation_echofall_movement_sliceplayerpresentation",
-      "label": "SlicePlayerPresentation",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "PlayerVisual",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "EchoFall.Movement",
-        "scope_chain": [
-          "s22"
-        ]
-      },
-      "norm_label": "sliceplayerpresentation",
-      "source_file": "Assets/EchoFall/Scripts/SlicePlayerPresentation.cs",
-      "source_location": "L5"
-    },
-    {
       "id": "tools_playerpresentationreview_playerpresentationreview",
       "label": "PlayerPresentationReview",
       "_callable": true,
@@ -823,6 +785,25 @@
       "norm_label": "playerpresentationreview",
       "source_file": "Tools/PlayerPresentationReview.cs",
       "source_location": "L10"
+    },
+    {
+      "id": "assets_echofall_scripts_sliceplayerpresentation_echofall_movement_sliceplayerpresentation",
+      "label": "SlicePlayerPresentation",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 49,
+      "community_name": "SlicePlayerPresentation",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "EchoFall.Movement",
+        "scope_chain": [
+          "s22"
+        ]
+      },
+      "norm_label": "sliceplayerpresentation",
+      "source_file": "Assets/EchoFall/Scripts/SlicePlayerPresentation.cs",
+      "source_location": "L5"
     },
     {
       "id": "assets_echofall_scripts_labmarker_echofall_movement_labmarker",
@@ -882,44 +863,6 @@
       "source_location": "L4"
     },
     {
-      "id": "assets_echofall_scripts_sliceroom_echofall_movement_sliceroom",
-      "label": "SliceRoom",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "MonoBehaviour",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "EchoFall.Movement",
-        "scope_chain": [
-          "s34"
-        ]
-      },
-      "norm_label": "sliceroom",
-      "source_file": "Assets/EchoFall/Scripts/SliceRoom.cs",
-      "source_location": "L7"
-    },
-    {
-      "id": "assets_echofall_scripts_sliceroom_echofall_movement_slicespawn",
-      "label": "SliceSpawn",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "MonoBehaviour",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "EchoFall.Movement",
-        "scope_chain": [
-          "s34"
-        ]
-      },
-      "norm_label": "slicespawn",
-      "source_file": "Assets/EchoFall/Scripts/SliceRoom.cs",
-      "source_location": "L6"
-    },
-    {
       "id": "assets_echofall_scripts_slicesound_echofall_movement_slicesound",
       "label": "SliceSound",
       "_callable": true,
@@ -975,6 +918,63 @@
       "norm_label": "wakecamerapresentation",
       "source_file": "Assets/EchoFall/Scripts/WakeCameraPresentation.cs",
       "source_location": "L5"
+    },
+    {
+      "id": "assets_echofall_scripts_slicepogo_echofall_movement_slicepogo",
+      "label": "SlicePogo",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 59,
+      "community_name": ".Strike",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "EchoFall.Movement",
+        "scope_chain": [
+          "s19"
+        ]
+      },
+      "norm_label": "slicepogo",
+      "source_file": "Assets/EchoFall/Scripts/SlicePogo.cs",
+      "source_location": "L2"
+    },
+    {
+      "id": "assets_echofall_scripts_sliceroom_echofall_movement_sliceroom",
+      "label": "SliceRoom",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "unityengine",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "EchoFall.Movement",
+        "scope_chain": [
+          "s34"
+        ]
+      },
+      "norm_label": "sliceroom",
+      "source_file": "Assets/EchoFall/Scripts/SliceRoom.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "assets_echofall_scripts_sliceroom_echofall_movement_slicespawn",
+      "label": "SliceSpawn",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "unityengine",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "EchoFall.Movement",
+        "scope_chain": [
+          "s34"
+        ]
+      },
+      "norm_label": "slicespawn",
+      "source_file": "Assets/EchoFall/Scripts/SliceRoom.cs",
+      "source_location": "L6"
     },
     {
       "id": "tools_checkpointmenureview_checkpointmenureview",
@@ -3954,8 +3954,8 @@
       "source_location": "L24"
     },
     {
-      "id": "assets_echofall_scripts_playermotor_echofall_movement_playermotor_pogo",
-      "label": ".Pogo()",
+      "id": "assets_echofall_scripts_playermotor_echofall_movement_playermotor_refreshairoptions",
+      "label": ".RefreshAirOptions()",
       "_callable": true,
       "_origin": "ast",
       "community": 13,
@@ -3967,31 +3967,13 @@
           "s20"
         ]
       },
-      "norm_label": ".pogo()",
+      "norm_label": ".refreshairoptions()",
       "source_file": "Assets/EchoFall/Scripts/PlayerMotor.cs",
-      "source_location": "L81"
+      "source_location": "L89"
     },
     {
-      "id": "assets_echofall_scripts_playervisual_echofall_movement_playervisual_playattack",
-      "label": ".PlayAttack()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "SliceEnemy",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "EchoFall.Movement",
-        "scope_chain": [
-          "s23"
-        ]
-      },
-      "norm_label": ".playattack()",
-      "source_file": "Assets/EchoFall/Scripts/PlayerVisual.cs",
-      "source_location": "L56"
-    },
-    {
-      "id": "assets_echofall_scripts_slicecombat_echofall_movement_slicecombat_strike",
-      "label": ".Strike()",
+      "id": "assets_echofall_scripts_slicecombat_echofall_movement_slicecombat_hurt",
+      "label": ".Hurt()",
       "_callable": true,
       "_origin": "ast",
       "community": 13,
@@ -4004,22 +3986,54 @@
         ],
         "unresolved_calls": [
           {
-            "callee": "Overlaps",
-            "receiver_type": "Rect",
+            "callee": "Min",
+            "receiver_type": "Mathf",
             "lang": "csharp",
-            "line": "L103"
+            "line": "L119"
           },
           {
-            "callee": "Contains",
-            "receiver_type": "Rect",
+            "callee": "CeilToInt",
+            "receiver_type": "Mathf",
             "lang": "csharp",
-            "line": "L107"
+            "line": "L129"
+          },
+          {
+            "callee": "Max",
+            "receiver_type": "Mathf",
+            "lang": "csharp",
+            "line": "L130"
           }
         ]
       },
-      "norm_label": ".strike()",
+      "norm_label": ".hurt()",
       "source_file": "Assets/EchoFall/Scripts/SliceCombat.cs",
-      "source_location": "L84"
+      "source_location": "L111"
+    },
+    {
+      "id": "assets_echofall_scripts_sliceenemy_echofall_movement_sliceenemy_damage",
+      "label": ".Damage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "SliceEnemy",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "EchoFall.Movement",
+        "scope_chain": [
+          "s20"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Max",
+            "receiver_type": "Mathf",
+            "lang": "csharp",
+            "line": "L70"
+          }
+        ]
+      },
+      "norm_label": ".damage()",
+      "source_file": "Assets/EchoFall/Scripts/SliceEnemy.cs",
+      "source_location": "L67"
     },
     {
       "id": "assets_echofall_scripts_sliceenemy_echofall_movement_sliceenemy_deflected",
@@ -4276,6 +4290,24 @@
       "norm_label": ".matchesoriginalperticktrajectory()",
       "source_file": "Assets/EchoFall/Tests/Editor/ReferenceTrajectoryTests.cs",
       "source_location": "L27"
+    },
+    {
+      "id": "assets_echofall_tests_playmode_movementplaytests_echofall_movement_tests_movementacceptancedriver_fixedupdate",
+      "label": ".FixedUpdate()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "MovementPlayTests",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "EchoFall.Movement.Tests",
+        "scope_chain": [
+          "s204"
+        ]
+      },
+      "norm_label": ".fixedupdate()",
+      "source_file": "Assets/EchoFall/Tests/PlayMode/MovementPlayTests.cs",
+      "source_location": "L184"
     },
     {
       "id": "assets_echofall_tests_playmode_movementplaytests_echofall_movement_tests_movementacceptancedriver_update",
@@ -6334,32 +6366,6 @@
       "source_location": "L18"
     },
     {
-      "id": "assets_echofall_scripts_sliceenemy_echofall_movement_sliceenemy_damage",
-      "label": ".Damage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "SliceCombat",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "EchoFall.Movement",
-        "scope_chain": [
-          "s20"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "Max",
-            "receiver_type": "Mathf",
-            "lang": "csharp",
-            "line": "L70"
-          }
-        ]
-      },
-      "norm_label": ".damage()",
-      "source_file": "Assets/EchoFall/Scripts/SliceEnemy.cs",
-      "source_location": "L67"
-    },
-    {
       "id": "assets_echofall_scripts_movementinput_echofall_movement_movementinput_clearedges",
       "label": ".ClearEdges()",
       "_callable": true,
@@ -6850,22 +6856,36 @@
       "source_location": "L263"
     },
     {
-      "id": "assets_echofall_tests_playmode_movementplaytests_echofall_movement_tests_movementacceptancedriver_fixedupdate",
-      "label": ".FixedUpdate()",
+      "id": "assets_echofall_scripts_playercameraimpulse_echofall_movement_playercameraimpulse_kick",
+      "label": ".Kick()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PlayerMotor",
+      "community": 43,
+      "community_name": "PlayerVisual",
       "file_type": "code",
       "metadata": {
-        "namespace": "EchoFall.Movement.Tests",
+        "namespace": "EchoFall.Movement",
         "scope_chain": [
-          "s204"
+          "s49"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Max",
+            "receiver_type": "Mathf",
+            "lang": "csharp",
+            "line": "L16"
+          },
+          {
+            "callee": "Clamp",
+            "receiver_type": "Mathf",
+            "lang": "csharp",
+            "line": "L16"
+          }
         ]
       },
-      "norm_label": ".fixedupdate()",
-      "source_file": "Assets/EchoFall/Tests/PlayMode/MovementPlayTests.cs",
-      "source_location": "L184"
+      "norm_label": ".kick()",
+      "source_file": "Assets/EchoFall/Scripts/PlayerCameraImpulse.cs",
+      "source_location": "L16"
     },
     {
       "id": "assets_echofall_scripts_playervisual_echofall_movement_playervisual_awake",
@@ -6886,8 +6906,8 @@
       "source_location": "L32"
     },
     {
-      "id": "assets_echofall_scripts_playervisual_echofall_movement_playervisual_bind",
-      "label": ".Bind()",
+      "id": "assets_echofall_scripts_playervisual_echofall_movement_playervisual_impact",
+      "label": ".Impact()",
       "_callable": true,
       "_origin": "ast",
       "community": 43,
@@ -6897,11 +6917,25 @@
         "namespace": "EchoFall.Movement",
         "scope_chain": [
           "s23"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Max",
+            "receiver_type": "Mathf",
+            "lang": "csharp",
+            "line": "L63"
+          },
+          {
+            "callee": "Min",
+            "receiver_type": "Mathf",
+            "lang": "csharp",
+            "line": "L63"
+          }
         ]
       },
-      "norm_label": ".bind()",
+      "norm_label": ".impact()",
       "source_file": "Assets/EchoFall/Scripts/PlayerVisual.cs",
-      "source_location": "L55"
+      "source_location": "L62"
     },
     {
       "id": "assets_echofall_scripts_playervisual_echofall_movement_playervisual_lateupdate",
@@ -7026,6 +7060,42 @@
       "source_location": "L171"
     },
     {
+      "id": "assets_echofall_scripts_playervisual_echofall_movement_playervisual_playdeflect",
+      "label": ".PlayDeflect()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "PlayerVisual",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "EchoFall.Movement",
+        "scope_chain": [
+          "s23"
+        ]
+      },
+      "norm_label": ".playdeflect()",
+      "source_file": "Assets/EchoFall/Scripts/PlayerVisual.cs",
+      "source_location": "L60"
+    },
+    {
+      "id": "assets_echofall_scripts_playervisual_echofall_movement_playervisual_playhurt",
+      "label": ".PlayHurt()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "PlayerVisual",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "EchoFall.Movement",
+        "scope_chain": [
+          "s23"
+        ]
+      },
+      "norm_label": ".playhurt()",
+      "source_file": "Assets/EchoFall/Scripts/PlayerVisual.cs",
+      "source_location": "L58"
+    },
+    {
       "id": "assets_echofall_scripts_playervisual_echofall_movement_playervisual_resetghosts",
       "label": ".ResetGhosts()",
       "_callable": true,
@@ -7114,24 +7184,6 @@
       "source_location": "L159"
     },
     {
-      "id": "assets_echofall_scripts_sliceplayerpresentation_echofall_movement_sliceplayerpresentation_start",
-      "label": ".Start()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "PlayerVisual",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "EchoFall.Movement",
-        "scope_chain": [
-          "s22"
-        ]
-      },
-      "norm_label": ".start()",
-      "source_file": "Assets/EchoFall/Scripts/SlicePlayerPresentation.cs",
-      "source_location": "L9"
-    },
-    {
       "id": "tools_playerpresentationreview_playerpresentationreview_capture",
       "label": ".Capture()",
       "_callable": true,
@@ -7148,40 +7200,46 @@
             "line": "L29"
           },
           {
+            "callee": "RoundToInt",
+            "receiver_type": "Mathf",
+            "lang": "csharp",
+            "line": "L33"
+          },
+          {
             "callee": "ReadPixels",
             "receiver_type": "Texture2D",
             "lang": "csharp",
-            "line": "L39"
+            "line": "L40"
           },
           {
             "callee": "Apply",
             "receiver_type": "Texture2D",
             "lang": "csharp",
-            "line": "L39"
+            "line": "L40"
           },
           {
             "callee": "WriteAllBytes",
             "receiver_type": "File",
             "lang": "csharp",
-            "line": "L40"
+            "line": "L41"
           },
           {
             "callee": "EncodeToPNG",
             "receiver_type": "Texture2D",
             "lang": "csharp",
-            "line": "L40"
+            "line": "L41"
           },
           {
             "callee": "Add",
             "receiver_type": "List",
             "lang": "csharp",
-            "line": "L41"
+            "line": "L42"
           },
           {
             "callee": "Release",
             "receiver_type": "RenderTexture",
             "lang": "csharp",
-            "line": "L43"
+            "line": "L44"
           }
         ]
       },
@@ -7203,49 +7261,49 @@
             "callee": "Clear",
             "receiver_type": "List",
             "lang": "csharp",
-            "line": "L49"
+            "line": "L50"
           },
           {
             "callee": "GetCurrentDirectory",
             "receiver_type": "Directory",
             "lang": "csharp",
-            "line": "L50"
+            "line": "L51"
           },
           {
             "callee": "CreateDirectory",
             "receiver_type": "Directory",
             "lang": "csharp",
-            "line": "L50"
+            "line": "L51"
           },
           {
             "callee": "LoadSceneAsync",
             "receiver_type": "SceneManager",
             "lang": "csharp",
-            "line": "L54"
+            "line": "L55"
           },
           {
             "callee": "NameToLayer",
             "receiver_type": "LayerMask",
             "lang": "csharp",
-            "line": "L69"
+            "line": "L70"
           },
           {
             "callee": "AddComponent",
             "receiver_type": "GameObject",
             "lang": "csharp",
-            "line": "L69"
+            "line": "L70"
           },
           {
             "callee": "SyncTransforms",
             "receiver_type": "Physics2D",
             "lang": "csharp",
-            "line": "L69"
+            "line": "L70"
           }
         ]
       },
       "norm_label": ".captureall()",
       "source_file": "Tools/PlayerPresentationReview.cs",
-      "source_location": "L45"
+      "source_location": "L46"
     },
     {
       "id": "tools_playerpresentationreview_playerpresentationreview_frames",
@@ -7292,94 +7350,12 @@
       "source_location": "L19"
     },
     {
-      "id": "assets_echofall_scripts_playercameraimpulse_echofall_movement_playercameraimpulse_kick",
-      "label": ".Kick()",
+      "id": "assets_echofall_scripts_playervisual_echofall_movement_playervisual_bind",
+      "label": ".Bind()",
       "_callable": true,
       "_origin": "ast",
-      "community": 46,
-      "community_name": ".Hurt",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "EchoFall.Movement",
-        "scope_chain": [
-          "s49"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "Max",
-            "receiver_type": "Mathf",
-            "lang": "csharp",
-            "line": "L16"
-          },
-          {
-            "callee": "Clamp",
-            "receiver_type": "Mathf",
-            "lang": "csharp",
-            "line": "L16"
-          }
-        ]
-      },
-      "norm_label": ".kick()",
-      "source_file": "Assets/EchoFall/Scripts/PlayerCameraImpulse.cs",
-      "source_location": "L16"
-    },
-    {
-      "id": "assets_echofall_scripts_playermotor_echofall_movement_playermotor_refreshairoptions",
-      "label": ".RefreshAirOptions()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 46,
-      "community_name": ".Hurt",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "EchoFall.Movement",
-        "scope_chain": [
-          "s20"
-        ]
-      },
-      "norm_label": ".refreshairoptions()",
-      "source_file": "Assets/EchoFall/Scripts/PlayerMotor.cs",
-      "source_location": "L89"
-    },
-    {
-      "id": "assets_echofall_scripts_playervisual_echofall_movement_playervisual_impact",
-      "label": ".Impact()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 46,
-      "community_name": ".Hurt",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "EchoFall.Movement",
-        "scope_chain": [
-          "s23"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "Max",
-            "receiver_type": "Mathf",
-            "lang": "csharp",
-            "line": "L63"
-          },
-          {
-            "callee": "Min",
-            "receiver_type": "Mathf",
-            "lang": "csharp",
-            "line": "L63"
-          }
-        ]
-      },
-      "norm_label": ".impact()",
-      "source_file": "Assets/EchoFall/Scripts/PlayerVisual.cs",
-      "source_location": "L62"
-    },
-    {
-      "id": "assets_echofall_scripts_playervisual_echofall_movement_playervisual_playdeflect",
-      "label": ".PlayDeflect()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 46,
-      "community_name": ".Hurt",
+      "community": 49,
+      "community_name": "SlicePlayerPresentation",
       "file_type": "code",
       "metadata": {
         "namespace": "EchoFall.Movement",
@@ -7387,65 +7363,27 @@
           "s23"
         ]
       },
-      "norm_label": ".playdeflect()",
+      "norm_label": ".bind()",
       "source_file": "Assets/EchoFall/Scripts/PlayerVisual.cs",
-      "source_location": "L60"
+      "source_location": "L55"
     },
     {
-      "id": "assets_echofall_scripts_playervisual_echofall_movement_playervisual_playhurt",
-      "label": ".PlayHurt()",
+      "id": "assets_echofall_scripts_sliceplayerpresentation_echofall_movement_sliceplayerpresentation_start",
+      "label": ".Start()",
       "_callable": true,
       "_origin": "ast",
-      "community": 46,
-      "community_name": ".Hurt",
+      "community": 49,
+      "community_name": "SlicePlayerPresentation",
       "file_type": "code",
       "metadata": {
         "namespace": "EchoFall.Movement",
         "scope_chain": [
-          "s23"
+          "s22"
         ]
       },
-      "norm_label": ".playhurt()",
-      "source_file": "Assets/EchoFall/Scripts/PlayerVisual.cs",
-      "source_location": "L58"
-    },
-    {
-      "id": "assets_echofall_scripts_slicecombat_echofall_movement_slicecombat_hurt",
-      "label": ".Hurt()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 46,
-      "community_name": ".Hurt",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "EchoFall.Movement",
-        "scope_chain": [
-          "s51"
-        ],
-        "unresolved_calls": [
-          {
-            "callee": "Min",
-            "receiver_type": "Mathf",
-            "lang": "csharp",
-            "line": "L119"
-          },
-          {
-            "callee": "CeilToInt",
-            "receiver_type": "Mathf",
-            "lang": "csharp",
-            "line": "L129"
-          },
-          {
-            "callee": "Max",
-            "receiver_type": "Mathf",
-            "lang": "csharp",
-            "line": "L130"
-          }
-        ]
-      },
-      "norm_label": ".hurt()",
-      "source_file": "Assets/EchoFall/Scripts/SliceCombat.cs",
-      "source_location": "L111"
+      "norm_label": ".start()",
+      "source_file": "Assets/EchoFall/Scripts/SlicePlayerPresentation.cs",
+      "source_location": "L9"
     },
     {
       "id": "assets_echofall_scripts_labmarker_echofall_movement_labmarker_awake",
@@ -7584,24 +7522,6 @@
       "norm_label": ".lateupdate()",
       "source_file": "Assets/EchoFall/Scripts/SliceParallax.cs",
       "source_location": "L9"
-    },
-    {
-      "id": "assets_echofall_scripts_sliceroom_echofall_movement_sliceroom_spawn",
-      "label": ".Spawn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "MonoBehaviour",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "EchoFall.Movement",
-        "scope_chain": [
-          "s34"
-        ]
-      },
-      "norm_label": ".spawn()",
-      "source_file": "Assets/EchoFall/Scripts/SliceRoom.cs",
-      "source_location": "L13"
     },
     {
       "id": "assets_echofall_scripts_slicesound_echofall_movement_slicesound_ondestroy",
@@ -7852,6 +7772,92 @@
       "norm_label": ".onprecull()",
       "source_file": "Assets/EchoFall/Scripts/WakeCameraPresentation.cs",
       "source_location": "L12"
+    },
+    {
+      "id": "assets_echofall_scripts_playermotor_echofall_movement_playermotor_pogo",
+      "label": ".Pogo()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 59,
+      "community_name": ".Strike",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "EchoFall.Movement",
+        "scope_chain": [
+          "s20"
+        ]
+      },
+      "norm_label": ".pogo()",
+      "source_file": "Assets/EchoFall/Scripts/PlayerMotor.cs",
+      "source_location": "L81"
+    },
+    {
+      "id": "assets_echofall_scripts_playervisual_echofall_movement_playervisual_playattack",
+      "label": ".PlayAttack()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 59,
+      "community_name": ".Strike",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "EchoFall.Movement",
+        "scope_chain": [
+          "s23"
+        ]
+      },
+      "norm_label": ".playattack()",
+      "source_file": "Assets/EchoFall/Scripts/PlayerVisual.cs",
+      "source_location": "L56"
+    },
+    {
+      "id": "assets_echofall_scripts_slicecombat_echofall_movement_slicecombat_strike",
+      "label": ".Strike()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 59,
+      "community_name": ".Strike",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "EchoFall.Movement",
+        "scope_chain": [
+          "s51"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Overlaps",
+            "receiver_type": "Rect",
+            "lang": "csharp",
+            "line": "L103"
+          },
+          {
+            "callee": "Contains",
+            "receiver_type": "Rect",
+            "lang": "csharp",
+            "line": "L107"
+          }
+        ]
+      },
+      "norm_label": ".strike()",
+      "source_file": "Assets/EchoFall/Scripts/SliceCombat.cs",
+      "source_location": "L84"
+    },
+    {
+      "id": "assets_echofall_scripts_sliceroom_echofall_movement_sliceroom_spawn",
+      "label": ".Spawn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "unityengine",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "EchoFall.Movement",
+        "scope_chain": [
+          "s34"
+        ]
+      },
+      "norm_label": ".spawn()",
+      "source_file": "Assets/EchoFall/Scripts/SliceRoom.cs",
+      "source_location": "L13"
     },
     {
       "id": "tools_checkpointmenureview_checkpointmenureview_show",
@@ -11390,6 +11396,17 @@
       "source_location": "L1"
     },
     {
+      "id": "assets_echofall_scripts_slicecombat_cs_vector2",
+      "label": "Vector2",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "SliceEnemy",
+      "file_type": "code",
+      "norm_label": "vector2",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "assets_echofall_scripts_sliceenemy_cs_rect",
       "label": "Rect",
       "_origin": "ast",
@@ -11500,6 +11517,18 @@
       "norm_label": "vector2",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "docs_playerpresentation",
+      "label": "PlayerPresentation.md",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "WakeSlice five-room memory loop",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "playerpresentation.md",
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L1"
     },
     {
       "id": "readme",
@@ -12184,6 +12213,17 @@
       "norm_label": "argumentexception",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "assets_echofall_scripts_slicecheckpoint",
+      "label": "SliceCheckpoint.cs",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "SliceArchive",
+      "file_type": "code",
+      "norm_label": "slicecheckpoint.cs",
+      "source_file": "Assets/EchoFall/Scripts/SliceCheckpoint.cs",
+      "source_location": "L1"
     },
     {
       "id": "assets_echofall_scripts_slicecheckpoint_cs_list",
@@ -13403,116 +13443,6 @@
       "source_location": "L167"
     },
     {
-      "id": "packages_packages_lock_com_unity_nuget_mono_cecil_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "com.unity.test-framework",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L227"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_nuget_mono_cecil_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "com.unity.test-framework",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L225"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_nuget_mono_cecil_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "com.unity.test-framework",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L226"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_nuget_mono_cecil_url",
-      "label": "url",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "com.unity.test-framework",
-      "file_type": "code",
-      "norm_label": "url",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L228"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_nuget_mono_cecil_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "com.unity.test-framework",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L224"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_pipeline_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "com.unity.test-framework",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L241"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_pipeline_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "com.unity.test-framework",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L239"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_pipeline_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "com.unity.test-framework",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L240"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_pipeline_url",
-      "label": "url",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "com.unity.test-framework",
-      "file_type": "code",
-      "norm_label": "url",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L249"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_pipeline_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "com.unity.test-framework",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L238"
-    },
-    {
       "id": "packages_packages_lock_com_unity_test_framework_depth",
       "label": "depth",
       "_origin": "ast",
@@ -13612,28 +13542,6 @@
       "source_location": "L166"
     },
     {
-      "id": "packages_packages_lock_dependencies_com_unity_nuget_mono_cecil",
-      "label": "com.unity.nuget.mono-cecil",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "com.unity.test-framework",
-      "file_type": "code",
-      "norm_label": "com.unity.nuget.mono-cecil",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L146"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_pipeline",
-      "label": "com.unity.pipeline",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "com.unity.test-framework",
-      "file_type": "code",
-      "norm_label": "com.unity.pipeline",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L237"
-    },
-    {
       "id": "packages_packages_lock_dependencies_com_unity_test_framework",
       "label": "com.unity.test-framework",
       "_origin": "ast",
@@ -13660,7 +13568,7 @@
       "label": "dependencies",
       "_origin": "ast",
       "community": 22,
-      "community_name": "com.unity.nuget.newtonsoft-json",
+      "community_name": "com.unity.modules.unitywebrequest",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
@@ -13671,7 +13579,7 @@
       "label": "depth",
       "_origin": "ast",
       "community": 22,
-      "community_name": "com.unity.nuget.newtonsoft-json",
+      "community_name": "com.unity.modules.unitywebrequest",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
@@ -13682,7 +13590,7 @@
       "label": "source",
       "_origin": "ast",
       "community": 22,
-      "community_name": "com.unity.nuget.newtonsoft-json",
+      "community_name": "com.unity.modules.unitywebrequest",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
@@ -13693,99 +13601,275 @@
       "label": "version",
       "_origin": "ast",
       "community": 22,
-      "community_name": "com.unity.nuget.newtonsoft-json",
+      "community_name": "com.unity.modules.unitywebrequest",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L433"
     },
     {
-      "id": "packages_packages_lock_com_unity_nuget_newtonsoft_json_dependencies",
+      "id": "packages_packages_lock_com_unity_modules_unitywebrequest_dependencies",
       "label": "dependencies",
       "_origin": "ast",
       "community": 22,
-      "community_name": "com.unity.nuget.newtonsoft-json",
+      "community_name": "com.unity.modules.unitywebrequest",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L234"
+      "source_location": "L602"
     },
     {
-      "id": "packages_packages_lock_com_unity_nuget_newtonsoft_json_depth",
+      "id": "packages_packages_lock_com_unity_modules_unitywebrequest_depth",
       "label": "depth",
       "_origin": "ast",
       "community": 22,
-      "community_name": "com.unity.nuget.newtonsoft-json",
+      "community_name": "com.unity.modules.unitywebrequest",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L232"
+      "source_location": "L600"
     },
     {
-      "id": "packages_packages_lock_com_unity_nuget_newtonsoft_json_source",
+      "id": "packages_packages_lock_com_unity_modules_unitywebrequest_source",
       "label": "source",
       "_origin": "ast",
       "community": 22,
-      "community_name": "com.unity.nuget.newtonsoft-json",
+      "community_name": "com.unity.modules.unitywebrequest",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L233"
+      "source_location": "L601"
     },
     {
-      "id": "packages_packages_lock_com_unity_nuget_newtonsoft_json_url",
-      "label": "url",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "com.unity.nuget.newtonsoft-json",
-      "file_type": "code",
-      "norm_label": "url",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L235"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_nuget_newtonsoft_json_version",
+      "id": "packages_packages_lock_com_unity_modules_unitywebrequest_version",
       "label": "version",
       "_origin": "ast",
       "community": 22,
-      "community_name": "com.unity.nuget.newtonsoft-json",
+      "community_name": "com.unity.modules.unitywebrequest",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L231"
+      "source_location": "L599"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_purchasing_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L255"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_purchasing_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L253"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_purchasing_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L254"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_purchasing_url",
+      "label": "url",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "url",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L263"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_purchasing_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L252"
     },
     {
       "id": "packages_packages_lock_com_unity_services_core_dependencies",
       "label": "dependencies",
       "_origin": "ast",
       "community": 22,
-      "community_name": "com.unity.nuget.newtonsoft-json",
+      "community_name": "com.unity.modules.unitywebrequest",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L316"
     },
     {
+      "id": "packages_packages_lock_com_unity_services_core_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L314"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_services_core_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L315"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_services_core_url",
+      "label": "url",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "url",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L321"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_services_core_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L313"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_services_deployment_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L327"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_services_deployment_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L325"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_services_deployment_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L326"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_services_deployment_url",
+      "label": "url",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "url",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L331"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_services_deployment_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L324"
+    },
+    {
       "id": "packages_packages_lock_dependencies_com_unity_modules_androidjni",
       "label": "com.unity.modules.androidjni",
       "_origin": "ast",
       "community": 22,
-      "community_name": "com.unity.nuget.newtonsoft-json",
+      "community_name": "com.unity.modules.unitywebrequest",
       "file_type": "code",
       "norm_label": "com.unity.modules.androidjni",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L258"
     },
     {
-      "id": "packages_packages_lock_dependencies_com_unity_nuget_newtonsoft_json",
-      "label": "com.unity.nuget.newtonsoft-json",
+      "id": "packages_packages_lock_dependencies_com_unity_modules_unitywebrequest",
+      "label": "com.unity.modules.unitywebrequest",
       "_origin": "ast",
       "community": 22,
-      "community_name": "com.unity.nuget.newtonsoft-json",
+      "community_name": "com.unity.modules.unitywebrequest",
       "file_type": "code",
-      "norm_label": "com.unity.nuget.newtonsoft-json",
+      "norm_label": "com.unity.modules.unitywebrequest",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L230"
+      "source_location": "L261"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_purchasing",
+      "label": "com.unity.purchasing",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "com.unity.purchasing",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L251"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_services_core",
+      "label": "com.unity.services.core",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "com.unity.services.core",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L257"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_services_deployment",
+      "label": "com.unity.services.deployment",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "com.unity.modules.unitywebrequest",
+      "file_type": "code",
+      "norm_label": "com.unity.services.deployment",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L259"
     },
     {
       "id": "assets_echofall_scripts_playercameraimpulse_cs_camera",
@@ -14179,61 +14263,6 @@
       "source_location": "L74"
     },
     {
-      "id": "packages_packages_lock_com_unity_2d_tilemap_extras_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "com.unity.2d.tilemap",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L85"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_tilemap_extras_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "com.unity.2d.tilemap",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L83"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_tilemap_extras_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "com.unity.2d.tilemap",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L84"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_tilemap_extras_url",
-      "label": "url",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "com.unity.2d.tilemap",
-      "file_type": "code",
-      "norm_label": "url",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L90"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_tilemap_extras_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "com.unity.2d.tilemap",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L82"
-    },
-    {
       "id": "packages_packages_lock_com_unity_2d_tilemap_source",
       "label": "source",
       "_origin": "ast",
@@ -14254,17 +14283,6 @@
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L73"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_tilemap_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "com.unity.2d.tilemap",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L560"
     },
     {
       "id": "packages_packages_lock_com_unity_modules_tilemap_depth",
@@ -14311,17 +14329,6 @@
       "source_location": "L23"
     },
     {
-      "id": "packages_packages_lock_dependencies_com_unity_2d_tilemap_extras",
-      "label": "com.unity.2d.tilemap.extras",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "com.unity.2d.tilemap",
-      "file_type": "code",
-      "norm_label": "com.unity.2d.tilemap.extras",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L81"
-    },
-    {
       "id": "packages_packages_lock_dependencies_com_unity_modules_tilemap",
       "label": "com.unity.modules.tilemap",
       "_origin": "ast",
@@ -14331,61 +14338,6 @@
       "norm_label": "com.unity.modules.tilemap",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L77"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_tooling_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "com.unity.modules.uielements",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L96"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_tooling_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "com.unity.modules.uielements",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L94"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_tooling_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "com.unity.modules.uielements",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L95"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_tooling_url",
-      "label": "url",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "com.unity.modules.uielements",
-      "file_type": "code",
-      "norm_label": "url",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L100"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_tooling_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "com.unity.modules.uielements",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L93"
     },
     {
       "id": "packages_packages_lock_com_unity_inputsystem_dependencies",
@@ -14487,15 +14439,37 @@
       "source_location": "L219"
     },
     {
-      "id": "packages_packages_lock_dependencies_com_unity_2d_tooling",
-      "label": "com.unity.2d.tooling",
+      "id": "packages_packages_lock_com_unity_multiplayer_center_depth",
+      "label": "depth",
       "_origin": "ast",
       "community": 27,
       "community_name": "com.unity.modules.uielements",
       "file_type": "code",
-      "norm_label": "com.unity.2d.tooling",
+      "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L92"
+      "source_location": "L217"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_multiplayer_center_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "com.unity.modules.uielements",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L218"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_multiplayer_center_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "com.unity.modules.uielements",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L216"
     },
     {
       "id": "packages_packages_lock_dependencies_com_unity_inputsystem",
@@ -14518,6 +14492,17 @@
       "norm_label": "com.unity.modules.uielements",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L12"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_multiplayer_center",
+      "label": "com.unity.multiplayer.center",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "com.unity.modules.uielements",
+      "file_type": "code",
+      "norm_label": "com.unity.multiplayer.center",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L215"
     },
     {
       "id": "assets_echofall_scripts_sliceeffects_cs_color",
@@ -14948,7 +14933,7 @@
       "label": "dependencies",
       "_origin": "ast",
       "community": 30,
-      "community_name": "com.unity.services.deployment",
+      "community_name": "com.unity.services.deployment.api",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
@@ -14959,7 +14944,7 @@
       "label": "depth",
       "_origin": "ast",
       "community": 30,
-      "community_name": "com.unity.services.deployment",
+      "community_name": "com.unity.services.deployment.api",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
@@ -14970,7 +14955,7 @@
       "label": "source",
       "_origin": "ast",
       "community": 30,
-      "community_name": "com.unity.services.deployment",
+      "community_name": "com.unity.services.deployment.api",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
@@ -14981,7 +14966,7 @@
       "label": "url",
       "_origin": "ast",
       "community": 30,
-      "community_name": "com.unity.services.deployment",
+      "community_name": "com.unity.services.deployment.api",
       "file_type": "code",
       "norm_label": "url",
       "source_file": "Packages/packages-lock.json",
@@ -14992,84 +14977,18 @@
       "label": "version",
       "_origin": "ast",
       "community": 30,
-      "community_name": "com.unity.services.deployment",
+      "community_name": "com.unity.services.deployment.api",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L334"
     },
     {
-      "id": "packages_packages_lock_com_unity_services_deployment_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "com.unity.services.deployment",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L327"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_services_deployment_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "com.unity.services.deployment",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L325"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_services_deployment_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "com.unity.services.deployment",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L326"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_services_deployment_url",
-      "label": "url",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "com.unity.services.deployment",
-      "file_type": "code",
-      "norm_label": "url",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L331"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_services_deployment_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "com.unity.services.deployment",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L324"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_services_deployment",
-      "label": "com.unity.services.deployment",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "com.unity.services.deployment",
-      "file_type": "code",
-      "norm_label": "com.unity.services.deployment",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L259"
-    },
-    {
       "id": "packages_packages_lock_dependencies_com_unity_services_deployment_api",
       "label": "com.unity.services.deployment.api",
       "_origin": "ast",
       "community": 30,
-      "community_name": "com.unity.services.deployment",
+      "community_name": "com.unity.services.deployment.api",
       "file_type": "code",
       "norm_label": "com.unity.services.deployment.api",
       "source_file": "Packages/packages-lock.json",
@@ -15175,66 +15094,11 @@
       "source_location": "L4"
     },
     {
-      "id": "packages_packages_lock_com_unity_2d_animation_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L7"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_animation_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L5"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_animation_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L6"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_animation_url",
-      "label": "url",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "url",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L14"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_animation_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L4"
-    },
-    {
       "id": "packages_packages_lock_com_unity_2d_aseprite_dependencies",
       "label": "dependencies",
       "_origin": "ast",
       "community": 32,
-      "community_name": "com.unity.2d.common",
+      "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
@@ -15245,7 +15109,7 @@
       "label": "depth",
       "_origin": "ast",
       "community": 32,
-      "community_name": "com.unity.2d.common",
+      "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
@@ -15256,7 +15120,7 @@
       "label": "source",
       "_origin": "ast",
       "community": 32,
-      "community_name": "com.unity.2d.common",
+      "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
@@ -15267,7 +15131,7 @@
       "label": "url",
       "_origin": "ast",
       "community": 32,
-      "community_name": "com.unity.2d.common",
+      "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "url",
       "source_file": "Packages/packages-lock.json",
@@ -15278,209 +15142,22 @@
       "label": "version",
       "_origin": "ast",
       "community": 32,
-      "community_name": "com.unity.2d.common",
+      "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L17"
     },
     {
-      "id": "packages_packages_lock_com_unity_2d_common_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L31"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_common_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L32"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_common_url",
-      "label": "url",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "url",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L42"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_common_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L30"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_psdimporter_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L48"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_psdimporter_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L46"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_psdimporter_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L47"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_psdimporter_url",
-      "label": "url",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "url",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L53"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_psdimporter_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L45"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_sprite_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L59"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_sprite_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L57"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_sprite_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L58"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_sprite_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L56"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_2d_animation",
-      "label": "com.unity.2d.animation",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "com.unity.2d.animation",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L3"
-    },
-    {
       "id": "packages_packages_lock_dependencies_com_unity_2d_aseprite",
       "label": "com.unity.2d.aseprite",
       "_origin": "ast",
       "community": 32,
-      "community_name": "com.unity.2d.common",
+      "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "com.unity.2d.aseprite",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L16"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_2d_common",
-      "label": "com.unity.2d.common",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "com.unity.2d.common",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L8"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_2d_psdimporter",
-      "label": "com.unity.2d.psdimporter",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "com.unity.2d.psdimporter",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L44"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_2d_sprite",
-      "label": "com.unity.2d.sprite",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "com.unity.2d.common",
-      "file_type": "code",
-      "norm_label": "com.unity.2d.sprite",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L9"
     },
     {
       "id": "assets_echofall_scripts_playervisual_echofall_movement_wandererpose_attack",
@@ -15859,6 +15536,61 @@
       "source_location": "L107"
     },
     {
+      "id": "packages_packages_lock_com_unity_2d_animation_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "com.unity.collections",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_animation_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "com.unity.collections",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_animation_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "com.unity.collections",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_animation_url",
+      "label": "url",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "com.unity.collections",
+      "file_type": "code",
+      "norm_label": "url",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_animation_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "com.unity.collections",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L4"
+    },
+    {
       "id": "packages_packages_lock_com_unity_collab_proxy_dependencies",
       "label": "dependencies",
       "_origin": "ast",
@@ -15947,6 +15679,17 @@
       "source_location": "L141"
     },
     {
+      "id": "packages_packages_lock_dependencies_com_unity_2d_animation",
+      "label": "com.unity.2d.animation",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "com.unity.collections",
+      "file_type": "code",
+      "norm_label": "com.unity.2d.animation",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L3"
+    },
+    {
       "id": "packages_packages_lock_dependencies_com_unity_collab_proxy",
       "label": "com.unity.collab-proxy",
       "_origin": "ast",
@@ -15969,11 +15712,99 @@
       "source_location": "L10"
     },
     {
+      "id": "packages_packages_lock_com_unity_modules_jsonserialize_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "com.unity.modules.jsonserialize",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L497"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_jsonserialize_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "com.unity.modules.jsonserialize",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L495"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_jsonserialize_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "com.unity.modules.jsonserialize",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L496"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_jsonserialize_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "com.unity.modules.jsonserialize",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L494"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_unityanalytics_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "com.unity.modules.jsonserialize",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L593"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_unityanalytics_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "com.unity.modules.jsonserialize",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L591"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_unityanalytics_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "com.unity.modules.jsonserialize",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L592"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_unityanalytics_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "com.unity.modules.jsonserialize",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L590"
+    },
+    {
       "id": "packages_packages_lock_com_unity_visualscripting_dependencies",
       "label": "dependencies",
       "_origin": "ast",
       "community": 36,
-      "community_name": "com.unity.visualscripting",
+      "community_name": "com.unity.modules.jsonserialize",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
@@ -15984,7 +15815,7 @@
       "label": "depth",
       "_origin": "ast",
       "community": 36,
-      "community_name": "com.unity.visualscripting",
+      "community_name": "com.unity.modules.jsonserialize",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
@@ -15995,7 +15826,7 @@
       "label": "source",
       "_origin": "ast",
       "community": 36,
-      "community_name": "com.unity.visualscripting",
+      "community_name": "com.unity.modules.jsonserialize",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
@@ -16006,7 +15837,7 @@
       "label": "url",
       "_origin": "ast",
       "community": 36,
-      "community_name": "com.unity.visualscripting",
+      "community_name": "com.unity.modules.jsonserialize",
       "file_type": "code",
       "norm_label": "url",
       "source_file": "Packages/packages-lock.json",
@@ -16017,18 +15848,40 @@
       "label": "version",
       "_origin": "ast",
       "community": 36,
-      "community_name": "com.unity.visualscripting",
+      "community_name": "com.unity.modules.jsonserialize",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L394"
     },
     {
+      "id": "packages_packages_lock_dependencies_com_unity_modules_jsonserialize",
+      "label": "com.unity.modules.jsonserialize",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "com.unity.modules.jsonserialize",
+      "file_type": "code",
+      "norm_label": "com.unity.modules.jsonserialize",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L88"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_modules_unityanalytics",
+      "label": "com.unity.modules.unityanalytics",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "com.unity.modules.jsonserialize",
+      "file_type": "code",
+      "norm_label": "com.unity.modules.unityanalytics",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L589"
+    },
+    {
       "id": "packages_packages_lock_dependencies_com_unity_visualscripting",
       "label": "com.unity.visualscripting",
       "_origin": "ast",
       "community": 36,
-      "community_name": "com.unity.visualscripting",
+      "community_name": "com.unity.modules.jsonserialize",
       "file_type": "code",
       "norm_label": "com.unity.visualscripting",
       "source_file": "Packages/packages-lock.json",
@@ -16321,110 +16174,11 @@
       "source_location": "L369"
     },
     {
-      "id": "packages_packages_lock_com_unity_2d_spriteshape_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 38,
-      "community_name": "com.unity.mathematics",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L65"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_spriteshape_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 38,
-      "community_name": "com.unity.mathematics",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L63"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_spriteshape_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 38,
-      "community_name": "com.unity.mathematics",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L64"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_spriteshape_url",
-      "label": "url",
-      "_origin": "ast",
-      "community": 38,
-      "community_name": "com.unity.mathematics",
-      "file_type": "code",
-      "norm_label": "url",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L70"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_spriteshape_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 38,
-      "community_name": "com.unity.mathematics",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L62"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_mathematics_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 38,
-      "community_name": "com.unity.mathematics",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L188"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_mathematics_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 38,
-      "community_name": "com.unity.mathematics",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L186"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_mathematics_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 38,
-      "community_name": "com.unity.mathematics",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L187"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_mathematics_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 38,
-      "community_name": "com.unity.mathematics",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L185"
-    },
-    {
       "id": "packages_packages_lock_com_unity_modules_physics2d_dependencies",
       "label": "dependencies",
       "_origin": "ast",
       "community": 38,
-      "community_name": "com.unity.mathematics",
+      "community_name": "com.unity.modules.physics2d",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
@@ -16435,7 +16189,7 @@
       "label": "depth",
       "_origin": "ast",
       "community": 38,
-      "community_name": "com.unity.mathematics",
+      "community_name": "com.unity.modules.physics2d",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
@@ -16446,7 +16200,7 @@
       "label": "source",
       "_origin": "ast",
       "community": 38,
-      "community_name": "com.unity.mathematics",
+      "community_name": "com.unity.modules.physics2d",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
@@ -16457,7 +16211,7 @@
       "label": "version",
       "_origin": "ast",
       "community": 38,
-      "community_name": "com.unity.mathematics",
+      "community_name": "com.unity.modules.physics2d",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
@@ -16468,7 +16222,7 @@
       "label": "dependencies",
       "_origin": "ast",
       "community": 38,
-      "community_name": "com.unity.mathematics",
+      "community_name": "com.unity.modules.physics2d",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
@@ -16479,7 +16233,7 @@
       "label": "depth",
       "_origin": "ast",
       "community": 38,
-      "community_name": "com.unity.mathematics",
+      "community_name": "com.unity.modules.physics2d",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
@@ -16490,7 +16244,7 @@
       "label": "source",
       "_origin": "ast",
       "community": 38,
-      "community_name": "com.unity.mathematics",
+      "community_name": "com.unity.modules.physics2d",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
@@ -16501,40 +16255,29 @@
       "label": "version",
       "_origin": "ast",
       "community": 38,
-      "community_name": "com.unity.mathematics",
+      "community_name": "com.unity.modules.physics2d",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L520"
     },
     {
-      "id": "packages_packages_lock_dependencies_com_unity_2d_spriteshape",
-      "label": "com.unity.2d.spriteshape",
+      "id": "packages_packages_lock_com_unity_modules_tilemap_dependencies",
+      "label": "dependencies",
       "_origin": "ast",
       "community": 38,
-      "community_name": "com.unity.mathematics",
+      "community_name": "com.unity.modules.physics2d",
       "file_type": "code",
-      "norm_label": "com.unity.2d.spriteshape",
+      "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L61"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_mathematics",
-      "label": "com.unity.mathematics",
-      "_origin": "ast",
-      "community": 38,
-      "community_name": "com.unity.mathematics",
-      "file_type": "code",
-      "norm_label": "com.unity.mathematics",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L24"
+      "source_location": "L560"
     },
     {
       "id": "packages_packages_lock_dependencies_com_unity_modules_physics2d",
       "label": "com.unity.modules.physics2d",
       "_origin": "ast",
       "community": 38,
-      "community_name": "com.unity.mathematics",
+      "community_name": "com.unity.modules.physics2d",
       "file_type": "code",
       "norm_label": "com.unity.modules.physics2d",
       "source_file": "Packages/packages-lock.json",
@@ -16545,106 +16288,62 @@
       "label": "com.unity.modules.physicscore2d",
       "_origin": "ast",
       "community": 38,
-      "community_name": "com.unity.mathematics",
+      "community_name": "com.unity.modules.physics2d",
       "file_type": "code",
       "norm_label": "com.unity.modules.physicscore2d",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L516"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_cloth_dependencies",
+      "id": "packages_packages_lock_com_unity_modules_terrain_dependencies",
       "label": "dependencies",
       "_origin": "ast",
       "community": 39,
-      "community_name": "com.unity.modules.physics",
+      "community_name": "com.unity.modules.terrain",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L462"
+      "source_location": "L545"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_cloth_depth",
+      "id": "packages_packages_lock_com_unity_modules_terrain_depth",
       "label": "depth",
       "_origin": "ast",
       "community": 39,
-      "community_name": "com.unity.modules.physics",
+      "community_name": "com.unity.modules.terrain",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L460"
+      "source_location": "L543"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_cloth_source",
+      "id": "packages_packages_lock_com_unity_modules_terrain_source",
       "label": "source",
       "_origin": "ast",
       "community": 39,
-      "community_name": "com.unity.modules.physics",
+      "community_name": "com.unity.modules.terrain",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L461"
+      "source_location": "L544"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_cloth_version",
+      "id": "packages_packages_lock_com_unity_modules_terrain_version",
       "label": "version",
       "_origin": "ast",
       "community": 39,
-      "community_name": "com.unity.modules.physics",
+      "community_name": "com.unity.modules.terrain",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L459"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_physics_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "com.unity.modules.physics",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L509"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_physics_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "com.unity.modules.physics",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L507"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_physics_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "com.unity.modules.physics",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L508"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_physics_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "com.unity.modules.physics",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L506"
+      "source_location": "L542"
     },
     {
       "id": "packages_packages_lock_com_unity_modules_terrainphysics_dependencies",
       "label": "dependencies",
       "_origin": "ast",
       "community": 39,
-      "community_name": "com.unity.modules.physics",
+      "community_name": "com.unity.modules.terrain",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
@@ -16655,7 +16354,7 @@
       "label": "depth",
       "_origin": "ast",
       "community": 39,
-      "community_name": "com.unity.modules.physics",
+      "community_name": "com.unity.modules.terrain",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
@@ -16666,7 +16365,7 @@
       "label": "source",
       "_origin": "ast",
       "community": 39,
-      "community_name": "com.unity.modules.physics",
+      "community_name": "com.unity.modules.terrain",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
@@ -16677,40 +16376,40 @@
       "label": "version",
       "_origin": "ast",
       "community": 39,
-      "community_name": "com.unity.modules.physics",
+      "community_name": "com.unity.modules.terrain",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L548"
     },
     {
-      "id": "packages_packages_lock_dependencies_com_unity_modules_cloth",
-      "label": "com.unity.modules.cloth",
+      "id": "packages_packages_lock_com_unity_render_pipelines_core_dependencies",
+      "label": "dependencies",
       "_origin": "ast",
       "community": 39,
-      "community_name": "com.unity.modules.physics",
+      "community_name": "com.unity.modules.terrain",
       "file_type": "code",
-      "norm_label": "com.unity.modules.cloth",
+      "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L458"
+      "source_location": "L269"
     },
     {
-      "id": "packages_packages_lock_dependencies_com_unity_modules_physics",
-      "label": "com.unity.modules.physics",
+      "id": "packages_packages_lock_dependencies_com_unity_modules_terrain",
+      "label": "com.unity.modules.terrain",
       "_origin": "ast",
       "community": 39,
-      "community_name": "com.unity.modules.physics",
+      "community_name": "com.unity.modules.terrain",
       "file_type": "code",
-      "norm_label": "com.unity.modules.physics",
+      "norm_label": "com.unity.modules.terrain",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L390"
+      "source_location": "L272"
     },
     {
       "id": "packages_packages_lock_dependencies_com_unity_modules_terrainphysics",
       "label": "com.unity.modules.terrainphysics",
       "_origin": "ast",
       "community": 39,
-      "community_name": "com.unity.modules.physics",
+      "community_name": "com.unity.modules.terrain",
       "file_type": "code",
       "norm_label": "com.unity.modules.terrainphysics",
       "source_file": "Packages/packages-lock.json",
@@ -17115,241 +16814,10 @@
       "source_location": ""
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_adaptiveperformance_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "com.unity.modules.subsystems",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L422"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_adaptiveperformance_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "com.unity.modules.subsystems",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L420"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_adaptiveperformance_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "com.unity.modules.subsystems",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L421"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_adaptiveperformance_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "com.unity.modules.subsystems",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L419"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_subsystems_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "com.unity.modules.subsystems",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L537"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_subsystems_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "com.unity.modules.subsystems",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L535"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_subsystems_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "com.unity.modules.subsystems",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L536"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_subsystems_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "com.unity.modules.subsystems",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L534"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_modules_adaptiveperformance",
-      "label": "com.unity.modules.adaptiveperformance",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "com.unity.modules.subsystems",
-      "file_type": "code",
-      "norm_label": "com.unity.modules.adaptiveperformance",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L418"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_modules_subsystems",
-      "label": "com.unity.modules.subsystems",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "com.unity.modules.subsystems",
-      "file_type": "code",
-      "norm_label": "com.unity.modules.subsystems",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L423"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_2d_common_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L33"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_imageconversion_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L485"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_imageconversion_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L483"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_imageconversion_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L484"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_imageconversion_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L482"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_screencapture_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L529"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_screencapture_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L527"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_screencapture_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L528"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_screencapture_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L526"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_modules_imageconversion",
-      "label": "com.unity.modules.imageconversion",
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "com.unity.modules.imageconversion",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L40"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_modules_screencapture",
-      "label": "com.unity.modules.screencapture",
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "com.unity.modules.screencapture",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L246"
-    },
-    {
       "id": "packages_packages_lock_com_unity_modules_accessibility_dependencies",
       "label": "dependencies",
       "_origin": "ast",
-      "community": 42,
+      "community": 40,
       "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "dependencies",
@@ -17360,7 +16828,7 @@
       "id": "packages_packages_lock_com_unity_modules_accessibility_depth",
       "label": "depth",
       "_origin": "ast",
-      "community": 42,
+      "community": 40,
       "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "depth",
@@ -17371,7 +16839,7 @@
       "id": "packages_packages_lock_com_unity_modules_accessibility_source",
       "label": "source",
       "_origin": "ast",
-      "community": 42,
+      "community": 40,
       "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "source",
@@ -17382,7 +16850,7 @@
       "id": "packages_packages_lock_com_unity_modules_accessibility_version",
       "label": "version",
       "_origin": "ast",
-      "community": 42,
+      "community": 40,
       "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "version",
@@ -17390,131 +16858,98 @@
       "source_location": "L413"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_umbra_dependencies",
+      "id": "packages_packages_lock_com_unity_modules_adaptiveperformance_dependencies",
       "label": "dependencies",
       "_origin": "ast",
-      "community": 42,
+      "community": 40,
       "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L587"
+      "source_location": "L422"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_umbra_depth",
+      "id": "packages_packages_lock_com_unity_modules_adaptiveperformance_depth",
       "label": "depth",
       "_origin": "ast",
-      "community": 42,
+      "community": 40,
       "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L585"
+      "source_location": "L420"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_umbra_source",
+      "id": "packages_packages_lock_com_unity_modules_adaptiveperformance_source",
       "label": "source",
       "_origin": "ast",
-      "community": 42,
+      "community": 40,
       "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L586"
+      "source_location": "L421"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_umbra_version",
+      "id": "packages_packages_lock_com_unity_modules_adaptiveperformance_version",
       "label": "version",
       "_origin": "ast",
-      "community": 42,
+      "community": 40,
       "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L584"
+      "source_location": "L419"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_unitywebrequestaudio_dependencies",
+      "id": "packages_packages_lock_com_unity_modules_subsystems_dependencies",
       "label": "dependencies",
       "_origin": "ast",
-      "community": 42,
+      "community": 40,
       "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L617"
+      "source_location": "L537"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_unitywebrequestaudio_depth",
+      "id": "packages_packages_lock_com_unity_modules_subsystems_depth",
       "label": "depth",
       "_origin": "ast",
-      "community": 42,
+      "community": 40,
       "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L615"
+      "source_location": "L535"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_unitywebrequestaudio_source",
+      "id": "packages_packages_lock_com_unity_modules_subsystems_source",
       "label": "source",
       "_origin": "ast",
-      "community": 42,
+      "community": 40,
       "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L616"
+      "source_location": "L536"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_unitywebrequestaudio_version",
+      "id": "packages_packages_lock_com_unity_modules_subsystems_version",
       "label": "version",
       "_origin": "ast",
-      "community": 42,
+      "community": 40,
       "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L614"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_multiplayer_center_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 42,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L217"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_multiplayer_center_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 42,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L218"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_multiplayer_center_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 42,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L216"
+      "source_location": "L534"
     },
     {
       "id": "packages_packages_lock_dependencies",
       "label": "dependencies",
       "_origin": "ast",
-      "community": 42,
+      "community": 40,
       "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "dependencies",
@@ -17525,7 +16960,7 @@
       "id": "packages_packages_lock_dependencies_com_unity_modules_accessibility",
       "label": "com.unity.modules.accessibility",
       "_origin": "ast",
-      "community": 42,
+      "community": 40,
       "community_name": "dependencies",
       "file_type": "code",
       "norm_label": "com.unity.modules.accessibility",
@@ -17533,37 +16968,191 @@
       "source_location": "L412"
     },
     {
+      "id": "packages_packages_lock_dependencies_com_unity_modules_adaptiveperformance",
+      "label": "com.unity.modules.adaptiveperformance",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "com.unity.modules.adaptiveperformance",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L418"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_modules_subsystems",
+      "label": "com.unity.modules.subsystems",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "com.unity.modules.subsystems",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L423"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_imageconversion_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "com.unity.modules.imageconversion",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L485"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_imageconversion_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "com.unity.modules.imageconversion",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L483"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_imageconversion_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "com.unity.modules.imageconversion",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L484"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_imageconversion_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "com.unity.modules.imageconversion",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L482"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_screencapture_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "com.unity.modules.imageconversion",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L529"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_screencapture_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "com.unity.modules.imageconversion",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L527"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_screencapture_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "com.unity.modules.imageconversion",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L528"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_screencapture_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "com.unity.modules.imageconversion",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L526"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_modules_imageconversion",
+      "label": "com.unity.modules.imageconversion",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "com.unity.modules.imageconversion",
+      "file_type": "code",
+      "norm_label": "com.unity.modules.imageconversion",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L40"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_modules_screencapture",
+      "label": "com.unity.modules.screencapture",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "com.unity.modules.imageconversion",
+      "file_type": "code",
+      "norm_label": "com.unity.modules.screencapture",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L246"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_umbra_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "com.unity.modules.umbra",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L587"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_umbra_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "com.unity.modules.umbra",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L585"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_umbra_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "com.unity.modules.umbra",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L586"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_umbra_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "com.unity.modules.umbra",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L584"
+    },
+    {
       "id": "packages_packages_lock_dependencies_com_unity_modules_umbra",
       "label": "com.unity.modules.umbra",
       "_origin": "ast",
       "community": 42,
-      "community_name": "dependencies",
+      "community_name": "com.unity.modules.umbra",
       "file_type": "code",
       "norm_label": "com.unity.modules.umbra",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L583"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_modules_unitywebrequestaudio",
-      "label": "com.unity.modules.unitywebrequestaudio",
-      "_origin": "ast",
-      "community": 42,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "com.unity.modules.unitywebrequestaudio",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L613"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_multiplayer_center",
-      "label": "com.unity.multiplayer.center",
-      "_origin": "ast",
-      "community": 42,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "com.unity.multiplayer.center",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L215"
     },
     {
       "id": "assets_echofall_scripts_playervisual_cs_color",
@@ -17750,11 +17339,22 @@
       "source_location": ""
     },
     {
+      "id": "packages_packages_lock_com_unity_2d_common_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "com.unity.burst",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L33"
+    },
+    {
       "id": "packages_packages_lock_com_unity_burst_dependencies",
       "label": "dependencies",
       "_origin": "ast",
       "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
+      "community_name": "com.unity.burst",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
@@ -17765,7 +17365,7 @@
       "label": "depth",
       "_origin": "ast",
       "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
+      "community_name": "com.unity.burst",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
@@ -17776,7 +17376,7 @@
       "label": "source",
       "_origin": "ast",
       "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
+      "community_name": "com.unity.burst",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
@@ -17787,7 +17387,7 @@
       "label": "url",
       "_origin": "ast",
       "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
+      "community_name": "com.unity.burst",
       "file_type": "code",
       "norm_label": "url",
       "source_file": "Packages/packages-lock.json",
@@ -17798,154 +17398,275 @@
       "label": "version",
       "_origin": "ast",
       "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
+      "community_name": "com.unity.burst",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L122"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_jsonserialize_dependencies",
+      "id": "packages_packages_lock_com_unity_mathematics_dependencies",
       "label": "dependencies",
       "_origin": "ast",
       "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
+      "community_name": "com.unity.burst",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L497"
+      "source_location": "L188"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_jsonserialize_depth",
+      "id": "packages_packages_lock_com_unity_mathematics_depth",
       "label": "depth",
       "_origin": "ast",
       "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
+      "community_name": "com.unity.burst",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L495"
+      "source_location": "L186"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_jsonserialize_source",
+      "id": "packages_packages_lock_com_unity_mathematics_source",
       "label": "source",
       "_origin": "ast",
       "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
+      "community_name": "com.unity.burst",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L496"
+      "source_location": "L187"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_jsonserialize_version",
+      "id": "packages_packages_lock_com_unity_mathematics_version",
       "label": "version",
       "_origin": "ast",
       "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
+      "community_name": "com.unity.burst",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L494"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_terrain_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L545"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_terrain_depth",
-      "label": "depth",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
-      "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L543"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_terrain_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L544"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_modules_terrain_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L542"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_render_pipelines_core_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L269"
+      "source_location": "L185"
     },
     {
       "id": "packages_packages_lock_dependencies_com_unity_burst",
       "label": "com.unity.burst",
       "_origin": "ast",
       "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
+      "community_name": "com.unity.burst",
       "file_type": "code",
       "norm_label": "com.unity.burst",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L34"
     },
     {
-      "id": "packages_packages_lock_dependencies_com_unity_modules_jsonserialize",
-      "label": "com.unity.modules.jsonserialize",
+      "id": "packages_packages_lock_dependencies_com_unity_mathematics",
+      "label": "com.unity.mathematics",
       "_origin": "ast",
       "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
+      "community_name": "com.unity.burst",
       "file_type": "code",
-      "norm_label": "com.unity.modules.jsonserialize",
+      "norm_label": "com.unity.mathematics",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L88"
+      "source_location": "L24"
     },
     {
-      "id": "packages_packages_lock_dependencies_com_unity_modules_terrain",
-      "label": "com.unity.modules.terrain",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "com.unity.modules.jsonserialize",
-      "file_type": "code",
-      "norm_label": "com.unity.modules.terrain",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L272"
-    },
-    {
-      "id": "assets_echofall_scripts_slicecombat_cs_vector2",
-      "label": "Vector2",
+      "id": "packages_packages_lock_com_unity_nuget_mono_cecil_dependencies",
+      "label": "dependencies",
       "_origin": "ast",
       "community": 46,
-      "community_name": ".Hurt",
+      "community_name": "com.unity.nuget.mono-cecil",
       "file_type": "code",
-      "norm_label": "vector2",
-      "source_file": "",
-      "source_location": ""
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L227"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_nuget_mono_cecil_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L225"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_nuget_mono_cecil_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L226"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_nuget_mono_cecil_url",
+      "label": "url",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "url",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L228"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_nuget_mono_cecil_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L224"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_nuget_newtonsoft_json_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L234"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_nuget_newtonsoft_json_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L232"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_nuget_newtonsoft_json_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L233"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_nuget_newtonsoft_json_url",
+      "label": "url",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "url",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L235"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_nuget_newtonsoft_json_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L231"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_pipeline_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L241"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_pipeline_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L239"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_pipeline_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L240"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_pipeline_url",
+      "label": "url",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "url",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L249"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_pipeline_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L238"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_nuget_mono_cecil",
+      "label": "com.unity.nuget.mono-cecil",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "com.unity.nuget.mono-cecil",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L146"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_nuget_newtonsoft_json",
+      "label": "com.unity.nuget.newtonsoft-json",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "com.unity.nuget.newtonsoft-json",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L230"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_pipeline",
+      "label": "com.unity.pipeline",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "com.unity.nuget.mono-cecil",
+      "file_type": "code",
+      "norm_label": "com.unity.pipeline",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L237"
     },
     {
       "id": "packages_packages_lock_com_unity_xr_legacyinputhelpers_dependencies",
@@ -18094,6 +17815,42 @@
       "source_location": "L22"
     },
     {
+      "id": "docs_playerpresentation_asset_gaps",
+      "label": "Asset gaps",
+      "_origin": "ast",
+      "community": 49,
+      "community_name": "SlicePlayerPresentation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "asset gaps",
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L26"
+    },
+    {
+      "id": "docs_playerpresentation_verification",
+      "label": "Verification",
+      "_origin": "ast",
+      "community": 49,
+      "community_name": "SlicePlayerPresentation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "verification",
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L30"
+    },
+    {
+      "id": "docs_playerpresentation_wanderer_player_presentation",
+      "label": "Wanderer player presentation",
+      "_origin": "ast",
+      "community": 49,
+      "community_name": "SlicePlayerPresentation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "wanderer player presentation",
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L1"
+    },
+    {
       "id": "assets_echofall_scripts_labmarker_cs_font",
       "label": "Font",
       "_origin": "ast",
@@ -18204,39 +17961,6 @@
       "source_location": ""
     },
     {
-      "id": "assets_echofall_scripts_sliceroom_cs_rect",
-      "label": "Rect",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "MonoBehaviour",
-      "file_type": "code",
-      "norm_label": "rect",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "assets_echofall_scripts_sliceroom_cs_transform",
-      "label": "Transform",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "MonoBehaviour",
-      "file_type": "code",
-      "norm_label": "transform",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "assets_echofall_scripts_sliceroom_cs_vector2",
-      "label": "Vector2",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "MonoBehaviour",
-      "file_type": "code",
-      "norm_label": "vector2",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "assets_echofall_scripts_wakeatmosphere_cs_color",
       "label": "Color",
       "_origin": "ast",
@@ -18325,77 +18049,253 @@
       "source_location": ""
     },
     {
-      "id": "packages_packages_lock_com_unity_purchasing_dependencies",
+      "id": "packages_packages_lock_com_unity_2d_psdimporter_dependencies",
       "label": "dependencies",
       "_origin": "ast",
       "community": 50,
-      "community_name": "dependencies",
+      "community_name": "com.unity.2d.psdimporter",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L255"
+      "source_location": "L48"
     },
     {
-      "id": "packages_packages_lock_com_unity_purchasing_depth",
+      "id": "packages_packages_lock_com_unity_2d_psdimporter_depth",
       "label": "depth",
       "_origin": "ast",
       "community": 50,
-      "community_name": "dependencies",
+      "community_name": "com.unity.2d.psdimporter",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L253"
+      "source_location": "L46"
     },
     {
-      "id": "packages_packages_lock_com_unity_purchasing_source",
+      "id": "packages_packages_lock_com_unity_2d_psdimporter_source",
       "label": "source",
       "_origin": "ast",
       "community": 50,
-      "community_name": "dependencies",
+      "community_name": "com.unity.2d.psdimporter",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L254"
+      "source_location": "L47"
     },
     {
-      "id": "packages_packages_lock_com_unity_purchasing_url",
+      "id": "packages_packages_lock_com_unity_2d_psdimporter_url",
       "label": "url",
       "_origin": "ast",
       "community": 50,
-      "community_name": "dependencies",
+      "community_name": "com.unity.2d.psdimporter",
       "file_type": "code",
       "norm_label": "url",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L263"
+      "source_location": "L53"
     },
     {
-      "id": "packages_packages_lock_com_unity_purchasing_version",
+      "id": "packages_packages_lock_com_unity_2d_psdimporter_version",
       "label": "version",
       "_origin": "ast",
       "community": 50,
-      "community_name": "dependencies",
+      "community_name": "com.unity.2d.psdimporter",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L252"
+      "source_location": "L45"
     },
     {
-      "id": "packages_packages_lock_dependencies_com_unity_purchasing",
-      "label": "com.unity.purchasing",
+      "id": "packages_packages_lock_dependencies_com_unity_2d_psdimporter",
+      "label": "com.unity.2d.psdimporter",
       "_origin": "ast",
       "community": 50,
-      "community_name": "dependencies",
+      "community_name": "com.unity.2d.psdimporter",
       "file_type": "code",
-      "norm_label": "com.unity.purchasing",
+      "norm_label": "com.unity.2d.psdimporter",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L251"
+      "source_location": "L44"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_spriteshape_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "com.unity.2d.spriteshape",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L65"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_spriteshape_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "com.unity.2d.spriteshape",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L63"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_spriteshape_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "com.unity.2d.spriteshape",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L64"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_spriteshape_url",
+      "label": "url",
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "com.unity.2d.spriteshape",
+      "file_type": "code",
+      "norm_label": "url",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L70"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_spriteshape_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "com.unity.2d.spriteshape",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L62"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_2d_spriteshape",
+      "label": "com.unity.2d.spriteshape",
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "com.unity.2d.spriteshape",
+      "file_type": "code",
+      "norm_label": "com.unity.2d.spriteshape",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L61"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_tilemap_extras_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 52,
+      "community_name": "com.unity.2d.tilemap.extras",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L85"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_tilemap_extras_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 52,
+      "community_name": "com.unity.2d.tilemap.extras",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L83"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_tilemap_extras_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 52,
+      "community_name": "com.unity.2d.tilemap.extras",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L84"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_tilemap_extras_url",
+      "label": "url",
+      "_origin": "ast",
+      "community": 52,
+      "community_name": "com.unity.2d.tilemap.extras",
+      "file_type": "code",
+      "norm_label": "url",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L90"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_tilemap_extras_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 52,
+      "community_name": "com.unity.2d.tilemap.extras",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L82"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_2d_tilemap_extras",
+      "label": "com.unity.2d.tilemap.extras",
+      "_origin": "ast",
+      "community": 52,
+      "community_name": "com.unity.2d.tilemap.extras",
+      "file_type": "code",
+      "norm_label": "com.unity.2d.tilemap.extras",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L81"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_cloth_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "com.unity.modules.physics",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L462"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_cloth_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "com.unity.modules.physics",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L460"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_cloth_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "com.unity.modules.physics",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L461"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_cloth_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "com.unity.modules.physics",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L459"
     },
     {
       "id": "packages_packages_lock_com_unity_modules_hierarchycore_dependencies",
       "label": "dependencies",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
@@ -18406,7 +18306,7 @@
       "label": "depth",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
@@ -18417,7 +18317,7 @@
       "label": "source",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
@@ -18428,7 +18328,7 @@
       "label": "version",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
@@ -18439,7 +18339,7 @@
       "label": "dependencies",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
@@ -18450,7 +18350,7 @@
       "label": "depth",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
@@ -18461,7 +18361,7 @@
       "label": "source",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
@@ -18472,18 +18372,62 @@
       "label": "version",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L488"
     },
     {
+      "id": "packages_packages_lock_com_unity_modules_physics_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "com.unity.modules.physics",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L509"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_physics_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "com.unity.modules.physics",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L507"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_physics_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "com.unity.modules.physics",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L508"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_physics_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "com.unity.modules.physics",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L506"
+    },
+    {
       "id": "packages_packages_lock_com_unity_modules_ui_dependencies",
       "label": "dependencies",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
@@ -18494,7 +18438,7 @@
       "label": "depth",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
@@ -18505,7 +18449,7 @@
       "label": "source",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
@@ -18516,7 +18460,7 @@
       "label": "version",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
@@ -18527,7 +18471,7 @@
       "label": "dependencies",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
@@ -18538,18 +18482,29 @@
       "label": "dependencies",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L385"
     },
     {
+      "id": "packages_packages_lock_dependencies_com_unity_modules_cloth",
+      "label": "com.unity.modules.cloth",
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "com.unity.modules.physics",
+      "file_type": "code",
+      "norm_label": "com.unity.modules.cloth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L458"
+    },
+    {
       "id": "packages_packages_lock_dependencies_com_unity_modules_hierarchycore",
       "label": "com.unity.modules.hierarchycore",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "com.unity.modules.hierarchycore",
       "source_file": "Packages/packages-lock.json",
@@ -18560,22 +18515,154 @@
       "label": "com.unity.modules.imgui",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "com.unity.modules.imgui",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L355"
     },
     {
+      "id": "packages_packages_lock_dependencies_com_unity_modules_physics",
+      "label": "com.unity.modules.physics",
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "com.unity.modules.physics",
+      "file_type": "code",
+      "norm_label": "com.unity.modules.physics",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L390"
+    },
+    {
       "id": "packages_packages_lock_dependencies_com_unity_modules_ui",
       "label": "com.unity.modules.ui",
       "_origin": "ast",
       "community": 53,
-      "community_name": "com.unity.modules.imgui",
+      "community_name": "com.unity.modules.physics",
       "file_type": "code",
       "norm_label": "com.unity.modules.ui",
       "source_file": "Packages/packages-lock.json",
       "source_location": "L386"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_tooling_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "com.unity.2d.tooling",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L96"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_tooling_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "com.unity.2d.tooling",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L94"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_tooling_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "com.unity.2d.tooling",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L95"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_tooling_url",
+      "label": "url",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "com.unity.2d.tooling",
+      "file_type": "code",
+      "norm_label": "url",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L100"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_tooling_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "com.unity.2d.tooling",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L93"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_2d_tooling",
+      "label": "com.unity.2d.tooling",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "com.unity.2d.tooling",
+      "file_type": "code",
+      "norm_label": "com.unity.2d.tooling",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L92"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_common_depth",
+      "label": "depth",
+      "_origin": "ast",
+      "community": 55,
+      "community_name": "com.unity.2d.common",
+      "file_type": "code",
+      "norm_label": "depth",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L31"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_common_source",
+      "label": "source",
+      "_origin": "ast",
+      "community": 55,
+      "community_name": "com.unity.2d.common",
+      "file_type": "code",
+      "norm_label": "source",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L32"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_common_url",
+      "label": "url",
+      "_origin": "ast",
+      "community": 55,
+      "community_name": "com.unity.2d.common",
+      "file_type": "code",
+      "norm_label": "url",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L42"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_2d_common_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 55,
+      "community_name": "com.unity.2d.common",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "packages_packages_lock_dependencies_com_unity_2d_common",
+      "label": "com.unity.2d.common",
+      "_origin": "ast",
+      "community": 55,
+      "community_name": "com.unity.2d.common",
+      "file_type": "code",
+      "norm_label": "com.unity.2d.common",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L8"
     },
     {
       "id": "graphify_out_memory_query_20261006_214301_a6d89c5e_inspect_phase_2_systems_and_dependencies_affected",
@@ -18646,114 +18733,114 @@
       "source_location": "L20"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_unityanalytics_dependencies",
+      "id": "packages_packages_lock_com_unity_2d_sprite_dependencies",
       "label": "dependencies",
       "_origin": "ast",
-      "community": 58,
-      "community_name": "com.unity.modules.unitywebrequest",
+      "community": 57,
+      "community_name": "com.unity.2d.sprite",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L593"
+      "source_location": "L59"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_unityanalytics_depth",
+      "id": "packages_packages_lock_com_unity_2d_sprite_depth",
       "label": "depth",
       "_origin": "ast",
-      "community": 58,
-      "community_name": "com.unity.modules.unitywebrequest",
+      "community": 57,
+      "community_name": "com.unity.2d.sprite",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L591"
+      "source_location": "L57"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_unityanalytics_source",
+      "id": "packages_packages_lock_com_unity_2d_sprite_source",
       "label": "source",
       "_origin": "ast",
-      "community": 58,
-      "community_name": "com.unity.modules.unitywebrequest",
+      "community": 57,
+      "community_name": "com.unity.2d.sprite",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L592"
+      "source_location": "L58"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_unityanalytics_version",
+      "id": "packages_packages_lock_com_unity_2d_sprite_version",
       "label": "version",
       "_origin": "ast",
-      "community": 58,
-      "community_name": "com.unity.modules.unitywebrequest",
+      "community": 57,
+      "community_name": "com.unity.2d.sprite",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L590"
+      "source_location": "L56"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_unitywebrequest_dependencies",
+      "id": "packages_packages_lock_dependencies_com_unity_2d_sprite",
+      "label": "com.unity.2d.sprite",
+      "_origin": "ast",
+      "community": 57,
+      "community_name": "com.unity.2d.sprite",
+      "file_type": "code",
+      "norm_label": "com.unity.2d.sprite",
+      "source_file": "Packages/packages-lock.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "packages_packages_lock_com_unity_modules_unitywebrequestaudio_dependencies",
       "label": "dependencies",
       "_origin": "ast",
       "community": 58,
-      "community_name": "com.unity.modules.unitywebrequest",
+      "community_name": "com.unity.modules.unitywebrequestaudio",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L602"
+      "source_location": "L617"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_unitywebrequest_depth",
+      "id": "packages_packages_lock_com_unity_modules_unitywebrequestaudio_depth",
       "label": "depth",
       "_origin": "ast",
       "community": 58,
-      "community_name": "com.unity.modules.unitywebrequest",
+      "community_name": "com.unity.modules.unitywebrequestaudio",
       "file_type": "code",
       "norm_label": "depth",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L600"
+      "source_location": "L615"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_unitywebrequest_source",
+      "id": "packages_packages_lock_com_unity_modules_unitywebrequestaudio_source",
       "label": "source",
       "_origin": "ast",
       "community": 58,
-      "community_name": "com.unity.modules.unitywebrequest",
+      "community_name": "com.unity.modules.unitywebrequestaudio",
       "file_type": "code",
       "norm_label": "source",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L601"
+      "source_location": "L616"
     },
     {
-      "id": "packages_packages_lock_com_unity_modules_unitywebrequest_version",
+      "id": "packages_packages_lock_com_unity_modules_unitywebrequestaudio_version",
       "label": "version",
       "_origin": "ast",
       "community": 58,
-      "community_name": "com.unity.modules.unitywebrequest",
+      "community_name": "com.unity.modules.unitywebrequestaudio",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L599"
+      "source_location": "L614"
     },
     {
-      "id": "packages_packages_lock_dependencies_com_unity_modules_unityanalytics",
-      "label": "com.unity.modules.unityanalytics",
+      "id": "packages_packages_lock_dependencies_com_unity_modules_unitywebrequestaudio",
+      "label": "com.unity.modules.unitywebrequestaudio",
       "_origin": "ast",
       "community": 58,
-      "community_name": "com.unity.modules.unitywebrequest",
+      "community_name": "com.unity.modules.unitywebrequestaudio",
       "file_type": "code",
-      "norm_label": "com.unity.modules.unityanalytics",
+      "norm_label": "com.unity.modules.unitywebrequestaudio",
       "source_file": "Packages/packages-lock.json",
-      "source_location": "L589"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_modules_unitywebrequest",
-      "label": "com.unity.modules.unitywebrequest",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "com.unity.modules.unitywebrequest",
-      "file_type": "code",
-      "norm_label": "com.unity.modules.unitywebrequest",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L261"
+      "source_location": "L613"
     },
     {
       "id": "assets_echofall_editor_movementlabbuilder",
@@ -18877,17 +18964,6 @@
       "source_location": "L1"
     },
     {
-      "id": "assets_echofall_scripts_slicecheckpoint",
-      "label": "SliceCheckpoint.cs",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "unityengine",
-      "file_type": "code",
-      "norm_label": "slicecheckpoint.cs",
-      "source_file": "Assets/EchoFall/Scripts/SliceCheckpoint.cs",
-      "source_location": "L1"
-    },
-    {
       "id": "assets_echofall_scripts_slicecombat",
       "label": "SliceCombat.cs",
       "_origin": "ast",
@@ -19007,6 +19083,39 @@
       "norm_label": "sliceroom.cs",
       "source_file": "Assets/EchoFall/Scripts/SliceRoom.cs",
       "source_location": "L1"
+    },
+    {
+      "id": "assets_echofall_scripts_sliceroom_cs_rect",
+      "label": "Rect",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "unityengine",
+      "file_type": "code",
+      "norm_label": "rect",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "assets_echofall_scripts_sliceroom_cs_transform",
+      "label": "Transform",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "unityengine",
+      "file_type": "code",
+      "norm_label": "transform",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "assets_echofall_scripts_sliceroom_cs_vector2",
+      "label": "Vector2",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "unityengine",
+      "file_type": "code",
+      "norm_label": "vector2",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "assets_echofall_scripts_slicesession",
@@ -19420,59 +19529,15 @@
       "source_location": "L14"
     },
     {
-      "id": "packages_packages_lock_com_unity_services_core_depth",
-      "label": "depth",
+      "id": "tools_buildpresentationsheet",
+      "label": "BuildPresentationSheet.ps1",
       "_origin": "ast",
-      "community": 78,
-      "community_name": "com.unity.services.core",
+      "community": 77,
+      "community_name": "BuildPresentationSheet.ps1",
       "file_type": "code",
-      "norm_label": "depth",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L314"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_services_core_source",
-      "label": "source",
-      "_origin": "ast",
-      "community": 78,
-      "community_name": "com.unity.services.core",
-      "file_type": "code",
-      "norm_label": "source",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L315"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_services_core_url",
-      "label": "url",
-      "_origin": "ast",
-      "community": 78,
-      "community_name": "com.unity.services.core",
-      "file_type": "code",
-      "norm_label": "url",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L321"
-    },
-    {
-      "id": "packages_packages_lock_com_unity_services_core_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 78,
-      "community_name": "com.unity.services.core",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L313"
-    },
-    {
-      "id": "packages_packages_lock_dependencies_com_unity_services_core",
-      "label": "com.unity.services.core",
-      "_origin": "ast",
-      "community": 78,
-      "community_name": "com.unity.services.core",
-      "file_type": "code",
-      "norm_label": "com.unity.services.core",
-      "source_file": "Packages/packages-lock.json",
-      "source_location": "L257"
+      "norm_label": "buildpresentationsheet.ps1",
+      "source_file": "Tools/BuildPresentationSheet.ps1",
+      "source_location": "L1"
     },
     {
       "id": "packages_packages_lock",
@@ -21538,6 +21603,18 @@
       "type": "external"
     },
     {
+      "id": "unityengine_rendering",
+      "label": "unityengine_rendering",
+      "_origin": "semantic",
+      "community": 6,
+      "community_name": "unityengine",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "unityengine_rendering",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "unityengine_rendering_universal",
       "label": "unityengine_rendering_universal",
       "_origin": "semantic",
@@ -21582,17 +21659,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "unityengine_ui",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "unityengine_rendering",
-      "label": "unityengine_rendering",
-      "community": 6,
-      "community_name": "unityengine",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "unityengine_rendering",
       "source_file": "",
       "type": "external"
     }
@@ -27214,7 +27280,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Tools/PlayerPresentationReview.cs",
-      "source_location": "L54",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -27226,7 +27292,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Tools/PlayerPresentationReview.cs",
-      "source_location": "L57",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -27238,7 +27304,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Tools/PlayerPresentationReview.cs",
-      "source_location": "L75",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -29853,7 +29919,7 @@
         "ref_token": "BoxCollider2D"
       },
       "source_file": "Tools/PlayerPresentationReview.cs",
-      "source_location": "L69",
+      "source_location": "L70",
       "weight": 1.0
     },
     {
@@ -31038,7 +31104,7 @@
         "ref_token": "PlayerMotor"
       },
       "source_file": "Tools/PlayerPresentationReview.cs",
-      "source_location": "L55",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -31173,7 +31239,7 @@
         "ref_token": "PlayerVisual"
       },
       "source_file": "Tools/PlayerPresentationReview.cs",
-      "source_location": "L83",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -38450,7 +38516,7 @@
         "ref_token": "Task"
       },
       "source_file": "Tools/PlayerPresentationReview.cs",
-      "source_location": "L45",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -40041,6 +40107,39 @@
       "confidence_score": 1.0,
       "source_file": "Assets/EchoFall/Tests/PlayMode/SlicePlayTests.cs",
       "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_playerpresentation",
+      "target": "docs_playerpresentation_wanderer_player_presentation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_playerpresentation_wanderer_player_presentation",
+      "target": "docs_playerpresentation_asset_gaps",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_playerpresentation_wanderer_player_presentation",
+      "target": "docs_playerpresentation_verification",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -49555,7 +49654,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Tools/PlayerPresentationReview.cs",
-      "source_location": "L45",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -49611,6 +49710,17 @@
       "confidence_score": 1.0,
       "source_file": "Docs/MigrationPlan.md",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_phase2_wakeslice_validation",
+      "target": "docs_playerpresentation",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Docs/Phase2-WakeSlice.md",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -50293,7 +50403,103 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "Tools/PlayerPresentationReview.cs",
-      "source_location": "L58",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_playerpresentation_verification",
+      "target": "assets_echofall_scripts_playermotor_echofall_movement_playermotor",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "PlayerMotor",
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_playerpresentation_verification",
+      "target": "assets_echofall_scripts_playervisual_echofall_movement_playervisual",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "PlayerVisual",
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_playerpresentation_wanderer_player_presentation",
+      "target": "assets_echofall_scripts_playervisual_echofall_movement_playervisual",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "PlayerVisual",
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_playerpresentation_verification",
+      "target": "assets_echofall_scripts_roomcamera_echofall_movement_roomcamera",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "RoomCamera",
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_playerpresentation_verification",
+      "target": "assets_echofall_scripts_slicecombat_echofall_movement_slicecombat",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "SliceCombat",
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_playerpresentation_verification",
+      "target": "assets_echofall_scripts_sliceeffects_echofall_movement_sliceeffects",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "SliceEffects",
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_playerpresentation_verification",
+      "target": "assets_echofall_scripts_sliceplayerpresentation_echofall_movement_sliceplayerpresentation",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "SlicePlayerPresentation",
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_playerpresentation_wanderer_player_presentation",
+      "target": "assets_echofall_scripts_sliceplayerpresentation_echofall_movement_sliceplayerpresentation",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "SlicePlayerPresentation",
+      "source_file": "Docs/PlayerPresentation.md",
+      "source_location": "L5",
       "weight": 1.0
     },
     {

@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Tools/Phase3Review.cs",
+      "entry": "Phase3Review.Capture"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 249,
+      "executeMs": 4696,
+      "assemblyName": "PipelineRunScript_Phase3Review_72b80a4398bc4a1bba97deb744ffc38f",
+      "success": true,
+      "result": {
+        "firstFrame": 101,
+        "lastFrame": 296,
+        "evidence": [
+          {
+            "pair": true
+          },
+          {
+            "phase": 1,
+            "pattern": 0,
+            "state": "tell",
+            "hp": 40
+          },
+          {
+            "phase": 2,
+            "state": "transition",
+            "hp": 19
+          },
+          {
+            "victory": true,
+            "unlocked": true
+          }
+        ],
+        "room": "wake"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

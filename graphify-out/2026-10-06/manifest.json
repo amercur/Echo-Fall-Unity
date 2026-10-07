@@ -336,9 +336,9 @@
     "semantic_hash": "6399285db19e74970cc8e390d893ea00"
   },
   "Docs/Phase2-WakeSlice.md": {
-    "mtime": 1791324847.1296148,
-    "seen": 1791343293.8632026,
-    "ast_hash": "9e6f590fa70d77b51639c56a5ef30474",
+    "mtime": 1791343740.1446736,
+    "seen": 1791343745.6905353,
+    "ast_hash": "0f38ae3b6761baf98b434874ba1861f3",
     "semantic_hash": ""
   },
   "Docs/Validation/asset-results.txt": {
@@ -528,9 +528,9 @@
     "semantic_hash": ""
   },
   "Tools/PlayerPresentationReview.cs": {
-    "mtime": 1791343237.9353468,
-    "seen": 1791343293.8631895,
-    "ast_hash": "b9e466dc1d7e962dbbf4c1788b0ac24a",
+    "mtime": 1791343628.7221713,
+    "seen": 1791343745.6905239,
+    "ast_hash": "aac08caa10e7454628f9ebc41e56faa0",
     "semantic_hash": ""
   },
   "README.md": {
@@ -543,6 +543,186 @@
     "mtime": 1791324718.9333708,
     "seen": 1791343293.8632154,
     "ast_hash": "8941d5b09a8c16fcdeeb5a8c48b902be",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation-editor-state.json": {
+    "mtime": 1791343710.8763864,
+    "seen": 1791343745.690504,
+    "ast_hash": "3d1d4fddd0eae29ec9a8ec5528acb7ee",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation-playmode-results.json": {
+    "mtime": 1791343291.2866733,
+    "seen": 1791343745.6905062,
+    "ast_hash": "41722b3d29cdb130e9a349828e7d6040",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation-review.json": {
+    "mtime": 1791343664.927773,
+    "seen": 1791343745.6905074,
+    "ast_hash": "2d70ae3f0d058048063f6002660fcba5",
+    "semantic_hash": ""
+  },
+  "Tools/BuildPresentationSheet.ps1": {
+    "mtime": 1791343435.2139492,
+    "seen": 1791343745.6905198,
+    "ast_hash": "a1b6592de5c0e33f64c9cc775a00efdd",
+    "semantic_hash": ""
+  },
+  "Docs/PlayerPresentation.md": {
+    "mtime": 1791343739.4048688,
+    "seen": 1791343745.6905365,
+    "ast_hash": "546ec40bb52a37a5c642c1e61b3ff059",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/archive-attack.png": {
+    "mtime": 1791343662.081846,
+    "seen": 1791343745.6905694,
+    "ast_hash": "9615539d0600e09c27a77aaafc255446",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/archive.png": {
+    "mtime": 1791343662.0256147,
+    "seen": 1791343745.6905706,
+    "ast_hash": "95e4bba50e20529efd60ca24c676f81e",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/belfry-attack.png": {
+    "mtime": 1791343660.6793945,
+    "seen": 1791343745.6905715,
+    "ast_hash": "28eb305e06b5e07376989212a715e848",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/belfry.png": {
+    "mtime": 1791343660.635642,
+    "seen": 1791343745.6905723,
+    "ast_hash": "6b28d738754bdabc0a7fd824e6ea2aab",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/cistern-attack.png": {
+    "mtime": 1791343661.3792112,
+    "seen": 1791343745.6905732,
+    "ast_hash": "90c4a521ac7cee13133dba1c71cc292b",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/cistern.png": {
+    "mtime": 1791343661.3149774,
+    "seen": 1791343745.6905744,
+    "ast_hash": "ec30c365f15115edd32ab07048fb010f",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/death.png": {
+    "mtime": 1791343663.9108322,
+    "seen": 1791343745.6905754,
+    "ast_hash": "a60a53f74f2755cbc18562efb2ba257b",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/deflect.png": {
+    "mtime": 1791343662.9324684,
+    "seen": 1791343745.690576,
+    "ast_hash": "03cf2985bb5321e73dd6954be9148229",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/guard.png": {
+    "mtime": 1791343662.8700557,
+    "seen": 1791343745.6905773,
+    "ast_hash": "7f07f78bde5a53e0e4c600a22bfd699e",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/hurt.png": {
+    "mtime": 1791343662.9973042,
+    "seen": 1791343745.690578,
+    "ast_hash": "45def08011bc148588589c9d73c2cb3d",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/lab-dash.png": {
+    "mtime": 1791343658.3404238,
+    "seen": 1791343745.690579,
+    "ast_hash": "2cc1153a98bbdecacda5a93f7d864e8e",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/lab-fall.png": {
+    "mtime": 1791343658.186971,
+    "seen": 1791343745.6905797,
+    "ast_hash": "500cd93a87a4bff09dd7dda16cd4759b",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/lab-idle.png": {
+    "mtime": 1791343658.0547402,
+    "seen": 1791343745.6905808,
+    "ast_hash": "2b60de7dec6a21c40e9d15988ea8c21d",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/lab-land.png": {
+    "mtime": 1791343658.2219963,
+    "seen": 1791343745.6905816,
+    "ast_hash": "dd15c2dd02d5d66144f82444f9767e35",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/lab-rise.png": {
+    "mtime": 1791343658.1540194,
+    "seen": 1791343745.6905825,
+    "ast_hash": "18674cf6d6bd9f14849d908b520da88f",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/lab-run.png": {
+    "mtime": 1791343658.1192257,
+    "seen": 1791343745.6905832,
+    "ast_hash": "7eaca9fd480dd3891a3270f71d8bb775",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/lab-wall-jump.png": {
+    "mtime": 1791343658.4198823,
+    "seen": 1791343745.6905844,
+    "ast_hash": "8def0d0e500d5d5d6ae22d204d2a433d",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/lab-wall-slide.png": {
+    "mtime": 1791343658.38633,
+    "seen": 1791343745.6905851,
+    "ast_hash": "205f8879620008805e9d21b8ab36bf16",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/movement-lab.png": {
+    "mtime": 1791343658.074487,
+    "seen": 1791343745.690586,
+    "ast_hash": "c1df2ac3d4ded24aa6fe80b2e8caf108",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/pose-sheet.png": {
+    "mtime": 1791343715.6067748,
+    "seen": 1791343745.6905868,
+    "ast_hash": "578a5925a5658c482415af07c7b92559",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/procession-attack.png": {
+    "mtime": 1791343662.814644,
+    "seen": 1791343745.690588,
+    "ast_hash": "7743472ad59843b9484d88a729e67973",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/procession.png": {
+    "mtime": 1791343662.7313972,
+    "seen": 1791343745.6905892,
+    "ast_hash": "63511184b611561c28cbbea7c9f5f307",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/transfer.png": {
+    "mtime": 1791343663.1707292,
+    "seen": 1791343745.6905901,
+    "ast_hash": "055fc8ef1bf2296bb12950a91724e19e",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/wake-attack.png": {
+    "mtime": 1791343660.0174007,
+    "seen": 1791343745.6905909,
+    "ast_hash": "4c6d868a31263008f30816fc401a0500",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/player-presentation/wake.png": {
+    "mtime": 1791343659.9725819,
+    "seen": 1791343745.690592,
+    "ast_hash": "8d094034c7f1da0dc79368dfa0e6a15d",
     "semantic_hash": ""
   }
 }

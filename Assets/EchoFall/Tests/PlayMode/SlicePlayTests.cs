@@ -59,8 +59,8 @@ namespace EchoFall.Movement.Tests
                 S.combat.Strike(true,0);yield return null;yield return null;
                 Assert.That(visual.Pose,Is.EqualTo(WandererPose.Attack));Assert.That(visual.FrameIndex,Is.InRange(22,29));
                 visual.Impact(.05f,.05f);Assert.That(visual.PoseHoldRemaining,Is.GreaterThan(0));
-                int combo=S.combat.Combo;S.combat.Strike(true,1);
-                Assert.That(S.combat.Combo,Is.Not.EqualTo(combo));Assert.That(visual.PoseHoldRemaining,Is.Zero,"New attack interrupts visual hold immediately.");
+                S.combat.Strike(true,1);
+                Assert.That(S.combat.Combo,Is.EqualTo(3));Assert.That(visual.PoseHoldRemaining,Is.Zero,"New attack interrupts visual hold immediately.");
                 Assert.That(Time.timeScale,Is.EqualTo(1));
                 S.combat.Rest();S.combat.BeginGuard();yield return null;yield return null;
                 Assert.That(visual.Pose,Is.EqualTo(WandererPose.Guard));
@@ -139,7 +139,7 @@ namespace EchoFall.Movement.Tests
                 Assert.That(S.Room.GetComponentsInChildren<BoxCollider2D>().Length,Is.GreaterThan(0));
                 foreach(var gate in S.Room.GetComponentsInChildren<SliceInteraction>().Where(i=>i.kind=="gate"))
                 {
-                    Assert.That(new[]{"wake","procession","belfry","archive","cistern"},Does.Contain(gate.target));
+                    Assert.That(new[]{"wake","procession","belfry","archive","cistern","king"},Does.Contain(gate.target));
                     Assert.That(gate.entry,Is.Not.Null.And.Not.Empty);
                 }
             }

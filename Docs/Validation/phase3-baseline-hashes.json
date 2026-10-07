@@ -1,0 +1,266 @@
+[
+    {
+        "path":  "Assets/EchoFall/Prefabs\\Player.prefab.meta",
+        "sha256":  "931F0CD094E436366EEB5A46B3AB14FA53E59E264215A400D1D773EF0D12F970"
+    },
+    {
+        "path":  "Assets/EchoFall/Prefabs\\Player.prefab",
+        "sha256":  "3AFEC0FB0F430E662FFA1F58BB1DAB3AA2C930F0742924C9DEFF41E4335657C7"
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_wake.unity.meta",
+        "sha256":  "D2B6ACAFDF24ABDB1B8C3C4E29B14CBFE57BD0B16EA27AB742390FBCF9843C23"
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_wake.unity",
+        "sha256":  "B210052F7EE1073015FC453A475B0D7E804F2508069402EEC963FD758DFA9360"
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_procession.unity.meta",
+        "sha256":  "F9F770F90A4BA126D25FACB9CE42F6125EF22A24C3FE895CC30791D50F6C93B1"
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_procession.unity",
+        "sha256":  "A24134EBE53AD558A2B28DB366FC5D0375BE257EFF87F774F190656AB2073934"
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_cistern.unity.meta",
+        "sha256":  "974CD3BF39BFB38A4902C7B656497969336A97ECE79B5C01D6641E8AA713C421"
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_cistern.unity",
+        "sha256":  "0B554B9E95EE056799E8E609D8FACF42CF67FDAF20E88CB02CA8EA03E4C2193A"
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_belfry.unity.meta",
+        "sha256":  "595335AA86D4BA7D0380CE805ECAEE78D096419FB2C12BF66A75614CE01CD852"
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_belfry.unity",
+        "sha256":  "E938F330C107AB0EAF9A6980491FA5DAC6B920072870943CC108D4DCA8F5A0C6"
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_archive.unity.meta",
+        "sha256":  "BE2A5C1BDC1108FD433BAA929459F334EDB50466693BB557EAA671128A557D36"
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\Wake_archive.unity",
+        "sha256":  "D5DB5B79E2A528C5D2FDD89381F315A750DD2F19883866234E4D1F5509778581"
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\WakeSlice.unity.meta",
+        "sha256":  "CF7DD256F9FA1B9B8A93726CA4FCDC3BCE65282303455F7E4710AE50AB01EC83"
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\WakeSlice.unity",
+        "sha256":  "99B4EDD80AD786BDDA56AE90B0942B9D134E62641C8FCDAE1F093F1944B5E541"
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\MovementLab.unity.meta",
+        "sha256":  "6E7099695F89B1A36BFCA6FB479659A9B126E62BB4A7A270A053B12379A15F55"
+    },
+    {
+        "path":  "Assets/EchoFall/Scenes\\MovementLab.unity",
+        "sha256":  "DA2361A47EE34F06DC1B06EEED2B28DDA90885362979374B2C4850DD34FCE0C3"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\LabMarker.cs",
+        "sha256":  "B96F8B9F3949DC24162D12B97DE5F8380FD207EE4CC7795D97A058A77A76E22E"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\EchoFall.Movement.asmdef.meta",
+        "sha256":  "FD8612FC5937ABF39E777AB956C002438CCEB271A357B61F5CE4286D2B6CF84F"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\EchoFall.Movement.asmdef",
+        "sha256":  "7053B0F0C17AAF6B5B5EC876279550F7204103661C7264267223457F8A9D8301"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\MovementInput.cs",
+        "sha256":  "AF30B829E3CE0CADD28DB7CDFF4B82143E4ECAA6A4FE87C1049054708F5819DF"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\LabMarker.cs.meta",
+        "sha256":  "58E064A18FC1D47AAC1F81122EDC584996B725062EC5F93E27DDC352846554CA"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\MovementInput.cs.meta",
+        "sha256":  "E6DD59775EAC38E98ECC208133FD451E44322A348F8C0D64501B0315E50E1853"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\WakeCameraPresentation.cs.meta",
+        "sha256":  "811B27C1C7C9D41512011F741E66B8BFFEA07207268B7B50315A9DD2110F180E"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\WakeCameraPresentation.cs",
+        "sha256":  "9D8A37DB35A11A408EEC6F3BF319AB45B5563A8E510F1E7C14BF638F00223473"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\WakeAtmosphere.cs.meta",
+        "sha256":  "C3AFA8A2B9209E89E9180EBBC69F21F65F56A3A596936DC94B708EDB8D369DB8"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\WakeAtmosphere.cs",
+        "sha256":  "97EEC210DA8B1E6F57C10EA97ABEE933C97201DF597BB86F90215F26B7B09198"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceSound.cs.meta",
+        "sha256":  "1A92B8270BD0B03217D6C7B6677FF5F5E1FEF7522E31BC76CF0F8BAF96AD03D0"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceSound.cs",
+        "sha256":  "3F5C2EFAE64A87D7CD50FA6E6448451E4DB48544AFC576D56EB1A2329BCA8B8D"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceSession.cs.meta",
+        "sha256":  "E25466F988062907ECEAAC3EA4479324A8C3BF2D7ABC24D3B84929957C809C3E"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceSession.cs",
+        "sha256":  "9DE85FDD9C540CA1B6D5E263CE7F54582BF25793619EEF48A6488BCF3009F79A"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceRoom.cs.meta",
+        "sha256":  "C30BFC410995271B26BEA47432648D606CB3794CFCC6918795437C6862004B55"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceRoom.cs",
+        "sha256":  "54E0012C780548F0B0464391C1BAFBD891CA854474D17D5D502041A45740200D"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceProjectile.cs.meta",
+        "sha256":  "32A1505EC0EC58F38FD23B66C8D8E168896ED9DFACED39325184BA25E707ED62"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceProjectile.cs",
+        "sha256":  "FCC0D7BC86545C910C85465B8CBF497219C9EDFE06066BE8B6B95CDBAF5E307D"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SlicePogo.cs.meta",
+        "sha256":  "6D3D7E449771CDC2BF3CD7A5ED564EA97C7EF71E64CBE065E7574A82019B2738"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SlicePogo.cs",
+        "sha256":  "FFC99CDF97FBC7ECB29234DDAA53FB6A17CC504F49CBCFFE2F02E0D99692EA0D"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SlicePlayerPresentation.cs.meta",
+        "sha256":  "04ADACFA18614C3C39173399A87A8DB0BBF8424F4BF73AE25BB1A9AFBD5785A4"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SlicePlayerPresentation.cs",
+        "sha256":  "860797110E0A0C59C6F3A747F19DB8D5CAF68C996B92DE2D117D6C1A0B749873"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceParallax.cs.meta",
+        "sha256":  "FB88704728CC614869B41EB3DDF2A44EF17283B2EFCE53A39EE7E86AB1944D9B"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceParallax.cs",
+        "sha256":  "E49F0DDA18431CD9AE50142C0D30AB09C438627AE5D12E00640B1CF3A5DAED4D"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceMemory.cs.meta",
+        "sha256":  "A8E379BA0AE6D59C6237E6555EB6B46A67BC75B903BCA388EB8AD9FDEB6BF933"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceMemory.cs",
+        "sha256":  "C378F341A6E403900E33801D922BAF72B3B672658BEB3E5DDDD854235EBE627E"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceInteraction.cs.meta",
+        "sha256":  "AEF16D2D0406CA0F7522E43D3BD88459495A6A6C87BCE71EF384B320A1EBB097"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceInteraction.cs",
+        "sha256":  "0EDA8245942331D621B71AB73846C407A23BB57CE79A6314A32D0AF2A032FD36"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceHUD.cs.meta",
+        "sha256":  "CE24B6B6A996B5ED20287B8BC27A6ECB863010FDB052DB3BDEEF138299CE718E"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceHUD.cs",
+        "sha256":  "86401A7C462AB228C4F3592D15CA58DD7A327B7DACF4BD656A08216A08861EDF"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceEnemy.cs.meta",
+        "sha256":  "45FA96F763FEDE4CB77758E9D2D7CFDBFC4597F69F210323A7274609D435BD7E"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceEnemy.cs",
+        "sha256":  "01CCA51290D766439C365206AEB4025BA3ADE7BDB12740144C58985257DCA7E3"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceEffects.cs.meta",
+        "sha256":  "60289535BD630BBB431685A6C9F763A2351465580EBA62660869AE031FA29382"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceEffects.cs",
+        "sha256":  "82803D36AC409227442E5398B003BB738E523B1C2D14A8409F462E34CE60F03E"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceCombat.cs.meta",
+        "sha256":  "108B718E51924F0C89897925F367B4F4301DF6DCF3271FF174E4C79B22B01E25"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceCombat.cs",
+        "sha256":  "43CC8BA8794ED0EEF37FBA13F70A1571F8E1DCC00FE0F3117A217C631C81C100"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceCheckpoint.cs.meta",
+        "sha256":  "E99EF472CDED7A3898C50BDB589827A7FAB2AA5480F043B44A39EE2DCE004E54"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\SliceCheckpoint.cs",
+        "sha256":  "EA64F5A57DCE6497634546DAE9AACB371523F63C6A8253261E4631663CC344B4"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\RoomCamera.cs.meta",
+        "sha256":  "35E0387CBE1B41DBDF4A319D924BA8589CD52162D38F67BC237B0519C78FA284"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\RoomCamera.cs",
+        "sha256":  "046EB58B52BBDA615E1F52650D4BE41BB986656A000A728B4F05BED49773DB9B"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\PlayerVisual.cs.meta",
+        "sha256":  "DB86D73DA32F19B930E20E35606A0E0C367D47855AA19DAE6472F48A0127E230"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\PlayerVisual.cs",
+        "sha256":  "D75D704802A9B13F680D37875A6BEB9481BD1E9BDBE8358A57FF38A3C932F4F3"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\PlayerMotor.cs.meta",
+        "sha256":  "CA69DAC65C7F3EB439F7455FA06D226E51FC1EE9C80F47BCAA5C94E6D1A09B37"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\PlayerMotor.cs",
+        "sha256":  "A639078BAB92049FFB6A2FF3E76D90F1141F6D642A390AAAEA6515B58DC7628A"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\PlayerCameraImpulse.cs.meta",
+        "sha256":  "3A39DA0301D6A742E8B8491E77CBB9A482DD4FDF77B45F4DBFA946125CA85A5B"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\PlayerCameraImpulse.cs",
+        "sha256":  "0CBDE3DC758619027D30BA621A76D237ED0D946F5844F2601D28BE932100C3F4"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\MovementTuning.cs.meta",
+        "sha256":  "D40F8FB65BE3238AA2AB839467E92234347BDE51C3A89C0392B5C56FA44DE26C"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\MovementTuning.cs",
+        "sha256":  "9BD268494575DAF98CF836819BE8D6FCBB213742F771825A8AE20862DBD5B3AB"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\MovementLabHUD.cs.meta",
+        "sha256":  "2C3D5F42713472635C1AF2BDF74A2FB250D57318263B640879321EB17AB3BE39"
+    },
+    {
+        "path":  "Assets/EchoFall/Scripts\\MovementLabHUD.cs",
+        "sha256":  "B7AE9168082C0799C071ED87F736E5AE9CDD27A60D72A86CC5459ED07255BECB"
+    }
+]

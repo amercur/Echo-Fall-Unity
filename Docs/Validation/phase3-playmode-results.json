@@ -1,0 +1,230 @@
+{
+  "status": "completed",
+  "duration": 111.85,
+  "summary": {
+    "total": 31,
+    "passed": 31,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementPlayTests.BelfryClimbRunsInPlayModeAndCameraTracksSummit",
+      "Status": "Passed",
+      "Duration": 13.9750697,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementPlayTests.FixedTrajectoryRunsAt30_60_144RenderTargets",
+      "Status": "Passed",
+      "Duration": 3.7720425,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementPlayTests.InputEdgesAreConsumedOnceAndUpDoesNotJump",
+      "Status": "Passed",
+      "Duration": 0.7955012,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementPlayTests.SceneRunsWithNativeInputPhysicsSpritesAndCamera",
+      "Status": "Passed",
+      "Duration": 1.4502275,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementPlayTests.WandererLocomotionPosesTrackMotorWithoutChangingCollision",
+      "Status": "Passed",
+      "Duration": 1.1986739,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.BossVictoryCheckpointReloadAndCombatDeathKeepArchiveSemantics",
+      "Status": "Passed",
+      "Duration": 7.7210381,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.DeflectWindowsCounterStrainReturnCooldownAndKnockback",
+      "Status": "Passed",
+      "Duration": 2.3023287,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.KingPredictionPhasesPatternsVictoryAndBacktracking",
+      "Status": "Passed",
+      "Duration": 3.7751723,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.KingTakesActualBladePogoAndImprintDamage",
+      "Status": "Passed",
+      "Duration": 4.0072507,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.NativeComboBufferedThirdChargeAndDashRemainResponsive",
+      "Status": "Passed",
+      "Duration": 3.1161015,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.ReflectedProjectileSweepsBackIntoItsSourceAndEmberGeneratesResonance",
+      "Status": "Passed",
+      "Duration": 1.4979946,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.RisingPogoImprintFractionAndMendMatchSource",
+      "Status": "Passed",
+      "Duration": 5.0178822,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.SentinelProtectsLancerHeavyBypassesAndEveryArchetypeAttacks",
+      "Status": "Passed",
+      "Duration": 2.1179081,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.BenchReloadRestoresFiveRoomProgressAndLoadoutButNotLaterActions",
+      "Status": "Passed",
+      "Duration": 6.9876152,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.ChargedGuardCountersRedAndMatureImprintConsumesResonance",
+      "Status": "Passed",
+      "Duration": 4.6955455,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.ChargedReleaseDeflectsWhiteButShortHoldDoesNotCounterRed",
+      "Status": "Passed",
+      "Duration": 2.4157365,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.CompletedFiveRoomRunUsesGlassThenChangesTheNextWake",
+      "Status": "Passed",
+      "Duration": 4.063962,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.DeflectAndLateBlockConsumeOneWindowAndRestClearsCombatTimers",
+      "Status": "Passed",
+      "Duration": 2.1220468,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.EnemyDamageBacktracksButTransferResetsRunState",
+      "Status": "Passed",
+      "Duration": 4.0118019,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.FailedCheckpointAndLoadoutSavesKeepPreviousDataAndCanRetry",
+      "Status": "Passed",
+      "Duration": 3.557372,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.FatalMercyStillTransfersExactlyOneDecisionAndEmberClosesRoots",
+      "Status": "Passed",
+      "Duration": 3.1121496,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.FiveRoomsAndEveryOpenGateHaveValidSpawnsAndCollision",
+      "Status": "Passed",
+      "Duration": 4.360441,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.InterruptedRestNeverSavesAndFatalDamageClearsCompletedCheckpoint",
+      "Status": "Passed",
+      "Duration": 4.5184407,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.MercyChangesCreatureAndCreatesActualRootCollisionNextLife",
+      "Status": "Passed",
+      "Duration": 2.5253969,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.NativeInputMovementAttackAndPauseAreOperational",
+      "Status": "Passed",
+      "Duration": 2.1573121,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.NativePauseMenuEquipsRetainedMemoryOnlyInSafeAreas",
+      "Status": "Passed",
+      "Duration": 2.1110342,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.PlayerFeedbackWorksInEveryRoomAndNeverBlocksActions",
+      "Status": "Passed",
+      "Duration": 5.9393245,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.RememberedCreatureDoesNotBlockCompletionOfLaterLives",
+      "Status": "Passed",
+      "Duration": 2.0515595,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.StrongHitFeedbackLeavesSimulationAndCameraFollowUntouched",
+      "Status": "Passed",
+      "Duration": 1.7495248,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.TransferAndDeathAnimateWithoutDelayingExtractionOrNextLife",
+      "Status": "Passed",
+      "Duration": 2.921338,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.WhiteDeflectCompletesTrainingAndRedBypassesOrdinaryDash",
+      "Status": "Passed",
+      "Duration": 1.6291346,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

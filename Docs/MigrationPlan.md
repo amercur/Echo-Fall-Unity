@@ -6,6 +6,8 @@ Implementation follow-up (2026-10-04): Unity is **6000.5.8f1**. The existing Pha
 
 Scope update (2026-10-05): At the user's request, Phase 2 now combines initial combat with a five-room Wake vertical slice and its first persistent memory loop, bringing forward selected scope from phases 3, 4, and 6 below. `WakeSlice` preserves MovementLab and connects Wake, Procession, Belfry, Cistern, and Archive. See [Phase2-WakeSlice.md](Phase2-WakeSlice.md) for controls, source adaptations, validation, memory consequences, and deferred work. The original phase descriptions remain as the full migration checklist; this slice does not imply their complete acceptance gates have passed.
 
+Scope update (2026-10-07): Phase 2 is the preserved baseline. The user's Phase 3 milestone now delivers combat maturation, Sentinel/Lancer/Drone variety, a shared reaction framework, and the King/Court encounter without expanding the full world. The Court extends Procession; the original five-room completion and memory loop remain available. See [Phase3-CombatCourt.md](Phase3-CombatCourt.md) for implementation, tests, deliberate adaptations, remaining parity gaps and the proposed Phase 4 scope. The numbered sections below remain the original migration roadmap, not the current milestone numbering.
+
 Original, read-only reference: `C:\Users\sivas\echo-fall`.
 Destination: `C:\Users\sivas\Downloads\Unity Projects\Echo-Fall`.
 

@@ -1,0 +1,223 @@
+{
+  "status": "completed",
+  "duration": 104.99,
+  "summary": {
+    "total": 30,
+    "passed": 28,
+    "failed": 2,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementPlayTests.BelfryClimbRunsInPlayModeAndCameraTracksSummit",
+      "Status": "Passed",
+      "Duration": 14.0190081,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementPlayTests.FixedTrajectoryRunsAt30_60_144RenderTargets",
+      "Status": "Passed",
+      "Duration": 3.7458392,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementPlayTests.InputEdgesAreConsumedOnceAndUpDoesNotJump",
+      "Status": "Passed",
+      "Duration": 0.7505581,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementPlayTests.SceneRunsWithNativeInputPhysicsSpritesAndCamera",
+      "Status": "Passed",
+      "Duration": 1.4237703,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementPlayTests.WandererLocomotionPosesTrackMotorWithoutChangingCollision",
+      "Status": "Passed",
+      "Duration": 1.1315996,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.BossVictoryCheckpointReloadAndCombatDeathKeepArchiveSemantics",
+      "Status": "Passed",
+      "Duration": 6.5413134,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.DeflectWindowsCounterStrainReturnCooldownAndKnockback",
+      "Status": "Passed",
+      "Duration": 2.2763901,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.KingPredictionPhasesPatternsVictoryAndBacktracking",
+      "Status": "Failed",
+      "Duration": 2.1567455,
+      "Message": "  Expected: 2\r\n  But was:  1\r\n",
+      "StackTrace": "at EchoFall.Movement.Tests.Phase3CombatPlayTests+<KingPredictionPhasesPatternsVictoryAndBacktracking>d__17.MoveNext () [0x002df] in C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall\\Assets\\EchoFall\\Tests\\PlayMode\\Phase3CombatPlayTests.cs:130\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@1405238725ab\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:44\r\n"
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.NativeComboBufferedThirdChargeAndDashRemainResponsive",
+      "Status": "Passed",
+      "Duration": 3.1477224,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.ReflectedProjectileSweepsBackIntoItsSourceAndEmberGeneratesResonance",
+      "Status": "Passed",
+      "Duration": 1.488865,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.RisingPogoImprintFractionAndMendMatchSource",
+      "Status": "Passed",
+      "Duration": 5.0098336,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatPlayTests.SentinelProtectsLancerHeavyBypassesAndEveryArchetypeAttacks",
+      "Status": "Failed",
+      "Duration": 2.061535,
+      "Message": "  Expected: True\r\n  But was:  False\r\n",
+      "StackTrace": "at EchoFall.Movement.Tests.Phase3CombatPlayTests+<SentinelProtectsLancerHeavyBypassesAndEveryArchetypeAttacks>d__16.MoveNext () [0x003db] in C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall\\Assets\\EchoFall\\Tests\\PlayMode\\Phase3CombatPlayTests.cs:114\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@1405238725ab\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:44\r\n"
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.BenchReloadRestoresFiveRoomProgressAndLoadoutButNotLaterActions",
+      "Status": "Passed",
+      "Duration": 7.1202728,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.ChargedGuardCountersRedAndMatureImprintConsumesResonance",
+      "Status": "Passed",
+      "Duration": 4.695446,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.ChargedReleaseDeflectsWhiteButShortHoldDoesNotCounterRed",
+      "Status": "Passed",
+      "Duration": 2.5361338,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.CompletedFiveRoomRunUsesGlassThenChangesTheNextWake",
+      "Status": "Passed",
+      "Duration": 3.9562174,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.DeflectAndLateBlockConsumeOneWindowAndRestClearsCombatTimers",
+      "Status": "Passed",
+      "Duration": 2.2247068,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.EnemyDamageBacktracksButTransferResetsRunState",
+      "Status": "Passed",
+      "Duration": 4.0582491,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.FailedCheckpointAndLoadoutSavesKeepPreviousDataAndCanRetry",
+      "Status": "Passed",
+      "Duration": 3.5546018,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.FatalMercyStillTransfersExactlyOneDecisionAndEmberClosesRoots",
+      "Status": "Passed",
+      "Duration": 3.0831416,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.FiveRoomsAndEveryOpenGateHaveValidSpawnsAndCollision",
+      "Status": "Passed",
+      "Duration": 4.2964758,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.InterruptedRestNeverSavesAndFatalDamageClearsCompletedCheckpoint",
+      "Status": "Passed",
+      "Duration": 4.5034848,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.MercyChangesCreatureAndCreatesActualRootCollisionNextLife",
+      "Status": "Passed",
+      "Duration": 2.5026964,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.NativeInputMovementAttackAndPauseAreOperational",
+      "Status": "Passed",
+      "Duration": 2.1509075,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.NativePauseMenuEquipsRetainedMemoryOnlyInSafeAreas",
+      "Status": "Passed",
+      "Duration": 2.0894119,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.PlayerFeedbackWorksInEveryRoomAndNeverBlocksActions",
+      "Status": "Passed",
+      "Duration": 5.8964023,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.RememberedCreatureDoesNotBlockCompletionOfLaterLives",
+      "Status": "Passed",
+      "Duration": 2.0860712,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.StrongHitFeedbackLeavesSimulationAndCameraFollowUntouched",
+      "Status": "Passed",
+      "Duration": 1.8883711,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.TransferAndDeathAnimateWithoutDelayingExtractionOrNextLife",
+      "Status": "Passed",
+      "Duration": 2.8355105,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SlicePlayTests.WhiteDeflectCompletesTrainingAndRedBypassesOrdinaryDash",
+      "Status": "Passed",
+      "Duration": 1.6151368,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

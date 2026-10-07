@@ -9,6 +9,9 @@ namespace EchoFall.Movement
     {
         public SliceSession session;
         Text title, subtitle, health, status, prompt, message, modalTitle, modalBody, loop, map;
+        Text boss;
+        GameObject bossPanel;
+        RectTransform bossHealth;
         RectTransform root;
         RectTransform safeFrame;
         Image transition;
@@ -29,6 +32,10 @@ namespace EchoFall.Movement
             Panel("Title backing", root, new Vector2(0,1), new Vector2(0,1), new Vector2(24,-24), new Vector2(680,96), new Color(.03f,.05f,.075f,.72f));
             title = Label(root,"THE WAKE",28,Color.white, new Vector2(0,1),new Vector2(48,-40),new Vector2(670,38));
             subtitle = Label(root,"E C H O   /   F A L L",13,gold,new Vector2(0,1),new Vector2(49,-82),new Vector2(660,25));
+            bossPanel=Panel("Boss backing",root,new Vector2(.5f,1),new Vector2(.5f,1),new Vector2(-420,-250),new Vector2(840,80),ink).gameObject;
+            boss=Label(bossPanel.transform,"",19,gold,new Vector2(.5f,1),new Vector2(-400,-10),new Vector2(800,54));boss.alignment=TextAnchor.MiddleCenter;
+            Panel("Boss health track",bossPanel.transform,Vector2.zero,Vector2.zero,new Vector2(20,8),new Vector2(800,3),new Color(.2f,.25f,.29f));
+            bossHealth=Panel("Boss health",bossPanel.transform,Vector2.zero,Vector2.zero,new Vector2(20,8),new Vector2(800,3),gold);
             loop = Label(root,"",16,cyan,new Vector2(1,1),new Vector2(-360,-40),new Vector2(310,30)); loop.alignment = TextAnchor.MiddleRight;
             map = Label(root,"",13,new Color(.58f,.67f,.73f),new Vector2(1,1),new Vector2(-390,-78),new Vector2(340,100)); map.alignment = TextAnchor.UpperRight;
             Panel("Vitals backing",root,Vector2.zero,Vector2.zero,new Vector2(24,24),new Vector2(690,92),ink);
@@ -81,9 +88,13 @@ namespace EchoFall.Movement
             if(Camera.main!=null && safeFrame!=null) { var viewport=Camera.main.rect; safeFrame.anchorMin=viewport.min; safeFrame.anchorMax=viewport.max; }
             if(session.Room!=null) { title.text=session.Room.title; subtitle.text=session.Room.subtitle; }
             loop.text="LIFE " + session.Archive.loop.ToString("00") + "   /   " + (session.Archive.active=="fire"?"EMBER":session.Archive.active.ToUpperInvariant());
-            health.text="INTEGRITY   " + new string('◆',session.combat.Integrity) + new string('◇',6-session.combat.Integrity) + "    ·    RESONANCE  " + session.combat.Resonance;
+            health.text="INTEGRITY   " + new string('◆',session.combat.Integrity) + new string('◇',6-session.combat.Integrity) + "    ·    RESONANCE  " + session.combat.Resonance.ToString("0.##");
             status.text="J  STRIKE   F  DEFLECT   Q  IMPRINT   H  MEND   C  MEMORY" + (session.combat.Fracture>0?"   FRACTURE "+session.combat.Fracture:"");
-            map.text="THE FIRST RETURN\n"+session.Visited.Count+" / 5 PLACES WITNESSED";
+            var king=SliceKing.Active;
+            bossPanel.SetActive(king!=null && king.Started && king.Alive);
+            if(king!=null)bossHealth.sizeDelta=new Vector2(800*Mathf.Clamp01(king.hp/40),3);
+            boss.text=king!=null && king.Started && king.Alive?"THE KING / "+king.hp.ToString("0.#")+" / 40     PHASE "+king.Stage+"     BREAKS "+king.Breaks+"\n"+(king.Exposed>0?"EXPOSED":king.State=="tell"?(king.Red?"RED SWEEP / JUMP OR CHARGED COUNTER":"WHITE CHARGE / DEFLECT"):"BREAK HIS PREDICTION"):"";
+            map.text="THE FIRST RETURN\n"+(session.Visited.Count-(session.Visited.Contains("king")?1:0))+" / 5 PLACES WITNESSED";
             prompt.text=session.Playing && session.Nearest!=null ? "[ E / Y ]   "+session.Nearest.label : "";
             message.text=string.IsNullOrEmpty(session.CurrentMessage)?session.Objective:session.CurrentMessage;
             bool show=!session.Playing && session.Screen!=SliceScreen.Loading;

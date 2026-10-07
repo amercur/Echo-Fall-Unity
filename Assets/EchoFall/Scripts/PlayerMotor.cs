@@ -84,7 +84,16 @@ namespace EchoFall.Movement
             AirDashUsed = false;
             Grounded = false;
             dashTime = 0;
+            dashCooldown = 0;
         }
+
+        public void CombatKnockback(float sourceX)
+        {
+            Velocity=new Vector2(Position.x<sourceX?-2.7f:2.7f,1.7f);
+            dashTime=0;wallLock=.12f;Grounded=false;
+        }
+        public void DeflectLift()
+        { RefreshAirOptions();if(!Grounded)Velocity=new Vector2(Velocity.x,Mathf.Max(Velocity.y,2.1f)); }
 
         public void RefreshAirOptions() => AirDashUsed = false;
 

@@ -1,5 +1,4 @@
 using UnityEngine;
-
 namespace EchoFall.Movement
 {
     // A small bounded synth, following the source game's procedural-audio approach.
@@ -9,7 +8,13 @@ namespace EchoFall.Movement
         AudioSource ambience;
         AudioSource[] voices;
         AudioClip drone, bell, cut, impact;
-        int voice, lastLife, lastHp, lastResonance, lastCombo;
+        int voice, lastLife, lastHp, lastCombo;
+        float lastResonance;
+        public static void Cue(string cue)
+        {
+            var sound=FindAnyObjectByType<SliceSound>();if(sound==null || sound.voices==null)return;
+            sound.Play(cue=="slash"||cue=="charged"?sound.cut:cue=="hit"||cue=="heavy-hit"||cue=="armor"?sound.impact:sound.bell);
+        }
         string lastRoom;
         void Start()
         {
@@ -40,7 +45,7 @@ namespace EchoFall.Movement
             if(s.Room!=null && s.Room.id!=lastRoom) { lastRoom=s.Room.id; Play(bell); }
             if(s.combat.Integrity<lastHp)Play(impact);
             if(s.combat.Resonance>lastResonance || s.Archive.loop!=lastLife)Play(bell);
-            if(s.combat.Combo!=lastCombo)Play(cut);
+
             lastHp=s.combat.Integrity; lastResonance=s.combat.Resonance; lastLife=s.Archive.loop; lastCombo=s.combat.Combo;
         }
         void OnDestroy() { foreach(var clip in new[]{drone,bell,cut,impact})if(clip!=null)Destroy(clip); }

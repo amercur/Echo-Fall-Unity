@@ -4,6 +4,8 @@ Implementation date: 2026-10-05. This milestone follows the user's expanded Phas
 
 ## Play
 
+Phase 3 continuation (2026-10-07): this document remains the Phase 2 baseline/historical acceptance record. [Phase3-CombatCourt.md](Phase3-CombatCourt.md) describes the combat upgrade and new Court branch from Procession. The original five-room completion, memory/transfer behavior, saved anchors, player presentation and exploration remain supported; the sealed King passage is now open. Combat parity gaps mentioned below are superseded where explicitly completed in the Phase 3 notes.
+
 Open `Assets/EchoFall/Scenes/WakeSlice.unity` and press Play. The bootstrap loads `Wake_wake` additively. The original `MovementLab`, its player prefab, and its movement tuning are preserved. `WakeSlice` is first in Build Settings; all five destinations and MovementLab are included.
 
 Keyboard: A/D move; Space jump; K/Shift dash; J/X strike (hold then release for charged cut); W/S aim; F tap for white deflect, hold at least .48 seconds and release to counter red; Q imprint/early detonation; H hold while still to mend; C/L active memory; E interact; R voluntary transfer; Escape controls/pause. Dialogue uses buttons or 1/2/3. Controller movement and actions are bound; dialogue choices also use A/X/B. Physical controller testing remains necessary.

@@ -23,6 +23,8 @@ namespace EchoFall.Movement
         public SliceArchive Archive { get; private set; }
         public SliceRoom Room { get; private set; }
         public SliceScreen Screen { get; private set; } = SliceScreen.Loading;
+        public int KingStage, KingBreaks;
+        public string KingStyle;
         public string Decision { get; private set; }
         public string Message { get; private set; }
         public string ModalTitle { get; private set; }
@@ -44,8 +46,9 @@ namespace EchoFall.Movement
         public bool Playing => Screen == SliceScreen.Playing;
         public bool EncounterCleared => Defeated.Contains("procession/enemy-0") && Defeated.Contains("procession/enemy-1") && Defeated.Contains("procession/enemy-2") && Defeated.Contains("procession/enemy-3");
         public bool CreatureChoiceKnown => Decision != null || Archive.Remembers("mercy") || Archive.Remembers("fire");
-        public bool SliceComplete => CreatureChoiceKnown && Visited.Count == 5 && EncounterCleared && Consumed.Contains("bell-secret") && Consumed.Contains("pogo-secret");
-        public string Objective => !CreatureChoiceKnown ? "Listen to the wounded creature in the Wake." : !EncounterCleared ? "Clear the four sentries on the Pilgrim Causeway." : !Consumed.Contains("bell-secret") ? "Find the Bell Keeper's record above the Belfry." : !Consumed.Contains("pogo-secret") ? "Recover the Drowned Engineer's record in the Cistern." : Visited.Count < 5 ? "Reach the Glass Archive through the Belfry." : "The five rooms are witnessed. Return to the transfer glass.";
+        public bool WakeVisited => Visited.Contains("wake") && Visited.Contains("belfry") && Visited.Contains("cistern") && Visited.Contains("archive") && Visited.Contains("procession");
+        public bool SliceComplete => CreatureChoiceKnown && WakeVisited && EncounterCleared && Consumed.Contains("bell-secret") && Consumed.Contains("pogo-secret");
+        public string Objective => !CreatureChoiceKnown ? "Listen to the wounded creature in the Wake." : !EncounterCleared ? "Clear the four sentries on the Pilgrim Causeway." : !Consumed.Contains("bell-secret") ? "Find the Bell Keeper's record above the Belfry." : !Consumed.Contains("pogo-secret") ? "Recover the Drowned Engineer's record in the Cistern." : !WakeVisited ? "Reach the Glass Archive through the Belfry." : "The five rooms are witnessed. Return to the transfer glass.";
 
         void Awake()
         {
@@ -76,6 +79,7 @@ namespace EchoFall.Movement
             var checkpoint = Archive.checkpoint;
             if (checkpoint != null && checkpoint.Valid(Archive))
             {
+                KingStage=checkpoint.kingStage;KingBreaks=checkpoint.kingBreaks;KingStyle=checkpoint.kingStyle;
                 Decision = string.IsNullOrEmpty(checkpoint.decision) ? null : checkpoint.decision;
                 Defeated.UnionWith(checkpoint.defeated); Consumed.UnionWith(checkpoint.consumed);
                 Flags.UnionWith(checkpoint.flags); Visited.UnionWith(checkpoint.visited);
@@ -152,6 +156,7 @@ namespace EchoFall.Movement
             if (locked != null) { Notify(locked); return; }
             switch (item.kind)
             {
+                case "victory": EndRun(true); break;
                 case "gate": StartCoroutine(LoadRoom(item.target, item.entry)); break;
                 case "bench": BeginRest(item); break;
                 case "lever": Flags.Add(item.flag); Notify("The shortcut is open at both ends for this life."); break;
@@ -203,11 +208,14 @@ namespace EchoFall.Movement
             catch (Exception e) when (e is System.IO.IOException || e is UnauthorizedAccessException)
             { Notify("Could not save the memory. Free disk space and try again; this life is preserved."); Show(ModalTitle, ModalBody, SliceScreen.Transfer, ("RETRY TRANSFER", () => CommitTransfer(memory))); return; }
             Archive = next; Decision = null; Defeated.Clear(); EnemyHealth.Clear(); Consumed.Clear(); Flags.Clear(); Visited.Clear();
+            KingStage=KingBreaks=0;KingStyle=null;
             combat.Rest(); StartCoroutine(LoadRoom("wake", "default", true));
         }
         public IEnumerator LoadRoom(string id, string entry, bool newLife = false, string bench = null)
         {
-            if (Array.IndexOf(new[] { "wake", "belfry", "cistern", "archive", "procession" }, id) < 0) yield break;
+            if (Array.IndexOf(new[] { "wake", "belfry", "cistern", "archive", "procession", "king" }, id) < 0) yield break;
+            var departingKing=SliceKing.Active;
+            if(!newLife && departingKing!=null){KingStage=departingKing.Stage;KingBreaks=departingKing.Breaks;KingStyle=departingKing.LastStyle;}
             SetScreen(SliceScreen.Loading); combat.ClearTransient();
             if(hud!=null)yield return hud.FadeRoom(1,.16f);
             if (!newLife && Room != null) foreach (var enemy in Room.GetComponentsInChildren<SliceEnemy>()) EnemyHealth[enemy.id] = enemy.hp;
@@ -265,7 +273,7 @@ namespace EchoFall.Movement
             var checkpoint = new SliceCheckpoint
             {
                 loop = Archive.loop, archive = SliceCheckpoint.Signature(Archive), room = Room.id, bench = bench.id,
-                decision = Decision, resonance = combat.Resonance,
+                decision = Decision, resonance = combat.Resonance, kingStage=KingStage,kingBreaks=KingBreaks,kingStyle=KingStyle,
                 defeated = new List<string>(Defeated), consumed = new List<string>(Consumed),
                 flags = new List<string>(Flags), visited = new List<string>(Visited)
             };
