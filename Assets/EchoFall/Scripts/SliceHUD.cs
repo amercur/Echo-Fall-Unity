@@ -43,7 +43,7 @@ namespace EchoFall.Movement
             status = Label(root,"",13,new Color(.65f,.73f,.8f),Vector2.zero,new Vector2(46,56),new Vector2(650,25));
             prompt = Label(root,"",18,gold,new Vector2(.5f,0),new Vector2(-480,175),new Vector2(960,38)); prompt.alignment = TextAnchor.MiddleCenter;
             message = Label(root,"",15,new Color(.68f,.78f,.8f),new Vector2(0,1),new Vector2(49,-121),new Vector2(760,58)); message.alignment = TextAnchor.UpperLeft;
-            var hint = Label(root,"E  INTERACT    ESC  CONTROLS\nR  TRANSFER",13,new Color(.56f,.67f,.72f),new Vector2(1,0),new Vector2(-340,84),new Vector2(290,55)); hint.alignment = TextAnchor.MiddleRight;
+            var hint = Label(root,"E  INTERACT    ESC  CONTROLS\nM  MAP    R  TRANSFER",13,new Color(.56f,.67f,.72f),new Vector2(1,0),new Vector2(-340,84),new Vector2(290,55)); hint.alignment = TextAnchor.MiddleRight;
             shade = Panel("Modal shade",root,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero,new Color(.015f,.025f,.04f,.83f)).gameObject;
             modal = Panel("Memory panel",root,new Vector2(.5f,.5f),new Vector2(.5f,.5f),new Vector2(-450,-265),new Vector2(900,530),ink).gameObject;
             var panel = modal.GetComponent<RectTransform>();
@@ -94,10 +94,10 @@ namespace EchoFall.Movement
             bossPanel.SetActive(king!=null && king.Started && king.Alive);
             if(king!=null)bossHealth.sizeDelta=new Vector2(800*Mathf.Clamp01(king.hp/40),3);
             boss.text=king!=null && king.Started && king.Alive?"THE KING / "+king.hp.ToString("0.#")+" / 40     PHASE "+king.Stage+"     BREAKS "+king.Breaks+"\n"+(king.Exposed>0?"EXPOSED":king.State=="tell"?(king.Red?"RED SWEEP / JUMP OR CHARGED COUNTER":"WHITE CHARGE / DEFLECT"):"BREAK HIS PREDICTION"):"";
-            map.text="THE FIRST RETURN\n"+(session.Visited.Count-(session.Visited.Contains("king")?1:0))+" / 5 PLACES WITNESSED";
+            map.text=(session.Room==null?"":WorldCatalog.Find(session.Room.id).region.ToUpperInvariant())+"\n"+session.Visited.Count+" PLACES MAPPED / M";
             prompt.text=session.Playing && session.Nearest!=null ? "[ E / Y ]   "+session.Nearest.label : "";
             message.text=string.IsNullOrEmpty(session.CurrentMessage)?session.Objective:session.CurrentMessage;
-            bool show=!session.Playing && session.Screen!=SliceScreen.Loading;
+            bool show=!session.Playing && session.Screen!=SliceScreen.Loading && session.Screen!=SliceScreen.Map;
             shade.SetActive(show); modal.SetActive(show);
             if(show)
             {

@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Tools/Phase4Review.cs",
+      "entry": "Phase4Review.Capture"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 699,
+      "executeMs": 6199,
+      "assemblyName": "PipelineRunScript_Phase4Review_7f09238e595846cf89b99490c2b92d76",
+      "success": true,
+      "result": {
+        "firstFrame": 506,
+        "lastFrame": 1041,
+        "evidence": [
+          {
+            "room": "cradle",
+            "actors": 1,
+            "visited": true
+          },
+          {
+            "room": "lungs",
+            "actors": 2,
+            "visited": true
+          },
+          {
+            "room": "mother",
+            "actors": 2,
+            "visited": true
+          },
+          {
+            "room": "garden",
+            "actors": 0,
+            "visited": true
+          },
+          {
+            "room": "observatory",
+            "actors": 0,
+            "visited": true
+          },
+          {
+            "room": "choir",
+            "actors": 0,
+            "visited": true
+          },
+          {
+            "room": "rootvault",
+            "actors": 1,
+            "visited": true
+          }
+        ],
+        "ephemeral": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -32,5 +32,26 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/EchoFall/Scenes/Wake_king.unity
     guid: b65aa93c2014dca4cac681d123d97c27
+  - enabled: 1
+    path: Assets/EchoFall/Scenes/Wake_cradle.unity
+    guid: 518f7a0f184b26344a03f1a58217e407
+  - enabled: 1
+    path: Assets/EchoFall/Scenes/Wake_lungs.unity
+    guid: b97b5282da15eb845b4c9a9256e66a23
+  - enabled: 1
+    path: Assets/EchoFall/Scenes/Wake_mother.unity
+    guid: e76f8c89df2877f479b15233418cd642
+  - enabled: 1
+    path: Assets/EchoFall/Scenes/Wake_garden.unity
+    guid: 5303c5f3b9f356542b263fd5dfe37462
+  - enabled: 1
+    path: Assets/EchoFall/Scenes/Wake_observatory.unity
+    guid: 1d0b59a304ac9674685ca0f0cd852be3
+  - enabled: 1
+    path: Assets/EchoFall/Scenes/Wake_choir.unity
+    guid: b28491ea37b011d44a953f80a13b060a
+  - enabled: 1
+    path: Assets/EchoFall/Scenes/Wake_rootvault.unity
+    guid: 17a8e0277e038e044966d810cf50f4d4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

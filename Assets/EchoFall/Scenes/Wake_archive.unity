@@ -16710,13 +16710,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: EchoFall.Movement::EchoFall.Movement.SliceInteraction
   id: archive-memory
-  kind: lore
-  label: SEALED / BEYOND THIS SLICE
+  kind: gate
+  label: THE BREATHING PASSAGE
   story: Beyond this threshold lies another chapter. Explore the five open rooms,
     then return to the transfer glass.
   target: lungs
   entry: archive
-  requires: 
+  requires: breath-link
   memory: 
   blockedBy: 
   flag: 

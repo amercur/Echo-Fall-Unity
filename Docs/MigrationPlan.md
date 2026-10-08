@@ -9,6 +9,8 @@ Scope update (2026-10-05): At the user's request, Phase 2 now combines initial c
 Scope update (2026-10-07): Phase 2 is the preserved baseline. The user's Phase 3 milestone now delivers combat maturation, Sentinel/Lancer/Drone variety, a shared reaction framework, and the King/Court encounter without expanding the full world. The Court extends Procession; the original five-room completion and memory loop remain available. See [Phase3-CombatCourt.md](Phase3-CombatCourt.md) for implementation, tests, deliberate adaptations, remaining parity gaps and the proposed Phase 4 scope. The numbered sections below remain the original migration roadmap, not the current milestone numbering.
 
 Original, read-only reference: `C:\Users\sivas\echo-fall`.
+
+Scope update (2026-10-07): At the user's request, Phase 4 prioritizes interconnected exploration. Seven rooms extend the preserved Wake/Court baseline through Cradle, Lungs, the dormant Immortal Chamber, Last Garden, Observatory, Choir and an optional Root Vault. See [Phase4-WorldExpansion.md](Phase4-WorldExpansion.md) for source-route adaptations, map/save behavior, traversal validation and deferred bosses/endings. This supersedes the previous recommendation to implement broader combat styles before expanding.
 Destination: `C:\Users\sivas\Downloads\Unity Projects\Echo-Fall`.
 
 ## Direction and scope

@@ -139,7 +139,7 @@ namespace EchoFall.Movement.Tests
                 Assert.That(S.Room.GetComponentsInChildren<BoxCollider2D>().Length,Is.GreaterThan(0));
                 foreach(var gate in S.Room.GetComponentsInChildren<SliceInteraction>().Where(i=>i.kind=="gate"))
                 {
-                    Assert.That(new[]{"wake","procession","belfry","archive","cistern","king"},Does.Contain(gate.target));
+                    Assert.That(WorldCatalog.RoomId(gate.target),Is.True);
                     Assert.That(gate.entry,Is.Not.Null.And.Not.Empty);
                 }
             }

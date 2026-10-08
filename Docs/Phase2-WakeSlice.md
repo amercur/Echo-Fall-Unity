@@ -1,5 +1,7 @@
 # Phase 2: the first Wake slice
 
+Phase 4 continuation: the five-room loop remains available within the larger connected world. See [Phase4-WorldExpansion.md](Phase4-WorldExpansion.md) for expanded discovery, checkpoints and routes. Earlier room limits and missing-map notes below describe this historical milestone.
+
 Implementation date: 2026-10-05. This milestone follows the user's expanded Phase 2 scope: combat, five connected rooms, presentation, and the first memory loop. It brings forward selected work from the original plan's phases 3, 4, and 6; it does not claim those entire phases are complete.
 
 ## Play

@@ -1,0 +1,893 @@
+{
+  "rooms": [
+    {
+      "id": "cradle",
+      "name": "THE CRADLE / THREADS OF MERCY",
+      "width": 1470,
+      "top": -80,
+      "bottom": 540,
+      "enemies": [
+        {
+          "x": 1000,
+          "type": "lancer",
+          "floor": 452,
+          "left": 900,
+          "right": 1100
+        }
+      ],
+      "interactions": [
+        {
+          "id": "cradle-west",
+          "kind": "gate",
+          "x": 65,
+          "y": 417,
+          "target": "king",
+          "entry": "east",
+          "label": "THE COURT"
+        },
+        {
+          "id": "keeper",
+          "kind": "lore",
+          "x": 400,
+          "y": 412,
+          "label": "THE KEEPER",
+          "story": "The Keeper tends the sleeping engine. Climb to the Lungs; their maintenance lift returns above the chamber."
+        },
+        {
+          "id": "cradle-rest",
+          "kind": "bench",
+          "x": 820,
+          "y": 425,
+          "label": "SIGNAL ANCHOR"
+        },
+        {
+          "id": "cradle-high",
+          "kind": "gate",
+          "x": 710,
+          "y": 117,
+          "target": "lungs",
+          "entry": "low",
+          "label": "THE SUSPENDED LUNGS"
+        },
+        {
+          "id": "cradle-east",
+          "kind": "gate",
+          "x": 1400,
+          "y": 417,
+          "target": "mother",
+          "entry": "west",
+          "label": "THE IMMORTAL CHAMBER"
+        }
+      ],
+      "ground": [
+        {
+          "x": 0,
+          "y": 452,
+          "w": 1470,
+          "h": 100
+        }
+      ],
+      "platforms": [
+        {
+          "x": 235,
+          "y": 352,
+          "w": 125,
+          "h": 20
+        },
+        {
+          "x": 430,
+          "y": 252,
+          "w": 140,
+          "h": 20
+        },
+        {
+          "x": 630,
+          "y": 152,
+          "w": 160,
+          "h": 20
+        },
+        {
+          "x": 960,
+          "y": 352,
+          "w": 160,
+          "h": 20
+        }
+      ],
+      "solids": [],
+      "hazards": [],
+      "pogo": [],
+      "spawns": [
+        {
+          "id": "default",
+          "x": 121,
+          "y": 452
+        },
+        {
+          "id": "west",
+          "x": 121,
+          "y": 452
+        },
+        {
+          "id": "east",
+          "x": 1341,
+          "y": 452
+        },
+        {
+          "id": "high",
+          "x": 711,
+          "y": 152
+        }
+      ],
+      "decor": [
+        {
+          "kind": "arch",
+          "x": 490,
+          "y": 452,
+          "scale": 0.5
+        },
+        {
+          "kind": "spire",
+          "x": 1280,
+          "y": 452,
+          "scale": 0.48
+        }
+      ]
+    },
+    {
+      "id": "lungs",
+      "name": "THE SUSPENDED LUNGS / CHOIR MACHINERY",
+      "width": 1250,
+      "top": -320,
+      "bottom": 540,
+      "enemies": [
+        {
+          "x": 690,
+          "type": "drone",
+          "floor": 60,
+          "left": 615,
+          "right": 875
+        },
+        {
+          "x": 920,
+          "type": "sentinel",
+          "floor": 452,
+          "left": 820,
+          "right": 1020
+        }
+      ],
+      "interactions": [
+        {
+          "id": "lungs-low",
+          "kind": "gate",
+          "x": 60,
+          "y": 417,
+          "target": "cradle",
+          "entry": "high",
+          "label": "RETURN TO THE CRADLE"
+        },
+        {
+          "id": "echo",
+          "kind": "lore",
+          "x": 440,
+          "y": 195,
+          "label": "AN ABANDONED SELF",
+          "story": "An old record hints at paths above. Forms and further identities await a later milestone."
+        },
+        {
+          "id": "lungs-archive",
+          "kind": "gate",
+          "x": 1020,
+          "y": 190,
+          "target": "archive",
+          "entry": "memory",
+          "label": "THE BREATHING PASSAGE",
+          "requires": "breath-link"
+        },
+        {
+          "id": "lungs-lever",
+          "kind": "lever",
+          "x": 1100,
+          "y": 417,
+          "label": "RELEASE THE MAINTENANCE LIFT",
+          "flag": "lung-lift"
+        },
+        {
+          "id": "lungs-east",
+          "kind": "gate",
+          "x": 1190,
+          "y": 417,
+          "target": "mother",
+          "entry": "high",
+          "label": "THE MOTHER FROM ABOVE",
+          "requires": "lung-lift"
+        },
+        {
+          "id": "lungs-cache",
+          "kind": "cache",
+          "x": 710,
+          "y": 65,
+          "label": "A RESONANCE VESSEL"
+        },
+        {
+          "id": "form-breaker",
+          "kind": "lore",
+          "x": 805,
+          "y": 65,
+          "label": "ENGINE FORM",
+          "style": "breaker",
+          "story": "An old record hints at paths above. Forms and further identities await a later milestone."
+        },
+        {
+          "id": "breath-lever",
+          "kind": "lever",
+          "x": 1060,
+          "y": 190,
+          "flag": "breath-link",
+          "label": "UNLATCH THE BREATHING PASSAGE"
+        }
+      ],
+      "ground": [
+        {
+          "x": 0,
+          "y": 452,
+          "w": 1250,
+          "h": 100
+        }
+      ],
+      "platforms": [
+        {
+          "x": 180,
+          "y": 345,
+          "w": 140,
+          "h": 20
+        },
+        {
+          "x": 360,
+          "y": 230,
+          "w": 160,
+          "h": 20
+        },
+        {
+          "x": 650,
+          "y": 100,
+          "w": 180,
+          "h": 20
+        },
+        {
+          "x": 960,
+          "y": 225,
+          "w": 130,
+          "h": 20
+        }
+      ],
+      "solids": [
+        {
+          "x": 550,
+          "y": -100,
+          "w": 30,
+          "h": 400
+        },
+        {
+          "x": 750,
+          "y": -260,
+          "w": 30,
+          "h": 300
+        }
+      ],
+      "hazards": [],
+      "pogo": [],
+      "spawns": [
+        {
+          "id": "default",
+          "x": 111,
+          "y": 452
+        },
+        {
+          "id": "low",
+          "x": 111,
+          "y": 452
+        },
+        {
+          "id": "archive",
+          "x": 1111,
+          "y": 225
+        },
+        {
+          "id": "east",
+          "x": 1121,
+          "y": 452
+        }
+      ],
+      "decor": [
+        {
+          "kind": "spire",
+          "x": 1100,
+          "y": 452,
+          "scale": 0.6
+        }
+      ]
+    },
+    {
+      "id": "mother",
+      "name": "THE IMMORTAL CHAMBER / THE SLEEPING ENGINE",
+      "width": 1370,
+      "top": -80,
+      "bottom": 540,
+      "enemies": [
+        {
+          "type": "sentinel",
+          "x": 970,
+          "floor": 452,
+          "left": 900,
+          "right": 1060
+        },
+        {
+          "type": "drone",
+          "x": 1030,
+          "floor": 340,
+          "left": 940,
+          "right": 1140
+        }
+      ],
+      "interactions": [
+        {
+          "id": "mother-west",
+          "kind": "gate",
+          "x": 65,
+          "y": 417,
+          "target": "cradle",
+          "entry": "east",
+          "label": "THE CRADLE"
+        },
+        {
+          "id": "mother-high",
+          "kind": "gate",
+          "x": 230,
+          "y": 170,
+          "target": "lungs",
+          "entry": "east",
+          "label": "THE MAINTENANCE LIFT",
+          "requires": "lung-lift"
+        },
+        {
+          "id": "mother-east",
+          "kind": "gate",
+          "x": 1300,
+          "y": 417,
+          "target": "garden",
+          "entry": "west",
+          "label": "THE LAST GARDEN",
+          "requires": "garden-path"
+        },
+        {
+          "id": "garden-path-lever",
+          "kind": "lever",
+          "x": 285,
+          "y": 170,
+          "flag": "garden-path",
+          "label": "RELEASE THE GARDEN CAUSEWAY"
+        },
+        {
+          "id": "sleeping-engine",
+          "kind": "lore",
+          "x": 650,
+          "y": 417,
+          "label": "A HEART WITHOUT A BEAT",
+          "story": "The sovereign sleeps below. A maintenance release above the western stair opens the garden causeway."
+        }
+      ],
+      "ground": [
+        {
+          "x": 0,
+          "y": 452,
+          "w": 1370,
+          "h": 100
+        }
+      ],
+      "platforms": [
+        {
+          "x": 170,
+          "y": 205,
+          "w": 170,
+          "h": 20
+        },
+        {
+          "x": 360,
+          "y": 342,
+          "w": 125,
+          "h": 20
+        },
+        {
+          "x": 930,
+          "y": 342,
+          "w": 125,
+          "h": 20
+        },
+        {
+          "x": 290,
+          "y": 285,
+          "w": 90,
+          "h": 16
+        }
+      ],
+      "solids": [],
+      "hazards": [],
+      "pogo": [],
+      "spawns": [
+        {
+          "id": "default",
+          "x": 121,
+          "y": 452
+        },
+        {
+          "id": "west",
+          "x": 121,
+          "y": 452
+        },
+        {
+          "id": "high",
+          "x": 251,
+          "y": 205
+        },
+        {
+          "id": "east",
+          "x": 1261,
+          "y": 452
+        }
+      ],
+      "decor": [
+        {
+          "kind": "arch",
+          "x": 770,
+          "y": 452,
+          "scale": 0.75
+        }
+      ]
+    },
+    {
+      "id": "garden",
+      "name": "THE LAST GARDEN / A FIRST MORNING",
+      "width": 1430,
+      "top": -80,
+      "bottom": 540,
+      "enemies": [],
+      "interactions": [
+        {
+          "id": "garden-west",
+          "kind": "gate",
+          "x": 65,
+          "y": 417,
+          "target": "mother",
+          "entry": "east",
+          "label": "THE CRADLE"
+        },
+        {
+          "id": "garden-rest",
+          "kind": "bench",
+          "x": 360,
+          "y": 425,
+          "label": "SIGNAL ANCHOR"
+        },
+        {
+          "id": "garden-high",
+          "kind": "gate",
+          "x": 620,
+          "y": 210,
+          "target": "observatory",
+          "entry": "east",
+          "label": "THE QUIET OBSERVATORY"
+        },
+        {
+          "id": "child",
+          "kind": "child",
+          "x": 1110,
+          "y": 417,
+          "label": "THE LAST CHILD"
+        },
+        {
+          "id": "garden-east",
+          "kind": "gate",
+          "x": 1370,
+          "y": 417,
+          "target": "choir",
+          "entry": "west",
+          "label": "THE CHOIR WAITS",
+          "requires": "child"
+        },
+        {
+          "id": "root-secret",
+          "kind": "relic",
+          "x": 800,
+          "y": 125,
+          "label": "A SEED FROM OUTSIDE",
+          "story": "The seed predates the simulation. Someone kept a small possibility of a different world."
+        },
+        {
+          "id": "form-crescent",
+          "kind": "lore",
+          "x": 850,
+          "y": 125,
+          "label": "GARDENER FORM",
+          "style": "crescent",
+          "story": "An old record hints at paths above. Forms and further identities await a later milestone."
+        },
+        {
+          "id": "garden-vault",
+          "kind": "gate",
+          "x": 785,
+          "y": 125,
+          "target": "rootvault",
+          "entry": "entry",
+          "label": "A HOLLOW BETWEEN THE ROOTS"
+        }
+      ],
+      "ground": [
+        {
+          "x": 0,
+          "y": 452,
+          "w": 1430,
+          "h": 100
+        }
+      ],
+      "platforms": [
+        {
+          "x": 260,
+          "y": 350,
+          "w": 160,
+          "h": 20
+        },
+        {
+          "x": 540,
+          "y": 245,
+          "w": 160,
+          "h": 20
+        },
+        {
+          "x": 735,
+          "y": 160,
+          "w": 125,
+          "h": 20
+        },
+        {
+          "x": 930,
+          "y": 350,
+          "w": 150,
+          "h": 20
+        }
+      ],
+      "solids": [],
+      "hazards": [],
+      "pogo": [],
+      "spawns": [
+        {
+          "id": "default",
+          "x": 121,
+          "y": 452
+        },
+        {
+          "id": "west",
+          "x": 121,
+          "y": 452
+        },
+        {
+          "id": "east",
+          "x": 1311,
+          "y": 452
+        },
+        {
+          "id": "high",
+          "x": 631,
+          "y": 245
+        },
+        {
+          "id": "secret",
+          "x": 791,
+          "y": 160
+        }
+      ],
+      "decor": [
+        {
+          "kind": "arch",
+          "x": 630,
+          "y": 452,
+          "scale": 0.45
+        },
+        {
+          "kind": "spire",
+          "x": 1310,
+          "y": 452,
+          "scale": 0.33
+        }
+      ]
+    },
+    {
+      "id": "observatory",
+      "name": "THE QUIET OBSERVATORY / ANOTHER WAY HOME",
+      "width": 1050,
+      "top": -80,
+      "bottom": 540,
+      "enemies": [],
+      "interactions": [
+        {
+          "id": "observatory-east",
+          "kind": "gate",
+          "x": 980,
+          "y": 417,
+          "target": "garden",
+          "entry": "high",
+          "label": "THE GARDEN"
+        },
+        {
+          "id": "observatory-echo",
+          "kind": "lore",
+          "x": 520,
+          "y": 212,
+          "label": "THE SELF WHO REMAINED",
+          "loop": "older",
+          "story": "An old record hints at paths above. Forms and further identities await a later milestone."
+        },
+        {
+          "id": "well-lever",
+          "kind": "lever",
+          "x": 170,
+          "y": 417,
+          "label": "RECONNECT THE SIGNAL WELL",
+          "flag": "well-link"
+        },
+        {
+          "id": "observatory-west",
+          "kind": "gate",
+          "x": 65,
+          "y": 417,
+          "target": "wake",
+          "entry": "east",
+          "label": "THE WAY HOME",
+          "requires": "well-link"
+        },
+        {
+          "id": "observatory-cache",
+          "kind": "cache",
+          "x": 740,
+          "y": 417,
+          "label": "A RESONANCE VESSEL"
+        }
+      ],
+      "ground": [
+        {
+          "x": 0,
+          "y": 452,
+          "w": 1050,
+          "h": 100
+        }
+      ],
+      "platforms": [
+        {
+          "x": 210,
+          "y": 350,
+          "w": 150,
+          "h": 20
+        },
+        {
+          "x": 440,
+          "y": 245,
+          "w": 160,
+          "h": 20
+        }
+      ],
+      "solids": [],
+      "hazards": [],
+      "pogo": [],
+      "spawns": [
+        {
+          "id": "default",
+          "x": 911,
+          "y": 452
+        },
+        {
+          "id": "east",
+          "x": 911,
+          "y": 452
+        },
+        {
+          "id": "west",
+          "x": 111,
+          "y": 452
+        }
+      ],
+      "decor": [
+        {
+          "kind": "spire",
+          "x": 790,
+          "y": 452,
+          "scale": 0.58
+        }
+      ]
+    },
+    {
+      "id": "choir",
+      "name": "THE CHOIR / THE ORIGINAL MEMORY",
+      "width": 1420,
+      "top": -80,
+      "bottom": 540,
+      "enemies": [],
+      "interactions": [
+        {
+          "id": "choir-west",
+          "kind": "gate",
+          "x": 65,
+          "y": 417,
+          "target": "garden",
+          "entry": "east",
+          "label": "THE GARDEN"
+        },
+        {
+          "id": "choir",
+          "kind": "lore",
+          "x": 1100,
+          "y": 340,
+          "label": "REMEMBER THE BEGINNING",
+          "story": "The voices gather around an empty place. The final choice waits beyond this exploration milestone."
+        },
+        {
+          "id": "choir-rest",
+          "kind": "bench",
+          "x": 820,
+          "y": 425,
+          "label": "SIGNAL ANCHOR"
+        }
+      ],
+      "ground": [
+        {
+          "x": 0,
+          "y": 452,
+          "w": 1420,
+          "h": 100
+        }
+      ],
+      "platforms": [
+        {
+          "x": 320,
+          "y": 350,
+          "w": 140,
+          "h": 20
+        },
+        {
+          "x": 610,
+          "y": 245,
+          "w": 160,
+          "h": 20
+        }
+      ],
+      "solids": [],
+      "hazards": [],
+      "pogo": [],
+      "spawns": [
+        {
+          "id": "default",
+          "x": 121,
+          "y": 452
+        },
+        {
+          "id": "west",
+          "x": 121,
+          "y": 452
+        }
+      ],
+      "decor": [
+        {
+          "kind": "spire",
+          "x": 420,
+          "y": 452,
+          "scale": 0.55
+        },
+        {
+          "kind": "spire",
+          "x": 1290,
+          "y": 452,
+          "scale": 0.55
+        }
+      ]
+    },
+    {
+      "id": "rootvault",
+      "name": "THE ROOT VAULT / WHAT THE GARDEN HIDES",
+      "width": 800,
+      "top": -80,
+      "bottom": 540,
+      "enemies": [
+        {
+          "type": "drone",
+          "x": 465,
+          "floor": 200,
+          "left": 420,
+          "right": 540
+        }
+      ],
+      "interactions": [
+        {
+          "id": "vault-return",
+          "kind": "gate",
+          "x": 70,
+          "y": 417,
+          "target": "garden",
+          "entry": "secret",
+          "label": "RETURN TO THE GARDEN"
+        },
+        {
+          "id": "vault-cache",
+          "kind": "cache",
+          "x": 670,
+          "y": 417,
+          "label": "THE UNOPENED SEED",
+          "story": "Someone hid this pulse where only a falling blade could wake the roots."
+        },
+        {
+          "id": "vault-record",
+          "kind": "relic",
+          "x": 475,
+          "y": 210,
+          "label": "THE GARDENER WHO REFUSED",
+          "story": "Above the machinery, they planted something that could not be commanded."
+        }
+      ],
+      "ground": [
+        {
+          "x": 0,
+          "y": 452,
+          "w": 260,
+          "h": 100
+        },
+        {
+          "x": 590,
+          "y": 452,
+          "w": 210,
+          "h": 100
+        }
+      ],
+      "platforms": [
+        {
+          "x": 300,
+          "y": 340,
+          "w": 95,
+          "h": 16
+        },
+        {
+          "x": 430,
+          "y": 245,
+          "w": 100,
+          "h": 16
+        }
+      ],
+      "solids": [],
+      "hazards": [
+        {
+          "x": 260,
+          "y": 510,
+          "w": 330,
+          "h": 30
+        }
+      ],
+      "pogo": [
+        {
+          "x": 375,
+          "y": 405,
+          "w": 40,
+          "h": 20
+        }
+      ],
+      "spawns": [
+        {
+          "id": "default",
+          "x": 111,
+          "y": 452
+        },
+        {
+          "id": "entry",
+          "x": 111,
+          "y": 452
+        }
+      ],
+      "decor": []
+    }
+  ]
+}

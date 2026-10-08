@@ -24,9 +24,9 @@
     "semantic_hash": "bb744228dd7715511f394e4732aeac42"
   },
   "Assets/EchoFall/Editor/WakeSliceBuilder.cs": {
-    "mtime": 1791345995.019688,
-    "seen": 1791347366.3251863,
-    "ast_hash": "d496eda4d93ae9bdad4c5612af7884a1",
+    "mtime": 1791411507.9139316,
+    "seen": 1791437995.9352415,
+    "ast_hash": "2b78a3c46abd689f297d896b500cc560",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Editor/WakeVisualPass.cs": {
@@ -96,15 +96,15 @@
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceHUD.cs": {
-    "mtime": 1791405695.4184763,
-    "seen": 1791406214.354576,
-    "ast_hash": "b729a06ab644ebe27d4e37202288c001",
+    "mtime": 1791411507.9124174,
+    "seen": 1791437995.9352722,
+    "ast_hash": "4e198e84f7fdc0f97b14b266c1e8b7d5",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceInteraction.cs": {
-    "mtime": 1791345825.109804,
-    "seen": 1791347366.325238,
-    "ast_hash": "3c74aceb690f5b6c3e00949ce203e0a3",
+    "mtime": 1791411507.9134252,
+    "seen": 1791437995.9352734,
+    "ast_hash": "abcadd12daa8a5471a7eab509c929a0c",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceMemory.cs": {
@@ -144,9 +144,9 @@
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceSession.cs": {
-    "mtime": 1791406205.4305298,
-    "seen": 1791406214.3545973,
-    "ast_hash": "06b0f03fb4ed913aea4b0a9a0fddeb46",
+    "mtime": 1791412288.0495787,
+    "seen": 1791437995.9352844,
+    "ast_hash": "2399c25e254eddb05e8f8a000d11ff12",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceSound.cs": {
@@ -180,9 +180,9 @@
     "semantic_hash": "644e6ab568c25f91a88770e38765bc85"
   },
   "Assets/EchoFall/Tests/Editor/SliceRuleTests.cs": {
-    "mtime": 1791346951.1838608,
-    "seen": 1791347366.3252597,
-    "ast_hash": "69bd550004efca19c6a3eec926940a2e",
+    "mtime": 1791411755.04193,
+    "seen": 1791437995.9352977,
+    "ast_hash": "aa94cac8b2d3bf6a660d425a0311f0fd",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Tests/PlayMode/MovementPlayTests.cs": {
@@ -192,9 +192,9 @@
     "semantic_hash": ""
   },
   "Assets/EchoFall/Tests/PlayMode/SlicePlayTests.cs": {
-    "mtime": 1791345939.6223402,
-    "seen": 1791347366.3252642,
-    "ast_hash": "3fd08698202945d2e84ea6e6c657e2f4",
+    "mtime": 1791411755.0441334,
+    "seen": 1791437995.9353034,
+    "ast_hash": "035f75af50866343192f6de1005d3bf7",
     "semantic_hash": ""
   },
   "Assets/Resources/BillingMode.json": {
@@ -324,9 +324,9 @@
     "semantic_hash": "21ceb6533048be51308e69e7b74a35cf"
   },
   "Docs/MigrationPlan.md": {
-    "mtime": 1791405826.3600237,
-    "seen": 1791406214.3547254,
-    "ast_hash": "8c60dba73dc5ca5a64ec5cdb5f0cdcd7",
+    "mtime": 1791412251.1838226,
+    "seen": 1791437995.9353898,
+    "ast_hash": "62a0b568fc3ce03c6cd82d17bf67cd7f",
     "semantic_hash": ""
   },
   "Docs/Phase1-Movement.md": {
@@ -336,9 +336,9 @@
     "semantic_hash": "6399285db19e74970cc8e390d893ea00"
   },
   "Docs/Phase2-WakeSlice.md": {
-    "mtime": 1791405826.3600237,
-    "seen": 1791406214.3547294,
-    "ast_hash": "04b719c1aef1144bf68b9a77e3a25eee",
+    "mtime": 1791412251.1859035,
+    "seen": 1791437995.9353917,
+    "ast_hash": "dbd59b83aeae14690f8082867b7bcaff",
     "semantic_hash": ""
   },
   "Docs/Validation/asset-results.txt": {
@@ -462,9 +462,9 @@
     "semantic_hash": "e44be2b9e29404a9e73ab464ad02efc3"
   },
   "Assets/EchoFall/Scripts/SliceCheckpoint.cs": {
-    "mtime": 1791345825.1072829,
-    "seen": 1791347366.3252285,
-    "ast_hash": "d4b9b5c3bc6c580fb9ad57519a52c2b4",
+    "mtime": 1791411466.6663702,
+    "seen": 1791437995.9352648,
+    "ast_hash": "961144ab6294e379efce097e9ede7e56",
     "semantic_hash": ""
   },
   "Docs/Validation/phase2-checkpoint-editmode-results.json": {
@@ -816,9 +816,9 @@
     "semantic_hash": ""
   },
   "Docs/Phase3-CombatCourt.md": {
-    "mtime": 1791406138.3736787,
-    "seen": 1791406214.3547316,
-    "ast_hash": "570c2cd748dbd49ec067ef2d8bc664eb",
+    "mtime": 1791412251.184857,
+    "seen": 1791437995.9353929,
+    "ast_hash": "08bff77215e638801d0efd2bb4dd65a5",
     "semantic_hash": ""
   },
   "Docs/Validation/phase3-original-tests.txt": {
@@ -909,6 +909,204 @@
     "mtime": 1791406044.2135181,
     "seen": 1791406214.3548024,
     "ast_hash": "f1fa3fda66f0d7c15a9a24d2701df612",
+    "semantic_hash": ""
+  },
+  "Assets/EchoFall/Data/WorldExpansion.json": {
+    "mtime": 1791411813.5507379,
+    "seen": 1791437995.9352367,
+    "ast_hash": "e1f2e0ddc2da8ca0fa533cfabef8f51d",
+    "semantic_hash": ""
+  },
+  "Assets/EchoFall/Editor/WorldExpansionBuilder.cs": {
+    "mtime": 1791437713.4119136,
+    "seen": 1791437995.9352446,
+    "ast_hash": "a766c1dacb8648cdca260c80c1806121",
+    "semantic_hash": ""
+  },
+  "Assets/EchoFall/Resources/WorldCatalog.json": {
+    "mtime": 1791411813.5507379,
+    "seen": 1791437995.9352462,
+    "ast_hash": "d28a59d85472575aceb41797ce633cd5",
+    "semantic_hash": ""
+  },
+  "Assets/EchoFall/Scripts/WorldCatalog.cs": {
+    "mtime": 1791411461.100012,
+    "seen": 1791437995.93529,
+    "ast_hash": "9b3bb46ce8a0ce3a3464abd2f5217bae",
+    "semantic_hash": ""
+  },
+  "Assets/EchoFall/Scripts/WorldMap.cs": {
+    "mtime": 1791437713.4119136,
+    "seen": 1791437995.9352918,
+    "ast_hash": "a1f35e787f993e8235f0baeeea82e9d2",
+    "semantic_hash": ""
+  },
+  "Assets/EchoFall/Tests/Editor/WorldExpansionTests.cs": {
+    "mtime": 1791412251.182802,
+    "seen": 1791437995.935299,
+    "ast_hash": "3e3493448238162afe9d90c1111d705f",
+    "semantic_hash": ""
+  },
+  "Assets/EchoFall/Tests/PlayMode/WorldExpansionPlayTests.cs": {
+    "mtime": 1791437087.543242,
+    "seen": 1791437995.9353044,
+    "ast_hash": "f103d0eccf77a1b15bee80ce9f8527f9",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase3-editor-state.json": {
+    "mtime": 1791406227.1411588,
+    "seen": 1791437995.9353282,
+    "ast_hash": "cbfc536af83d45302ee02564c0daacb6",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4-build.json": {
+    "mtime": 1791437744.5559888,
+    "seen": 1791437995.9353395,
+    "ast_hash": "8873aab8b566011d7828aa9d0222e97b",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4-editmode-attempt1.json": {
+    "mtime": 1791412051.3316247,
+    "seen": 1791437995.9353406,
+    "ast_hash": "dbd455797b25c4697f9fefd262526a78",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4-editmode-results.json": {
+    "mtime": 1791437800.563583,
+    "seen": 1791437995.9353416,
+    "ast_hash": "5af18f4ebff7cc916bfc4b6ebe07d739",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4-editor-state.json": {
+    "mtime": 1791437976.8596797,
+    "seen": 1791437995.9353426,
+    "ast_hash": "cbfc536af83d45302ee02564c0daacb6",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4-map-playmode-results.json": {
+    "mtime": 1791437851.9359212,
+    "seen": 1791437995.9353435,
+    "ast_hash": "40465c8387d0c88732ac0e378cea9900",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4-playmode-results.json": {
+    "mtime": 1791437466.9366386,
+    "seen": 1791437995.9353447,
+    "ast_hash": "486f67b68a52619f39fab56c1f6c084f",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4-preservation.json": {
+    "mtime": 1791437977.6010435,
+    "seen": 1791437995.935346,
+    "ast_hash": "41a05322e3ea7f3943cfbb8882d26405",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4-source-hashes.json": {
+    "mtime": 1791411813.5522747,
+    "seen": 1791437995.9353466,
+    "ast_hash": "5289c035446a1eeeeed52758885fbb81",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4-visual-review.json": {
+    "mtime": 1791437879.14438,
+    "seen": 1791437995.9353483,
+    "ast_hash": "dc72424622c6c44392f0824358ab9ee0",
+    "semantic_hash": ""
+  },
+  "Tools/BuildPhase4.cs": {
+    "mtime": 1791411689.5038981,
+    "seen": 1791437995.9353662,
+    "ast_hash": "84d02cc545aaf72998778539842a1519",
+    "semantic_hash": ""
+  },
+  "Tools/Phase4Review.cs": {
+    "mtime": 1791412114.9584334,
+    "seen": 1791437995.9353743,
+    "ast_hash": "25d50f64ec2b8d46e4d8fc2e1767cca9",
+    "semantic_hash": ""
+  },
+  "Tools/import_world.py": {
+    "mtime": 1791411757.3313718,
+    "seen": 1791437995.9353843,
+    "ast_hash": "93c1e94dc09c58b97e290da51ed176ca",
+    "semantic_hash": ""
+  },
+  "Tools/phase4_preservation.py": {
+    "mtime": 1791437358.5099716,
+    "seen": 1791437995.935385,
+    "ast_hash": "33a88f7c783999cfb503a015f58b9054",
+    "semantic_hash": ""
+  },
+  "Docs/Phase4-WorldExpansion.md": {
+    "mtime": 1791437969.1486263,
+    "seen": 1791437995.9353938,
+    "ast_hash": "d93aeaf8ee0717b1d14c12bcedb925af",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4-original-tests.txt": {
+    "mtime": 1791437387.1797411,
+    "seen": 1791437995.9354012,
+    "ast_hash": "77d072600b0a5e9816ea0c058c49acee",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4/choir.png": {
+    "mtime": 1791437877.365599,
+    "seen": 1791437995.9354415,
+    "ast_hash": "ce51b46e9da58a9fc6ff6bbdf00a9b5a",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4/cradle.png": {
+    "mtime": 1791437874.1449935,
+    "seen": 1791437995.9354422,
+    "ast_hash": "1c019d2e920a061d5d909b3757b8bffe",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4/garden.png": {
+    "mtime": 1791437875.827817,
+    "seen": 1791437995.9354432,
+    "ast_hash": "3aeae429c685cff273988425c275697c",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4/lungs.png": {
+    "mtime": 1791437874.6963642,
+    "seen": 1791437995.935444,
+    "ast_hash": "00742de5ae35e0b4c63e36dd410aa919",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4/map-fog.png": {
+    "mtime": 1791437876.0347664,
+    "seen": 1791437995.935445,
+    "ast_hash": "bb938b83382a78ec860455d89f83ba7b",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4/map-full.png": {
+    "mtime": 1791437878.206249,
+    "seen": 1791437995.935446,
+    "ast_hash": "6ef487e836909be813f397fb65de120d",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4/mother.png": {
+    "mtime": 1791437875.2752202,
+    "seen": 1791437995.935447,
+    "ast_hash": "6edaba487562a074605bb6972b00172b",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4/observatory.png": {
+    "mtime": 1791437876.7879653,
+    "seen": 1791437995.9354482,
+    "ast_hash": "ddda59ce97168d69228e97c9048c74c4",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4/rootvault-mercy.png": {
+    "mtime": 1791437878.006568,
+    "seen": 1791437995.9354491,
+    "ast_hash": "f965a8b21a8ff2aee5ec61e33df2fbb8",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase4/rootvault.png": {
+    "mtime": 1791437877.9059627,
+    "seen": 1791437995.93545,
+    "ast_hash": "b40b317c090662577dd33c7305c899a3",
     "semantic_hash": ""
   }
 }

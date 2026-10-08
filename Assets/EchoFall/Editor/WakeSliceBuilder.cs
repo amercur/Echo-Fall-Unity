@@ -12,7 +12,7 @@ namespace EchoFall.Movement.Editor
 {
     // Import effective source geometry, then author only the explicit first-slice adaptations.
     // This builder owns WakeSlice/Wake_*; it never rebuilds MovementLab or the Player prefab.
-    public static class WakeSliceBuilder
+    public static partial class WakeSliceBuilder
     {
         const string Root = "Assets/EchoFall";
         [Serializable] public class Source { public Room[] rooms; }
@@ -182,7 +182,7 @@ namespace EchoFall.Movement.Editor
             {
                 if(item.kind=="style" || item.kind=="body" || item.kind=="door")
                 { item.kind="lore"; item.story="A life recorded, not erased. The glass carries one decision; the world keeps its consequences. The deeper forms and identities await a later chapter."; }
-                if(item.target!=null && !new[]{"wake","belfry","cistern","archive","procession"}.Contains(item.target))
+                if(item.target!=null && !WorldCatalog.RoomId(item.target))
                 { item.kind="lore"; item.requires=item.memory=item.blockedBy=null; item.label="SEALED / BEYOND THIS SLICE"; item.story="Beyond this threshold lies another chapter. Explore the five open rooms, then return to the transfer glass."; }
                 // Keep one original decision in Wake; move the crowded glass to a distinct upper dais in Archive.
                 if(item.kind=="mirror")continue;

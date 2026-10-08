@@ -1,0 +1,565 @@
+{
+  "rooms": [
+    {
+      "id": "wake",
+      "name": "THE WAKE",
+      "region": "Wake",
+      "x": 80,
+      "y": 210,
+      "hidden": false,
+      "benches": [
+        "rest-wake"
+      ],
+      "collectibles": [],
+      "enemies": [
+        {
+          "id": "wake/enemy-0",
+          "hp": 7
+        }
+      ],
+      "links": [
+        {
+          "id": "wake-east",
+          "target": "procession",
+          "entry": "west",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "wake-high",
+          "target": "belfry",
+          "entry": "low",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "wake-drain",
+          "target": "cistern",
+          "entry": "west",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "wake-return",
+          "target": "observatory",
+          "entry": "west",
+          "requires": "well-link",
+          "memory": "",
+          "blockedBy": ""
+        }
+      ]
+    },
+    {
+      "id": "belfry",
+      "name": "THE BELFRY",
+      "region": "Wake",
+      "x": 80,
+      "y": 70,
+      "hidden": false,
+      "benches": [],
+      "collectibles": [
+        "belfry-cache",
+        "bell-secret"
+      ],
+      "enemies": [
+        {
+          "id": "belfry/enemy-0",
+          "hp": 5
+        }
+      ],
+      "links": [
+        {
+          "id": "belfry-low",
+          "target": "wake",
+          "entry": "high",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "belfry-high",
+          "target": "archive",
+          "entry": "west",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        }
+      ]
+    },
+    {
+      "id": "cistern",
+      "name": "THE CISTERN",
+      "region": "Wake",
+      "x": 175,
+      "y": 350,
+      "hidden": false,
+      "benches": [],
+      "collectibles": [
+        "cistern-cache",
+        "pogo-secret"
+      ],
+      "enemies": [
+        {
+          "id": "cistern/enemy-0",
+          "hp": 5
+        },
+        {
+          "id": "cistern/enemy-1",
+          "hp": 5
+        }
+      ],
+      "links": [
+        {
+          "id": "cistern-west",
+          "target": "wake",
+          "entry": "drain",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "cistern-east",
+          "target": "procession",
+          "entry": "low",
+          "requires": "sluice",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "root-ascent",
+          "target": "archive",
+          "entry": "root",
+          "requires": "",
+          "memory": "mercy",
+          "blockedBy": "fire"
+        }
+      ]
+    },
+    {
+      "id": "archive",
+      "name": "THE GLASS ARCHIVE",
+      "region": "Wake",
+      "x": 290,
+      "y": 70,
+      "hidden": false,
+      "benches": [
+        "archive-rest"
+      ],
+      "collectibles": [],
+      "enemies": [],
+      "links": [
+        {
+          "id": "archive-west",
+          "target": "belfry",
+          "entry": "high",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "archive-east",
+          "target": "procession",
+          "entry": "high",
+          "requires": "archive-lift",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "archive-memory",
+          "target": "lungs",
+          "entry": "archive",
+          "requires": "breath-link",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "root-descent",
+          "target": "cistern",
+          "entry": "root",
+          "requires": "",
+          "memory": "mercy",
+          "blockedBy": "fire"
+        }
+      ]
+    },
+    {
+      "id": "procession",
+      "name": "PILGRIM CAUSEWAY",
+      "region": "Wake",
+      "x": 290,
+      "y": 210,
+      "hidden": false,
+      "benches": [],
+      "collectibles": [],
+      "enemies": [
+        {
+          "id": "procession/enemy-0",
+          "hp": 7
+        },
+        {
+          "id": "procession/enemy-1",
+          "hp": 10
+        },
+        {
+          "id": "procession/enemy-2",
+          "hp": 5
+        },
+        {
+          "id": "procession/enemy-3",
+          "hp": 7
+        }
+      ],
+      "links": [
+        {
+          "id": "procession-west",
+          "target": "wake",
+          "entry": "east",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "procession-high",
+          "target": "archive",
+          "entry": "east",
+          "requires": "archive-lift",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "procession-low",
+          "target": "cistern",
+          "entry": "east",
+          "requires": "sluice",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "procession-east",
+          "target": "king",
+          "entry": "west",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        }
+      ]
+    },
+    {
+      "id": "king",
+      "name": "THE COURT",
+      "region": "Wake",
+      "x": 480,
+      "y": 210,
+      "hidden": false,
+      "benches": [],
+      "collectibles": [],
+      "enemies": [
+        {
+          "id": "king/boss",
+          "hp": 40
+        }
+      ],
+      "links": [
+        {
+          "id": "king-west",
+          "target": "procession",
+          "entry": "east",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "king-east",
+          "target": "cradle",
+          "entry": "west",
+          "requires": "king",
+          "memory": "",
+          "blockedBy": ""
+        }
+      ]
+    },
+    {
+      "id": "cradle",
+      "name": "THE CRADLE",
+      "region": "Cradle",
+      "x": 670,
+      "y": 210,
+      "hidden": false,
+      "benches": [
+        "cradle-rest"
+      ],
+      "collectibles": [],
+      "enemies": [
+        {
+          "id": "cradle/enemy-0",
+          "hp": 10
+        }
+      ],
+      "links": [
+        {
+          "id": "cradle-west",
+          "target": "king",
+          "entry": "east",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "cradle-high",
+          "target": "lungs",
+          "entry": "low",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "cradle-east",
+          "target": "mother",
+          "entry": "west",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        }
+      ]
+    },
+    {
+      "id": "lungs",
+      "name": "THE SUSPENDED LUNGS",
+      "region": "Cradle",
+      "x": 670,
+      "y": 70,
+      "hidden": false,
+      "benches": [],
+      "collectibles": [
+        "lungs-cache"
+      ],
+      "enemies": [
+        {
+          "id": "lungs/enemy-0",
+          "hp": 5
+        },
+        {
+          "id": "lungs/enemy-1",
+          "hp": 7
+        }
+      ],
+      "links": [
+        {
+          "id": "lungs-low",
+          "target": "cradle",
+          "entry": "high",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "lungs-archive",
+          "target": "archive",
+          "entry": "memory",
+          "requires": "breath-link",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "lungs-east",
+          "target": "mother",
+          "entry": "high",
+          "requires": "lung-lift",
+          "memory": "",
+          "blockedBy": ""
+        }
+      ]
+    },
+    {
+      "id": "mother",
+      "name": "THE IMMORTAL CHAMBER",
+      "region": "Cradle",
+      "x": 860,
+      "y": 210,
+      "hidden": false,
+      "benches": [],
+      "collectibles": [],
+      "enemies": [
+        {
+          "id": "mother/enemy-0",
+          "hp": 7
+        },
+        {
+          "id": "mother/enemy-1",
+          "hp": 5
+        }
+      ],
+      "links": [
+        {
+          "id": "mother-west",
+          "target": "cradle",
+          "entry": "east",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "mother-high",
+          "target": "lungs",
+          "entry": "east",
+          "requires": "lung-lift",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "mother-east",
+          "target": "garden",
+          "entry": "west",
+          "requires": "garden-path",
+          "memory": "",
+          "blockedBy": ""
+        }
+      ]
+    },
+    {
+      "id": "garden",
+      "name": "THE LAST GARDEN",
+      "region": "Last Garden",
+      "x": 860,
+      "y": 350,
+      "hidden": false,
+      "benches": [
+        "garden-rest"
+      ],
+      "collectibles": [
+        "root-secret"
+      ],
+      "enemies": [],
+      "links": [
+        {
+          "id": "garden-west",
+          "target": "mother",
+          "entry": "east",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "garden-high",
+          "target": "observatory",
+          "entry": "east",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "garden-east",
+          "target": "choir",
+          "entry": "west",
+          "requires": "child",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "garden-vault",
+          "target": "rootvault",
+          "entry": "entry",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        }
+      ]
+    },
+    {
+      "id": "observatory",
+      "name": "THE QUIET OBSERVATORY",
+      "region": "Last Garden",
+      "x": 480,
+      "y": 350,
+      "hidden": false,
+      "benches": [],
+      "collectibles": [
+        "observatory-cache"
+      ],
+      "enemies": [],
+      "links": [
+        {
+          "id": "observatory-east",
+          "target": "garden",
+          "entry": "high",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        },
+        {
+          "id": "observatory-west",
+          "target": "wake",
+          "entry": "east",
+          "requires": "well-link",
+          "memory": "",
+          "blockedBy": ""
+        }
+      ]
+    },
+    {
+      "id": "choir",
+      "name": "THE CHOIR",
+      "region": "Choir",
+      "x": 1050,
+      "y": 350,
+      "hidden": false,
+      "benches": [
+        "choir-rest"
+      ],
+      "collectibles": [],
+      "enemies": [],
+      "links": [
+        {
+          "id": "choir-west",
+          "target": "garden",
+          "entry": "east",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        }
+      ]
+    },
+    {
+      "id": "rootvault",
+      "name": "THE ROOT VAULT",
+      "region": "Last Garden",
+      "x": 860,
+      "y": 480,
+      "hidden": true,
+      "benches": [],
+      "collectibles": [
+        "vault-cache",
+        "vault-record"
+      ],
+      "enemies": [
+        {
+          "id": "rootvault/enemy-0",
+          "hp": 5
+        }
+      ],
+      "links": [
+        {
+          "id": "vault-return",
+          "target": "garden",
+          "entry": "secret",
+          "requires": "",
+          "memory": "",
+          "blockedBy": ""
+        }
+      ]
+    }
+  ],
+  "flags": [
+    "sluice",
+    "archive-lift",
+    "king",
+    "lung-lift",
+    "well-link",
+    "breath-link",
+    "garden-path",
+    "child"
+  ]
+}

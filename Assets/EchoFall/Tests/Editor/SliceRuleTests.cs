@@ -29,7 +29,7 @@ namespace EchoFall.Movement.Tests
             Assert.That(cp.Valid(archive), Is.True);
             cp.loop++; Assert.That(cp.Valid(archive), Is.False); cp.loop--;
             cp.bench = "missing"; Assert.That(cp.Valid(archive), Is.False); cp.bench = "rest-wake";
-            cp.visited.Add("mother"); Assert.That(cp.Valid(archive), Is.False); cp.visited.Remove("mother");
+            cp.visited.Add("unmapped-room"); Assert.That(cp.Valid(archive), Is.False); cp.visited.Remove("unmapped-room");
             var enemy = new SliceEnemySnapshot { id = "procession/enemy-1", hp = 8 }; cp.enemies.Add(enemy);
             Assert.That(cp.Valid(archive), Is.True);
             foreach (float hp in new[] { float.NaN, float.PositiveInfinity, -1, 0, 11 })

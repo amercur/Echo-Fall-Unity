@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 namespace EchoFall.Movement
 {
-    public enum SliceScreen { Playing, Dialogue, Transfer, Pause, Loading }
+    public enum SliceScreen { Playing, Dialogue, Transfer, Pause, Loading, Map }
     public sealed class SliceSession : MonoBehaviour
     {
         public static SliceSession Instance { get; private set; }
@@ -24,6 +24,7 @@ namespace EchoFall.Movement
         public SliceRoom Room { get; private set; }
         public SliceScreen Screen { get; private set; } = SliceScreen.Loading;
         public int KingStage, KingBreaks;
+        public int ChildStage;
         public string KingStyle;
         public string Decision { get; private set; }
         public string Message { get; private set; }
@@ -48,8 +49,25 @@ namespace EchoFall.Movement
         public bool CreatureChoiceKnown => Decision != null || Archive.Remembers("mercy") || Archive.Remembers("fire");
         public bool WakeVisited => Visited.Contains("wake") && Visited.Contains("belfry") && Visited.Contains("cistern") && Visited.Contains("archive") && Visited.Contains("procession");
         public bool SliceComplete => CreatureChoiceKnown && WakeVisited && EncounterCleared && Consumed.Contains("bell-secret") && Consumed.Contains("pogo-secret");
-        public string Objective => !CreatureChoiceKnown ? "Listen to the wounded creature in the Wake." : !EncounterCleared ? "Clear the four sentries on the Pilgrim Causeway." : !Consumed.Contains("bell-secret") ? "Find the Bell Keeper's record above the Belfry." : !Consumed.Contains("pogo-secret") ? "Recover the Drowned Engineer's record in the Cistern." : !WakeVisited ? "Reach the Glass Archive through the Belfry." : "The five rooms are witnessed. Return to the transfer glass.";
+        string WakeObjective => !CreatureChoiceKnown ? "Listen to the wounded creature in the Wake." : !EncounterCleared ? "Clear the four sentries on the Pilgrim Causeway." : !Consumed.Contains("bell-secret") ? "Find the Bell Keeper's record above the Belfry." : !Consumed.Contains("pogo-secret") ? "Recover the Drowned Engineer's record in the Cistern." : !WakeVisited ? "Reach the Glass Archive through the Belfry." : "The five rooms are witnessed. Return to the transfer glass.";
 
+        public string Objective
+        {
+            get
+            {
+                switch(Room?.id)
+                {
+                    case "cradle": return "Rest at the anchor. Climb the suspended steps to the Lungs, or follow the engine east.";
+                    case "lungs": return "Climb the machinery. Release the high breathing passage and the maintenance lift.";
+                    case "mother": return Flags.Contains("garden-path") ? "The Garden causeway is open. The engine below remains asleep." : "Find the maintenance release above the western stair.";
+                    case "garden": return Flags.Contains("child") ? "The Choir is open. An observation lens and a hollow in the upper roots invite a detour." : "Listen to the Child. Watch for paths above the garden.";
+                    case "observatory": return "Reconnect the signal well to open the long way home.";
+                    case "rootvault": return "A downward strike wakes the hanging bell. The far bank holds a forgotten seed.";
+                    case "choir": return "Rest beneath the voices. The final choice waits; the routes behind you remain open.";
+                    default: return WakeObjective;
+                }
+            }
+        }
         void Awake()
         {
             Instance = this;
@@ -58,6 +76,7 @@ namespace EchoFall.Movement
             string warning = null;
             Archive = EphemeralSave ? new SliceArchive() : SliceMemoryStore.Load(SavePath, out warning);
             if (warning != null) Notify(warning);
+            gameObject.AddComponent<WorldMap>();
             interact = Action("Interact", "<Keyboard>/e", "<Gamepad>/buttonNorth");
             pause = Action("Pause", "<Keyboard>/escape", "<Gamepad>/start");
             transfer = Action("Transfer", "<Keyboard>/r", "<Gamepad>/select");
@@ -80,6 +99,7 @@ namespace EchoFall.Movement
             if (checkpoint != null && checkpoint.Valid(Archive))
             {
                 KingStage=checkpoint.kingStage;KingBreaks=checkpoint.kingBreaks;KingStyle=checkpoint.kingStyle;
+                ChildStage=checkpoint.childStage;
                 Decision = string.IsNullOrEmpty(checkpoint.decision) ? null : checkpoint.decision;
                 Defeated.UnionWith(checkpoint.defeated); Consumed.UnionWith(checkpoint.consumed);
                 Flags.UnionWith(checkpoint.flags); Visited.UnionWith(checkpoint.visited);
@@ -157,6 +177,7 @@ namespace EchoFall.Movement
             switch (item.kind)
             {
                 case "victory": EndRun(true); break;
+                case "child": ChildDialogue(); break;
                 case "gate": StartCoroutine(LoadRoom(item.target, item.entry)); break;
                 case "bench": BeginRest(item); break;
                 case "lever": Flags.Add(item.flag); Notify("The shortcut is open at both ends for this life."); break;
@@ -209,11 +230,12 @@ namespace EchoFall.Movement
             { Notify("Could not save the memory. Free disk space and try again; this life is preserved."); Show(ModalTitle, ModalBody, SliceScreen.Transfer, ("RETRY TRANSFER", () => CommitTransfer(memory))); return; }
             Archive = next; Decision = null; Defeated.Clear(); EnemyHealth.Clear(); Consumed.Clear(); Flags.Clear(); Visited.Clear();
             KingStage=KingBreaks=0;KingStyle=null;
+            ChildStage=0;
             combat.Rest(); StartCoroutine(LoadRoom("wake", "default", true));
         }
         public IEnumerator LoadRoom(string id, string entry, bool newLife = false, string bench = null)
         {
-            if (Array.IndexOf(new[] { "wake", "belfry", "cistern", "archive", "procession", "king" }, id) < 0) yield break;
+            if (!WorldCatalog.RoomId(id)) yield break;
             var departingKing=SliceKing.Active;
             if(!newLife && departingKing!=null){KingStage=departingKing.Stage;KingBreaks=departingKing.Breaks;KingStyle=departingKing.LastStyle;}
             SetScreen(SliceScreen.Loading); combat.ClearTransient();
@@ -273,7 +295,7 @@ namespace EchoFall.Movement
             var checkpoint = new SliceCheckpoint
             {
                 loop = Archive.loop, archive = SliceCheckpoint.Signature(Archive), room = Room.id, bench = bench.id,
-                decision = Decision, resonance = combat.Resonance, kingStage=KingStage,kingBreaks=KingBreaks,kingStyle=KingStyle,
+                decision = Decision, resonance = combat.Resonance, kingStage=KingStage,kingBreaks=KingBreaks,kingStyle=KingStyle,childStage=ChildStage,
                 defeated = new List<string>(Defeated), consumed = new List<string>(Consumed),
                 flags = new List<string>(Flags), visited = new List<string>(Visited)
             };
@@ -287,6 +309,26 @@ namespace EchoFall.Movement
             try { if (!EphemeralSave) SliceMemoryStore.Save(SavePath, next); return true; }
             catch (Exception e) when (e is System.IO.IOException || e is UnauthorizedAccessException)
             { Notify(failure); return false; }
+        }
+        public void ChildDialogue()
+        {
+            if(ChildStage>=3){Notify("If you leave, remember that I was here.");return;}
+            string[] titles={"This world is real.","Will I disappear?","Who gets to decide?"};
+            string[][] answers={new[]{"It is only a simulation.","What you feel is real.","Move aside."},new[]{"Nothing bad will happen.","It does not matter.","I cannot promise. I can remember you."},new[]{"You deserve a choice, too.","I built this world. I decide.","The Choir knows best."}};
+            int stage=ChildStage, correct=new[]{1,2,0}[stage];
+            var choices=new List<(string,Action)>();
+            for(int i=0;i<3;i++)
+            {
+                int answer=i;
+                choices.Add((answers[stage][i],()=>{
+                    SetScreen(SliceScreen.Playing);
+                    if(answer!=correct){Notify("You are speaking for me. Listen.");return;}
+                    ChildStage++;
+                    if(ChildStage==3){Flags.Add("child");Notify("Then I choose to let you try. The Choir passage opens.");}
+                    else ChildDialogue();
+                }));
+            }
+            Show(titles[stage],"The garden grows quiet. No weapon can answer for the Child.",SliceScreen.Dialogue,choices.ToArray());
         }
         public bool CanChangeMemory
         {

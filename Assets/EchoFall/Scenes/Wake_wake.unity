@@ -34971,13 +34971,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: EchoFall.Movement::EchoFall.Movement.SliceInteraction
   id: wake-return
-  kind: lore
-  label: SEALED / BEYOND THIS SLICE
+  kind: gate
+  label: THE SIGNAL WELL / OBSERVATORY
   story: Beyond this threshold lies another chapter. Explore the five open rooms,
     then return to the transfer glass.
   target: observatory
   entry: west
-  requires: 
+  requires: well-link
   memory: 
   blockedBy: 
   flag: 

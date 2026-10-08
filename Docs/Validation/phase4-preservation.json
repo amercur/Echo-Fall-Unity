@@ -1,0 +1,146 @@
+[
+  {
+    "source": "game.js",
+    "unchanged": true
+  },
+  {
+    "source": "data/world.json",
+    "unchanged": true
+  },
+  {
+    "source": "assets/art-manifest.js",
+    "unchanged": true
+  },
+  {
+    "source": "assets/ruin-arch.png",
+    "unchanged": true
+  },
+  {
+    "source": "assets/ruin-ledge.png",
+    "unchanged": true
+  },
+  {
+    "source": "assets/choir-spire.png",
+    "unchanged": true
+  },
+  {
+    "source": "assets/sentinel.png",
+    "unchanged": true
+  },
+  {
+    "source": "assets/lancer.png",
+    "unchanged": true
+  },
+  {
+    "source": "assets/drone.png",
+    "unchanged": true
+  },
+  {
+    "source": "game.js",
+    "unchanged": true
+  },
+  {
+    "source": "data/world.json",
+    "unchanged": true
+  },
+  {
+    "source": "assets/art-manifest.js",
+    "unchanged": true
+  },
+  {
+    "source": "assets/king.png",
+    "unchanged": true
+  },
+  {
+    "source": "game.js",
+    "unchanged": true
+  },
+  {
+    "source": "data/world.json",
+    "unchanged": true
+  },
+  {
+    "source": "assets/art-manifest.js",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/PlayerMotor.cs",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/MovementTuning.cs",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/MovementInput.cs",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/PlayerVisual.cs",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/SlicePlayerPresentation.cs",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/SliceCombat.cs",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/SliceEnemy.cs",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/SliceKing.cs",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/SliceProjectile.cs",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/SliceMemory.cs",
+    "unchanged": true
+  },
+  {
+    "scene": "Assets/EchoFall/Scenes/MovementLab.unity",
+    "wholeSceneUnchanged": true,
+    "collisionUnchanged": true
+  },
+  {
+    "scene": "Assets/EchoFall/Scenes/WakeSlice.unity",
+    "wholeSceneUnchanged": true,
+    "collisionUnchanged": true
+  },
+  {
+    "scene": "Assets/EchoFall/Scenes/Wake_wake.unity",
+    "wholeSceneUnchanged": false,
+    "collisionUnchanged": true
+  },
+  {
+    "scene": "Assets/EchoFall/Scenes/Wake_belfry.unity",
+    "wholeSceneUnchanged": true,
+    "collisionUnchanged": true
+  },
+  {
+    "scene": "Assets/EchoFall/Scenes/Wake_cistern.unity",
+    "wholeSceneUnchanged": true,
+    "collisionUnchanged": true
+  },
+  {
+    "scene": "Assets/EchoFall/Scenes/Wake_archive.unity",
+    "wholeSceneUnchanged": false,
+    "collisionUnchanged": true
+  },
+  {
+    "scene": "Assets/EchoFall/Scenes/Wake_procession.unity",
+    "wholeSceneUnchanged": true,
+    "collisionUnchanged": true
+  },
+  {
+    "scene": "Assets/EchoFall/Scenes/Wake_king.unity",
+    "wholeSceneUnchanged": false,
+    "collisionUnchanged": true
+  }
+]

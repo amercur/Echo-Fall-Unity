@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Tools/BuildPhase4.cs",
+      "entry": "BuildPhase4.Build"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 1084,
+      "executeMs": 7987,
+      "assemblyName": "PipelineRunScript_BuildPhase4_da7fcf0fb8d9432da3c7f492ad76ba22",
+      "success": true,
+      "result": "Seven new rooms authored; existing baseline scenes patched only at expansion thresholds."
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,328 @@
+{
+  "status": "completed",
+  "duration": 16.86,
+  "summary": {
+    "total": 45,
+    "passed": 45,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.AuthoredLabBelfryShaftCanBeClimbedWithoutUpgrades",
+      "Status": "Passed",
+      "Duration": 0.6729333,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.AuthoredLabHasConnectedPlayerValidMaterialsAndCameraBounds",
+      "Status": "Passed",
+      "Duration": 0.6200578,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.CameraStaysInsideBoundsAtDifferentAspectRatiosAndTracksHeight",
+      "Status": "Passed",
+      "Duration": 0.1363397,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.CoyoteJumpWorksOnlyInsideGraceWindow",
+      "Status": "Passed",
+      "Duration": 0.1348323,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.DashCannotTunnelThroughThinSolidAndJumpCannotEnterCeiling",
+      "Status": "Passed",
+      "Duration": 0.1332065,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.ExactlyOneAirDashUntilLandingAndDashBufferSurvivesCooldown",
+      "Status": "Passed",
+      "Duration": 0.1333093,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.FixedMovementMatchesAcrossRenderRates",
+      "Status": "Passed",
+      "Duration": 0.1328918,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.GroundAccelerationAndBrakingMatchReference",
+      "Status": "Passed",
+      "Duration": 0.1318453,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.HazardReturnsToSafeFootingWithoutCombatOrDeathState",
+      "Status": "Passed",
+      "Duration": 0.1407546,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.HeldJumpRisesHigherAndUpDoesNotJump",
+      "Status": "Passed",
+      "Duration": 0.14138,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.ImportedSpritesPreserveScalePivotAndAllFortyFrames",
+      "Status": "Passed",
+      "Duration": 0.1551952,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.JumpBufferFiresOnLandingAndExpiredBufferDoesNot",
+      "Status": "Passed",
+      "Duration": 0.1417491,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.OneWayAllowsRiseLandingAndDropButFloorRemainsSolid",
+      "Status": "Passed",
+      "Duration": 0.1425208,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.RoomLimitsConvertOriginalPlayerTopToFeet",
+      "Status": "Passed",
+      "Duration": 0.1444378,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.SameWallTapJumpsGainHeightAndRestoreAirDash(-1)",
+      "Status": "Passed",
+      "Duration": 0.1417095,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.SameWallTapJumpsGainHeightAndRestoreAirDash(1)",
+      "Status": "Passed",
+      "Duration": 0.1410674,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.SecondJumpInAirDoesNotGrantDoubleJump",
+      "Status": "Passed",
+      "Duration": 0.139044,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.MovementTests.TapBetweenPhysicsTicksStaysShort",
+      "Status": "Passed",
+      "Duration": 0.1397878,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatRuleTests.BladeVolumesPreserveDirectionalReachAndGroundedDownFallsBackToSide",
+      "Status": "Passed",
+      "Duration": 0.0011679,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatRuleTests.Phase2CheckpointsRemainCompatibleAndCourtDataIsValidated",
+      "Status": "Passed",
+      "Duration": 0.0035367,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.Phase3CombatRuleTests.SweptProjectileCrossesSmallActorsButDoesNotHitParallelMisses",
+      "Status": "Passed",
+      "Duration": 0.0006423,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"run-brake\")",
+      "Status": "Passed",
+      "Duration": 0.1385614,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"held-jump\")",
+      "Status": "Passed",
+      "Duration": 0.1385726,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"short-jump\")",
+      "Status": "Passed",
+      "Duration": 0.1378176,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"jump-dash\")",
+      "Status": "Passed",
+      "Duration": 0.1448225,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"platform-drop\")",
+      "Status": "Passed",
+      "Duration": 0.1440693,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"thin-wall\")",
+      "Status": "Passed",
+      "Duration": 0.1510794,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"ceiling\")",
+      "Status": "Passed",
+      "Duration": 0.150544,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.ReferenceTrajectoryTests.MatchesOriginalPerTickTrajectory(\"camera-travel\")",
+      "Status": "Passed",
+      "Duration": 0.1609623,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SliceRuleTests.ArchiveTransferPreservesIdentityAndEmberOverridesRoots",
+      "Status": "Passed",
+      "Duration": 0.0009072,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SliceRuleTests.CheckpointRejectsStaleArchiveUnknownIdsAndInvalidEnemyHealth",
+      "Status": "Passed",
+      "Duration": 0.000762,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SliceRuleTests.InvalidArchiveNeverPassesValidation",
+      "Status": "Passed",
+      "Duration": 0.0002526,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SliceRuleTests.InvalidCheckpointDoesNotDiscardArchiveAndOldSaveStillLoads",
+      "Status": "Passed",
+      "Duration": 0.0301059,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SliceRuleTests.LoadoutChangesAbilityWithoutRemovingMemoryConsequencesOrCheckpoint",
+      "Status": "Passed",
+      "Duration": 0.0008406,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SliceRuleTests.SaveRoundTripAndCorruptPrimaryRecoversBackup",
+      "Status": "Passed",
+      "Duration": 0.0075857,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SliceRuleTests.UnknownMemoryIsRejected(\"unknown\")",
+      "Status": "Passed",
+      "Duration": 0.0004248,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SliceRuleTests.UnknownMemoryIsRejected(\"\")",
+      "Status": "Passed",
+      "Duration": 5E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.SliceRuleTests.UnknownMemoryIsRejected(null)",
+      "Status": "Passed",
+      "Duration": 3.93E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.WorldExpansionTests.AllAuthoredTransitionsMatchCatalogAndNamedSafeEntries",
+      "Status": "Passed",
+      "Duration": 6.847181,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.WorldExpansionTests.ExpandedCheckpointRemainsStrictAndOldArchiveCompatible",
+      "Status": "Passed",
+      "Duration": 0.4683555,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.WorldExpansionTests.SuspendedLungsWallJumpRouteReachesUpperMachinery",
+      "Status": "Passed",
+      "Duration": 0.9494578,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.WorldExpansionTests.TraversalStairsReachHighRouteWithoutChangingMovement(\"cradle\",1.85f,0.0f,3.0f,1.0f,4.9f,2.0f,7.0f,3.0f)",
+      "Status": "Passed",
+      "Duration": 0.9491268,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.WorldExpansionTests.TraversalStairsReachHighRouteWithoutChangingMovement(\"garden\",2.15f,0.0f,3.5f,1.02f,6.2f,2.07f,7.95f,2.92f)",
+      "Status": "Passed",
+      "Duration": 0.956065,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.WorldExpansionTests.TraversalStairsReachHighRouteWithoutChangingMovement(\"mother\",3.3f,0.0f,4.0f,1.1f,3.3f,1.67f,2.5f,2.47f)",
+      "Status": "Passed",
+      "Duration": 0.9513681,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "EchoFall.Movement.Tests.WorldExpansionTests.WorldIsConnectedAndSecretDoesNotLeakIntoMapFog",
+      "Status": "Passed",
+      "Duration": 0.4635527,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}
