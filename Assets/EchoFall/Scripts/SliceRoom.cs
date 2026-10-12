@@ -17,6 +17,7 @@ namespace EchoFall.Movement
         }
         public void Apply(SliceSession session)
         {
+            MemoryWorld.Apply(this, session);
             if (rootBridge != null) rootBridge.gameObject.SetActive(session.Archive.RootsOpen);
             if (returnedCreature != null) returnedCreature.gameObject.SetActive(session.Archive.RootsOpen);
             if (emberScar != null) emberScar.gameObject.SetActive(session.Archive.Remembers("fire"));

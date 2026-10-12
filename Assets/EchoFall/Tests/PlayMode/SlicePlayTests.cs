@@ -289,7 +289,11 @@ namespace EchoFall.Movement.Tests
             yield return RestAtAnchor(); S.combat.PayIntegrity(6);
             Assert.That(S.Screen,Is.EqualTo(SliceScreen.Transfer));
             Assert.That(SliceMemoryStore.Load(SliceSession.SavePathOverride,out _).checkpoint,Is.Null);
-            yield return SceneManager.LoadSceneAsync("WakeSlice"); yield return Ready();
+            yield return SceneManager.LoadSceneAsync("WakeSlice");
+            float extractionDeadline=Time.realtimeSinceStartup+10;
+            while(S==null || S.Screen!=SliceScreen.Transfer){Assert.That(Time.realtimeSinceStartup,Is.LessThan(extractionDeadline));yield return null;}
+            Assert.That(S.Archive.pending,Does.Contain("return"));
+            S.ChooseOption(0);yield return Ready();
             Assert.That(S.Room.id,Is.EqualTo("wake")); Assert.That(S.Archive.checkpoint,Is.Null);
         }
         [UnityTest] public IEnumerator FailedCheckpointAndLoadoutSavesKeepPreviousDataAndCanRetry()
@@ -349,14 +353,32 @@ namespace EchoFall.Movement.Tests
             Keys(Key.Digit2); yield return null; Keys(); yield return null;
             Assert.That(S.Playing,Is.True); Assert.That(S.Archive.active,Is.EqualTo("mercy"));
             Assert.That(S.Archive.RootsOpen,Is.False);
-            var digits=new[]{Key.Digit1,Key.Digit2,Key.Digit3};
+            var digits=new[]{Key.Digit1,Key.Digit2,Key.Digit3,Key.Digit4,Key.Digit5,Key.Digit6,Key.Digit7,Key.Digit8,Key.Digit9};
             for(int i=0;i<digits.Length;i++)
             {
                 int selected=-1;
-                S.Show("CHOICES","",SliceScreen.Dialogue,("ONE",()=>selected=0),("TWO",()=>selected=1),("THREE",()=>selected=2));
+                var choices=new System.Collections.Generic.List<(string,System.Action)>();
+                for(int n=0;n<9;n++){int index=n;choices.Add(("MEMORY "+n,()=>selected=index));}
+                S.Show("CHOICES","",SliceScreen.Dialogue,choices.ToArray());
                 Keys(digits[i]); yield return null; Keys(); yield return null;
                 Assert.That(selected,Is.EqualTo(i),"Numbered modal choice must consume its native key.");
             }
+            var pad=InputSystem.AddDevice<Gamepad>();
+            try
+            {
+                int selected=-1;var choices=new System.Collections.Generic.List<(string,System.Action)>();
+                for(int n=0;n<6;n++){int index=n;choices.Add(("MEMORY "+n,()=>selected=index));}
+                S.Show("CONTROLLER CHOICES","",SliceScreen.Dialogue,choices.ToArray());
+                for(int n=0;n<5;n++)
+                {
+                    InputSystem.QueueStateEvent(pad,new GamepadState().WithButton(GamepadButton.DpadDown));yield return null;
+                    InputSystem.QueueStateEvent(pad,new GamepadState());yield return null;
+                }
+                InputSystem.QueueStateEvent(pad,new GamepadState().WithButton(GamepadButton.South));yield return null;
+                InputSystem.QueueStateEvent(pad,new GamepadState());yield return null;
+                Assert.That(selected,Is.EqualTo(5),"Controller must reach the sixth menu choice.");
+            }
+            finally{InputSystem.RemoveDevice(pad);}
             S.SetScreen(SliceScreen.Playing);
             yield return S.LoadRoom("procession","west");
             Assert.That(S.EquipMemory("return"),Is.False); Assert.That(S.Archive.active,Is.EqualTo("mercy"));

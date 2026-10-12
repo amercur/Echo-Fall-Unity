@@ -89,11 +89,11 @@ namespace EchoFall.Movement
             if(!charged&&recovery>0){buffer=Mathf.Min(.42f,recovery+.085f);return;}
             Combo=charged?3:comboWindow>0?Combo%3+1:1;comboWindow=.72f;recovery=CombatRules.Recovery(Combo,charged);AttackVisual=recovery;buffer=mendTime=0;
             presentation?.PlayAttack(charged,direction,Combo,recovery);SliceSound.Cue(charged?"charged":"slash");
-            float damage=CombatRules.Damage(Combo,charged)+(Session.Decision=="fire"?1:0);
+            float damage=CombatRules.Damage(Combo,charged)+Session.RunPower;
             bool down=direction<-.4f&&!motor.Grounded;
             Vector2 dir=down?Vector2.down:direction>.4f?Vector2.up:Vector2.right*motor.Facing;
             if(!charged&&!down&&Session.Archive.active=="fire")
-            {SliceProjectile.Spawn(motor.Position+Vector2.up*.25f,dir*5.9f,null,2.7f+(Session.Decision=="fire"?1:0));return;}
+            {SliceProjectile.Spawn(motor.Position+Vector2.up*.25f,dir*5.9f,null,2.7f+Session.RunPower);return;}
             Rect area=CombatRules.Blade(motor.Position,motor.Facing,Combo,charged,direction,motor.Grounded);
             SliceEffects.Slash(motor.Position+Vector2.up*.25f,dir,charged?new Color(1,.75f,.42f):new Color(.6f,1,1));
             bool hit=false;
@@ -135,6 +135,7 @@ namespace EchoFall.Movement
         }
         public void PayIntegrity(int cost){Integrity=Mathf.Max(0,Integrity-cost);presentation?.PlayHurt(cost);if(Integrity==0)Session.EndRun(false);}
         public void Heal(int amount)=>Integrity=Mathf.Min(6,Integrity+amount);
+        public void GrantWard(float seconds)=>invulnerable=Mathf.Max(invulnerable,seconds);
         public void GainResonance(float amount)=>Resonance=Mathf.Clamp(Resonance+amount,0,3);
         public void Rest(){Integrity=6;Resonance=3;Fracture=0;ClearTransient();}
         public void RestoreBench(float resonance){Integrity=6;Resonance=Mathf.Clamp(resonance,1,3);Fracture=0;ClearTransient();}
@@ -168,11 +169,21 @@ namespace EchoFall.Movement
         public void MemoryAbility()
         {
             if(Session==null||!Session.Playing||abilityCooldown>0)return;
+            string identity=Session.Archive.active;
+            if(identity=="obedience" || identity=="abandon")
+            { invulnerable=identity=="obedience"?2:1.6f;abilityCooldown=identity=="obedience"?7:5;SliceEffects.Ring(HitRect.center,Color.cyan,.7f);return; }
+            if(identity=="defiance")
+            { SliceEffects.Ring(HitRect.center,Color.cyan,.4f);motor.MemoryBlink();invulnerable=.4f;DashFollowup=.7f;abilityCooldown=3;return; }
+            if(identity=="sacrifice")
+            {
+                if(Integrity>=6 || Session.Room==null || !Session.SacrificeUsed.Add(Session.Room.id))return;
+                Heal(2);abilityCooldown=1;SliceEffects.Ring(HitRect.center,Color.cyan,.6f);SliceSound.Cue("mend");return;
+            }
             if(Session.Archive.active=="return"){guardTime=.34f;perfectTime=.24f;abilityCooldown=.9f;return;}
-            if(Session.Archive.active=="fire")
+            if(Session.Archive.active=="fire" || Session.Archive.active=="betrayal")
             {
                 var area=new Rect(motor.Position+new Vector2(-1.66f,-.05f),new Vector2(3.1f,.5f));bool hit=false;
-                foreach(var enemy in FindObjectsByType<SliceEnemy>())if(enemy.Alive&&area.Overlaps(enemy.HitRect))hit|=enemy.Hit(CombatRules.Damage(Combo,false)+2+(Session.Decision=="fire"?1:0),.12f,0,true);
+                foreach(var enemy in FindObjectsByType<SliceEnemy>())if(enemy.Alive&&area.Overlaps(enemy.HitRect))hit|=enemy.Hit(CombatRules.Damage(Combo,false)+2+Session.RunPower,.12f,0,true);
                 if(hit)GainResonance(.25f);SliceEffects.Ring(motor.Position+Vector2.up*.2f,new Color(1,.5f,.2f),1.55f);
             }
             else {var target=Closest(4.5f);if(target!=null){target.Hit(target is SliceKing?4:5,.12f,0,true);SliceEffects.Ring(target.HitRect.center,Color.cyan,.7f);}}

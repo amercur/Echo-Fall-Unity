@@ -1,5 +1,7 @@
 # Phase 3: combat and the Court
 
+Phase 5 continuation: [Phase5-MemoryConsequences.md](Phase5-MemoryConsequences.md) adds the original memory abilities, ORDER's 48-integrity King, delayed MERCY assistance and an Archive Echo. The baseline patterns, damage pipeline and responsive animation ownership remain intact.
+
 Phase 4 continuation: this combat milestone is now the preserved baseline. The Court retains its transfer glass and gains the original eastern connection to Cradle. See [Phase4-WorldExpansion.md](Phase4-WorldExpansion.md) for the expanded world and the deferred Mother/ending scope. Statements below describing Court as the world boundary are historical.
 
 Phase 2 (including checkpoint/loadout persistence and player presentation) remains the baseline. The original JavaScript project is read-only. This milestone extends the five-room Wake with the Court only; the remaining chapter is not imported.

@@ -132,6 +132,7 @@ namespace EchoFall.Movement
         }
         protected virtual void Die()
         {
+            if(Session!=null && !training && Session.Archive.active=="betrayal")Session.combat.Heal(1);
             if(Session!=null){Session.Defeated.Add(id);Session.EnemyHealth.Remove(id);if(training)Session.Notify("The warden bows. You have learned the white deflect.");}
             SliceEffects.Dust(HitRect.center,Vector2.up*.3f,12);SliceEffects.Ring(HitRect.center,Color.cyan,.45f);SliceSound.Cue("defeat");
             if(visual!=null)SliceDeathEcho.Spawn(visual);

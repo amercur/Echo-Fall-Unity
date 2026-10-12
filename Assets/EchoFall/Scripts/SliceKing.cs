@@ -14,8 +14,10 @@ namespace EchoFall.Movement
         protected override float TellReach => Red?2.07f:1.96f;
         public override Rect HitRect => new Rect((Vector2)transform.position+new Vector2(-.27f,0),new Vector2(.54f,.92f));
         int attack;
+        float aidTimer=2;
+        public int AidStrikes {get;private set;}
         public static SliceKing Active => FindAnyObjectByType<SliceKing>();
-        protected override void Start(){base.Start();MaxHealth=40;left=arena.x+.57f;right=arena.y-.53f;State="idle";timer=1.1f;}
+        protected override void Start(){base.Start();MaxHealth=Session!=null && Session.Archive.Remembers("obedience")?48:40;if(Session!=null && !Session.EnemyHealth.ContainsKey(id))hp=MaxHealth;left=arena.x+.57f;right=arena.y-.53f;State="idle";timer=1.1f;}
         public void RestorePrediction(int stage,int breaks,string style)
         {Stage=Mathf.Max(1,stage);Breaks=breaks;LastStyle=style??"";}
         public override void Tick(float dt)
@@ -28,6 +30,11 @@ namespace EchoFall.Movement
                 Session.Notify("THE KING / Deflect his rhythm. Jump, charge, or dash to break prediction.");SliceSound.Cue("boss-intro");
             }
             clock+=dt;hitFlash=Mathf.Max(0,hitFlash-dt);
+            if(Session.Archive.MatureMercy)
+            {
+                aidTimer-=dt;
+                if(aidTimer<=0){aidTimer=4;AidStrikes++;Hit(2.5f,.12f,0,true);SliceEffects.Ring(HitRect.center,new Color(.6f,1,.5f),.65f);Session.Notify("Small paws cross the silent court.");if(!Alive)return;}
+            }
             if(impactHold>0){impactHold-=dt;return;}
             if(Stage==1 && (hp<=MaxHealth*.5f || Breaks>=3))
             {Stage=2;Enter("transition",1.4f);Exposed=1.4f;SliceProjectile.ClearAll();Session.Notify("THE KING / PREDICTION BROKEN. A new rhythm begins.");SliceSound.Cue("boss-phase");}

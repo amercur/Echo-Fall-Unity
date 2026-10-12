@@ -16,6 +16,8 @@ namespace EchoFall.Movement
         public bool Grounded { get; private set; }
         public bool OnPlatform { get; private set; }
         public bool AirDashUsed { get; private set; }
+        public bool DoubleJumpUsed { get; private set; }
+        public bool HasAirJump => SliceSession.Instance != null && SliceSession.Instance.Archive.active == "defiance";
         public int Facing { get; private set; } = 1;
         public int Wall { get; private set; }
         public bool Dashing => dashTime > 0;
@@ -66,6 +68,7 @@ namespace EchoFall.Movement
             Position = previousPosition = feet;
             Velocity = Vector2.zero;
             Grounded = OnPlatform = AirDashUsed = false;
+            DoubleJumpUsed = false;
             Wall = lastWall = 0;
             jumpBuffer = coyote = wallGrace = wallLock = wallSteer = dashTime = dashCooldown = dashBuffer = dropTime = 0;
             cutBufferedJump = false;
@@ -80,6 +83,7 @@ namespace EchoFall.Movement
 
         public void Pogo()
         {
+            DoubleJumpUsed = false;
             Velocity = new Vector2(Velocity.x, 5.35f);
             AirDashUsed = false;
             Grounded = false;
@@ -95,7 +99,15 @@ namespace EchoFall.Movement
         public void DeflectLift()
         { RefreshAirOptions();if(!Grounded)Velocity=new Vector2(Velocity.x,Mathf.Max(Velocity.y,2.1f)); }
 
-        public void RefreshAirOptions() => AirDashUsed = false;
+        public void RefreshAirOptions() { AirDashUsed = DoubleJumpUsed = false; }
+
+        public void MemoryBlink()
+        {
+            Initialize();
+            float travel = Sweep(Position, Vector2.right * Facing, 1.5f, false, out _);
+            Position = new Vector2(Mathf.Clamp(Position.x + Facing * travel, roomBounds.xMin + tuning.size.x * .5f, roomBounds.xMax - tuning.size.x * .5f), Position.y);
+            previousPosition = Position; body.position = Position;
+        }
 
         public void Simulate(float dt, MovementCommand command)
         {
@@ -147,6 +159,7 @@ namespace EchoFall.Movement
                     wallLock = tuning.wallLock;
                     wallSteer = tuning.wallSteerTime;
                     AirDashUsed = false;
+                    DoubleJumpUsed = false;
                     Wall = 0;
                     wallGrace = jumpBuffer = coyote = 0;
                     if (cutBufferedJump) v.y = Mathf.Min(v.y, tuning.releasedJumpSpeed);
@@ -156,6 +169,11 @@ namespace EchoFall.Movement
                     v.y = cutBufferedJump ? tuning.releasedJumpSpeed : tuning.jumpSpeed;
                     Grounded = false;
                     jumpBuffer = coyote = 0;
+                }
+                else if (HasAirJump && !DoubleJumpUsed)
+                {
+                    DoubleJumpUsed = true; v.y = cutBufferedJump ? tuning.releasedJumpSpeed : tuning.jumpSpeed;
+                    jumpBuffer = 0; dashTime = 0; AirDashUsed = false;
                 }
             }
 
@@ -168,7 +186,7 @@ namespace EchoFall.Movement
                 // The source retains the endpoint tick at 120 Hz (.15 in JS doubles).
                 // Keep that boundary inclusive despite Unity's float subtraction rounding.
                 dashTime = tuning.dashDuration + 1e-7f;
-                dashCooldown = tuning.dashCooldown;
+                dashCooldown = SliceSession.Instance != null && SliceSession.Instance.Archive.active == "abandon" ? .32f : tuning.dashCooldown;
                 v.y = 0;
             }
             if (Dashing) v = new Vector2(Facing * tuning.dashSpeed, 0);
@@ -213,6 +231,7 @@ namespace EchoFall.Movement
             bool inHazard = TouchingHazard();
             if (Grounded)
             {
+                DoubleJumpUsed = false;
                 AirDashUsed = false;
                 Wall = 0;
                 // Require full foot support before replacing the recovery point near a pit.

@@ -1,5 +1,7 @@
 # Phase 4: the connected world
 
+Phase 5 continuation: this world remains the baseline. [Phase5-MemoryConsequences.md](Phase5-MemoryConsequences.md) adds remembered decisions, NPC reactions and room variants. DEFIANCE can open the breathing passage early; the existing far-side latch remains usable with ORDER. BETRAYAL conditionally adds an Archive lift guardian. Saved room scenes and base geometry remain unchanged.
+
 Phase 3 is the baseline. This milestone expands exploration without changing player movement values, combat rules, enemy behavior or the King fight. Start in WakeSlice. Defeat the King and use the new eastern Court arch to continue; the Court transfer glass and original five-room completion remain available.
 
 ## Source and dependency review

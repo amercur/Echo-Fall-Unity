@@ -1,0 +1,16 @@
+{
+  "runs": [
+    {
+      "date": "2026-10-06T21:41:52.293292+00:00",
+      "files": 77,
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_status": "unavailable_from_host_agent_tool",
+      "external_llm_api_calls": 0
+    }
+  ],
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "token_usage_status": "unmeasured",
+  "zero_totals_are_placeholders": true
+}

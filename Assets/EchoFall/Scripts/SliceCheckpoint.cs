@@ -19,6 +19,7 @@ namespace EchoFall.Movement
         public string archive, room, bench, decision;
         public List<string> defeated = new List<string>(), consumed = new List<string>(),
             flags = new List<string>(), visited = new List<string>();
+        public List<string> decisions = new List<string>(), sacrificeUsed = new List<string>();
         public List<SliceEnemySnapshot> enemies = new List<SliceEnemySnapshot>();
 
         public static string Signature(SliceArchive owner)
@@ -28,7 +29,7 @@ namespace EchoFall.Movement
             return string.Join("|", ids);
         }
         public static bool RoomId(string id) => WorldCatalog.RoomId(id);
-        public static float EnemyMax(string id) => WorldCatalog.EnemyMax(id);
+        public static float EnemyMax(string id) => id == "archive/betrayal-guard" ? 12 : WorldCatalog.EnemyMax(id);
         static bool Unique(List<string> values, Predicate<string> valid, int limit) =>
             values != null && values.Count <= limit && values.TrueForAll(valid) &&
             new HashSet<string>(values).Count == values.Count;
@@ -41,13 +42,14 @@ namespace EchoFall.Movement
                 !WorldCatalog.Bench(room, bench) ||
                 !(string.IsNullOrEmpty(decision) || decision == "mercy" || decision == "fire") ||
                 !Unique(visited, RoomId, WorldCatalog.Data.rooms.Length) || !visited.Contains(room) ||
-                !Unique(defeated, id => EnemyMax(id) > 0, WorldCatalog.EnemyCount) ||
-                !Unique(consumed, WorldCatalog.Collectible, WorldCatalog.CollectibleCount) ||
-                !Unique(flags, WorldCatalog.Flag, WorldCatalog.Data.flags.Length) || enemies == null || enemies.Count > WorldCatalog.EnemyCount) return false;
+                !Unique(decisions, SliceArchive.ValidId, 9) || !Unique(sacrificeUsed, RoomId, WorldCatalog.Data.rooms.Length) ||
+                !Unique(defeated, id => EnemyMax(id) > 0, WorldCatalog.EnemyCount + 1) ||
+                !Unique(consumed, id => WorldCatalog.Collectible(id) || MemoryRules.NpcId(id), WorldCatalog.CollectibleCount + 5) ||
+                !Unique(flags, WorldCatalog.Flag, WorldCatalog.Data.flags.Length + 1) || enemies == null || enemies.Count > WorldCatalog.EnemyCount + 1) return false;
             var ids = new HashSet<string>();
             foreach (var enemy in enemies)
                 if (enemy == null || !ids.Add(enemy.id) || defeated.Contains(enemy.id) ||
-                    !(enemy.hp > 0 && enemy.hp <= EnemyMax(enemy.id))) return false;
+                    !(enemy.hp > 0 && enemy.hp <= (enemy.id == "king/boss" && owner.Remembers("obedience") ? 48 : EnemyMax(enemy.id)))) return false;
             return true;
         }
     }

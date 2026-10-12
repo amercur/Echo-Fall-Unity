@@ -16,7 +16,7 @@ namespace EchoFall.Movement
         RectTransform safeFrame;
         Image transition;
         GameObject modal, shade;
-        readonly Button[] buttons = new Button[3];
+        readonly Button[] buttons = new Button[9];
         Font font;
         readonly Color ink = new Color(.028f,.046f,.068f,.94f), cyan = new Color(.48f,.88f,.86f), gold = new Color(.85f,.74f,.51f);
         void Awake()
@@ -50,7 +50,7 @@ namespace EchoFall.Movement
             Panel("Gold rule",panel,new Vector2(0,1),new Vector2(0,1),new Vector2(40,-36),new Vector2(820,2),gold);
             modalTitle = Label(panel,"",30,Color.white,new Vector2(0,1),new Vector2(44,-62),new Vector2(810,52));
             modalBody = Label(panel,"",19,new Color(.7f,.79f,.82f),new Vector2(0,1),new Vector2(44,-124),new Vector2(810,190));
-            for(int i=0;i<3;i++)
+            for(int i=0;i<9;i++)
             {
                 var rect = Panel("Choice " + i,panel,new Vector2(0,1),new Vector2(0,1),new Vector2(44,-350-i*53),new Vector2(812,44),new Color(.09f,.15f,.18f));
                 buttons[i] = rect.gameObject.AddComponent<Button>(); int index=i; buttons[i].onClick.AddListener(()=>session.ChooseOption(index));
@@ -87,13 +87,13 @@ namespace EchoFall.Movement
             if(session==null)return;
             if(Camera.main!=null && safeFrame!=null) { var viewport=Camera.main.rect; safeFrame.anchorMin=viewport.min; safeFrame.anchorMax=viewport.max; }
             if(session.Room!=null) { title.text=session.Room.title; subtitle.text=session.Room.subtitle; }
-            loop.text="LIFE " + session.Archive.loop.ToString("00") + "   /   " + (session.Archive.active=="fire"?"EMBER":session.Archive.active.ToUpperInvariant());
+            loop.text="LIFE " + session.Archive.loop.ToString("00") + "   /   " + (MemoryRules.Name(session.Archive.active));
             health.text="INTEGRITY   " + new string('◆',session.combat.Integrity) + new string('◇',6-session.combat.Integrity) + "    ·    RESONANCE  " + session.combat.Resonance.ToString("0.##");
             status.text="J  STRIKE   F  DEFLECT   Q  IMPRINT   H  MEND   C  MEMORY" + (session.combat.Fracture>0?"   FRACTURE "+session.combat.Fracture:"");
             var king=SliceKing.Active;
             bossPanel.SetActive(king!=null && king.Started && king.Alive);
-            if(king!=null)bossHealth.sizeDelta=new Vector2(800*Mathf.Clamp01(king.hp/40),3);
-            boss.text=king!=null && king.Started && king.Alive?"THE KING / "+king.hp.ToString("0.#")+" / 40     PHASE "+king.Stage+"     BREAKS "+king.Breaks+"\n"+(king.Exposed>0?"EXPOSED":king.State=="tell"?(king.Red?"RED SWEEP / JUMP OR CHARGED COUNTER":"WHITE CHARGE / DEFLECT"):"BREAK HIS PREDICTION"):"";
+            if(king!=null)bossHealth.sizeDelta=new Vector2(800*Mathf.Clamp01(king.hp/king.MaxHealth),3);
+            boss.text=king!=null && king.Started && king.Alive?"THE KING / "+king.hp.ToString("0.#")+" / "+king.MaxHealth+"     PHASE "+king.Stage+"     BREAKS "+king.Breaks+"\n"+(king.Exposed>0?"EXPOSED":king.State=="tell"?(king.Red?"RED SWEEP / JUMP OR CHARGED COUNTER":"WHITE CHARGE / DEFLECT"):"BREAK HIS PREDICTION"):"";
             map.text=(session.Room==null?"":WorldCatalog.Find(session.Room.id).region.ToUpperInvariant())+"\n"+session.Visited.Count+" PLACES MAPPED / M";
             prompt.text=session.Playing && session.Nearest!=null ? "[ E / Y ]   "+session.Nearest.label : "";
             message.text=string.IsNullOrEmpty(session.CurrentMessage)?session.Objective:session.CurrentMessage;
@@ -102,7 +102,13 @@ namespace EchoFall.Movement
             if(show)
             {
                 modalTitle.text=session.ModalTitle; modalBody.text=session.ModalBody;
-                for(int i=0;i<3;i++) { buttons[i].gameObject.SetActive(i<session.OptionLabels.Count); if(i<session.OptionLabels.Count) buttons[i].GetComponentInChildren<Text>().text=(i+1)+"   "+session.OptionLabels[i]; }
+                bool many=session.OptionLabels.Count>3;
+                modalBody.rectTransform.sizeDelta=new Vector2(810,many?120:190);
+                modal.GetComponent<RectTransform>().sizeDelta=new Vector2(900,many?730:530);
+                modal.GetComponent<RectTransform>().anchoredPosition=new Vector2(-450,many?-365:-265);
+                for(int n=0;n<buttons.Length;n++) buttons[n].GetComponent<RectTransform>().anchoredPosition=new Vector2(44,-(many?300:350)-n*(many?46:53));
+                if(many)modalBody.text += "\n1-9 / click   |   D-pad + A";
+                for(int i=0;i<9;i++) { buttons[i].gameObject.SetActive(i<session.OptionLabels.Count); if(i<session.OptionLabels.Count) buttons[i].GetComponentInChildren<Text>().text=(many && session.MemoryCursor==i?"> ":"")+(i+1)+"   "+session.OptionLabels[i]; }
             }
         }
     }

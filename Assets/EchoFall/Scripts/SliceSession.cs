@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 namespace EchoFall.Movement
 {
     public enum SliceScreen { Playing, Dialogue, Transfer, Pause, Loading, Map }
-    public sealed class SliceSession : MonoBehaviour
+    public sealed partial class SliceSession : MonoBehaviour
     {
         public static SliceSession Instance { get; private set; }
         // Tests may opt into an ephemeral archive before loading the bootstrap scene.
@@ -86,9 +86,10 @@ namespace EchoFall.Movement
             interact.performed += _ => interactPressed=true;
             pause.performed += _ => pausePressed=true;
             transfer.performed += _ => transferPressed=true;
-            select1.performed += _ => pendingOption=0;
+            select1.performed += context => pendingOption=context.control.device is Gamepad && OptionLabels.Count>3 ? MemoryCursor : 0;
             select2.performed += _ => pendingOption=1;
             select3.performed += _ => pendingOption=2;
+            InitializeMemoryInput();
             SetScreen(SliceScreen.Loading);
         }
         static InputAction Action(string name, string key, string pad)
@@ -101,6 +102,8 @@ namespace EchoFall.Movement
                 KingStage=checkpoint.kingStage;KingBreaks=checkpoint.kingBreaks;KingStyle=checkpoint.kingStyle;
                 ChildStage=checkpoint.childStage;
                 Decision = string.IsNullOrEmpty(checkpoint.decision) ? null : checkpoint.decision;
+                Decisions.AddRange(checkpoint.decisions); if (Decision != null && !Decisions.Contains(Decision)) Decisions.Add(Decision);
+                SacrificeUsed.UnionWith(checkpoint.sacrificeUsed);
                 Defeated.UnionWith(checkpoint.defeated); Consumed.UnionWith(checkpoint.consumed);
                 Flags.UnionWith(checkpoint.flags); Visited.UnionWith(checkpoint.visited);
                 foreach (var enemy in checkpoint.enemies) EnemyHealth[enemy.id] = enemy.hp;
@@ -111,12 +114,14 @@ namespace EchoFall.Movement
             else
             {
                 yield return LoadRoom("wake", "default");
-                if (string.IsNullOrEmpty(CurrentMessage)) Notify("Find the wounded creature. Rest at a signal anchor to save this life.");
+                if (Archive.pending.Count > 0) ShowExtraction();
+                else if (string.IsNullOrEmpty(CurrentMessage)) Notify("Find the wounded creature. Rest at a signal anchor to save this life.");
             }
         }
         void OnDestroy()
         {
             foreach (var a in new[] { interact, pause, transfer, select1, select2, select3 }) a?.Dispose();
+            foreach (var a in memoryInputs) a.Dispose();
             if (Instance == this) Instance = null;
         }
         void Update()
@@ -132,7 +137,7 @@ namespace EchoFall.Movement
             }
             Nearest = FindNearest();
             if (menu)
-                Show("THE WORLD WAITS", "A / D move  ·  SPACE jump  ·  K / SHIFT dash\nJ / X strike (hold for charged cut)  ·  W / S aim\nF tap: white deflect  ·  Hold F, release: red counter\nQ imprint / detonate  ·  H hold: mend  ·  C memory\nE interact  ·  R transfer\nController: A jump, X strike, B dash, Y interact; LB guard, RB imprint, LT memory, RT mend.", SliceScreen.Pause,
+                Show("THE WORLD WAITS", "A / D move  Â·  SPACE jump  Â·  K / SHIFT dash\nJ / X strike (hold for charged cut)  Â·  W / S aim\nF tap: white deflect  Â·  Hold F, release: red counter\nQ imprint / detonate  Â·  H hold: mend  Â·  C memory\nE interact  Â·  R transfer\nController: A jump, X strike, B dash, Y interact; LB guard, RB imprint, LT memory, RT mend.", SliceScreen.Pause,
                     ("RESUME", () => SetScreen(SliceScreen.Playing)), ("MEMORIES", ShowMemories));
             else if (leave)
                 Show("LEAVE THIS LIFE?", "The run ends. One decision may cross. Unfinished encounters will return.", SliceScreen.Dialogue,
@@ -164,6 +169,7 @@ namespace EchoFall.Movement
         public void Show(string title, string body, SliceScreen screen, params (string label, Action action)[] choices)
         {
             ModalTitle = title; ModalBody = body; OptionLabels.Clear(); options.Clear();
+            MemoryCursor = 0;
             foreach (var choice in choices) { OptionLabels.Add(choice.label); options.Add(choice.action); }
             SetScreen(screen);
         }
@@ -174,6 +180,7 @@ namespace EchoFall.Movement
             if (!Playing || !item.Available(this)) return;
             string locked = item.LockReason(this);
             if (locked != null) { Notify(locked); return; }
+            if (MemoryConversation(item)) return;
             switch (item.kind)
             {
                 case "victory": EndRun(true); break;
@@ -190,7 +197,7 @@ namespace EchoFall.Movement
                     if (Archive.Remembers("fire")) { Notify("A warm scar. The stones remember losing a life."); break; }
                     if (Archive.Remembers("mercy")) { combat.Heal(1); Notify("It presses its head into your hand. Living roots now cross the Cistern."); break; }
                     Show("A SMALL, WARM THING", "An injured creature curls around a living ember.\nGive two integrity to keep it alive, or take its fire into your blade.\nOnly a transferred decision survives this life.", SliceScreen.Dialogue,
-                        ("GIVE 2 INTEGRITY — MERCY", () => MakeDecision("mercy")),
+                        ("GIVE 2 INTEGRITY â€” MERCY", () => MakeDecision("mercy")),
                         ("TAKE THE EMBER", () => MakeDecision("fire")), ("LEAVE", () => SetScreen(SliceScreen.Playing))); break;
                 case "mirror":
                     if (SliceComplete) EndRun(true);
@@ -203,36 +210,19 @@ namespace EchoFall.Movement
         public void MakeDecision(string id)
         {
             if (Decision != null || (id != "mercy" && id != "fire")) return;
-            Decision = id; SetScreen(SliceScreen.Playing);
+            Decision = id; RecordDecision(id); SetScreen(SliceScreen.Playing);
             if (id == "mercy") combat.PayIntegrity(2);
             Notify(id == "mercy" ? "It limps into the dark. Return to the glass to remember MERCY." : "The warmth stays in your blade. The creature does not. Carry EMBER to the glass.");
         }
         public void EndRun(bool completed)
         {
             if (Screen == SliceScreen.Transfer || Screen == SliceScreen.Loading) return;
-            if (Archive.checkpoint != null)
-            {
-                var cleared = Archive.Copy(); cleared.checkpoint = null;
-                if (TrySave(cleared, "Could not clear the bench save. Retry the transfer before closing the game.")) Archive = cleared;
-            }
-            string memory = Decision ?? "return";
-            Show(completed ? "THE GLASS ACCEPTS YOU" : "THIS LIFE IS OVER", "One decision can cross.\n" +
-                (memory == "return" ? "You made no new decision. RETURN remains." : memory == "mercy" ? "MERCY — the creature returns. A living root opens a path." : "EMBER — fire enters your blade. The creature becomes a scar; roots close.") +
-                "\nThe world will be rebuilt. Your archive endures.", SliceScreen.Transfer,
-                ("REMEMBER " + (memory == "fire" ? "EMBER" : memory.ToUpperInvariant()), () => CommitTransfer(memory)));
+            var next = Archive.Copy(); next.checkpoint = null;
+            next.pending = Decisions.Count == 0 ? new List<string> { Decision ?? "return" } : new List<string>(Decisions);
+            if (TrySave(next, "Could not save extraction. Retry before closing the game.")) Archive = next;
+            ShowExtraction(next.pending, completed);
         }
-        public void CommitTransfer(string memory)
-        {
-            if (Screen != SliceScreen.Transfer || memory != (Decision ?? "return")) return;
-            var next = Archive.Copy(); next.Transfer(memory);
-            try { if (!EphemeralSave) SliceMemoryStore.Save(SavePath, next); }
-            catch (Exception e) when (e is System.IO.IOException || e is UnauthorizedAccessException)
-            { Notify("Could not save the memory. Free disk space and try again; this life is preserved."); Show(ModalTitle, ModalBody, SliceScreen.Transfer, ("RETRY TRANSFER", () => CommitTransfer(memory))); return; }
-            Archive = next; Decision = null; Defeated.Clear(); EnemyHealth.Clear(); Consumed.Clear(); Flags.Clear(); Visited.Clear();
-            KingStage=KingBreaks=0;KingStyle=null;
-            ChildStage=0;
-            combat.Rest(); StartCoroutine(LoadRoom("wake", "default", true));
-        }
+        public void CommitTransfer(string memory) => TransferSelected(memory, null);
         public IEnumerator LoadRoom(string id, string entry, bool newLife = false, string bench = null)
         {
             if (!WorldCatalog.RoomId(id)) yield break;
@@ -295,7 +285,7 @@ namespace EchoFall.Movement
             var checkpoint = new SliceCheckpoint
             {
                 loop = Archive.loop, archive = SliceCheckpoint.Signature(Archive), room = Room.id, bench = bench.id,
-                decision = Decision, resonance = combat.Resonance, kingStage=KingStage,kingBreaks=KingBreaks,kingStyle=KingStyle,childStage=ChildStage,
+                decision = Decision, decisions = new List<string>(Decisions), sacrificeUsed = new List<string>(SacrificeUsed), resonance = combat.Resonance, kingStage=KingStage,kingBreaks=KingBreaks,kingStyle=KingStyle,childStage=ChildStage,
                 defeated = new List<string>(Defeated), consumed = new List<string>(Consumed),
                 flags = new List<string>(Flags), visited = new List<string>(Visited)
             };
@@ -324,7 +314,7 @@ namespace EchoFall.Movement
                     SetScreen(SliceScreen.Playing);
                     if(answer!=correct){Notify("You are speaking for me. Listen.");return;}
                     ChildStage++;
-                    if(ChildStage==3){Flags.Add("child");Notify("Then I choose to let you try. The Choir passage opens.");}
+                    if(ChildStage==3){Flags.Add("child");RecordDecision("respect");Notify("Then I choose to let you try. The Choir passage opens.");}
                     else ChildDialogue();
                 }));
             }
@@ -353,9 +343,10 @@ namespace EchoFall.Movement
             foreach (string id in ids)
             {
                 string memory = id;
-                choices.Add(((id == "fire" ? "EMBER" : id.ToUpperInvariant()) + (Archive.active == id ? " / ACTIVE" : ""), () => EquipMemory(memory)));
+                choices.Add(((MemoryRules.Name(id)) + (Archive.active == id ? " / ACTIVE" : ""), () => EquipMemory(memory)));
             }
-            Show("RETAINED MEMORIES", "Choose the ability you carry. Every retained memory still shapes the world.\nRETURN: longer white deflect. MERCY: spirit strike. EMBER: firebolts.\nEscape / Start closes this menu.", SliceScreen.Pause, choices.ToArray());
+            choices.Add(("FORGET A MEMORY", ShowForgetting));
+            Show("RETAINED MEMORIES", Archive.memories.Count + " / 5 retained. Every memory shapes the world. Select an ability to equip.\n" + MemoryRules.Hint(Archive.active) + "\nEscape / Start closes this menu.", SliceScreen.Pause, choices.ToArray());
         }
         public bool EquipMemory(string id)
         {
@@ -363,7 +354,7 @@ namespace EchoFall.Movement
             var next = Archive.Copy(); next.Equip(id);
             if (!TrySave(next, "Could not save the loadout. Your previous memory is still equipped.")) { ShowMemories(); return false; }
             Archive = next; combat.ClearTransient(); SetScreen(SliceScreen.Playing);
-            Notify((id == "fire" ? "EMBER" : id.ToUpperInvariant()) + " equipped. Retained memories still shape the world.");
+            Notify((MemoryRules.Name(id)) + " equipped. Retained memories still shape the world.");
             return true;
         }
     }

@@ -9,7 +9,8 @@ namespace EchoFall.Movement
     {
         public string id,target,entry,requires,memory,blockedBy;
         public bool Open(SliceArchive archive, ISet<string> flags) =>
-            (string.IsNullOrEmpty(requires) || flags.Contains(requires)) &&
+            !MemoryWorld.GuardBlocks(requires,archive,flags) &&
+            (string.IsNullOrEmpty(requires) || flags.Contains(requires) || requires=="breath-link" && MemoryWorld.BreathingPassage(archive)) &&
             (string.IsNullOrEmpty(memory) || archive.Remembers(memory)) &&
             (string.IsNullOrEmpty(blockedBy) || !archive.Remembers(blockedBy));
     }
@@ -32,7 +33,7 @@ namespace EchoFall.Movement
         public static bool RoomId(string id) => Find(id)!=null;
         public static bool Bench(string room,string id) => Find(room)?.benches.Contains(id)==true;
         public static bool Collectible(string id) => Data.rooms.Any(r=>r.collectibles.Contains(id));
-        public static bool Flag(string id) => Data.flags.Contains(id);
+        public static bool Flag(string id) => id=="betrayal-guard" || Data.flags.Contains(id);
         public static float EnemyMax(string id) => Data.rooms.SelectMany(r=>r.enemies).FirstOrDefault(e=>e.id==id)?.hp ?? 0;
         public static int EnemyCount => Data.rooms.Sum(r=>r.enemies.Length);
         public static int CollectibleCount => Data.rooms.Sum(r=>r.collectibles.Length);
