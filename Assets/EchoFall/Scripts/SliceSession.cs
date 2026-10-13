@@ -38,6 +38,7 @@ namespace EchoFall.Movement
         MovementInput movement;
         InputAction interact, pause, transfer, select1, select2, select3;
         string loadedScene;
+        SliceInteraction[] roomInteractions=Array.Empty<SliceInteraction>();
         float messageUntil;
         SliceInteraction restingBench;
         float restTime;
@@ -78,6 +79,7 @@ namespace EchoFall.Movement
             if (warning != null) Notify(warning);
             gameObject.AddComponent<WorldMap>();
             interact = Action("Interact", "<Keyboard>/e", "<Gamepad>/buttonNorth");
+            PlayerPreferences.Current.Apply(interact);combat.ApplyBindings();
             pause = Action("Pause", "<Keyboard>/escape", "<Gamepad>/start");
             transfer = Action("Transfer", "<Keyboard>/r", "<Gamepad>/select");
             select1 = Action("First", "<Keyboard>/1", "<Gamepad>/buttonSouth");
@@ -127,6 +129,7 @@ namespace EchoFall.Movement
         }
         void Update()
         {
+            if(CaptureBinding()){interactPressed=pausePressed=transferPressed=false;pendingOption=-1;return;}
             bool use=interactPressed, menu=pausePressed, leave=transferPressed; int option=pendingOption;
             interactPressed=pausePressed=transferPressed=false; pendingOption=-1;
             if (Screen == SliceScreen.Loading) return;
@@ -138,8 +141,8 @@ namespace EchoFall.Movement
             }
             Nearest = FindNearest();
             if (menu)
-                Show("THE WORLD WAITS", "A / D move  Â·  SPACE jump  Â·  K / SHIFT dash\nJ / X strike (hold for charged cut)  Â·  W / S aim\nF tap: white deflect  Â·  Hold F, release: red counter\nQ imprint / detonate  Â·  H hold: mend  Â·  C memory\nE interact  Â·  R transfer\nController: A jump, X strike, B dash, Y interact; LB guard, RB imprint, LT memory, RT mend.", SliceScreen.Pause,
-                    ("RESUME", () => SetScreen(SliceScreen.Playing)), ("MEMORIES", ShowMemories));
+                Show("THE WORLD WAITS", ControlsText, SliceScreen.Pause,
+                    ("RESUME", () => SetScreen(SliceScreen.Playing)), ("MEMORIES", ShowMemories), ("SETTINGS", ShowSettings));
             else if (leave)
                 Show("LEAVE THIS LIFE?", "The run ends. One decision may cross. Unfinished encounters will return.", SliceScreen.Dialogue,
                     ("TRANSFER", () => EndRun(false)), ("STAY", () => SetScreen(SliceScreen.Playing)));
@@ -149,8 +152,9 @@ namespace EchoFall.Movement
         {
             SliceInteraction best = null; float distance = float.MaxValue;
             if (Room == null) return null;
-            foreach (var item in Room.GetComponentsInChildren<SliceInteraction>())
+            foreach (var item in roomInteractions)
             {
+                if(item==null||!item.gameObject.activeInHierarchy)continue;
                 float d = Vector2.Distance(motor.Position + Vector2.up * .25f, item.transform.position);
                 if (item.Available(this) && d < item.radius && d < distance) { best = item; distance = d; }
             }
@@ -175,7 +179,7 @@ namespace EchoFall.Movement
             SetScreen(screen);
         }
         public void ChooseOption(int index)
-        { if (Playing || Screen == SliceScreen.Loading || index < 0 || index >= options.Count) return; var action = options[index]; options.Clear(); action(); }
+        { if (Playing || Screen == SliceScreen.Loading || index < 0 || index >= options.Count) return;SliceSound.Cue("ui"); var action = options[index]; options.Clear(); action(); }
         public void Interact(SliceInteraction item)
         {
             if (!Playing || !item.Available(this)) return;
@@ -239,6 +243,7 @@ namespace EchoFall.Movement
             yield return SceneManager.LoadSceneAsync(loadedScene, LoadSceneMode.Additive);
             Room = FindAnyObjectByType<SliceRoom>();
             Room.Apply(this); Visited.Add(id);
+            roomInteractions=Room.GetComponentsInChildren<SliceInteraction>(true);
             motor.roomBounds = follow.bounds = Room.bounds;
             Vector2 spawn = Room.Spawn(entry);
             if (bench != null)

@@ -27,6 +27,7 @@ namespace EchoFall.Movement
             jump = instance.FindAction("Movement/Jump", true);
             dash = instance.FindAction("Movement/Dash", true);
             reset = instance.FindAction("Movement/Reset", true);
+            PlayerPreferences.Current.Apply(jump);PlayerPreferences.Current.Apply(dash);
             jump.performed += JumpPressed;
             jump.canceled += JumpReleased;
             dash.performed += DashPressed;

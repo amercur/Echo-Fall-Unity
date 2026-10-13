@@ -18,7 +18,10 @@ namespace EchoFall.Movement
         int attack;
         float aidTimer=2;
         public int AidStrikes {get;private set;}
-        public static SliceKing Active => FindAnyObjectByType<SliceKing>();
+        static SliceKing active;
+        public static SliceKing Active=>active!=null&&active.gameObject.activeInHierarchy?active:null;
+        void OnEnable()=>active=this;
+        void OnDestroy(){if(active==this)active=null;}
         protected override void Start(){base.Start();MaxHealth=Session!=null && Session.Archive.Remembers("obedience")?48:40;if(Session!=null && !Session.EnemyHealth.ContainsKey(id))hp=MaxHealth;left=arena.x+.57f;right=arena.y-.53f;State="idle";timer=1.1f;}
         public void RestorePrediction(int stage,int breaks,string style)
         {Stage=Mathf.Max(1,stage);Breaks=breaks;LastStyle=style??"";}

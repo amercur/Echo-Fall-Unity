@@ -21,7 +21,7 @@ namespace EchoFall.Movement
             if(s!=null && !s.Playing && s.Screen!=SliceScreen.Transfer) {Clear();return;}
             remaining=Mathf.Max(0,remaining-Time.unscaledDeltaTime);phase+=Time.unscaledDeltaTime;
             float envelope=remaining/.16f;
-            Offset=new Vector2(Mathf.Sin(phase*93),Mathf.Cos(phase*111)*.65f)*strength*envelope*envelope;
+            Offset=new Vector2(Mathf.Sin(phase*93),Mathf.Cos(phase*111)*.65f)*strength*envelope*envelope*PlayerPreferences.Current.shake;
             if(remaining<=0)strength=0;
         }
         void Begin(ScriptableRenderContext context,Camera camera)

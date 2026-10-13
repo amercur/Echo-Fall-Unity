@@ -6,14 +6,15 @@ This repository contains the Unity port of the original JavaScript/Canvas versio
 
 ## Development status
 
-In active development. The movement lab and first five-room Wake vertical slice are implemented, including combat, the initial memory loop, checkpoint saves, and memory selection. EditMode and PlayMode validation is documented in [the Wake slice notes](Docs/Phase2-WakeSlice.md). Full feature parity, broader content, physical controller testing, and standalone build validation remain in progress.
+The current chapter contains thirteen connected rooms, three regular enemy archetypes, the King and Mother, the noncombat Child, nine memory types and four replayable endings. Phase 7 adds build tooling, settings, keyboard remapping, audio transitions and stabilization. See [Phase 7 validation and known issues](Docs/Phase7-ReleasePolish.md) for the current build's acceptance status; automated checks do not replace a first-time controller playthrough.
 
 ## Implemented gameplay
 
 - Movement with variable-height jumps, wall jumps, dashes, and one-way platforms.
 - Blade combos, charged and directional attacks, deflects, counters, projectile reflection, pogo strikes, and healing.
-- Five connected rooms: Wake, Pilgrim Causeway, Belfry, Cistern, and Glass Archive, with enemies, hazards, collectibles, dialogue, and shortcuts.
-- Death and voluntary transfer, persistent RETURN/MERCY/EMBER memories, equipped abilities, and memory-driven world changes.
+- Thirteen connected rooms across Wake, Court, Cradle, Last Garden and Choir, with optional routes, secrets, hazards and shortcuts.
+- Death and voluntary transfer, nine persistent memory types with five retained slots, equipped abilities, forgetting, delayed consequences and NPC reactions.
+- King prediction combat, Mother's recalled identities, Child dialogue, and RESET/BREAK/REMEMBER/SHARE endings.
 - Signal-anchor checkpoint saves, run restoration, HUD, pause and memory menus, camera tracking, lighting, parallax, and procedural audio.
 
 ## Unity and technologies
@@ -32,6 +33,22 @@ In active development. The movement lab and first five-room Wake vertical slice 
 4. Open `Assets/EchoFall/Scenes/WakeSlice.unity` and press **Play**.
 
 Use **A/D** to move, **Space** to jump, **K/Shift** to dash, **J/X** to strike, **F** to guard, **E** to interact, and **Escape** for controls and pause. For isolated movement practice, open `Assets/EchoFall/Scenes/MovementLab.unity`.
+
+Hold/release strike for a charged attack; **W/S** aims directional attacks. Tap **F** to deflect white attacks; hold at least .48 seconds and release to counter red attacks. **Q** imprints/detonates, **H** holds mend, **C/L** uses the active memory, **M** opens the map, and **R** offers voluntary transfer. Controller: left stick movement/aim, A jump, B dash, X strike, Y interact, LB guard, RB imprint, LT memory, RT mend, Start pause, Back transfer, right-stick press map. Menus support number keys, mouse and D-pad/A navigation.
+
+Pause > Settings controls volume, music/SFX balance, shake, hit flashes and larger dialogue. Eight primary keyboard action bindings can be replaced; movement, menu and controller bindings remain fixed. Rest still for .45 seconds at a signal anchor to save. Reload restores that anchor; later unsaved exploration is lost. Death/transfer clears the run checkpoint while preserving the archive. Ending discoveries persist across future loops.
+
+## Windows build
+
+With Unity **6000.5.8f1** and Windows Build Support installed, use **Echo-Fall > Build Windows Playtest**. The output is `Builds/Windows/Echo-Fall.exe` plus its accompanying data and runtime files; distribute the entire folder. The build is version `0.7.0`, windowed and resizable. Its explicit scene list excludes MovementLab and SampleScene. The QA build menu produces a separate development build; use the release folder for playtesting.
+
+Windows saves remain in `%USERPROFILE%/AppData/LocalLow/DefaultCompany/Echo-Fall/`: `wake-slice-v1.json` for the archive and `settings-v1.json` for preferences. Keep `.bak` files when diagnosing recovery. Builds, logs, Library and Temp are ignored by Git.
+
+Run the complete EditMode and PlayMode suites in Unity Test Runner. Reproducible validation tools and reports live in `Tools/` and `Docs/Validation/phase7/`. The development-only standalone driver uses an isolated archive and is excluded from the release executable.
+
+## Known limitations
+
+Authored final audio/music, dedicated NPC art, some bespoke player animations, controller rebinding, hold/toggle alternatives and localization remain pending. Dynamic abandoned-body placement and combat styles are deferred parity work. Physical controller feel, subjective balance and an uninterrupted human release-player run still need external QA. macOS/Linux have not been certified.
 
 ## Original browser version
 

@@ -89,27 +89,29 @@ namespace EchoFall.Movement
             if(session.Room!=null) { title.text=session.Room.title; subtitle.text=session.Room.subtitle; }
             loop.text="LIFE " + session.Archive.loop.ToString("00") + "   /   " + (MemoryRules.Name(session.Archive.active));
             health.text="INTEGRITY   " + new string('◆',session.combat.Integrity) + new string('◇',6-session.combat.Integrity) + "    ·    RESONANCE  " + session.combat.Resonance.ToString("0.##");
-            status.text="J  STRIKE   F  DEFLECT   Q  IMPRINT   H  MEND   C  MEMORY" + (session.combat.Fracture>0?"   FRACTURE "+session.combat.Fracture:"");
+            var preferences=PlayerPreferences.Current;
+            status.text=preferences.Key("Attack","J")+" STRIKE   "+preferences.Key("Guard","F")+" DEFLECT   "+preferences.Key("Imprint","Q")+" IMPRINT   "+preferences.Key("Mend","H")+" MEND   "+preferences.Key("Memory","C")+" MEMORY" + (session.combat.Fracture>0?"   FRACTURE "+session.combat.Fracture:"");
             var king=SliceKing.Active;var mother=SliceMother.Active;
             bossPanel.SetActive(king!=null && king.Started && king.Alive || mother!=null && mother.Started && mother.Alive);
             if(king!=null)bossHealth.sizeDelta=new Vector2(800*Mathf.Clamp01(king.hp/king.MaxHealth),3);
             boss.text=king!=null && king.Started && king.Alive?"THE KING / "+king.hp.ToString("0.#")+" / "+king.MaxHealth+"     PHASE "+king.Stage+"     BREAKS "+king.Breaks+"\n"+(king.Exposed>0?"EXPOSED":king.State=="tell"?(king.Red?"RED SWEEP / JUMP OR CHARGED COUNTER":"WHITE CHARGE / DEFLECT"):"BREAK HIS PREDICTION"):"";
             if(mother!=null && mother.Started && mother.Alive){bossHealth.sizeDelta=new Vector2(800*Mathf.Clamp01(mother.hp/mother.MaxHealth),3);boss.text="THE MOTHER / "+mother.hp.ToString("0.#")+" / "+mother.MaxHealth+"     PHASE "+mother.Stage+"\n"+(mother.State=="tell"?(mother.Red?"RED SIGNAL / JUMP OR CHARGED COUNTER":"WHITE SIGNAL / DEFLECT"):"THE ARCHIVE ANSWERS");}
             map.text=(session.Room==null?"":WorldCatalog.Find(session.Room.id).region.ToUpperInvariant())+"\n"+session.Visited.Count+" PLACES MAPPED / M";
-            prompt.text=session.Playing && session.Nearest!=null ? "[ E / Y ]   "+session.Nearest.label : "";
+            prompt.text=session.Playing && session.Nearest!=null ? "[ "+preferences.Key("Interact","E")+" / Y ]   "+session.Nearest.label : "";
             message.text=string.IsNullOrEmpty(session.CurrentMessage)?session.Objective:session.CurrentMessage;
             bool show=!session.Playing && session.Screen!=SliceScreen.Loading && session.Screen!=SliceScreen.Map;
             shade.SetActive(show); modal.SetActive(show);
             if(show)
             {
                 modalTitle.text=session.ModalTitle; modalBody.text=session.ModalBody;
+                modalBody.fontSize=PlayerPreferences.Current.largeText?23:19;
                 bool many=session.OptionLabels.Count>3;bool ending=session.Screen==SliceScreen.Ending;
-                modalBody.rectTransform.sizeDelta=new Vector2(810,many?120:ending?250:190);
+                modalBody.rectTransform.sizeDelta=new Vector2(810,many?160:ending?250:190);
                 modal.GetComponent<RectTransform>().sizeDelta=new Vector2(900,many?730:ending?650:530);
                 modal.GetComponent<RectTransform>().anchoredPosition=new Vector2(-450,many?-365:ending?-325:-265);
                 for(int n=0;n<buttons.Length;n++) buttons[n].GetComponent<RectTransform>().anchoredPosition=new Vector2(44,-(many?300:ending?450:350)-n*(many?46:53));
                 if(many)modalBody.text += "\n1-9 / click   |   D-pad + A";
-                for(int i=0;i<9;i++) { buttons[i].gameObject.SetActive(i<session.OptionLabels.Count); if(i<session.OptionLabels.Count) buttons[i].GetComponentInChildren<Text>().text=(many && session.MemoryCursor==i?"> ":"")+(i+1)+"   "+session.OptionLabels[i]; }
+                for(int i=0;i<9;i++) { buttons[i].gameObject.SetActive(i<session.OptionLabels.Count); if(i<session.OptionLabels.Count) {var label=buttons[i].GetComponentInChildren<Text>();label.fontSize=PlayerPreferences.Current.largeText?20:17;label.text=(session.MemoryCursor==i?"> ":"")+(i+1)+"   "+session.OptionLabels[i];} }
             }
         }
     }

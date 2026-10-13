@@ -38,8 +38,10 @@ namespace EchoFall.Movement
             attack.performed+=_=>attackPressed=true;attack.canceled+=_=>attackReleased=true;
             guard.performed+=_=>guardPressed=true;guard.canceled+=_=>guardReleased=true;
             imprint.performed+=_=>imprintPressed=true;ability.performed+=_=>abilityPressed=true;
+            ApplyBindings();
         }
         static InputAction Button(string name,string key,string pad){var a=new InputAction(name,InputActionType.Button);a.AddBinding(key);a.AddBinding(pad);a.Enable();return a;}
+        public void ApplyBindings(){foreach(var a in new[]{attack,guard,imprint,mend,ability})if(a!=null)PlayerPreferences.Current.Apply(a);}
         void OnDestroy(){attack?.Dispose();guard?.Dispose();imprint?.Dispose();mend?.Dispose();ability?.Dispose();aim?.Dispose();}
         void Update()
         {

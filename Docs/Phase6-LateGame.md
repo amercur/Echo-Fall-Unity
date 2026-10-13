@@ -1,5 +1,7 @@
 # Phase 6: the voices converge
 
+Phase 7 continuation: [Phase7-ReleasePolish.md](Phase7-ReleasePolish.md) preserves these encounters and ending conditions while adding preferences, audio transitions, cleanup and Windows validation. Refer there for current release-candidate status and remaining acceptance checks.
+
 Phase 5 is the preserved baseline. Start from `WakeSlice`: its five-room objective and voluntary transfer remain available. The current chapter now also supports King, Mother, Child and the four Choir endings. The original JavaScript project is read-only.
 
 ## Progression and source adaptations

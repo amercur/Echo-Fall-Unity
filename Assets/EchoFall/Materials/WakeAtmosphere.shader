@@ -11,13 +11,14 @@ Shader "EchoFall/Atmospheric Veil"
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
-            struct Attributes { float4 positionOS:POSITION; float2 uv:TEXCOORD0; float4 color:COLOR; };
+            #pragma multi_compile_instancing
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Core2D.hlsl"
+            struct Attributes { float4 positionOS:POSITION; float2 uv:TEXCOORD0; float4 color:COLOR; UNITY_VERTEX_INPUT_INSTANCE_ID };
             struct Varyings { float4 positionCS:SV_POSITION; float2 uv:TEXCOORD0; float4 color:COLOR; };
             CBUFFER_START(UnityPerMaterial)
             float4 _Color; float _Motion;
             CBUFFER_END
-            Varyings vert(Attributes v) { Varyings o; o.positionCS=TransformObjectToHClip(v.positionOS.xyz); o.uv=v.uv; o.color=v.color*_Color; return o; }
+            Varyings vert(Attributes v) { UNITY_SETUP_INSTANCE_ID(v); SetUpSpriteInstanceProperties(); Varyings o; o.positionCS=TransformObjectToHClip(v.positionOS.xyz); o.uv=v.uv; o.color=v.color*_Color*unity_SpriteColor; return o; }
             half4 frag(Varyings i):SV_Target
             {
                 float2 p=i.uv*2-1;

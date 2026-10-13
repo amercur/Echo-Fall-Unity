@@ -1,0 +1,18 @@
+{
+    "passed": true,
+    "error": "",
+    "version": "0.7.0",
+    "device": "AMD Radeon (TM) Graphics",
+    "savePath": "C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall\\Docs\\Validation\\phase7\\standalone-rendered\\archive.json",
+    "endings": [
+        "BREAK",
+        "SHARE"
+    ],
+    "samples": [],
+    "checks": [
+        "Ending restored after process restart",
+        "Both discoveries survived restart",
+        "Ending replay returns to Wake",
+        "Final archive valid"
+    ]
+}

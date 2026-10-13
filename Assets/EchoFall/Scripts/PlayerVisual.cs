@@ -148,6 +148,7 @@ namespace EchoFall.Movement
             var tint=combat!=null && combat.MendProgress>0?new Color(.65f,1,.9f):baseColor;
             if(hurt>0) {tint=Color.Lerp(baseColor,new Color(1,.4f,.4f),Mathf.Clamp01(hurt/.48f));alpha*=.6f+.4f*Mathf.Abs(Mathf.Cos(hurt*45));}
             if(Pose==WandererPose.Deflect || Pose==WandererPose.Transfer)tint=new Color(.65f,1,1);
+            tint=Color.Lerp(baseColor,tint,PlayerPreferences.Current.flash);
             tint.a=baseColor.a*alpha;spriteRenderer.color=tint;
             transform.position=motor.RenderPosition+Vector2.up*lift;
             transform.localScale=Vector3.Scale(baseScale,new Vector3(sx,sy,1));

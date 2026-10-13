@@ -1,0 +1,102 @@
+{
+    "version": 1,
+    "loop": 4,
+    "active": "sacrifice",
+    "memories": [
+        "respect",
+        "sacrifice"
+    ],
+    "acquired": [
+        {
+            "id": "respect",
+            "loop": 1
+        },
+        {
+            "id": "sacrifice",
+            "loop": 3
+        }
+    ],
+    "pending": [],
+    "kinship": 2,
+    "endings": [
+        "BREAK"
+    ],
+    "outcomes": [
+        {
+            "id": "BREAK",
+            "epilogue": "The Keeper returns to his borrowed heartbeats.\nSomething small still breathes in the dark.",
+            "loop": 1,
+            "memories": [],
+            "decisions": [
+                "respect"
+            ],
+            "flags": [
+                "king",
+                "mother",
+                "garden-path",
+                "child"
+            ],
+            "discoveries": []
+        }
+    ],
+    "currentEnding": "",
+    "lastEcho": "sacrifice",
+    "hasCheckpoint": true,
+    "benchSave": {
+        "version": 1,
+        "loop": 4,
+        "resonance": 3.0,
+        "motherMax": 0.0,
+        "kingStage": 0,
+        "kingBreaks": 0,
+        "childStage": 3,
+        "motherStage": 0,
+        "motherRecall": 0,
+        "motherAttack": 0,
+        "kingStyle": "",
+        "archive": "respect|sacrifice",
+        "room": "garden",
+        "bench": "garden-rest",
+        "decision": "",
+        "defeated": [
+            "king/boss",
+            "mother/boss"
+        ],
+        "consumed": [],
+        "flags": [
+            "king",
+            "mother",
+            "garden-path",
+            "child"
+        ],
+        "visited": [
+            "wake",
+            "king",
+            "cradle",
+            "mother",
+            "garden"
+        ],
+        "decisions": [
+            "respect"
+        ],
+        "sacrificeUsed": [],
+        "enemies": [
+            {
+                "id": "wake/enemy-0",
+                "hp": 7.0
+            },
+            {
+                "id": "cradle/enemy-0",
+                "hp": 10.0
+            },
+            {
+                "id": "mother/enemy-0",
+                "hp": 7.0
+            },
+            {
+                "id": "mother/enemy-1",
+                "hp": 5.0
+            }
+        ]
+    }
+}

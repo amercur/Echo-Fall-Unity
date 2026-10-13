@@ -73,7 +73,7 @@ namespace EchoFall.Movement
                 if(Vector2.Distance(Session.motor.Position,transform.position)>4)return;
                 recognition-=dt;if(recognition>0)return;Recognized=true;
                 if(recalled?identity=="respect":Session.Archive.Remembers("respect"))
-                {Refused=true;if(!recalled){Session.Defeated.Add(id);Session.Flags.Add("betrayal-guard");Session.EnemyHealth.Remove(id);}Session.combat.GainResonance(1);Session.Notify("No. I remember being you.");gameObject.SetActive(false);return;}
+                {Refused=true;if(!recalled){Session.Defeated.Add(id);Session.Flags.Add("betrayal-guard");Session.EnemyHealth.Remove(id);}Session.combat.GainResonance(1);Session.Notify("No. I remember being you.");gameObject.SetActive(false);if(recalled)Destroy(gameObject);return;}
                 Session.Notify("I remember the hand. I do not remember why.");
             }
             skill-=dt;
@@ -94,7 +94,7 @@ namespace EchoFall.Movement
             }
             return base.Hit(amount,staggerTime,knock,bypass);
         }
-        protected override void Die(){if(!recalled)Session?.Flags.Add("betrayal-guard");base.Die();}
+        protected override void Die(){if(!recalled)Session?.Flags.Add("betrayal-guard");base.Die();if(recalled)Destroy(gameObject);}
         protected override void LateUpdate()
         {
             base.LateUpdate();

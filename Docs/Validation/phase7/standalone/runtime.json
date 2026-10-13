@@ -1,0 +1,13 @@
+{
+    "passed": false,
+    "error": "System.Exception: Anchor saved in wake\r\n  at EchoFall.Movement.StandaloneQA.Check (System.Boolean value, System.String label) [0x0001b] in C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall\\Assets\\EchoFall\\Scripts\\StandaloneQA.cs:34 \r\n  at EchoFall.Movement.StandaloneQA.Rest () [0x00159] in C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall\\Assets\\EchoFall\\Scripts\\StandaloneQA.cs:38 \r\n  at EchoFall.Movement.StandaloneQA.Start () [0x0029b] in C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall\\Assets\\EchoFall\\Scripts\\StandaloneQA.cs:67 ",
+    "version": "1.0",
+    "device": "AMD Radeon (TM) Graphics",
+    "savePath": "C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall\\Docs\\Validation\\phase7\\standalone\\archive.json",
+    "endings": [],
+    "samples": [],
+    "checks": [
+        "Standalone launched into Wake",
+        "Standalone movement simulation"
+    ]
+}

@@ -5,7 +5,10 @@ namespace EchoFall.Movement
 {
     public sealed class SliceMother : SliceEnemy
     {
-        public static SliceMother Active => FindAnyObjectByType<SliceMother>();
+        static SliceMother active;
+        public static SliceMother Active=>active!=null&&active.gameObject.activeInHierarchy?active:null;
+        void OnEnable()=>active=this;
+        void OnDestroy(){if(active==this)active=null;}
         public Vector2 arena=new Vector2(3.5f,12);
         public bool Started {get;private set;}
         public override bool IsBoss=>true;

@@ -2,6 +2,8 @@
 
 Analysis date: 2026-10-03. This document preserves the initial analysis and phased plan.
 
+Phase 7 continuation (2026-10-12): [Phase7-ReleasePolish.md](Phase7-ReleasePolish.md) records settings/accessibility, audio continuity, transient-object cleanup, release build tooling and standalone validation. Phase 6 gameplay and progression remain the baseline; no new world or combat systems are added.
+
 Phase 6 continuation (2026-10-11): the Phase 5 baseline now connects the existing King, the implemented Mother and the noncombat Child to RESET, BREAK, REMEMBER and SHARE. Memory-shaped recalls, ending eligibility, outcome records and replay use the existing archive/checkpoint model. See [Phase6-LateGame.md](Phase6-LateGame.md) for internal conditions, source adaptations, validation and remaining release work. Earlier deferrals below are historical; Mother and the four main endings are now implemented.
 
 Phase 5 continuation (2026-10-08): the Phase 4 world is preserved while the archive expands to the original nine memory types, five retained slots, multi-decision extraction, confirmed forgetting, saved pending transfers, NPC reactions and additive world/combat consequences. See [Phase5-MemoryConsequences.md](Phase5-MemoryConsequences.md) for behavior, source adaptations, verification and remaining gaps. Mother, dynamic body remnants and final endings remain deferred.

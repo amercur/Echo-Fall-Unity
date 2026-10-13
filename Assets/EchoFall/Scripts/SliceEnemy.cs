@@ -112,7 +112,7 @@ namespace EchoFall.Movement
             if(visual==null)return;
             int frame=State=="tell"?4+(int)(clock*8)%2:State=="strike"||State=="sweep"||State=="charge"?6:State=="recover"||State=="transition"?7:(int)(clock*6)%4;
             if(frames!=null && frames.Length>=8)visual.sprite=frames[frame];visual.flipX=facing<0;
-            visual.color=hitFlash>0?new Color(1,.65f,.65f):State=="tell"?(Red?new Color(1,.38f,.4f):new Color(1,1,.85f)):Guarding?new Color(.8f,.9f,1):Color.white;
+            visual.color=hitFlash>0?Color.Lerp(Color.white,new Color(1,.65f,.65f),PlayerPreferences.Current.flash):State=="tell"?(Red?new Color(1,.38f,.4f):new Color(1,1,.85f)):Guarding?new Color(.8f,.9f,1):Color.white;
         }
         public virtual void Deflected(bool charged)
         {
