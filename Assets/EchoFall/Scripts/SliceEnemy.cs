@@ -13,6 +13,9 @@ namespace EchoFall.Movement
         public Sprite[] frames;
         public SpriteRenderer visual;
         public bool Alive => hp>0;
+        public virtual bool IsBoss => false;
+        public virtual bool EncounterStarted => false;
+        public virtual bool Persistent => true;
         public virtual Rect HitRect => new Rect((Vector2)transform.position+new Vector2(-.13f,0),new Vector2(.26f,.38f));
         public string State {get;protected set;}="patrol";
         public virtual bool Red => kind=="lancer";
@@ -57,22 +60,22 @@ namespace EchoFall.Movement
                 if(kind=="sentinel" && !training && close)
                 {
                     foreach(var ally in FindObjectsByType<SliceEnemy>())
-                        if(ally!=this && ally.Alive && !ally.training && !(ally is SliceKing) && Mathf.Abs(ally.transform.position.x-transform.position.x)<1.3f && Mathf.Abs(ally.transform.position.y-transform.position.y)<.45f)
+                        if(ally!=this && ally.Alive && !ally.training && !ally.IsBoss && Mathf.Abs(ally.transform.position.x-transform.position.x)<1.3f && Mathf.Abs(ally.transform.position.y-transform.position.y)<.45f)
                         {Guarding=true;Move(Mathf.MoveTowards(transform.position.x,Mathf.Clamp(ally.transform.position.x+facing*.38f,left,right),dt*.85f)-transform.position.x);break;}
                     if(Guarding && Mathf.Abs(delta.x)>.64f)return;
                 }
                 if(Mathf.Abs(delta.x)<(Red?1.5f:.75f) && Mathf.Abs(delta.y)<.75f && timer<=0)
                 {chain=0;Enter("tell",training?.9f:Red?.78f:.46f);}
-                else {Move(facing*.55f*dt);if(transform.position.x<=left || transform.position.x>=right)facing=-facing;}
+                else {Move(facing*(kind=="echo"?.95f:.55f)*dt);if(transform.position.x<=left || transform.position.x>=right)facing=-facing;}
             }
             else if(State=="tell" && timer<=0)
             {connected=false;Enter("strike",Red?.26f:.17f);SliceEffects.Slash((Vector2)transform.position+Vector2.up*.2f,Vector2.right*facing,Red?new Color(1,.3f,.35f):Color.white);}
             else if(State=="strike")
             {
-                Move(facing*(Red?4.3f:2.4f)*dt);
+                Move(facing*(Red?4.3f:this is MemoryEcho echo && echo.identity=="abandon"?4.2f:2.4f)*dt);
                 Rect hit=HitRect;hit.xMin-=.12f;hit.xMax+=.12f;
                 if(hit.Overlaps(Session.combat.HitRect))
-                {var result=Session.combat.ReceiveHit(1,transform.position,Red,this);if(result!=CombatHitResult.Immune)connected=true;}
+                {var result=Session.combat.ReceiveHit(1,transform.position,Red,this);if(result!=CombatHitResult.Immune)connected=true;if(result==CombatHitResult.Damaged && this is MemoryEcho recalled && recalled.identity=="betrayal")hp=Mathf.Min(MaxHealth,hp+2);}
                 // A deflect may already have replaced this state with recovery.
                 if(State=="strike" && timer<=0)
                 {if(kind=="sentinel" && !training && chain==0){chain++;facing=delta.x<0?-1:1;Enter("tell",.32f);}
@@ -133,7 +136,7 @@ namespace EchoFall.Movement
         protected virtual void Die()
         {
             if(Session!=null && !training && Session.Archive.active=="betrayal")Session.combat.Heal(1);
-            if(Session!=null){Session.Defeated.Add(id);Session.EnemyHealth.Remove(id);if(training)Session.Notify("The warden bows. You have learned the white deflect.");}
+            if(Session!=null){if(Persistent){Session.Defeated.Add(id);Session.EnemyHealth.Remove(id);}if(training)Session.Notify("The warden bows. You have learned the white deflect.");}
             SliceEffects.Dust(HitRect.center,Vector2.up*.3f,12);SliceEffects.Ring(HitRect.center,Color.cyan,.45f);SliceSound.Cue("defeat");
             if(visual!=null)SliceDeathEcho.Spawn(visual);
             gameObject.SetActive(false);

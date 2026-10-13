@@ -7293,7 +7293,7 @@ Transform:
   m_GameObject: {fileID: 772895062}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.7, y: 0, z: 0}
+  m_LocalPosition: {x: 12.55, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7316,8 +7316,8 @@ MonoBehaviour:
   kind: sentinel
   training: 0
   hp: 7
-  left: 9
-  right: 10.6
+  left: 12.3
+  right: 13.3
   strain: 0
   frames:
   - {fileID: 778334186437190414, guid: 0ffe1c02a69639446a6b9b57234f595e, type: 3}
@@ -9174,6 +9174,69 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &1064227310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1064227311}
+  - component: {fileID: 1064227312}
+  m_Layer: 0
+  m_Name: The Mother
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1064227311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064227310}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.12, y: 0.02, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1670361557}
+  m_Father: {fileID: 1643407129}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1064227312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064227310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f8f9d8291ff7647a8fe9e2c9b55e35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: EchoFall.Movement::EchoFall.Movement.SliceMother
+  id: mother/boss
+  kind: mother
+  training: 0
+  hp: 48
+  left: 3.7
+  right: 11.6
+  strain: 0
+  frames:
+  - {fileID: 6104271598021302686, guid: 550b453edf3bdf040af89ed5cb0806cc, type: 3}
+  - {fileID: 6639881344722595843, guid: 550b453edf3bdf040af89ed5cb0806cc, type: 3}
+  - {fileID: 2503365212967238150, guid: 550b453edf3bdf040af89ed5cb0806cc, type: 3}
+  - {fileID: 3511635659545913728, guid: 550b453edf3bdf040af89ed5cb0806cc, type: 3}
+  - {fileID: 8080075250222203405, guid: 550b453edf3bdf040af89ed5cb0806cc, type: 3}
+  - {fileID: -6820642777407476916, guid: 550b453edf3bdf040af89ed5cb0806cc, type: 3}
+  - {fileID: 6450856327877299545, guid: 550b453edf3bdf040af89ed5cb0806cc, type: 3}
+  - {fileID: 2574092912733230478, guid: 550b453edf3bdf040af89ed5cb0806cc, type: 3}
+  visual: {fileID: 1670361558}
+  arena: {x: 3.5, y: 12}
 --- !u!1 &1064714968
 GameObject:
   m_ObjectHideFlags: 0
@@ -10913,7 +10976,7 @@ Transform:
   m_GameObject: {fileID: 1264222447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.3, y: 1.12, z: 0}
+  m_LocalPosition: {x: 13.05, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10936,8 +10999,8 @@ MonoBehaviour:
   kind: drone
   training: 0
   hp: 5
-  left: 9.4
-  right: 11.4
+  left: 12.3
+  right: 13.3
   strain: 0
   frames:
   - {fileID: 9148800814639467426, guid: f4e48a32bb60e0f45b952f147333026c, type: 3}
@@ -15193,8 +15256,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: EchoFall.Movement::EchoFall.Movement.SliceRoom
   id: mother
-  title: THE IMMORTAL CHAMBER
-  subtitle: THE SLEEPING ENGINE
+  title: THE MOTHER
+  subtitle: A FUTURE WITHOUT END
   bounds:
     serializedVersion: 2
     x: 0
@@ -15232,6 +15295,7 @@ Transform:
   - {fileID: 1408859928}
   - {fileID: 11403159}
   - {fileID: 1311014059}
+  - {fileID: 1064227311}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1645834273
@@ -15321,6 +15385,98 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
+--- !u!1 &1670361556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1670361557}
+  - component: {fileID: 1670361558}
+  m_Layer: 0
+  m_Name: Original Mother atlas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1670361557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670361556}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1064227311}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1670361558
+SpriteRenderer:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670361556}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ce13042b5a88bf540ac9406fcbb22af5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 9
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 6104271598021302686, guid: 550b453edf3bdf040af89ed5cb0806cc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

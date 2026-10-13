@@ -2,6 +2,8 @@
 
 Analysis date: 2026-10-03. This document preserves the initial analysis and phased plan.
 
+Phase 6 continuation (2026-10-11): the Phase 5 baseline now connects the existing King, the implemented Mother and the noncombat Child to RESET, BREAK, REMEMBER and SHARE. Memory-shaped recalls, ending eligibility, outcome records and replay use the existing archive/checkpoint model. See [Phase6-LateGame.md](Phase6-LateGame.md) for internal conditions, source adaptations, validation and remaining release work. Earlier deferrals below are historical; Mother and the four main endings are now implemented.
+
 Phase 5 continuation (2026-10-08): the Phase 4 world is preserved while the archive expands to the original nine memory types, five retained slots, multi-decision extraction, confirmed forgetting, saved pending transfers, NPC reactions and additive world/combat consequences. See [Phase5-MemoryConsequences.md](Phase5-MemoryConsequences.md) for behavior, source adaptations, verification and remaining gaps. Mother, dynamic body remnants and final endings remain deferred.
 
 Implementation follow-up (2026-10-04): Unity is **6000.5.8f1**. The existing Phase 1 movement lab has been repaired and verified with **26 passing EditMode tests and 4 passing PlayMode tests**, including original-game trajectory comparisons and a live Belfry climb. See [Phase1-Movement.md](Phase1-Movement.md) for evidence and the remaining hands-on/controller, physical 144 Hz, and standalone-build checks. The analysis below preserves the original pre-initialization snapshot.

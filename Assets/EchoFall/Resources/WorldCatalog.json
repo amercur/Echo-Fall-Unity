@@ -390,6 +390,10 @@
         {
           "id": "mother/enemy-1",
           "hp": 5
+        },
+        {
+          "id": "mother/boss",
+          "hp": 48
         }
       ],
       "links": [
@@ -560,6 +564,7 @@
     "well-link",
     "breath-link",
     "garden-path",
-    "child"
+    "child",
+    "mother"
   ]
 }

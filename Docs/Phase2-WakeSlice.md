@@ -1,5 +1,7 @@
 # Phase 2: the first Wake slice
 
+Phase 6 continuation: [Phase6-LateGame.md](Phase6-LateGame.md) adds late-game encounters and four replayable endings. The original five-room completion and voluntary transfer remain available; movement tuning and Wake scenes are preserved.
+
 Phase 5 continuation: the original three-memory archive is now expanded to nine source memory types with five retained slots, multiple candidate decisions, confirmed forgetting and saved pending extraction. See [Phase5-MemoryConsequences.md](Phase5-MemoryConsequences.md). The five-room completion route remains available.
 
 Phase 4 continuation: the five-room loop remains available within the larger connected world. See [Phase4-WorldExpansion.md](Phase4-WorldExpansion.md) for expanded discovery, checkpoints and routes. Earlier room limits and missing-map notes below describe this historical milestone.

@@ -14,7 +14,8 @@ namespace EchoFall.Movement
     {
         public int version = 1, loop;
         public float resonance;
-        public int kingStage, kingBreaks, childStage;
+        public float motherMax;
+        public int kingStage, kingBreaks, childStage, motherStage, motherRecall, motherAttack;
         public string kingStyle;
         public string archive, room, bench, decision;
         public List<string> defeated = new List<string>(), consumed = new List<string>(),
@@ -37,6 +38,7 @@ namespace EchoFall.Movement
         {
             if (owner == null || version != 1 || loop != owner.loop || archive != Signature(owner) ||
                 float.IsNaN(resonance) || resonance < 1 || resonance > 3 ||
+                float.IsNaN(motherMax) || motherMax<0 || motherMax>48 || motherStage<0 || motherStage>2 || motherRecall<0 || motherRecall>100000 || motherAttack<0 || motherAttack>100000 ||
                 childStage<0 || childStage>3 || kingStage<0 || kingStage>2 || kingBreaks<0 || kingBreaks>10000 ||
                 !(string.IsNullOrEmpty(kingStyle) || kingStyle=="air" || kingStyle=="dash" || kingStyle=="charge" || kingStyle=="ground") ||
                 !WorldCatalog.Bench(room, bench) ||

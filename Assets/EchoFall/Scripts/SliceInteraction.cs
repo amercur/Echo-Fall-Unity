@@ -9,8 +9,8 @@ namespace EchoFall.Movement
         public bool Available(SliceSession session) => !session.Consumed.Contains(id);
         public string LockReason(SliceSession session)
         {
-            var king=SliceKing.Active;
-            if(kind=="gate" && king!=null && king.Started && king.Alive)return "The King holds this arena. Defeat him or transfer this life.";
+            if(kind=="gate")foreach(var boss in Object.FindObjectsByType<SliceEnemy>())
+                if(boss.IsBoss && boss.EncounterStarted && boss.Alive)return "The sovereign holds this arena. Defeat them or transfer this life.";
             if(requires=="king" && !session.Flags.Contains("king"))return "The King still holds this threshold.";
             if(requires=="child" && !session.Flags.Contains("child"))return "The Child has not chosen to let you pass. Listen in the garden.";
             if(MemoryWorld.GuardBlocks(requires,session.Archive,session.Flags))return "A remembered hand holds the Archive lift.";

@@ -15,6 +15,9 @@ namespace EchoFall.Movement
         public List<MemoryAge> acquired = new List<MemoryAge>();
         public List<string> pending = new List<string>();
         public int kinship;
+        public List<string> endings = new List<string>();
+        public List<EndingRecord> outcomes = new List<EndingRecord>();
+        public string currentEnding;
         public string lastEcho = "return";
         public int Age(string id) { var stamp = acquired?.Find(a => a != null && a.id == id); return Remembers(id) && stamp != null ? loop - stamp.loop : 0; }
         public bool MatureMercy => RootsOpen && Age("mercy") >= 3;
@@ -53,13 +56,15 @@ namespace EchoFall.Movement
                 memories.Add(memory); acquired.Add(new MemoryAge { id = memory, loop = loop });
             }
             if (memory == "respect") kinship++;
-            lastEcho = memory; pending.Clear();
+            lastEcho = memory; pending.Clear();currentEnding=null;
             active = memory;
             loop++;
             checkpoint = null;
         }
         public static bool ValidId(string id) => MemoryRules.Ids.Contains(id);
-        public bool Valid() => version == 1 && loop >= 1 && kinship >= 0 && memories != null && memories.Count <= Capacity &&
+        public bool Valid() => endings!=null && endings.Count<=4 && endings.TrueForAll(EndingRules.ValidId) && new HashSet<string>(endings).Count==endings.Count &&
+            outcomes!=null && outcomes.Count==endings.Count && outcomes.TrueForAll(e=>e!=null && e.Valid() && endings.Contains(e.id)) && new HashSet<string>(outcomes.ConvertAll(e=>e.id)).Count==outcomes.Count &&
+            (string.IsNullOrEmpty(currentEnding) || endings.Contains(currentEnding)) && version == 1 && loop >= 1 && kinship >= 0 && memories != null && memories.Count <= Capacity &&
             acquired != null && acquired.Count <= Capacity && acquired.TrueForAll(a => a != null && memories.Contains(a.id) && a.loop >= 1 && a.loop <= loop) &&
             new HashSet<string>(acquired.ConvertAll(a => a.id)).Count == acquired.Count &&
             pending != null && pending.Count <= 9 && pending.TrueForAll(ValidId) && new HashSet<string>(pending).Count == pending.Count && ValidId(lastEcho) &&

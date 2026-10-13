@@ -1,5 +1,7 @@
 # Phase 3: combat and the Court
 
+Phase 6 continuation: [Phase6-LateGame.md](Phase6-LateGame.md) extends shared combat to Mother and recalled identities. King prediction, existing enemy patterns and player movement remain the baseline. Mother is no longer deferred.
+
 Phase 5 continuation: [Phase5-MemoryConsequences.md](Phase5-MemoryConsequences.md) adds the original memory abilities, ORDER's 48-integrity King, delayed MERCY assistance and an Archive Echo. The baseline patterns, damage pipeline and responsive animation ownership remain intact.
 
 Phase 4 continuation: this combat milestone is now the preserved baseline. The Court retains its transfer glass and gains the original eastern connection to Cradle. See [Phase4-WorldExpansion.md](Phase4-WorldExpansion.md) for the expanded world and the deferred Mother/ending scope. Statements below describing Court as the world boundary are historical.

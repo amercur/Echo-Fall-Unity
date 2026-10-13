@@ -78,9 +78,9 @@
     "semantic_hash": "49cb844d34bc8cc49313e91525b80215"
   },
   "Assets/EchoFall/Scripts/SliceCombat.cs": {
-    "mtime": 1791494000.953892,
-    "seen": 1791494100.9415572,
-    "ast_hash": "4da43b63f456cd9ac8425ea38a5df979",
+    "mtime": 1791784748.6869543,
+    "seen": 1791785857.4114416,
+    "ast_hash": "3c5e6f4e099d19d1f34fb4363a63a0fb",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceEffects.cs": {
@@ -90,27 +90,27 @@
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceEnemy.cs": {
-    "mtime": 1791438958.2583878,
-    "seen": 1791493410.4037988,
-    "ast_hash": "c1de27d0abf0a01167730a03bfa9ec1d",
+    "mtime": 1791784604.635946,
+    "seen": 1791785857.411446,
+    "ast_hash": "ead70316ac26eb1938e1eb108ce146b2",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceHUD.cs": {
-    "mtime": 1791493216.380083,
-    "seen": 1791493410.4038017,
-    "ast_hash": "9a155c4131f4ba04b86f3ea3aa970c53",
+    "mtime": 1791784748.696618,
+    "seen": 1791785857.411447,
+    "ast_hash": "91add84e30b9d95a237a5583c1a2fb71",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceInteraction.cs": {
-    "mtime": 1791493154.4998252,
-    "seen": 1791493410.4038033,
-    "ast_hash": "69cf3f304e6d56f68e0293ca6398da51",
+    "mtime": 1791784748.6940691,
+    "seen": 1791785857.4114482,
+    "ast_hash": "ba1341231591c66719992f5fd25bf831",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceMemory.cs": {
-    "mtime": 1791493154.498796,
-    "seen": 1791493410.403807,
-    "ast_hash": "bc6d4232d635b7e49e7eaccab85ac8ba",
+    "mtime": 1791784748.6950755,
+    "seen": 1791785857.4114506,
+    "ast_hash": "49254916c5be477c9fab154861d254ac",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceParallax.cs": {
@@ -132,9 +132,9 @@
     "semantic_hash": "18bb89efada62354b50ed92dac2b89a9"
   },
   "Assets/EchoFall/Scripts/SliceProjectile.cs": {
-    "mtime": 1791345825.035051,
-    "seen": 1791347366.325247,
-    "ast_hash": "3f78cf78224e6e075adf5278636e4313",
+    "mtime": 1791784604.6375048,
+    "seen": 1791785857.4114575,
+    "ast_hash": "0f897e6a1ed0ba536a3f588d1eafb902",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceRoom.cs": {
@@ -144,9 +144,9 @@
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceSession.cs": {
-    "mtime": 1791493998.8134594,
-    "seen": 1791494100.9415755,
-    "ast_hash": "3545a8e03ae8cfe3ff60e2e7a2b68bac",
+    "mtime": 1791784929.8589752,
+    "seen": 1791785857.41146,
+    "ast_hash": "80e2d5ddad57f39b2e2baa1109650cb6",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceSound.cs": {
@@ -324,9 +324,9 @@
     "semantic_hash": "21ceb6533048be51308e69e7b74a35cf"
   },
   "Docs/MigrationPlan.md": {
-    "mtime": 1791493681.029559,
-    "seen": 1791494100.9416924,
-    "ast_hash": "94aba0c9e458177e06159ce630438609",
+    "mtime": 1791785841.1040561,
+    "seen": 1791785857.4115896,
+    "ast_hash": "38658ee4fc2f762ff0c51b415f6f1503",
     "semantic_hash": ""
   },
   "Docs/Phase1-Movement.md": {
@@ -336,9 +336,9 @@
     "semantic_hash": "6399285db19e74970cc8e390d893ea00"
   },
   "Docs/Phase2-WakeSlice.md": {
-    "mtime": 1791493681.0335283,
-    "seen": 1791494100.9416947,
-    "ast_hash": "d9c285f6ce9e1262bbc740b4e7b30843",
+    "mtime": 1791785841.1045694,
+    "seen": 1791785857.411592,
+    "ast_hash": "08d675136f075581817707547799df5d",
     "semantic_hash": ""
   },
   "Docs/Validation/asset-results.txt": {
@@ -462,9 +462,9 @@
     "semantic_hash": "e44be2b9e29404a9e73ab464ad02efc3"
   },
   "Assets/EchoFall/Scripts/SliceCheckpoint.cs": {
-    "mtime": 1791494000.9523787,
-    "seen": 1791494100.941556,
-    "ast_hash": "cdf8107f33fd6d3b0e04514d9fb95df9",
+    "mtime": 1791784929.8583784,
+    "seen": 1791785857.4114404,
+    "ast_hash": "f1caf5ab9a6a3138a6853854a43eeb80",
     "semantic_hash": ""
   },
   "Docs/Validation/phase2-checkpoint-editmode-results.json": {
@@ -750,9 +750,9 @@
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/SliceKing.cs": {
-    "mtime": 1791438958.25738,
-    "seen": 1791493410.4038053,
-    "ast_hash": "38146d0593088c8eb874a9407ff47d68",
+    "mtime": 1791784604.635946,
+    "seen": 1791785857.4114497,
+    "ast_hash": "c9f3bb414ebceb7e6642a40623f05920",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Tests/Editor/Phase3CombatRuleTests.cs": {
@@ -816,9 +816,9 @@
     "semantic_hash": ""
   },
   "Docs/Phase3-CombatCourt.md": {
-    "mtime": 1791493681.0325322,
-    "seen": 1791494100.9416957,
-    "ast_hash": "568a24a48a11e5cfca26a2f000fcfaef",
+    "mtime": 1791785841.1050858,
+    "seen": 1791785857.4115934,
+    "ast_hash": "dc65d42e5d505a13904089010a982376",
     "semantic_hash": ""
   },
   "Docs/Validation/phase3-original-tests.txt": {
@@ -924,9 +924,9 @@
     "semantic_hash": ""
   },
   "Assets/EchoFall/Resources/WorldCatalog.json": {
-    "mtime": 1791411813.5507379,
-    "seen": 1791437995.9352462,
-    "ast_hash": "d28a59d85472575aceb41797ce633cd5",
+    "mtime": 1791784748.6971354,
+    "seen": 1791785857.4114146,
+    "ast_hash": "a69859738034b58296f5c16c973454da",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/WorldCatalog.cs": {
@@ -942,9 +942,9 @@
     "semantic_hash": ""
   },
   "Assets/EchoFall/Tests/Editor/WorldExpansionTests.cs": {
-    "mtime": 1791412251.182802,
-    "seen": 1791437995.935299,
-    "ast_hash": "3e3493448238162afe9d90c1111d705f",
+    "mtime": 1791784790.8245378,
+    "seen": 1791785857.4114773,
+    "ast_hash": "14327f65550d4de8f706866b5977096d",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Tests/PlayMode/WorldExpansionPlayTests.cs": {
@@ -1038,9 +1038,9 @@
     "semantic_hash": ""
   },
   "Docs/Phase4-WorldExpansion.md": {
-    "mtime": 1791493681.0314581,
-    "seen": 1791494100.9416971,
-    "ast_hash": "097f4e086b2068196be5752620879d75",
+    "mtime": 1791785841.106098,
+    "seen": 1791785857.4115944,
+    "ast_hash": "7e2b9b4285ab07c324b384cb15bb3a7c",
     "semantic_hash": ""
   },
   "Docs/Validation/phase4-original-tests.txt": {
@@ -1110,9 +1110,9 @@
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/MemoryFlow.cs": {
-    "mtime": 1791493998.8124523,
-    "seen": 1791494100.9415367,
-    "ast_hash": "04462ddb19c3ae22ffe758fb7d0342ff",
+    "mtime": 1791784929.857216,
+    "seen": 1791785857.4114223,
+    "ast_hash": "bb9d059fe5b83af318502dc8552e589e",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/MemoryRules.cs": {
@@ -1122,9 +1122,9 @@
     "semantic_hash": ""
   },
   "Assets/EchoFall/Scripts/MemoryWorld.cs": {
-    "mtime": 1791493888.0315313,
-    "seen": 1791494100.9415417,
-    "ast_hash": "491f39f6c49d1c0aa679ee5c1769994a",
+    "mtime": 1791784790.824025,
+    "seen": 1791785857.4114256,
+    "ast_hash": "6665a0af5a873b7476e6d77beb64c983",
     "semantic_hash": ""
   },
   "Assets/EchoFall/Tests/Editor/MemoryConsequenceTests.cs": {
@@ -1140,9 +1140,9 @@
     "semantic_hash": ""
   },
   "Docs/Validation/phase5/editmode.json": {
-    "mtime": 1791493249.2392137,
-    "seen": 1791493410.4039497,
-    "ast_hash": "5e0904efbf69073f97d3acc0f76a0e25",
+    "mtime": 1791494078.6774895,
+    "seen": 1791785857.4115326,
+    "ast_hash": "6850155eb59e8a2f1169019ed5592159",
     "semantic_hash": ""
   },
   "Tools/Phase5Review.cs": {
@@ -1152,15 +1152,15 @@
     "semantic_hash": ""
   },
   "Docs/Phase5-MemoryConsequences.md": {
-    "mtime": 1791493389.0100508,
-    "seen": 1791493410.4040375,
-    "ast_hash": "83f30404a7f566f8ca26551e555453cb",
+    "mtime": 1791785841.10661,
+    "seen": 1791785857.4115956,
+    "ast_hash": "dbb5b2510ebfb69993a4ce9bf7ac3fe5",
     "semantic_hash": ""
   },
   "Docs/Validation/phase5/graph-update.txt": {
-    "mtime": 1791494099.0214508,
-    "seen": 1791494100.9417076,
-    "ast_hash": "effbe4568a9574ad46bf00fcc90d09f2",
+    "mtime": 1791494101.0747008,
+    "seen": 1791785857.4116066,
+    "ast_hash": "481200691e9f2a2228e5c28e7855cb5b",
     "semantic_hash": ""
   },
   "Docs/Validation/phase5/original-tests.txt": {
@@ -1194,14 +1194,14 @@
     "semantic_hash": ""
   },
   "Docs/Validation/phase5/playmode.json": {
-    "mtime": 1791493814.8498547,
-    "seen": 1791494100.9416492,
-    "ast_hash": "a8e84d4d604c81f4c44f2026f9f22b1a",
+    "mtime": 1791494289.6173682,
+    "seen": 1791785857.4115403,
+    "ast_hash": "fc3bba75584c4368c48c92fae88669cc",
     "semantic_hash": ""
   },
   "Docs/Validation/phase5/preservation.json": {
-    "mtime": 1791493457.5265205,
-    "seen": 1791494100.9416502,
+    "mtime": 1791494155.8245234,
+    "seen": 1791785857.4115415,
     "ast_hash": "2d117c6eeae0202564aa59fcd1029923",
     "semantic_hash": ""
   },
@@ -1245,6 +1245,168 @@
     "mtime": 1791493615.2153788,
     "seen": 1791494100.9417677,
     "ast_hash": "206c4c95d71405e8f9baf77ff0ea9162",
+    "semantic_hash": ""
+  },
+  "Assets/EchoFall/Editor/LateGameBuilder.cs": {
+    "mtime": 1791784827.9692695,
+    "seen": 1791785857.4114058,
+    "ast_hash": "513915dc7dbe6e594032ee338f3b1afa",
+    "semantic_hash": ""
+  },
+  "Assets/EchoFall/Scripts/EndingRules.cs": {
+    "mtime": 1791784672.9477906,
+    "seen": 1791785857.411417,
+    "ast_hash": "cdf634b929053f9d541c8efedd7a4b7c",
+    "semantic_hash": ""
+  },
+  "Assets/EchoFall/Scripts/LateGameFlow.cs": {
+    "mtime": 1791784929.856182,
+    "seen": 1791785857.4114199,
+    "ast_hash": "b6ef9d83d987577c33d84fc49e1bdc3a",
+    "semantic_hash": ""
+  },
+  "Assets/EchoFall/Scripts/SliceMother.cs": {
+    "mtime": 1791784929.8577368,
+    "seen": 1791785857.4114518,
+    "ast_hash": "57f4eaffba7db3bd51dafc5b2c4099f2",
+    "semantic_hash": ""
+  },
+  "Assets/EchoFall/Tests/Editor/LateGameRuleTests.cs": {
+    "mtime": 1791785034.9705362,
+    "seen": 1791785857.411468,
+    "ast_hash": "dd88b036853bcc32145bb4f1b27fae0a",
+    "semantic_hash": ""
+  },
+  "Assets/EchoFall/Tests/PlayMode/LateGamePlayTests.cs": {
+    "mtime": 1791785034.971579,
+    "seen": 1791785857.411478,
+    "ast_hash": "8130ba0b7cd60b13df99b94893a51459",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/editmode.json": {
+    "mtime": 1791785096.005682,
+    "seen": 1791785857.411543,
+    "ast_hash": "478fbeb802f86e70cf75c4604ad98084",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/live-review.json": {
+    "mtime": 1791785765.6822062,
+    "seen": 1791785857.4115438,
+    "ast_hash": "29c89b2c4f33d8cfebf1f0ff95b97b8f",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/playmode.json": {
+    "mtime": 1791785335.5930722,
+    "seen": 1791785857.4115448,
+    "ast_hash": "080b248ad681b96f23ab8a25588a3116",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/preservation.json": {
+    "mtime": 1791785384.9010117,
+    "seen": 1791785857.4115458,
+    "ast_hash": "fd51dd93e82afe6fdfe51d1cd545284b",
+    "semantic_hash": ""
+  },
+  "Tools/Phase6Review.cs": {
+    "mtime": 1791785217.0061069,
+    "seen": 1791785857.4115734,
+    "ast_hash": "ac4fc7b673dec579d64d265f810aa92f",
+    "semantic_hash": ""
+  },
+  "Tools/phase6_preservation.py": {
+    "mtime": 1791785380.4799266,
+    "seen": 1791785857.411586,
+    "ast_hash": "5103f0688a0b43d2c6ab9ed2f882d5d5",
+    "semantic_hash": ""
+  },
+  "Docs/Phase6-LateGame.md": {
+    "mtime": 1791785841.10661,
+    "seen": 1791785857.4115965,
+    "ast_hash": "f7f00135807f0a14ae9a58daf83cb0da",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase5/graph-memory-query.txt": {
+    "mtime": 1791494180.1845646,
+    "seen": 1791785857.4116056,
+    "ast_hash": "b3cdccd0a0700226891ede97c8da4622",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/original-tests.txt": {
+    "mtime": 1791785125.600852,
+    "seen": 1791785857.411609,
+    "ast_hash": "54ee1fa1bedeace3da8a537dfaf8fea1",
+    "semantic_hash": ""
+  },
+  "Assets/EchoFall/Art/Wake/mother.png": {
+    "mtime": 1790833909.3662436,
+    "seen": 1791785857.4116256,
+    "ast_hash": "c9dd3d00e1bbb6e4247d2f4ccfefb571",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/child-history.png": {
+    "mtime": 1791785759.4621024,
+    "seen": 1791785857.4116704,
+    "ast_hash": "082f434f6f3dfd884538295390209c56",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/choir-choices.png": {
+    "mtime": 1791785760.251948,
+    "seen": 1791785857.4116714,
+    "ast_hash": "0437207823df37085e4fa713a74e0b8c",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/credits.png": {
+    "mtime": 1791785760.845361,
+    "seen": 1791785857.4116724,
+    "ast_hash": "232b2ce29fa03bae04dc306e9fc866b7",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/ending-break.png": {
+    "mtime": 1791785763.650313,
+    "seen": 1791785857.4116735,
+    "ast_hash": "734a31f75af59d82992009ef974fdf15",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/ending-remember.png": {
+    "mtime": 1791785765.0009475,
+    "seen": 1791785857.4116743,
+    "ast_hash": "809d9133f2e3ab9696d54f1487fa49b7",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/ending-reset.png": {
+    "mtime": 1791785762.2498841,
+    "seen": 1791785857.4116755,
+    "ast_hash": "bea07daddd91e895ae941a0958cd486c",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/ending-share.png": {
+    "mtime": 1791785760.5230787,
+    "seen": 1791785857.4116766,
+    "ast_hash": "1440c2b2e06435af4865cb91dd9a9e0f",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/mother-defeat.png": {
+    "mtime": 1791785758.6813676,
+    "seen": 1791785857.4116774,
+    "ast_hash": "73a2a88c564bd25461dbb0ea5fb01069",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/mother-recall.png": {
+    "mtime": 1791785758.4012375,
+    "seen": 1791785857.4116786,
+    "ast_hash": "f31d7d7b2e42f78369ee2442160ffbe7",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/mother-red-tell.png": {
+    "mtime": 1791785758.0910704,
+    "seen": 1791785857.4116793,
+    "ast_hash": "b1cb315acf99575964a37d37e8c2c7ab",
+    "semantic_hash": ""
+  },
+  "Docs/Validation/phase6/mother-white-tell.png": {
+    "mtime": 1791785757.8130174,
+    "seen": 1791785857.4116802,
+    "ast_hash": "7757e40cb7b3f10bc09579875378af1d",
     "semantic_hash": ""
   }
 }

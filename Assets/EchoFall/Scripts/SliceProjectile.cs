@@ -6,13 +6,16 @@ namespace EchoFall.Movement
         public Vector2 Velocity {get;private set;}
         public bool Friendly {get;private set;}
         public bool Reflected {get;private set;}
+        public bool Heavy {get;private set;}
         public float Damage {get;private set;}
         SliceEnemy source;float life=4;LineRenderer line;
-        public static SliceProjectile Spawn(Vector2 position,Vector2 velocity,SliceEnemy source,float damage)
+        public static SliceProjectile Spawn(Vector2 position,Vector2 velocity,SliceEnemy source,float damage,bool heavy=false)
         {
             var go=new GameObject(source==null?"Ember bolt":"White bolt");go.transform.position=position;
             var p=go.AddComponent<SliceProjectile>();p.Velocity=velocity;p.source=source;p.Damage=damage;p.Friendly=source==null;p.life=source==null?1.1f:4;
+            p.Heavy=heavy;
             p.line=SliceEffects.Line(go,source==null?new Color(1,.5f,.2f):Color.white,.04f);p.line.useWorldSpace=false;p.line.positionCount=2;
+            if(heavy){p.line.startColor=p.line.endColor=new Color(1,.3f,.45f);p.line.startWidth=p.line.endWidth=.08f;}
             p.line.SetPosition(0,Vector3.zero);p.line.SetPosition(1,-(Vector3)velocity.normalized*.18f);return p;
         }
         public static void ClearAll(){foreach(var p in FindObjectsByType<SliceProjectile>())p.Expire();}
@@ -27,7 +30,7 @@ namespace EchoFall.Movement
             transform.position=next;
             if(!Friendly&&CombatRules.Segment(s.combat.HitRect,old,next,.07f))
             {
-                if(s.combat.ReceiveHit(1,old,false,source)==CombatHitResult.Deflected)
+                if(s.combat.ReceiveHit(1,old,Heavy,source)==CombatHitResult.Deflected)
                 {
                     Friendly=Reflected=true;Damage=4;life=2;
                     Vector2 target=source!=null&&source.Alive?source.HitRect.center:s.motor.Position+Vector2.right*s.motor.Facing*3+Vector2.up*.2f;

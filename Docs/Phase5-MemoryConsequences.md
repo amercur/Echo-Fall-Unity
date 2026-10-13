@@ -1,5 +1,7 @@
 # Phase 5: remembered consequences
 
+Phase 6 continuation: [Phase6-LateGame.md](Phase6-LateGame.md) carries this baseline into Mother's identity recalls, Child recognition, contradictory-history epilogues and four persistent ending discoveries. Five-slot capacity, forgetting, pending extraction, NPC consequences and future-loop rebuilding remain unchanged. Dynamic body remnants and combat styles remain deferred; Mother and endings do not.
+
 Phase 4 remains the world baseline: thirteen rooms, thirty-six directed gates, five anchors, the original Wake completion loop, King, combat, map discovery and mechanical shortcuts. Phase 5 adds archive-driven variants and decisions without rewriting those scenes or changing the baseline movement tuning. The original project at `C:\Users\sivas\echo-fall` is read-only.
 
 ## Dependencies and source comparison

@@ -43,7 +43,8 @@ namespace EchoFall.Movement
         void RebuildLife()
         {
             Decision = null; Decisions.Clear(); SacrificeUsed.Clear(); Defeated.Clear(); EnemyHealth.Clear(); Consumed.Clear(); Flags.Clear(); Visited.Clear();
-            KingStage = KingBreaks = ChildStage = 0; KingStyle = null;
+            KingStage = KingBreaks = ChildStage = MotherStage = MotherRecall = MotherAttack = 0; KingStyle = null;
+            MotherMax=0;
             combat.Rest(); StartCoroutine(LoadRoom("wake", "default", true));
         }
         void ShowForgetting()
@@ -88,6 +89,7 @@ namespace EchoFall.Movement
             {Show("AN EMPTY PLACE","The dust stops where someone used to stand.",SliceScreen.Dialogue,("LEAVE",leave));return true;}
             Action<string, int> decide = (memory, cost) => {
                 Consumed.Add(item.id); RecordDecision(memory); SetScreen(SliceScreen.Playing);
+                if(memory=="sacrifice")HelpPreservedBodies();
                 if (cost > 0) combat.PayIntegrity(cost); else if(memory=="obedience")combat.GrantWard(15);else combat.Heal(memory == "betrayal" ? 6 : 1);
                 if (Playing) Notify("Something about this moment stays with you.");
             };

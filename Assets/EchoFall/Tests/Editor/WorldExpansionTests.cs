@@ -54,7 +54,7 @@ namespace EchoFall.Movement.Tests
             Assert.That(JsonUtility.FromJson<SliceArchive>(JsonUtility.ToJson(archive)).checkpoint.Valid(archive),Is.True);
             checkpoint.bench="rest-wake";Assert.That(checkpoint.Valid(archive),Is.False);checkpoint.bench="garden-rest";
             checkpoint.childStage=4;Assert.That(checkpoint.Valid(archive),Is.False);checkpoint.childStage=2;
-            checkpoint.flags.Add("mother");Assert.That(checkpoint.Valid(archive),Is.False,"No invented Mother victory.");
+            checkpoint.flags.Add("unimplemented-sovereign");Assert.That(checkpoint.Valid(archive),Is.False,"Unknown progression flags must not load.");
             Assert.That(JsonUtility.FromJson<SliceArchive>("{\"version\":1,\"loop\":1,\"active\":\"return\",\"memories\":[]}").Valid(),Is.True);
         }
         [TestCase("cradle",1.85f,0f,3f,1f,4.9f,2f,7f,3f)]

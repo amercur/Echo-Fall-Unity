@@ -151,7 +151,7 @@ namespace EchoFall.Movement
         {
             SliceEnemy nearest=null;
             foreach(var e in FindObjectsByType<SliceEnemy>())
-            {float d=Vector2.Distance(HitRect.center,e.HitRect.center);if(e.Alive&&(!(e is SliceKing king)||king.Started)&&d<radius){radius=d;nearest=e;}}
+            {float d=Vector2.Distance(HitRect.center,e.HitRect.center);if(e.Alive&&(!e.IsBoss||e.EncounterStarted)&&d<radius){radius=d;nearest=e;}}
             return nearest;
         }
         public void Imprint()
@@ -186,7 +186,7 @@ namespace EchoFall.Movement
                 foreach(var enemy in FindObjectsByType<SliceEnemy>())if(enemy.Alive&&area.Overlaps(enemy.HitRect))hit|=enemy.Hit(CombatRules.Damage(Combo,false)+2+Session.RunPower,.12f,0,true);
                 if(hit)GainResonance(.25f);SliceEffects.Ring(motor.Position+Vector2.up*.2f,new Color(1,.5f,.2f),1.55f);
             }
-            else {var target=Closest(4.5f);if(target!=null){target.Hit(target is SliceKing?4:5,.12f,0,true);SliceEffects.Ring(target.HitRect.center,Color.cyan,.7f);}}
+            else {var target=Closest(4.5f);if(target!=null){target.Hit(target.IsBoss?4:5,.12f,0,true);SliceEffects.Ring(target.HitRect.center,Color.cyan,.7f);}}
             abilityCooldown=4;SliceSound.Cue("memory");
         }
     }

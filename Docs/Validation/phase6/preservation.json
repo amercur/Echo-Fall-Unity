@@ -1,0 +1,150 @@
+[
+  {
+    "source": "game.js",
+    "unchanged": true
+  },
+  {
+    "source": "data/world.json",
+    "unchanged": true
+  },
+  {
+    "source": "assets/art-manifest.js",
+    "unchanged": true
+  },
+  {
+    "source": "assets/ruin-arch.png",
+    "unchanged": true
+  },
+  {
+    "source": "assets/ruin-ledge.png",
+    "unchanged": true
+  },
+  {
+    "source": "assets/choir-spire.png",
+    "unchanged": true
+  },
+  {
+    "source": "assets/sentinel.png",
+    "unchanged": true
+  },
+  {
+    "source": "assets/lancer.png",
+    "unchanged": true
+  },
+  {
+    "source": "assets/drone.png",
+    "unchanged": true
+  },
+  {
+    "source": "game.js",
+    "unchanged": true
+  },
+  {
+    "source": "data/world.json",
+    "unchanged": true
+  },
+  {
+    "source": "assets/art-manifest.js",
+    "unchanged": true
+  },
+  {
+    "source": "assets/king.png",
+    "unchanged": true
+  },
+  {
+    "source": "game.js",
+    "unchanged": true
+  },
+  {
+    "source": "data/world.json",
+    "unchanged": true
+  },
+  {
+    "source": "assets/art-manifest.js",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scenes/MovementLab.unity",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scenes/WakeSlice.unity",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scenes/Wake_archive.unity",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scenes/Wake_belfry.unity",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scenes/Wake_choir.unity",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scenes/Wake_cistern.unity",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scenes/Wake_cradle.unity",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scenes/Wake_garden.unity",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scenes/Wake_king.unity",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scenes/Wake_lungs.unity",
+    "unchanged": true
+  },
+  {
+    "scene": "Assets/EchoFall/Scenes/Wake_mother.unity",
+    "collisionUnchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scenes/Wake_observatory.unity",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scenes/Wake_procession.unity",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scenes/Wake_rootvault.unity",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scenes/Wake_wake.unity",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/MovementInput.cs",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/MovementTuning.cs",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/PlayerMotor.cs",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/PlayerVisual.cs",
+    "unchanged": true
+  },
+  {
+    "baseline": "Assets/EchoFall/Scripts/SlicePlayerPresentation.cs",
+    "unchanged": true
+  },
+  {
+    "asset": "mother.png",
+    "unchanged": true
+  }
+]

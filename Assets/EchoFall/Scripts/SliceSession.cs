@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 namespace EchoFall.Movement
 {
-    public enum SliceScreen { Playing, Dialogue, Transfer, Pause, Loading, Map }
+    public enum SliceScreen { Playing, Dialogue, Transfer, Pause, Loading, Map, Ending }
     public sealed partial class SliceSession : MonoBehaviour
     {
         public static SliceSession Instance { get; private set; }
@@ -59,11 +59,11 @@ namespace EchoFall.Movement
                 {
                     case "cradle": return "Rest at the anchor. Climb the suspended steps to the Lungs, or follow the engine east.";
                     case "lungs": return "Climb the machinery. Release the high breathing passage and the maintenance lift.";
-                    case "mother": return Flags.Contains("garden-path") ? "The Garden causeway is open. The engine below remains asleep." : "Find the maintenance release above the western stair.";
+                    case "mother": return Flags.Contains("mother") ? "The Mother released the bodies. The Garden is waiting." : "The Mother waits below. The upper maintenance route still leads around her chamber.";
                     case "garden": return Flags.Contains("child") ? "The Choir is open. An observation lens and a hollow in the upper roots invite a detour." : "Listen to the Child. Watch for paths above the garden.";
                     case "observatory": return "Reconnect the signal well to open the long way home.";
                     case "rootvault": return "A downward strike wakes the hanging bell. The far bank holds a forgotten seed.";
-                    case "choir": return "Rest beneath the voices. The final choice waits; the routes behind you remain open.";
+                    case "choir": return EndingRules.Converged(Flags) ? "The Choir waits for your answer. Remember the beginning." : "The Choir listens for the King, the Mother, and a willing Child. The routes behind you remain open.";
                     default: return WakeObjective;
                 }
             }
@@ -100,7 +100,7 @@ namespace EchoFall.Movement
             if (checkpoint != null && checkpoint.Valid(Archive))
             {
                 KingStage=checkpoint.kingStage;KingBreaks=checkpoint.kingBreaks;KingStyle=checkpoint.kingStyle;
-                ChildStage=checkpoint.childStage;
+                ChildStage=checkpoint.childStage; MotherStage=checkpoint.motherStage;MotherRecall=checkpoint.motherRecall;MotherAttack=checkpoint.motherAttack;MotherMax=checkpoint.motherMax;
                 Decision = string.IsNullOrEmpty(checkpoint.decision) ? null : checkpoint.decision;
                 Decisions.AddRange(checkpoint.decisions); if (Decision != null && !Decisions.Contains(Decision)) Decisions.Add(Decision);
                 SacrificeUsed.UnionWith(checkpoint.sacrificeUsed);
@@ -114,7 +114,8 @@ namespace EchoFall.Movement
             else
             {
                 yield return LoadRoom("wake", "default");
-                if (Archive.pending.Count > 0) ShowExtraction();
+                if (!string.IsNullOrEmpty(Archive.currentEnding)) ShowEnding();
+                else if (Archive.pending.Count > 0) ShowExtraction();
                 else if (string.IsNullOrEmpty(CurrentMessage)) Notify("Find the wounded creature. Rest at a signal anchor to save this life.");
             }
         }
@@ -132,7 +133,7 @@ namespace EchoFall.Movement
             if (!Playing)
             {
                 if (option >= 0) ChooseOption(option);
-                else if (menu && Screen != SliceScreen.Transfer) SetScreen(SliceScreen.Playing);
+                else if (menu && Screen != SliceScreen.Transfer && Screen != SliceScreen.Ending) SetScreen(SliceScreen.Playing);
                 return;
             }
             Nearest = FindNearest();
@@ -180,6 +181,7 @@ namespace EchoFall.Movement
             if (!Playing || !item.Available(this)) return;
             string locked = item.LockReason(this);
             if (locked != null) { Notify(locked); return; }
+            if(item.id=="choir"){ChoirDialogue();return;}
             if (MemoryConversation(item)) return;
             switch (item.kind)
             {
@@ -216,7 +218,7 @@ namespace EchoFall.Movement
         }
         public void EndRun(bool completed)
         {
-            if (Screen == SliceScreen.Transfer || Screen == SliceScreen.Loading) return;
+            if (Screen == SliceScreen.Transfer || Screen == SliceScreen.Loading || Screen==SliceScreen.Ending) return;
             var next = Archive.Copy(); next.checkpoint = null;
             next.pending = Decisions.Count == 0 ? new List<string> { Decision ?? "return" } : new List<string>(Decisions);
             if (TrySave(next, "Could not save extraction. Retry before closing the game.")) Archive = next;
@@ -227,10 +229,11 @@ namespace EchoFall.Movement
         {
             if (!WorldCatalog.RoomId(id)) yield break;
             var departingKing=SliceKing.Active;
+            if(!newLife)CaptureMother();
             if(!newLife && departingKing!=null){KingStage=departingKing.Stage;KingBreaks=departingKing.Breaks;KingStyle=departingKing.LastStyle;}
             SetScreen(SliceScreen.Loading); combat.ClearTransient();
             if(hud!=null)yield return hud.FadeRoom(1,.16f);
-            if (!newLife && Room != null) foreach (var enemy in Room.GetComponentsInChildren<SliceEnemy>()) EnemyHealth[enemy.id] = enemy.hp;
+            if (!newLife && Room != null) foreach (var enemy in Room.GetComponentsInChildren<SliceEnemy>()) if(enemy.Persistent) EnemyHealth[enemy.id] = enemy.hp;
             if (!string.IsNullOrEmpty(loadedScene)) yield return SceneManager.UnloadSceneAsync(loadedScene);
             loadedScene = "Wake_" + id;
             yield return SceneManager.LoadSceneAsync(loadedScene, LoadSceneMode.Additive);
@@ -281,11 +284,12 @@ namespace EchoFall.Movement
         }
         SliceCheckpoint CaptureCheckpoint(SliceInteraction bench)
         {
-            foreach (var enemy in Room.GetComponentsInChildren<SliceEnemy>()) EnemyHealth[enemy.id] = enemy.hp;
+            CaptureMother();
+            foreach (var enemy in Room.GetComponentsInChildren<SliceEnemy>()) if(enemy.Persistent) EnemyHealth[enemy.id] = enemy.hp;
             var checkpoint = new SliceCheckpoint
             {
                 loop = Archive.loop, archive = SliceCheckpoint.Signature(Archive), room = Room.id, bench = bench.id,
-                decision = Decision, decisions = new List<string>(Decisions), sacrificeUsed = new List<string>(SacrificeUsed), resonance = combat.Resonance, kingStage=KingStage,kingBreaks=KingBreaks,kingStyle=KingStyle,childStage=ChildStage,
+                decision = Decision, decisions = new List<string>(Decisions), sacrificeUsed = new List<string>(SacrificeUsed), resonance = combat.Resonance, kingStage=KingStage,kingBreaks=KingBreaks,kingStyle=KingStyle,childStage=ChildStage,motherStage=MotherStage,motherRecall=MotherRecall,motherAttack=MotherAttack,motherMax=MotherMax,
                 defeated = new List<string>(Defeated), consumed = new List<string>(Consumed),
                 flags = new List<string>(Flags), visited = new List<string>(Visited)
             };
@@ -318,13 +322,13 @@ namespace EchoFall.Movement
                     else ChildDialogue();
                 }));
             }
-            Show(titles[stage],"The garden grows quiet. No weapon can answer for the Child.",SliceScreen.Dialogue,choices.ToArray());
+            Show(titles[stage],(Archive.Remembers("betrayal")?"I heard what happened to the Keeper. Let me finish speaking.":Archive.Remembers("respect")?"You remembered a voice that was not yours. Will you listen again?":"The garden grows quiet. No weapon can answer for the Child."),SliceScreen.Dialogue,choices.ToArray());
         }
         public bool CanChangeMemory
         {
             get
             {
-                if (Room == null || Screen == SliceScreen.Transfer || Screen == SliceScreen.Loading) return false;
+                if (Room == null || Screen == SliceScreen.Transfer || Screen == SliceScreen.Loading || Screen==SliceScreen.Ending) return false;
                 if (Room.id == "wake" && motor.Position.x < 2.2f) return true;
                 foreach (var bench in Room.GetComponentsInChildren<SliceInteraction>())
                     if (bench.kind == "bench" && Vector2.Distance(motor.Position, bench.transform.position) < 1) return true;
@@ -346,6 +350,7 @@ namespace EchoFall.Movement
                 choices.Add(((MemoryRules.Name(id)) + (Archive.active == id ? " / ACTIVE" : ""), () => EquipMemory(memory)));
             }
             choices.Add(("FORGET A MEMORY", ShowForgetting));
+            if(Archive.endings.Count>0)choices.Add(("ENDINGS RECOVERED",ShowEndingArchive));
             Show("RETAINED MEMORIES", Archive.memories.Count + " / 5 retained. Every memory shapes the world. Select an ability to equip.\n" + MemoryRules.Hint(Archive.active) + "\nEscape / Start closes this menu.", SliceScreen.Pause, choices.ToArray());
         }
         public bool EquipMemory(string id)

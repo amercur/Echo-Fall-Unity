@@ -5,6 +5,8 @@ namespace EchoFall.Movement
     {
         public Vector2 arena=new Vector2(2.65f,11.2f);
         public bool Started {get;private set;}
+        public override bool IsBoss => true;
+        public override bool EncounterStarted => Started;
         public int Stage {get;private set;}=1;
         public int Breaks {get;private set;}
         public string LastStyle {get;private set;}="";

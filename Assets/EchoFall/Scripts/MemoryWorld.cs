@@ -59,6 +59,8 @@ namespace EchoFall.Movement
     // A remembered identity, not a recording or a following companion.
     public sealed class MemoryEcho : SliceEnemy
     {
+        public bool recalled;
+        public override bool Persistent=>!recalled;
         public string identity;
         public bool Recognized { get; private set; }
         public bool Refused { get; private set; }
@@ -70,21 +72,29 @@ namespace EchoFall.Movement
             {
                 if(Vector2.Distance(Session.motor.Position,transform.position)>4)return;
                 recognition-=dt;if(recognition>0)return;Recognized=true;
-                if(Session.Archive.Remembers("respect"))
-                {Refused=true;Session.Defeated.Add(id);Session.Flags.Add("betrayal-guard");Session.EnemyHealth.Remove(id);Session.combat.GainResonance(1);Session.Notify("No. I remember being you.");gameObject.SetActive(false);return;}
+                if(recalled?identity=="respect":Session.Archive.Remembers("respect"))
+                {Refused=true;if(!recalled){Session.Defeated.Add(id);Session.Flags.Add("betrayal-guard");Session.EnemyHealth.Remove(id);}Session.combat.GainResonance(1);Session.Notify("No. I remember being you.");gameObject.SetActive(false);return;}
                 Session.Notify("I remember the hand. I do not remember why.");
             }
             skill-=dt;
             if(skill<=0)
             {
-                skill=identity=="fire"?1.8f:4;
-                if(identity=="fire")SliceProjectile.Spawn(HitRect.center,(Session.combat.HitRect.center-HitRect.center).normalized*2.2f,this,1);
-                if(identity=="mercy" || identity=="sacrifice")hp=Mathf.Min(MaxHealth,hp+1.5f);
-                if(identity=="defiance")Move(Mathf.Sign(Session.motor.Position.x-transform.position.x)*.85f);
+                if(identity=="fire"){SliceProjectile.Spawn(HitRect.center,(Session.combat.HitRect.center-HitRect.center).normalized*2.2f,this,1);skill=1.8f;}
+                if(identity=="mercy" || identity=="sacrifice"){if(recalled)SliceMother.Active?.RestoreIntegrity(1.5f);else hp=Mathf.Min(MaxHealth,hp+1.5f);skill=4;}
+                if(identity=="defiance" && Mathf.Abs(Session.motor.Position.x-transform.position.x)>.9f){Move(Mathf.Sign(Session.motor.Position.x-transform.position.x)*.85f);skill=2.5f;}
             }
             base.Tick(dt);
         }
-        protected override void Die(){Session?.Flags.Add("betrayal-guard");base.Die();}
+        public override bool Hit(float amount,float staggerTime=.12f,int knock=0,bool bypass=false)
+        {
+            if(recalled && skill<=0)
+            {
+                if(identity=="return" && State=="patrol" && staggerTime<.5f){skill=2;SliceEffects.Ring(HitRect.center,Color.cyan,.35f);return false;}
+                if(identity=="obedience"){amount*=.35f;skill=2.5f;SliceEffects.Ring(HitRect.center,Color.cyan,.35f);}
+            }
+            return base.Hit(amount,staggerTime,knock,bypass);
+        }
+        protected override void Die(){if(!recalled)Session?.Flags.Add("betrayal-guard");base.Die();}
         protected override void LateUpdate()
         {
             base.LateUpdate();
