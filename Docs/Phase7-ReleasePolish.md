@@ -1,5 +1,7 @@
 # Phase 7: playable-build stabilization
 
+Follow-up: [advanced presentation pass](PresentationPass.md) records the subsequent camera/animation/UI/audio changes and its separate Windows candidate and validation.
+
 Phase 6 remains the gameplay baseline. No new region, boss, combat style, movement tuning or ending condition is introduced. The original JavaScript project remains read-only.
 
 ## Dependencies and scope

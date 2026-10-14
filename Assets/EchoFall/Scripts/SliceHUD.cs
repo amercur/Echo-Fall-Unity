@@ -17,6 +17,15 @@ namespace EchoFall.Movement
         Image transition;
         GameObject modal, shade;
         readonly Button[] buttons = new Button[9];
+        readonly Text[] choiceLabels=new Text[9];
+        readonly RectTransform[] choiceRects=new RectTransform[9];
+        readonly ChoicePresentation[] choicePresentation=new ChoicePresentation[9];
+        CanvasGroup modalFade;
+        string shownTitle;
+        float modalAge,resourcePulse;
+        int previousHealth=-1;
+        float previousResonance=-1;
+        Image modalRule;
         Font font;
         readonly Color ink = new Color(.028f,.046f,.068f,.94f), cyan = new Color(.48f,.88f,.86f), gold = new Color(.85f,.74f,.51f);
         void Awake()
@@ -47,14 +56,18 @@ namespace EchoFall.Movement
             shade = Panel("Modal shade",root,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero,new Color(.015f,.025f,.04f,.83f)).gameObject;
             modal = Panel("Memory panel",root,new Vector2(.5f,.5f),new Vector2(.5f,.5f),new Vector2(-450,-265),new Vector2(900,530),ink).gameObject;
             var panel = modal.GetComponent<RectTransform>();
-            Panel("Gold rule",panel,new Vector2(0,1),new Vector2(0,1),new Vector2(40,-36),new Vector2(820,2),gold);
+            modalFade=modal.AddComponent<CanvasGroup>();
+            modalRule=Panel("Gold rule",panel,new Vector2(0,1),new Vector2(0,1),new Vector2(40,-36),new Vector2(820,2),gold).GetComponent<Image>();
             modalTitle = Label(panel,"",30,Color.white,new Vector2(0,1),new Vector2(44,-62),new Vector2(810,52));
             modalBody = Label(panel,"",19,new Color(.7f,.79f,.82f),new Vector2(0,1),new Vector2(44,-124),new Vector2(810,190));
             for(int i=0;i<9;i++)
             {
                 var rect = Panel("Choice " + i,panel,new Vector2(0,1),new Vector2(0,1),new Vector2(44,-350-i*53),new Vector2(812,44),new Color(.09f,.15f,.18f));
                 buttons[i] = rect.gameObject.AddComponent<Button>(); int index=i; buttons[i].onClick.AddListener(()=>session.ChooseOption(index));
+                buttons[i].transition=Selectable.Transition.None;
+                choiceRects[i]=rect;choicePresentation[i]=rect.gameObject.AddComponent<ChoicePresentation>();
                 var text = Label(rect,"",17,cyan,new Vector2(0,1),new Vector2(16,-6),new Vector2(780,32)); text.alignment=TextAnchor.MiddleLeft;
+                choiceLabels[i]=text;
             }
             transition=Panel("Room transition",root,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero,new Color(.012f,.022f,.032f,1)).GetComponent<Image>();
         }
@@ -90,6 +103,10 @@ namespace EchoFall.Movement
             loop.text="LIFE " + session.Archive.loop.ToString("00") + "   /   " + (MemoryRules.Name(session.Archive.active));
             health.text="INTEGRITY   " + new string('◆',session.combat.Integrity) + new string('◇',6-session.combat.Integrity) + "    ·    RESONANCE  " + session.combat.Resonance.ToString("0.##");
             var preferences=PlayerPreferences.Current;
+            if(previousHealth!=session.combat.Integrity || !Mathf.Approximately(previousResonance,session.combat.Resonance))resourcePulse=.25f;
+            previousHealth=session.combat.Integrity;previousResonance=session.combat.Resonance;
+            resourcePulse=Mathf.Max(0,resourcePulse-Time.unscaledDeltaTime);
+            health.color=Color.Lerp(cyan,Color.white,resourcePulse*1.2f*preferences.flash);
             status.text=preferences.Key("Attack","J")+" STRIKE   "+preferences.Key("Guard","F")+" DEFLECT   "+preferences.Key("Imprint","Q")+" IMPRINT   "+preferences.Key("Mend","H")+" MEND   "+preferences.Key("Memory","C")+" MEMORY" + (session.combat.Fracture>0?"   FRACTURE "+session.combat.Fracture:"");
             var king=SliceKing.Active;var mother=SliceMother.Active;
             bossPanel.SetActive(king!=null && king.Started && king.Alive || mother!=null && mother.Started && mother.Alive);
@@ -103,16 +120,22 @@ namespace EchoFall.Movement
             shade.SetActive(show); modal.SetActive(show);
             if(show)
             {
+                if(shownTitle!=session.ModalTitle){shownTitle=session.ModalTitle;modalAge=0;}
+                modalAge+=Time.unscaledDeltaTime;
+                modalFade.alpha=Mathf.Lerp(.65f,1,Mathf.Clamp01(modalAge/.12f));
+                var accent=session.Screen==SliceScreen.Transfer?cyan:gold;
+                modalRule.color=accent;
                 modalTitle.text=session.ModalTitle; modalBody.text=session.ModalBody;
                 modalBody.fontSize=PlayerPreferences.Current.largeText?23:19;
                 bool many=session.OptionLabels.Count>3;bool ending=session.Screen==SliceScreen.Ending;
                 modalBody.rectTransform.sizeDelta=new Vector2(810,many?160:ending?250:190);
                 modal.GetComponent<RectTransform>().sizeDelta=new Vector2(900,many?730:ending?650:530);
                 modal.GetComponent<RectTransform>().anchoredPosition=new Vector2(-450,many?-365:ending?-325:-265);
-                for(int n=0;n<buttons.Length;n++) buttons[n].GetComponent<RectTransform>().anchoredPosition=new Vector2(44,-(many?300:ending?450:350)-n*(many?46:53));
+                for(int n=0;n<buttons.Length;n++) choiceRects[n].anchoredPosition=new Vector2(44,-(many?300:ending?450:350)-n*(many?46:53));
                 if(many)modalBody.text += "\n1-9 / click   |   D-pad + A";
-                for(int i=0;i<9;i++) { buttons[i].gameObject.SetActive(i<session.OptionLabels.Count); if(i<session.OptionLabels.Count) {var label=buttons[i].GetComponentInChildren<Text>();label.fontSize=PlayerPreferences.Current.largeText?20:17;label.text=(session.MemoryCursor==i?"> ":"")+(i+1)+"   "+session.OptionLabels[i];} }
+                for(int i=0;i<9;i++) { buttons[i].gameObject.SetActive(i<session.OptionLabels.Count); if(i<session.OptionLabels.Count) {choicePresentation[i].Focused=session.MemoryCursor==i;choicePresentation[i].Accent=accent;var label=choiceLabels[i];label.fontSize=PlayerPreferences.Current.largeText?20:17;label.text=(session.MemoryCursor==i?"> ":"")+(i+1)+"   "+session.OptionLabels[i];} }
             }
+            else shownTitle=null;
         }
     }
 }

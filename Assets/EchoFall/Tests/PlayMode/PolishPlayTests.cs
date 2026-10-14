@@ -28,5 +28,13 @@ namespace EchoFall.Movement.Tests
         {
             var prefs=PlayerPreferences.Current;float old=prefs.shake;try{prefs.shake=0;var impulse=Camera.main.GetComponent<PlayerCameraImpulse>();impulse.Kick(.06f);yield return null;Assert.That(impulse.Offset,Is.EqualTo(Vector2.zero));int life=S.Archive.loop;S.ShowSettings();Assert.That(S.OptionLabels.Count,Is.EqualTo(9));Assert.That(S.Archive.loop,Is.EqualTo(life));S.ChooseOption(7);Assert.That(S.Playing,Is.True);}finally{prefs.shake=old;}
         }
+        [UnityTest] public IEnumerator ModalPresentationDoesNotDelayChoicesOrChangeResources()
+        {
+            int life=S.Archive.loop,hp=S.combat.Integrity;float resonance=S.combat.Resonance;
+            S.ShowSettings();yield return null;
+            var choices=Object.FindObjectsByType<ChoicePresentation>();Assert.That(choices.Length,Is.EqualTo(9));
+            S.ChooseOption(7);Assert.That(S.Playing,Is.True);
+            Assert.That(S.Archive.loop,Is.EqualTo(life));Assert.That(S.combat.Integrity,Is.EqualTo(hp));Assert.That(S.combat.Resonance,Is.EqualTo(resonance));
+        }
     }
 }

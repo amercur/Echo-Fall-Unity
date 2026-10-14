@@ -15,7 +15,13 @@ namespace EchoFall.Movement
 
         void Awake() => view = GetComponent<Camera>();
         void Start() => SnapToTarget();
-        void FixedUpdate() => Simulate(Time.fixedDeltaTime);
+        // Track the same interpolated position as the sprite, once per rendered frame.
+        void LateUpdate()
+        {
+            var session=SliceSession.Instance;
+            if(session!=null && !session.Playing)return;
+            Follow(Time.deltaTime,target!=null?target.RenderPosition:Vector2.zero);
+        }
 
         public void SnapToTarget()
         {
@@ -43,11 +49,14 @@ namespace EchoFall.Movement
         }
 
         public void Simulate(float dt)
+        { Follow(dt,target!=null?target.Position:Vector2.zero); }
+
+        void Follow(float dt,Vector2 feet)
         {
             if (view == null) view = GetComponent<Camera>();
             if (target == null || view == null) return;
             if (target.ResetCount != resetCount) { SnapToTarget(); return; }
-            Vector2 desired = DesiredPosition(target.Position, target.Velocity, view.orthographicSize, view.aspect);
+            Vector2 desired = DesiredPosition(feet, target.Velocity, view.orthographicSize, view.aspect);
             Vector2 position = Vector2.Lerp(transform.position, desired, 1 - Mathf.Exp(-smoothing * dt));
             position = ClampCenter(position, view.orthographicSize, view.aspect);
             transform.position = new Vector3(position.x, position.y, -10);

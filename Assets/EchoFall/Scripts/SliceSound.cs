@@ -10,6 +10,8 @@ namespace EchoFall.Movement
         AudioSource[] music;
         AudioClip[] tracks;
         AudioClip step,jump,land,dash,ui,deflect;
+        AudioClip heavyImpact,counter,imprint,detonate,transfer,focus;
+        SliceScreen lastScreen;
         readonly float[] gains=new float[6];
         AudioPalette palette;
         readonly System.Collections.Generic.List<AudioClip> generated=new System.Collections.Generic.List<AudioClip>();
@@ -28,9 +30,10 @@ namespace EchoFall.Movement
             var sound=instance;if(sound==null || sound.voices==null)return;
             AudioClip chosen=cue=="slash"||cue=="charged"?sound.cut:cue=="hit"||cue=="heavy-hit"||cue=="armor"?sound.impact:sound.bell;
             chosen=cue=="step"?sound.step:cue=="jump"?sound.jump:cue=="land"?sound.land:cue=="dash"?sound.dash:cue=="ui"?sound.ui:cue=="deflect"||cue=="counter"?sound.deflect:chosen;
+            chosen=cue=="heavy-hit"?sound.heavyImpact:cue=="counter"?sound.counter:cue=="imprint"?sound.imprint:cue=="detonate"?sound.detonate:cue=="transfer"?sound.transfer:cue=="focus"?sound.focus:chosen;
             var p=sound.palette;
-            if(p!=null){var replacement=cue=="step"?p.step:cue=="jump"?p.jump:cue=="land"?p.land:cue=="dash"?p.dash:cue=="ui"?p.ui:cue=="deflect"||cue=="counter"?p.deflect:cue=="charged"?p.charged:null;if(replacement!=null)chosen=replacement;}
-            sound.Play(chosen,cue=="step"?.12f:cue=="jump"||cue=="land"?.4f:1);
+            if(p!=null){var replacement=cue=="step"?p.step:cue=="jump"?p.jump:cue=="land"?p.land:cue=="dash"?p.dash:cue=="ui"?p.ui:cue=="deflect"?p.deflect:cue=="charged"?p.charged:null;if(replacement!=null)chosen=replacement;}
+            sound.Play(chosen,cue=="focus"?.2f:cue=="step"?.12f:cue=="jump"||cue=="land"?.4f:1);
             if(cue=="hit"||cue=="heavy-hit"||cue=="tell"||cue=="slash")sound.combatHold=5;
         }
         string lastRoom;
@@ -43,6 +46,12 @@ namespace EchoFall.Movement
             impact=Clip(palette?.impact,"Fracture",.3f,75,false);
             step=Clip(palette?.step,"Footfall",.06f,90,false);jump=Clip(palette?.jump,"Jump",.12f,220,false);land=Clip(palette?.land,"Landing",.13f,65,false);
             dash=Clip(palette?.dash,"Dash",.15f,180,false);ui=Clip(palette?.ui,"Selection",.08f,330,false);deflect=Clip(palette?.deflect,"Deflect",.28f,660,false);
+            heavyImpact=Clip(palette?.heavyImpact,"Deep fracture",.25f,48,false);
+            counter=Clip(palette?.counter,"Counter chord",.32f,520,false);
+            imprint=Clip(palette?.imprint,"Imprint glass",.22f,880,false);
+            detonate=Clip(palette?.detonate,"Breaking glass",.35f,96,false);
+            transfer=Clip(palette?.transfer,"Crossing",.7f,165,false);
+            focus=Clip(palette?.focus,"Focus",.04f,480,false);
             tracks=new[]{Clip(palette?.exploration,"Exploration",8,55,true),Clip(palette?.combat,"Unrest",8,82,true),Clip(palette?.boss,"Sovereign",8,65,true),Clip(palette?.memory,"Remembering",8,110,true),Clip(palette?.ending,"Another morning",8,88,true)};
             music=new AudioSource[2];for(int i=0;i<2;i++){music[i]=gameObject.AddComponent<AudioSource>();music[i].loop=true;music[i].volume=0;}
             ambience=gameObject.AddComponent<AudioSource>(); ambience.clip=drone; ambience.loop=true; ambience.volume=.12f; ambience.Play();
@@ -66,6 +75,8 @@ namespace EchoFall.Movement
         void Update()
         {
             var s=SliceSession.Instance; if(s==null || voices==null)return;
+            if(s.Screen==SliceScreen.Transfer && lastScreen!=SliceScreen.Transfer)Cue("transfer");
+            lastScreen=s.Screen;
             var p=PlayerPreferences.Current;float dt=Time.unscaledDeltaTime;
             ambience.volume=(s.Playing?.07f:.025f)*p.master*p.sfx;
             for(int i=0;i<voices.Length;i++)voices[i].volume=.18f*gains[i]*p.master*p.sfx;

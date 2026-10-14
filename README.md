@@ -10,6 +10,8 @@ The current chapter contains thirteen connected rooms, three regular enemy arche
 
 ## Implemented gameplay
 
+The [advanced presentation pass](Docs/PresentationPass.md) tracks render-cadence camera following, player silhouette easing, menu feedback and distinct memory/combat audio cues, with before/after evidence and remaining art/audio needs.
+
 - Movement with variable-height jumps, wall jumps, dashes, and one-way platforms.
 - Blade combos, charged and directional attacks, deflects, counters, projectile reflection, pogo strikes, and healing.
 - Thirteen connected rooms across Wake, Court, Cradle, Last Garden and Choir, with optional routes, secrets, hazards and shortcuts.

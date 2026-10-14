@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 // Pipeline Play Mode review. Only ephemeral sessions; no authored assets or saves are changed.
 public static class PlayerPresentationReview
 {
+    public static Task<object> CapturePresentation()=>CaptureAll("Docs/Validation/presentation/poses");
     static readonly List<object> captures=new List<object>();
     static string directory;
     static async Task Frames(int count=2)
@@ -43,12 +44,12 @@ public static class PlayerPresentationReview
         }
         finally {RenderTexture.active=old;camera.targetTexture=null;rt.Release();UnityEngine.Object.Destroy(rt);UnityEngine.Object.Destroy(texture);UnityEngine.Object.Destroy(go);}
     }
-    public static async Task<object> CaptureAll()
+    public static async Task<object> CaptureAll(string output="Docs/Validation/player-presentation")
     {
         if(!Application.isPlaying)throw new Exception("Enter Play Mode first");
         bool background=Application.runInBackground,ephemeral=SliceSession.EphemeralSave;
         Application.runInBackground=true;SliceSession.EphemeralSave=true;captures.Clear();
-        directory=Path.Combine(Directory.GetCurrentDirectory(),"Docs/Validation/player-presentation");Directory.CreateDirectory(directory);
+        directory=Path.Combine(Directory.GetCurrentDirectory(),output);Directory.CreateDirectory(directory);
         int first=Time.frameCount;
         try
         {

@@ -28,6 +28,8 @@ namespace EchoFall.Movement
         float fallSpeed, attackAxis;
         int teleport, wallSequence, nextGhost, combo;
         bool grounded, dashing, heavy, transferring;
+        float visualLean;
+        Vector2 visualStretch=Vector2.one;
 
         void Awake()
         {
@@ -64,6 +66,7 @@ namespace EchoFall.Movement
         public void ResetTransient()
         {
             landing=wallJump=hurt=deflect=attack=hold=transferTime=0; transferring=false;
+            visualLean=0;visualStretch=Vector2.one;
             for(int i=0;i<ghostLife.Length;i++) {ghostLife[i]=0;if(ghosts[i]!=null)ghosts[i].enabled=false;}
             if(cameraImpulse!=null)cameraImpulse.Clear();
         }
@@ -137,7 +140,7 @@ namespace EchoFall.Movement
             else if(Pose==WandererPose.WallJump) {sx=.95f;sy=1.05f;lean=-7*motor.Facing*wallJump/.16f;}
             else if(Pose==WandererPose.Attack)lean=-motor.Facing*Mathf.Sin(progress*Mathf.PI)*(heavy?9:combo==3?7:4)+(attackAxis>.4f?-4:attackAxis<-.4f?4:0);
             else if(Pose==WandererPose.Hurt)lean=8*motor.Facing;
-            else if(Pose==WandererPose.Run)lean=-1.5f*motor.Facing;
+            else if(Pose==WandererPose.Run)lean=-3*Mathf.Clamp(motor.Velocity.x/2.65f,-1,1);
             float alpha=1;
             if(transfer)
             {
@@ -151,8 +154,12 @@ namespace EchoFall.Movement
             tint=Color.Lerp(baseColor,tint,PlayerPreferences.Current.flash);
             tint.a=baseColor.a*alpha;spriteRenderer.color=tint;
             transform.position=motor.RenderPosition+Vector2.up*lift;
-            transform.localScale=Vector3.Scale(baseScale,new Vector3(sx,sy,1));
-            transform.localRotation=baseRotation*Quaternion.Euler(0,0,lean);
+            // Only the silhouette eases. Sprite changes and gameplay remain immediate.
+            float blend=1-Mathf.Exp(-32*(live?dt:transfer?real:0));
+            visualLean=Mathf.LerpAngle(visualLean,lean,blend);
+            visualStretch=Vector2.Lerp(visualStretch,new Vector2(sx,sy),blend);
+            transform.localScale=Vector3.Scale(baseScale,new Vector3(visualStretch.x,visualStretch.y,1));
+            transform.localRotation=baseRotation*Quaternion.Euler(0,0,visualLean);
             if(rim!=null) {rim.sprite=spriteRenderer.sprite;rim.flipX=spriteRenderer.flipX;var color=rim.color;color.a=.18f*alpha;rim.color=color;}
             UpdateGhosts(live?dt:real,live && motor.Dashing);
         }

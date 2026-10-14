@@ -1,0 +1,89 @@
+{
+    "version": 1,
+    "loop": 5,
+    "active": "respect",
+    "memories": [
+        "respect",
+        "sacrifice"
+    ],
+    "acquired": [
+        {
+            "id": "respect",
+            "loop": 1
+        },
+        {
+            "id": "sacrifice",
+            "loop": 3
+        }
+    ],
+    "pending": [],
+    "kinship": 3,
+    "endings": [
+        "BREAK",
+        "SHARE"
+    ],
+    "outcomes": [
+        {
+            "id": "BREAK",
+            "epilogue": "The Keeper returns to his borrowed heartbeats.\nSomething small still breathes in the dark.",
+            "loop": 1,
+            "memories": [],
+            "decisions": [
+                "respect"
+            ],
+            "flags": [
+                "king",
+                "mother",
+                "garden-path",
+                "child"
+            ],
+            "discoveries": []
+        },
+        {
+            "id": "SHARE",
+            "epilogue": "The Keeper leaves the cages open.\nSomething small still breathes in the dark.",
+            "loop": 4,
+            "memories": [
+                "respect",
+                "sacrifice"
+            ],
+            "decisions": [
+                "respect"
+            ],
+            "flags": [
+                "king",
+                "mother",
+                "garden-path",
+                "child"
+            ],
+            "discoveries": []
+        }
+    ],
+    "currentEnding": "",
+    "lastEcho": "respect",
+    "hasCheckpoint": false,
+    "benchSave": {
+        "version": 1,
+        "loop": 0,
+        "resonance": 0.0,
+        "motherMax": 0.0,
+        "kingStage": 0,
+        "kingBreaks": 0,
+        "childStage": 0,
+        "motherStage": 0,
+        "motherRecall": 0,
+        "motherAttack": 0,
+        "kingStyle": "",
+        "archive": "",
+        "room": "",
+        "bench": "",
+        "decision": "",
+        "defeated": [],
+        "consumed": [],
+        "flags": [],
+        "visited": [],
+        "decisions": [],
+        "sacrificeUsed": [],
+        "enemies": []
+    }
+}

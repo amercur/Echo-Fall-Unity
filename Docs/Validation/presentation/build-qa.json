@@ -1,0 +1,28 @@
+{
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 3,
+    "bytes": 213657620,
+    "seconds": 92.6273619,
+    "scenes": [
+        "Assets/EchoFall/Scenes/WakeSlice.unity",
+        "Assets/EchoFall/Scenes/Wake_wake.unity",
+        "Assets/EchoFall/Scenes/Wake_belfry.unity",
+        "Assets/EchoFall/Scenes/Wake_cistern.unity",
+        "Assets/EchoFall/Scenes/Wake_archive.unity",
+        "Assets/EchoFall/Scenes/Wake_procession.unity",
+        "Assets/EchoFall/Scenes/Wake_king.unity",
+        "Assets/EchoFall/Scenes/Wake_cradle.unity",
+        "Assets/EchoFall/Scenes/Wake_lungs.unity",
+        "Assets/EchoFall/Scenes/Wake_mother.unity",
+        "Assets/EchoFall/Scenes/Wake_garden.unity",
+        "Assets/EchoFall/Scenes/Wake_observatory.unity",
+        "Assets/EchoFall/Scenes/Wake_choir.unity",
+        "Assets/EchoFall/Scenes/Wake_rootvault.unity"
+    ],
+    "messages": [
+        "[ServicesCore]: To use Unity's dashboard services, you need to link your Unity project to a project ID. To do this, go to Project Settings to select your organization, select your project and then link a project ID. You also need to make sure your organization has access to the required products. Visit https://dashboard.unity3d.com to sign up.",
+        "Pipeline: No RuntimePipelineConfig asset found (Project Settings > Pipeline > Runtime). Pipeline will be disabled in Player builds.",
+        "warning: Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/System.Windows.Forms.dll assembly is referenced by user code, but is not supported on current platform. Various failures might follow."
+    ]
+}

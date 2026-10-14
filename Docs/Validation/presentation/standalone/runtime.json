@@ -1,0 +1,64 @@
+{
+    "passed": true,
+    "error": "",
+    "version": "0.7.0",
+    "device": "AMD Radeon (TM) Graphics",
+    "savePath": "C:\\Users\\sivas\\Downloads\\Unity Projects\\Echo-Fall\\Docs\\Validation\\presentation\\standalone\\archive.json",
+    "endings": [
+        "BREAK",
+        "SHARE"
+    ],
+    "samples": [
+        {
+            "room": "procession",
+            "medianMs": 20.00030517578125,
+            "p95Ms": 20.019302368164064,
+            "managedBytes": 45056,
+            "totalBytes": 186069366,
+            "objects": 489
+        },
+        {
+            "room": "lungs",
+            "medianMs": 19.991199493408204,
+            "p95Ms": 20.083900451660158,
+            "managedBytes": -8192,
+            "totalBytes": 185987523,
+            "objects": 289
+        },
+        {
+            "room": "mother",
+            "medianMs": 20.0,
+            "p95Ms": 20.26799964904785,
+            "managedBytes": 16384,
+            "totalBytes": 186112892,
+            "objects": 261
+        },
+        {
+            "room": "choir",
+            "medianMs": 19.999801635742189,
+            "p95Ms": 20.357999801635743,
+            "managedBytes": -20480,
+            "totalBytes": 186081664,
+            "objects": 231
+        }
+    ],
+    "checks": [
+        "Standalone launched into Wake",
+        "Standalone movement simulation",
+        "Anchor saved in wake / Life saved at the signal anchor. Pause > Memories to change your active memory.",
+        "Standalone anchor reload",
+        "King victory BREAK",
+        "Anchor saved in cradle / Life saved at the signal anchor. Pause > Memories to change your active memory.",
+        "Mother victory BREAK",
+        "Child permission BREAK",
+        "Anchor saved in garden / Life saved at the signal anchor. Pause > Memories to change your active memory.",
+        "Saved BREAK",
+        "King victory SHARE",
+        "Anchor saved in cradle / Life saved at the signal anchor. Pause > Memories to change your active memory.",
+        "Mother victory SHARE",
+        "Child permission SHARE",
+        "Anchor saved in garden / Life saved at the signal anchor. Pause > Memories to change your active memory.",
+        "Saved SHARE",
+        "Final archive valid"
+    ]
+}

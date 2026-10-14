@@ -1,6 +1,7 @@
 using UnityEngine;
 namespace EchoFall.Movement
 {
+    [DefaultExecutionOrder(150)] // After render-cadence camera following.
     public sealed class SliceParallax : MonoBehaviour
     {
         public float factor = .18f;

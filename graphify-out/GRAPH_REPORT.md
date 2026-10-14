@@ -1,17 +1,17 @@
 # Graph Report - Echo-Fall  (2026-10-13)
 
 ## Corpus Check
-- 175 files · ~1,041,619 words
+- 194 files · ~1,782,491 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 482 file(s) not represented in the graph (top: .meta 279, .asset 169, .unity 17)
+- Unclassified: 485 file(s) not represented in the graph (top: .meta 281, .asset 169, .unity 17)
 
 ## Summary
-- 1991 nodes · 3883 edges · 114 communities (71 shown, 43 thin omitted)
+- 2039 nodes · 3970 edges · 106 communities (77 shown, 29 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 221 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e51ad17a`
+- Built from commit: `9a47845a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -33,47 +33,45 @@
 - WakeSlice five-room memory loop
 - com.unity.render-pipelines.core
 - StandaloneQA
-- WorldCatalog
 - SliceArchive
 - SliceHUD
 - com.unity.microsoft.gdk.discovery
 - com.unity.collections
 - com.unity.modules.unitywebrequest
-- PlayerCameraImpulse
-- com.unity.modules.jsonserialize
+- RoomCamera
+- com.unity.ugui
 - com.unity.modules.assetbundle
 - com.unity.2d.tilemap
 - com.unity.modules.uielements
 - .Line
-- com.unity.modules.imgui
+- com.unity.ext.nunit
 - Phase3CombatPlayTests
 - capture_movement_reference.cjs
-- com.unity.burst
+- com.unity.mathematics
 - WandererPose
 - com.unity.ai.navigation
 - SliceSession
-- com.unity.modules.terrain
+- com.unity.modules.jsonserialize
 - com.unity.modules.audio
 - com.unity.modules.physics2d
-- .SetScreen
+- .Remembers
 - com.unity.modules.subsystems
 - SliceKing
 - dependencies
 - PlayerVisual
-- .CaptureAll
-- RoomCamera
+- Advanced presentation pass
 - com.unity.nuget.mono-cecil
 - com.unity.xr.legacyinputhelpers
 - Q: Phase 2 checkpoint/loadout continuation status and dependencies
 - SliceCheckpoint
 - com.unity.2d.common
 - .Eligible
-- .LoadRoom
+- WorldCatalog
 - com.unity.modules.physics
 - Phase 3: combat and the Court
 - SliceRoom
 - Q: Inspect Phase 2 systems and dependencies affected by remaining checkpoint and combat work
-- .Open
+- WorldMap
 - SliceSound
 - .Strike
 - The Wake gameplay validation
@@ -91,14 +89,13 @@
 - Pointed stone arch with cyan accents
 - Ruin ledge artwork
 - Tiny pale square texture
-- SliceScreen
 - WakeAtmosphere
 - MonoBehaviour
 - MovementPlayTests
 - MemoryConsequencePlayTests
 - SliceMother
-- LateGamePlayTests
-- PolishPlayTests
+- .LoadRoom
+- PlayerPreferences
 - MovementInput
 - .Cue
 - .BuildRoom
@@ -106,21 +103,15 @@
 - Phase 4: the connected world
 - WakeSliceBuilder
 - .Geometry
-- PlayerPreferences
-- WorldMap
-- .Capture
-- .Capture
 - Phase6Review
-- .Transfer
-- MovementTuning
+- SliceRuleTests
 - ReleaseBuild
-- .Remembers
+- .Interact
 - Phase 6: the voices converge
 - ECHO//FALL Unity
 - Echo-Fall Unity migration
 - Phase 5: remembered consequences
-- .Awake
-- CheckpointSave
+- Remaining checkpoint/loadout persistence
 - MovementLab
 - .Run
 - package.json
@@ -130,9 +121,9 @@
 2. `SliceEnemy` - 54 edges
 3. `PlayerMotor` - 52 edges
 4. `SliceCombat` - 51 edges
-5. `EchoFall.Movement` - 48 edges
+5. `EchoFall.Movement` - 50 edges
 6. `SliceArchive` - 43 edges
-7. `PlayerVisual` - 39 edges
+7. `PlayerVisual` - 40 edges
 8. `WakeSliceBuilder` - 37 edges
 9. `SlicePlayTests` - 29 edges
 10. `MovementTests` - 28 edges
@@ -155,7 +146,7 @@
 ## Hyperedges (group relationships)
 - **Checkpoint continuation dependencies** — docs_migrationplan_checkpointsave, docs_migrationplan_rest, docs_migrationplan_lifetimes, docs_migrationplan_loadout [EXTRACTED 1.00]
 
-## Communities (114 total, 43 thin omitted)
+## Communities (106 total, 29 thin omitted)
 
 ### Community 0 - ".BuildWorld"
 Cohesion: 0.10
@@ -174,16 +165,20 @@ Cohesion: 0.09
 Nodes (16): SliceCombat, AttackVisual, Busy, ChargingGuard, Combo, DashFollowup, Fracture, Guarding (+8 more)
 
 ### Community 4 - "PlayerMotor"
-Cohesion: 0.08
+Cohesion: 0.09
 Nodes (17): PlayerMotor, AirDashUsed, DashCooldown, Dashing, DoubleJumpUsed, Facing, Grounded, HasAirJump (+9 more)
 
 ### Community 6 - "unityengine"
-Cohesion: 0.07
-Nodes (5): EchoFall.Movement.Tests, EchoFall.Movement, EchoFall.Movement.Editor, CheckpointMenuReview, Phase7PackagingAudit
+Cohesion: 0.06
+Nodes (6): PresentationTests, EchoFall.Movement.Tests, EchoFall.Movement, EchoFall.Movement.Editor, CheckpointMenuReview, Phase7PackagingAudit
 
 ### Community 8 - "packages-lock.json"
 Cohesion: 0.05
 Nodes (43): com.unity.2d.sprite, com.unity.2d.tilemap, com.unity.modules.ai, com.unity.modules.androidjni, com.unity.modules.animation, com.unity.modules.assetbundle, com.unity.modules.audio, com.unity.modules.director (+35 more)
+
+### Community 11 - "SlicePlayTests"
+Cohesion: 0.15
+Nodes (3): MovementCommand, SlicePlayTests, S
 
 ### Community 12 - "author_movement_assets.py"
 Cohesion: 0.09
@@ -195,7 +190,7 @@ Nodes (20): SliceEnemy, Alive, EncounterStarted, Guarding, HitRect, IsBoss, MaxH
 
 ### Community 14 - "WakeSlice five-room memory loop"
 Cohesion: 0.20
-Nodes (15): Original combat parity, Effective room geometry, Versioned Wake archive, WakeSliceBuilder and import_wake_slice.py, Remaining checkpoint/loadout persistence, Slice combat systems, Remaining combat parity, EMBER / fire (+7 more)
+Nodes (14): Original combat parity, Effective room geometry, Versioned Wake archive, WakeSliceBuilder and import_wake_slice.py, Slice combat systems, Remaining combat parity, EMBER / fire, Transfer extraction (+6 more)
 
 ### Community 15 - "com.unity.render-pipelines.core"
 Cohesion: 0.09
@@ -205,13 +200,13 @@ Nodes (25): depth, source, version, dependencies, depth, source, version, depend
 Cohesion: 0.07
 Nodes (17): Report, Sample, StandaloneQA, S, Box, Rect, Command, ReferenceData (+9 more)
 
-### Community 17 - "WorldCatalog"
-Cohesion: 0.19
-Nodes (6): WorldCatalog, CollectibleCount, Data, EnemyCount, WorldDefinition, WorldPlace
-
 ### Community 18 - "SliceArchive"
-Cohesion: 0.16
-Nodes (8): MemoryAge, SliceArchive, checkpoint, MatureMercy, RootsOpen, SliceMemoryStore, DefaultPath, MemoryConsequenceTests
+Cohesion: 0.17
+Nodes (6): MemoryAge, SliceArchive, checkpoint, MatureMercy, RootsOpen, MemoryConsequenceTests
+
+### Community 19 - "SliceHUD"
+Cohesion: 0.09
+Nodes (4): ChoicePresentation, Accent, Focused, SliceHUD
 
 ### Community 20 - "com.unity.microsoft.gdk.discovery"
 Cohesion: 0.11
@@ -223,11 +218,15 @@ Nodes (27): dependencies, depth, source, url, version, dependencies, depth, sour
 
 ### Community 22 - "com.unity.modules.unitywebrequest"
 Cohesion: 0.06
-Nodes (34): dependencies, depth, source, version, dependencies, depth, source, version (+26 more)
+Nodes (35): dependencies, depth, source, version, dependencies, dependencies, depth, source (+27 more)
 
-### Community 24 - "com.unity.modules.jsonserialize"
-Cohesion: 0.07
-Nodes (32): dependencies, depth, source, url, version, dependencies, depth, source (+24 more)
+### Community 23 - "RoomCamera"
+Cohesion: 0.16
+Nodes (3): PlayerCameraImpulse, Offset, RoomCamera
+
+### Community 24 - "com.unity.ugui"
+Cohesion: 0.10
+Nodes (22): dependencies, depth, source, url, version, dependencies, depth, source (+14 more)
 
 ### Community 25 - "com.unity.modules.assetbundle"
 Cohesion: 0.20
@@ -241,21 +240,17 @@ Nodes (16): dependencies, depth, dependencies, depth, source, url, version, sour
 Cohesion: 0.13
 Nodes (15): dependencies, depth, source, url, version, depth, source, version (+7 more)
 
-### Community 29 - "com.unity.modules.imgui"
-Cohesion: 0.12
-Nodes (17): dependencies, depth, source, version, dependencies, depth, source, url (+9 more)
-
-### Community 30 - "Phase3CombatPlayTests"
-Cohesion: 0.08
-Nodes (4): MovementCommand, WorldExpansionTests, Phase3CombatPlayTests, S
+### Community 29 - "com.unity.ext.nunit"
+Cohesion: 0.17
+Nodes (12): dependencies, depth, source, version, dependencies, depth, source, url (+4 more)
 
 ### Community 31 - "capture_movement_reference.cjs"
 Cohesion: 0.17
 Nodes (8): {boot}, cases, crypto, definitions, fs, out, output, path
 
-### Community 32 - "com.unity.burst"
+### Community 32 - "com.unity.mathematics"
 Cohesion: 0.12
-Nodes (17): dependencies, dependencies, depth, source, url, version, dependencies, depth (+9 more)
+Nodes (16): dependencies, dependencies, depth, source, version, dependencies, depth, source (+8 more)
 
 ### Community 33 - "WandererPose"
 Cohesion: 0.12
@@ -266,12 +261,12 @@ Cohesion: 0.18
 Nodes (11): dependencies, depth, source, url, version, dependencies, depth, source (+3 more)
 
 ### Community 35 - "SliceSession"
-Cohesion: 0.06
-Nodes (26): SliceSession, MemoryCursor, RunPower, Binding, ControlsText, SliceInteraction, Archive, CanChangeMemory (+18 more)
+Cohesion: 0.05
+Nodes (24): SliceSession, MemoryCursor, RunPower, ControlsText, Archive, CanChangeMemory, CreatureChoiceKnown, CurrentMessage (+16 more)
 
-### Community 36 - "com.unity.modules.terrain"
-Cohesion: 0.18
-Nodes (11): dependencies, depth, source, version, dependencies, depth, source, version (+3 more)
+### Community 36 - "com.unity.modules.jsonserialize"
+Cohesion: 0.12
+Nodes (17): dependencies, depth, source, url, version, dependencies, depth, source (+9 more)
 
 ### Community 37 - "com.unity.modules.audio"
 Cohesion: 0.10
@@ -279,27 +274,35 @@ Nodes (21): dependencies, depth, source, version, dependencies, depth, source, v
 
 ### Community 38 - "com.unity.modules.physics2d"
 Cohesion: 0.12
-Nodes (17): dependencies, depth, source, url, version, dependencies, depth, source (+9 more)
+Nodes (16): dependencies, depth, source, url, version, dependencies, depth, source (+8 more)
+
+### Community 39 - ".Remembers"
+Cohesion: 0.33
+Nodes (3): MemoryWorld, WorldLink, World and Echo implementation
 
 ### Community 40 - "com.unity.modules.subsystems"
 Cohesion: 0.20
 Nodes (10): dependencies, depth, source, version, dependencies, depth, source, version (+2 more)
 
 ### Community 41 - "SliceKing"
-Cohesion: 0.09
-Nodes (15): SliceArenaSeal, SliceKing, Active, AidStrikes, Breaks, EncounterStarted, Exposed, HitRect (+7 more)
+Cohesion: 0.11
+Nodes (14): SliceKing, Active, AidStrikes, Breaks, EncounterStarted, Exposed, HitRect, IsBoss (+6 more)
 
 ### Community 42 - "dependencies"
-Cohesion: 0.12
-Nodes (16): dependencies, depth, source, version, dependencies, depth, source, version (+8 more)
+Cohesion: 0.10
+Nodes (20): dependencies, depth, source, version, dependencies, depth, source, version (+12 more)
 
 ### Community 43 - "PlayerVisual"
 Cohesion: 0.09
 Nodes (10): PlayerVisual, FrameIndex, LiveGhosts, Pose, PoseHoldRemaining, StrongImpactCount, SlicePlayerPresentation, Asset gaps (+2 more)
 
+### Community 44 - "Advanced presentation pass"
+Cohesion: 0.22
+Nodes (7): Advanced presentation pass, Before / after, Dependencies and baseline, Implemented changes, Prioritized checklist, Remaining presentation work, Validation
+
 ### Community 46 - "com.unity.nuget.mono-cecil"
-Cohesion: 0.09
-Nodes (23): dependencies, depth, source, version, dependencies, depth, source, url (+15 more)
+Cohesion: 0.11
+Nodes (18): dependencies, depth, source, url, version, dependencies, depth, source (+10 more)
 
 ### Community 47 - "com.unity.xr.legacyinputhelpers"
 Cohesion: 0.29
@@ -310,7 +313,7 @@ Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: Phase 2 checkpoint/loadout continuation status and dependencies, Source Nodes
 
 ### Community 49 - "SliceCheckpoint"
-Cohesion: 0.18
+Cohesion: 0.20
 Nodes (3): SliceCheckpoint, SliceEnemySnapshot, Phase3CombatRuleTests
 
 ### Community 50 - "com.unity.2d.common"
@@ -321,29 +324,37 @@ Nodes (39): dependencies, depth, source, url, version, dependencies, depth, sour
 Cohesion: 0.19
 Nodes (3): EndingRecord, EndingRules, LateGameRuleTests
 
+### Community 52 - "WorldCatalog"
+Cohesion: 0.06
+Nodes (7): WorldCatalog, CollectibleCount, Data, EnemyCount, WorldExpansionTests, WorldExpansionPlayTests, S
+
 ### Community 53 - "com.unity.modules.physics"
-Cohesion: 0.10
-Nodes (21): dependencies, depth, source, version, dependencies, depth, source, version (+13 more)
+Cohesion: 0.07
+Nodes (32): dependencies, depth, source, version, dependencies, depth, source, version (+24 more)
 
 ### Community 54 - "Phase 3: combat and the Court"
 Cohesion: 0.22
 Nodes (9): Deliberate limits and remaining parity gaps, Dependency review before implementation, Entry and progression, King, Persistence and presentation, Phase 3: combat and the Court, Player combat, Recommended Phase 4 (+1 more)
 
 ### Community 55 - "SliceRoom"
-Cohesion: 0.20
-Nodes (3): SliceRoom, SliceSpawn, Phase3SceneAudit
+Cohesion: 0.09
+Nodes (4): SliceRoom, SliceSpawn, Phase3SceneAudit, PresentationReview
 
 ### Community 56 - "Q: Inspect Phase 2 systems and dependencies affected by remaining checkpoint and combat work"
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: Inspect Phase 2 systems and dependencies affected by remaining checkpoint and combat work, Source Nodes
 
+### Community 57 - "WorldMap"
+Cohesion: 0.06
+Nodes (8): WakeCameraPresentation, WorldDefinition, WorldPlace, WorldMap, Phase3Review, Phase4Review, DirectoryPath, PlayerPresentationReview
+
 ### Community 58 - "SliceSound"
-Cohesion: 0.21
-Nodes (4): AudioPalette, SliceSound, MusicChanges, MusicContext
+Cohesion: 0.10
+Nodes (13): AudioPalette, MovementTuning, SliceScreen, Dialogue, Ending, Loading, Map, Pause (+5 more)
 
 ### Community 59 - ".Strike"
-Cohesion: 0.15
-Nodes (8): CombatRules, CombatHitResult, Blocked, Damaged, Deflected, Immune, SlicePogo, Shared enemy framework and roster
+Cohesion: 0.17
+Nodes (7): CombatRules, CombatHitResult, Blocked, Damaged, Deflected, Immune, Shared enemy framework and roster
 
 ### Community 60 - "The Wake gameplay validation"
 Cohesion: 0.67
@@ -381,20 +392,24 @@ Nodes (3): Signal Anchor Interaction, Wake Screenshot, Wounded Creature Objectiv
 Cohesion: 0.67
 Nodes (3): Bright Cathedral Backdrop, Signal Anchor Interaction, Wake Visual Screenshot
 
-### Community 78 - "SliceScreen"
-Cohesion: 0.25
-Nodes (8): SliceScreen, Dialogue, Ending, Loading, Map, Pause, Playing, Transfer
+### Community 80 - "MonoBehaviour"
+Cohesion: 0.11
+Nodes (5): LabMarker, SliceArenaSeal, SliceDeathEcho, SliceParallax, SlicePogo
 
 ### Community 83 - "SliceMother"
 Cohesion: 0.08
 Nodes (12): SliceMother, Active, AidStrikes, Attack, EncounterStarted, HitRect, IsBoss, RecallIndex (+4 more)
+
+### Community 85 - "PlayerPreferences"
+Cohesion: 0.09
+Nodes (5): PlayerPreferences, Current, PolishTests, PolishPlayTests, S
 
 ### Community 86 - "MovementInput"
 Cohesion: 0.15
 Nodes (4): MovementInput, HasMovementIntent, MovementInput, PlayerMotor
 
 ### Community 87 - ".Cue"
-Cohesion: 0.15
+Cohesion: 0.17
 Nodes (4): MemoryEcho, Persistent, Recognized, Refused
 
 ### Community 91 - "Phase 4: the connected world"
@@ -405,33 +420,33 @@ Nodes (7): Map and persistence, New rooms and regions, Phase 4: the connected wo
 Cohesion: 0.29
 Nodes (4): WakeSliceBuilder, Decor, Enemy, SpawnData
 
-### Community 95 - "PlayerPreferences"
+### Community 101 - "SliceRuleTests"
 Cohesion: 0.18
-Nodes (3): PlayerPreferences, Current, PolishTests
+Nodes (3): SliceMemoryStore, DefaultPath, SliceRuleTests
 
 ### Community 103 - "ReleaseBuild"
-Cohesion: 0.31
-Nodes (3): ReleaseBuild, Result, Phase7Build
+Cohesion: 0.22
+Nodes (4): ReleaseBuild, Result, Phase7Build, PresentationBuild
 
-### Community 104 - ".Remembers"
-Cohesion: 0.33
-Nodes (3): MemoryWorld, WorldLink, World and Echo implementation
+### Community 104 - ".Interact"
+Cohesion: 0.12
+Nodes (3): MemoryRules, Binding, SliceInteraction
 
 ### Community 105 - "Phase 6: the voices converge"
 Cohesion: 0.20
 Nodes (10): Child, Encounters, Ending conditions — internal reference, King, Mother, Persistence and replay, Phase 6: the voices converge, Progression and source adaptations (+2 more)
 
 ### Community 106 - "ECHO//FALL Unity"
-Cohesion: 0.22
+Cohesion: 0.25
 Nodes (8): Development status, ECHO//FALL Unity, Implemented gameplay, Known limitations, Open and run, Original browser version, Unity and technologies, Windows build
 
 ### Community 108 - "Phase 5: remembered consequences"
 Cohesion: 0.33
 Nodes (6): Decisions and consequences, Dependencies and source comparison, Phase 5: remembered consequences, Remaining gaps and Phase 6, Transfer, forgetting and persistence, Validation
 
-### Community 110 - "CheckpointSave"
+### Community 110 - "Remaining checkpoint/loadout persistence"
 Cohesion: 0.40
-Nodes (4): CheckpointSave, Memory and style loadout, Completed bench rest, 45 original game tests
+Nodes (5): CheckpointSave, Memory and style loadout, Completed bench rest, Remaining checkpoint/loadout persistence, 45 original game tests
 
 ### Community 111 - "MovementLab"
 Cohesion: 0.40
@@ -442,23 +457,23 @@ Cohesion: 0.50
 Nodes (3): Algorithm, Hash, Path
 
 ## Knowledge Gaps
-- **675 isolated node(s):** `SpawnData`, `Enemy`, `Decor`, `RunPower`, `MemoryCursor` (+670 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 978 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **43 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **683 isolated node(s):** `SpawnData`, `Enemy`, `Decor`, `Focused`, `Accent` (+678 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 995 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **29 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `SliceSession` connect `SliceSession` to `SliceCombat`, `PlayerMotor`, `unityengine`, `SlicePlayTests`, `SliceEnemy`, `StandaloneQA`, `SliceArchive`, `SliceHUD`, `.Line`, `.SetScreen`, `RoomCamera`, `SliceCheckpoint`, `.LoadRoom`, `SliceRoom`, `.Open`, `SliceScreen`, `MonoBehaviour`, `MemoryConsequencePlayTests`, `PolishPlayTests`, `MovementInput`, `Phase5Review`, `WorldMap`, `Phase6Review`, `.Remembers`, `Phase 5: remembered consequences`?**
-  _High betweenness centrality (0.107) - this node is a cross-community bridge._
+- **Why does `SliceSession` connect `SliceSession` to `SliceCombat`, `PlayerMotor`, `unityengine`, `SlicePlayTests`, `SliceEnemy`, `StandaloneQA`, `SliceArchive`, `SliceHUD`, `RoomCamera`, `.Remembers`, `SliceCheckpoint`, `SliceRoom`, `WorldMap`, `SliceSound`, `MonoBehaviour`, `MemoryConsequencePlayTests`, `.LoadRoom`, `PlayerPreferences`, `MovementInput`, `Phase5Review`, `Phase6Review`, `.Interact`, `Phase 5: remembered consequences`?**
+  _High betweenness centrality (0.124) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `SliceSession` (e.g. with `Dependencies and source comparison` and `Dependencies and scope`) actually correct?**
   _`SliceSession` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `SpawnData`, `Enemy`, `Decor` to the rest of the system?**
-  _675 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _683 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `.BuildWorld` be split into smaller, more focused modules?**
   _Cohesion score 0.1038961038961039 - nodes in this community are weakly interconnected._
-- **Why does `PlayerMotor` connect `PlayerMotor` to `SliceSession`, `SliceCombat`, `MovementLabHUD`, `MovementTuning`, `unityengine`, `PlayerVisual`, `.CaptureAll`, `RoomCamera`, `MonoBehaviour`, `MovementInput`, `.Strike`?**
-  _High betweenness centrality (0.083) - this node is a cross-community bridge._
+- **Why does `PlayerMotor` connect `PlayerMotor` to `SliceSession`, `SliceCombat`, `MovementLabHUD`, `unityengine`, `PlayerVisual`, `MonoBehaviour`, `.Simulate`, `MovementInput`, `RoomCamera`, `WorldMap`, `SliceSound`?**
+  _High betweenness centrality (0.074) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `SliceEnemy` (e.g. with `Shared enemy framework and roster` and `Progression and source adaptations`) actually correct?**
   _`SliceEnemy` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Should `manifest.json` be split into smaller, more focused modules?**
