@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public static class PresentationReview
 {
     public static Task<object> After()=>Run("after");
+    public static Task<object> Finished()=>Run("finished");
     static async Task Frames(int count){int end=Time.frameCount+count;float limit=Time.realtimeSinceStartup+20;while(Time.frameCount<end){if(Time.realtimeSinceStartup>limit)throw new Exception("Render stalled");await Task.Delay(10);}}
     public static async Task<object> Run(string label="before")
     {

@@ -73,7 +73,7 @@ namespace EchoFall.Movement
                 if(Vector2.Distance(Session.motor.Position,transform.position)>4)return;
                 recognition-=dt;if(recognition>0)return;Recognized=true;
                 if(recalled?identity=="respect":Session.Archive.Remembers("respect"))
-                {Refused=true;if(!recalled){Session.Defeated.Add(id);Session.Flags.Add("betrayal-guard");Session.EnemyHealth.Remove(id);}Session.combat.GainResonance(1);Session.Notify("No. I remember being you.");gameObject.SetActive(false);if(recalled)Destroy(gameObject);return;}
+                {Refused=true;if(!recalled){Session.Defeated.Add(id);Session.Flags.Add("betrayal-guard");Session.EnemyHealth.Remove(id);}Session.combat.GainResonance(1);Session.Notify("No. I remember being you.");if(visual!=null)SliceDeathEcho.Spawn(visual);gameObject.SetActive(false);if(recalled)Destroy(gameObject);return;}
                 Session.Notify("I remember the hand. I do not remember why.");
             }
             skill-=dt;
@@ -105,6 +105,7 @@ namespace EchoFall.Movement
                 visual.sprite=frames[pose];
             }
             if(hitFlash<=0)visual.color*=new Color(.6f,.85f,1,.65f);
+            if(!Recognized){var c=visual.color;c.a*=Mathf.Lerp(.25f,1,Mathf.Clamp01((1.3f-recognition)/.35f));visual.color=c;}
         }
     }
 }

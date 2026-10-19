@@ -6,13 +6,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Profiling;
 
 namespace EchoFall.Movement
 {
     // Opt-in development-player validation. No driver is compiled into the release player.
     public sealed class StandaloneQA : MonoBehaviour
     {
-        [Serializable] public sealed class Sample{public string room;public float medianMs,p95Ms;public long managedBytes,totalBytes;public int objects;}
+        [Serializable] public sealed class Sample{public string room;public float medianMs,p95Ms;public long managedBytes,totalBytes,gcMedianBytes,gcP95Bytes;public int objects,frames;}
         [Serializable] public sealed class Report{public bool passed;public string error,version,device,savePath;public string[] endings;public List<Sample> samples=new List<Sample>();public List<string> checks=new List<string>();}
         static string output;
         static bool resume;
@@ -46,9 +47,12 @@ namespace EchoFall.Movement
             await Load(room);S.combat.Rest();
             if(room=="mother"){S.motor.Teleport(new Vector2(5,.02f));SliceMother.Active.Tick(.01f);for(int i=0;i<3;i++)SliceMother.Active.Recall();}
             if(room=="procession")S.motor.Teleport(new Vector2(5,.02f));
-            var samples=new List<float>();long start=GC.GetTotalMemory(false);
-            for(int n=0;n<120;n++){await Frames(1);samples.Add(Time.unscaledDeltaTime*1000);}
-            samples.Sort();report.samples.Add(new Sample{room=room,medianMs=samples[60],p95Ms=samples[114],managedBytes=GC.GetTotalMemory(false)-start,totalBytes=UnityEngine.Profiling.Profiler.GetTotalAllocatedMemoryLong(),objects=FindObjectsByType<Transform>().Length});
+            const int count=600;var samples=new List<float>(count);var allocations=new List<long>(count);long start=GC.GetTotalMemory(false);
+            using(var recorder=ProfilerRecorder.StartNew(ProfilerCategory.Memory,"GC Allocated In Frame",1))
+            {
+                for(int n=0;n<count;n++){await Frames(1);samples.Add(Time.unscaledDeltaTime*1000);allocations.Add(recorder.Valid?recorder.LastValue:-1);}
+            }
+            samples.Sort();allocations.Sort();report.samples.Add(new Sample{room=room,frames=count,medianMs=samples[count/2],p95Ms=samples[count*95/100],gcMedianBytes=allocations[count/2],gcP95Bytes=allocations[count*95/100],managedBytes=GC.GetTotalMemory(false)-start,totalBytes=UnityEngine.Profiling.Profiler.GetTotalAllocatedMemoryLong(),objects=FindObjectsByType<Transform>().Length});
         }
         async Task Finish(string ending)
         {

@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 public static class PlayerPresentationReview
 {
     public static Task<object> CapturePresentation()=>CaptureAll("Docs/Validation/presentation/poses");
+    public static Task<object> CaptureFinished()=>CaptureAll("Docs/Validation/finished/poses");
     static readonly List<object> captures=new List<object>();
     static string directory;
     static async Task Frames(int count=2)

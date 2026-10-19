@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1eb58171590644a99665be2ecd8592, type: 3}
+  m_Name: EchoAudio
+  m_EditorClassIdentifier: EchoFall.Movement::EchoFall.Movement.AudioPalette
+  ambience: {fileID: 8300000, guid: f75fcd8c640c80244aeeb86dc20c7b51, type: 3}
+  exploration: {fileID: 8300000, guid: 1cd8678b815f23949b050069b92386b7, type: 3}
+  combat: {fileID: 8300000, guid: 6f400a69e89c20648a599508a8e0bc49, type: 3}
+  boss: {fileID: 8300000, guid: 937705390b774974184bde37fab7f5eb, type: 3}
+  memory: {fileID: 8300000, guid: 2d83e7bb37540d9438ed62e2b291b589, type: 3}
+  ending: {fileID: 8300000, guid: 16df92c51d504a04bbef44e3ce34e8cb, type: 3}
+  step: {fileID: 8300000, guid: 0f72edf2fe6ebfe4092e8803990e7fc2, type: 3}
+  jump: {fileID: 8300000, guid: 632b046483c1268458da8a3b58b164cb, type: 3}
+  land: {fileID: 8300000, guid: 14ab991025b76284694d89fd97e5dc01, type: 3}
+  dash: {fileID: 8300000, guid: 3bf13b19f0beb4141b23e696c2785812, type: 3}
+  slash: {fileID: 8300000, guid: 8cab582988e1bb4488f10e885e54d1c3, type: 3}
+  charged: {fileID: 8300000, guid: bda24c4c55932904eb2b13925aadaea0, type: 3}
+  impact: {fileID: 8300000, guid: d538802ed5bf738489178eeac4f6819a, type: 3}
+  deflect: {fileID: 8300000, guid: e6ce16adac833ce4786cb639400eba1b, type: 3}
+  signal: {fileID: 8300000, guid: 43452b786519e4b46bdaaa8105ce7e26, type: 3}
+  ui: {fileID: 8300000, guid: a7054ff29f9b39a49bd84a6110122091, type: 3}
+  heavyImpact: {fileID: 8300000, guid: 9d206c4c3af96604394e62bfcf1ee977, type: 3}
+  counter: {fileID: 8300000, guid: a8f515e08decce146aa03441a8a29b2f, type: 3}
+  imprint: {fileID: 8300000, guid: 5f861655e3ef1f747bf178352b66a657, type: 3}
+  detonate: {fileID: 8300000, guid: 874374c9ec2d76a43be3238b07f30c9c, type: 3}
+  transfer: {fileID: 8300000, guid: 23cd19ae640f2ea44a23c91c1e01972f, type: 3}
+  focus: {fileID: 8300000, guid: 06619baef8bc46042bcac0569421f59a, type: 3}
+  stepStone: {fileID: 8300000, guid: 0f72edf2fe6ebfe4092e8803990e7fc2, type: 3}
+  stepMetal: {fileID: 8300000, guid: bd1efae0f64702b4a927ecdec43f6543, type: 3}
+  stepWood: {fileID: 8300000, guid: a7053d9c63c8d5346970fddf669fe2f9, type: 3}
+  stepMoss: {fileID: 8300000, guid: 8f930d6074215584da5a14aeb2ebbdf3, type: 3}
+  wakeAmbience: {fileID: 8300000, guid: f75fcd8c640c80244aeeb86dc20c7b51, type: 3}
+  cradleAmbience: {fileID: 8300000, guid: 515b6ba6529188248a34807a9590e9c0, type: 3}
+  gardenAmbience: {fileID: 8300000, guid: 85d6f4e57f245184896a7ed1a50b108a, type: 3}
+  choirAmbience: {fileID: 8300000, guid: 7be2c01a368b160468336d679dbeed5c, type: 3}

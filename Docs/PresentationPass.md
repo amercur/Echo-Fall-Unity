@@ -36,6 +36,8 @@ Existing dust, trails, afterimages, landing squash, actor-local impact pause, re
 
 ## Remaining presentation work
 
+**Follow-up:** the asset, material-audio, map/HUD and Echo items described below are the historical gaps at the end of the first pass. They are implemented in [FinishedPresentation.md](FinishedPresentation.md), which records current validation and the remaining human acceptance work.
+
 Live review confirms distinct existing silhouettes and clear traversable surfaces across thirteen rooms. Cradle's circles/cages, Garden's branches, Observatory's flat central block and the Child marker still look schematic beside the architecture kit; these need original art and composition work. Existing scenery is retained in this increment rather than claiming a completed environment overhaul.
 
 Dedicated authored landing/wall/dash/hurt/death/transfer clips, rising/falling sequences, directional/charged/distinct combo clips and Keeper/Child/creature art remain missing. Existing atlas adaptations are preserved. Final score, original sound design, physical material-specific footsteps and region-specific authored ambience are still needed; this pass does not relabel synthesized tones as final sound assets. Map animation, full HUD scaling, further Echo dissolve effects and new scenery/lighting are not yet implemented in this pass.

@@ -58,6 +58,8 @@ The release executable launched outside Unity, responded as an Echo-Fall window 
 
 ## Known limits and acceptance
 
+The subsequent [finished presentation follow-up](FinishedPresentation.md) supplies dedicated NPC/player art, original synthesized score/effects, regional ambience, material footfalls, map/HUD text scaling and Echo effects. Its report supersedes the corresponding historical asset gaps below; human feel/audio acceptance and platform certification remain separate.
+
 Status: **ready for limited external playtesting; Phase 7 is not fully complete**. The packaged candidate is suitable for collecting traversal, combat, controller and balance feedback. Full release acceptance still requires uninterrupted human playthroughs, subjective audio evaluation and longer performance/soak testing. Preserve the remaining warnings in the QA checklist.
 
 Physical keyboard/controller playthroughs, subjective combat/audio balance and a full uninterrupted release-player run remain distinct acceptance checks. Automated regression and staged standalone progression must not be described as completing them.

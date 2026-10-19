@@ -9,5 +9,7 @@ namespace EchoFall.Movement
         public AudioClip ambience,exploration,combat,boss,memory,ending;
         public AudioClip step,jump,land,dash,slash,charged,impact,deflect,signal,ui;
         public AudioClip heavyImpact,counter,imprint,detonate,transfer,focus;
+        public AudioClip stepStone,stepMetal,stepWood,stepMoss;
+        public AudioClip wakeAmbience,cradleAmbience,gardenAmbience,choirAmbience;
     }
 }

@@ -1,0 +1,23 @@
+{
+  "cell": 192,
+  "pivot": [
+    0.4999997019767761,
+    0.15870217978954315
+  ],
+  "states": {
+    "Rise": 4,
+    "Fall": 4,
+    "Land": 4,
+    "WallSlide": 4,
+    "WallJump": 4,
+    "Dash": 4,
+    "Hurt": 4,
+    "Death": 6,
+    "Transfer": 6,
+    "Up": 6,
+    "Down": 6,
+    "Charged": 8,
+    "Combo2": 6,
+    "Combo3": 6
+  }
+}

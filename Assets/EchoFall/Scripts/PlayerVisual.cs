@@ -133,7 +133,12 @@ namespace EchoFall.Movement
                 case WandererPose.Transfer:FrameIndex=30+(int)(transferTime*6)%2;break;
                 default:FrameIndex=(int)(clock*4)%4;break;
             }
-            spriteRenderer.sprite=frames[FrameIndex];spriteRenderer.flipX=motor.Facing<0;
+            string authored=Pose==WandererPose.Attack?(attackAxis>.4f?"Up":attackAxis<-.4f?"Down":heavy?"Charged":combo==2?"Combo2":combo==3?"Combo3":null):Pose.ToString();
+            float poseProgress=Pose==WandererPose.Attack?progress:Pose==WandererPose.Land?1-landing/.16f:Pose==WandererPose.Death||Pose==WandererPose.Transfer?transferTime/.65f:clock*4;
+            bool cyclic=Pose==WandererPose.Fall||Pose==WandererPose.WallSlide;
+            if(cyclic)poseProgress=clock*1.5f;
+            var authoredFrame=authored==null?null:PresentationArt.Frame(authored,poseProgress,cyclic);
+            spriteRenderer.sprite=authoredFrame!=null?authoredFrame:frames[FrameIndex];spriteRenderer.flipX=motor.Facing<0;
             float squash=landing/.16f, lean=0, sx=1+squash*.10f, sy=1-squash*.10f, lift=0;
             if(Pose==WandererPose.Dash) {sx=1.08f;sy=.92f;lean=-9*motor.Facing;}
             else if(Pose==WandererPose.WallSlide)lean=5*motor.Wall;

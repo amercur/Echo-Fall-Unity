@@ -10,7 +10,7 @@ The current chapter contains thirteen connected rooms, three regular enemy arche
 
 ## Implemented gameplay
 
-The [advanced presentation pass](Docs/PresentationPass.md) tracks render-cadence camera following, player silhouette easing, menu feedback and distinct memory/combat audio cues, with before/after evidence and remaining art/audio needs.
+The [advanced presentation pass](Docs/PresentationPass.md) adds render-cadence camera following, player silhouette easing and menu feedback. The [presentation follow-up](Docs/FinishedPresentation.md) adds dedicated player poses, NPC and regional art, material footsteps, original synthesized music/ambience, broader text scaling and Echo dissolution, with validation and remaining acceptance work.
 
 - Movement with variable-height jumps, wall jumps, dashes, and one-way platforms.
 - Blade combos, charged and directional attacks, deflects, counters, projectile reflection, pogo strikes, and healing.
@@ -38,7 +38,7 @@ Use **A/D** to move, **Space** to jump, **K/Shift** to dash, **J/X** to strike, 
 
 Hold/release strike for a charged attack; **W/S** aims directional attacks. Tap **F** to deflect white attacks; hold at least .48 seconds and release to counter red attacks. **Q** imprints/detonates, **H** holds mend, **C/L** uses the active memory, **M** opens the map, and **R** offers voluntary transfer. Controller: left stick movement/aim, A jump, B dash, X strike, Y interact, LB guard, RB imprint, LT memory, RT mend, Start pause, Back transfer, right-stick press map. Menus support number keys, mouse and D-pad/A navigation.
 
-Pause > Settings controls volume, music/SFX balance, shake, hit flashes and larger dialogue. Eight primary keyboard action bindings can be replaced; movement, menu and controller bindings remain fixed. Rest still for .45 seconds at a signal anchor to save. Reload restores that anchor; later unsaved exploration is lost. Death/transfer clears the run checkpoint while preserving the archive. Ending discoveries persist across future loops.
+Pause > Settings controls volume, music/SFX balance, shake, hit flashes and larger dialogue, HUD and map text. Eight primary keyboard action bindings can be replaced; movement, menu and controller bindings remain fixed. Rest still for .45 seconds at a signal anchor to save. Reload restores that anchor; later unsaved exploration is lost. Death/transfer clears the run checkpoint while preserving the archive. Ending discoveries persist across future loops.
 
 ## Windows build
 
@@ -50,7 +50,7 @@ Run the complete EditMode and PlayMode suites in Unity Test Runner. Reproducible
 
 ## Known limitations
 
-Authored final audio/music, dedicated NPC art, some bespoke player animations, controller rebinding, hold/toggle alternatives and localization remain pending. Dynamic abandoned-body placement and combat styles are deferred parity work. Physical controller feel, subjective balance and an uninterrupted human release-player run still need external QA. macOS/Linux have not been certified.
+Human approval of the authored synthesized audio/music mix, controller rebinding, hold/toggle alternatives and localization remain pending. Dynamic abandoned-body placement and combat styles are deferred parity work. Physical controller feel, subjective balance and an uninterrupted human release-player run still need external QA. macOS/Linux have not been certified. Dedicated player/NPC art and regional presentation assets are now supplied; see the follow-up report for their provenance and validation limits.
 
 ## Original browser version
 

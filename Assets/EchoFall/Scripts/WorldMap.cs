@@ -12,6 +12,8 @@ namespace EchoFall.Movement
         GameObject panel;
         Transform content;
         Font font;
+        CanvasGroup fade;
+        Image currentRoom;
         void Start()
         {
             session=GetComponent<SliceSession>();font=Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
@@ -20,6 +22,8 @@ namespace EchoFall.Movement
         void OnDestroy(){toggle?.Dispose();if(panel!=null)Destroy(panel);}
         void Update()
         {
+            if(fade!=null)fade.alpha=Mathf.MoveTowards(fade.alpha,1,Time.unscaledDeltaTime*4);
+            if(currentRoom!=null)currentRoom.color=Color.Lerp(new Color(.10f,.31f,.31f),new Color(.16f,.40f,.38f),(.5f+.5f*Mathf.Sin(Time.unscaledTime*2))*PlayerPreferences.Current.flash);
             if(toggle!=null && toggle.WasPressedThisFrame())
             {
                 if(session.Screen==SliceScreen.Map)Close();
@@ -27,7 +31,7 @@ namespace EchoFall.Movement
             }
             if(panel!=null && session.Screen!=SliceScreen.Map){Destroy(panel);panel=null;}
         }
-        public void Close(){if(session.Screen==SliceScreen.Map)session.SetScreen(SliceScreen.Playing);}
+        public void Close(){if(session.Screen==SliceScreen.Map){SliceSound.Cue("ui");session.SetScreen(SliceScreen.Playing);}}
         static Vector2 Position(WorldPlace room)=>new Vector2(110+room.x,690-room.y);
         RectTransform Rect(string name,Vector2 pos,Vector2 size,Color color)
         {
@@ -39,15 +43,17 @@ namespace EchoFall.Movement
         {
             var go=new GameObject(value,typeof(RectTransform),typeof(Text));go.transform.SetParent(content,false);
             var rect=go.GetComponent<RectTransform>();rect.anchorMin=rect.anchorMax=Vector2.zero;rect.anchoredPosition=pos;rect.sizeDelta=size;
-            var text=go.GetComponent<Text>();text.font=font;text.fontSize=points;text.color=color;text.text=value;text.alignment=TextAnchor.MiddleCenter;text.raycastTarget=false;
+            var text=go.GetComponent<Text>();text.font=font;text.fontSize=PlayerPreferences.Current.largeText?Mathf.RoundToInt(points*1.2f):points;text.color=color;text.text=value;text.alignment=TextAnchor.MiddleCenter;text.raycastTarget=false;
         }
         public void Open()
         {
             if(session==null)session=GetComponent<SliceSession>();
             if(!session.Playing)return;
             session.SetScreen(SliceScreen.Map);
+            SliceSound.Cue("memory");
             panel=new GameObject("Discovered world",typeof(RectTransform),typeof(Canvas),typeof(CanvasScaler),typeof(GraphicRaycaster));
             var canvas=panel.GetComponent<Canvas>();canvas.renderMode=RenderMode.ScreenSpaceOverlay;canvas.sortingOrder=100;
+            fade=panel.AddComponent<CanvasGroup>();fade.alpha=.65f;
             var scaler=panel.GetComponent<CanvasScaler>();scaler.uiScaleMode=CanvasScaler.ScaleMode.ScaleWithScreenSize;scaler.referenceResolution=new Vector2(1400,900);scaler.screenMatchMode=CanvasScaler.ScreenMatchMode.Expand;
             var layout=new GameObject("Map safe frame",typeof(RectTransform));layout.transform.SetParent(panel.transform,false);
             var layoutRect=layout.GetComponent<RectTransform>();layoutRect.anchorMin=layoutRect.anchorMax=new Vector2(.5f,.5f);layoutRect.sizeDelta=new Vector2(1400,900);content=layout.transform;
@@ -76,7 +82,7 @@ namespace EchoFall.Movement
             {
                 if(!visible.Contains(room.id))continue;
                 bool seen=session.Visited.Contains(room.id),current=session.Room.id==room.id;
-                var pos=Position(room);Rect(room.id,pos,new Vector2(155,58),current?new Color(.10f,.31f,.31f):new Color(.08f,.14f,.19f));
+                var pos=Position(room);var tile=Rect(room.id,pos,new Vector2(155,58),current?new Color(.10f,.31f,.31f):new Color(.08f,.14f,.19f));if(current)currentRoom=tile.GetComponent<Image>();
                 Label(seen?room.name:"UNEXPLORED",pos+Vector2.up*9,new Vector2(153,30),12,seen?Color.white:Color.gray);
                 Label(current?"YOU ARE HERE":!seen?"?":room.benches.Length>0?"SIGNAL ANCHOR":room.region.ToUpperInvariant(),pos-Vector2.up*15,new Vector2(150,21),10,new Color(.51f,.78f,.77f));
             }

@@ -27,6 +27,9 @@ namespace EchoFall.Movement
         float previousResonance=-1;
         Image modalRule;
         Font font;
+        readonly System.Collections.Generic.List<Text> readableLabels=new System.Collections.Generic.List<Text>();
+        readonly System.Collections.Generic.List<int> readableSizes=new System.Collections.Generic.List<int>();
+        bool previousLarge;
         readonly Color ink = new Color(.028f,.046f,.068f,.94f), cyan = new Color(.48f,.88f,.86f), gold = new Color(.85f,.74f,.51f);
         void Awake()
         {
@@ -93,7 +96,7 @@ namespace EchoFall.Movement
         {
             var go=new GameObject("Text",typeof(RectTransform),typeof(Text)); go.transform.SetParent(parent,false);
             var rect=go.GetComponent<RectTransform>(); rect.anchorMin=rect.anchorMax=anchor; rect.pivot=new Vector2(0,1); rect.anchoredPosition=position; rect.sizeDelta=dimensions;
-            var t=go.GetComponent<Text>(); t.font=font; t.fontSize=size; t.color=color; t.text=value; t.raycastTarget=false; t.supportRichText=false; return t;
+            var t=go.GetComponent<Text>(); t.font=font; t.fontSize=size; t.color=color; t.text=value; t.raycastTarget=false; t.supportRichText=false;readableLabels.Add(t);readableSizes.Add(size); return t;
         }
         void Update()
         {
@@ -103,6 +106,13 @@ namespace EchoFall.Movement
             loop.text="LIFE " + session.Archive.loop.ToString("00") + "   /   " + (MemoryRules.Name(session.Archive.active));
             health.text="INTEGRITY   " + new string('◆',session.combat.Integrity) + new string('◇',6-session.combat.Integrity) + "    ·    RESONANCE  " + session.combat.Resonance.ToString("0.##");
             var preferences=PlayerPreferences.Current;
+            if(preferences.largeText!=previousLarge)
+            {
+                previousLarge=preferences.largeText;
+                for(int n=0;n<readableLabels.Count;n++)readableLabels[n].fontSize=previousLarge?Mathf.RoundToInt(readableSizes[n]*1.15f):readableSizes[n];
+            }
+            if(preferences.largeText){health.text=health.text.Replace("    ·    RESONANCE", "\nRESONANCE");health.fontSize=24;health.rectTransform.anchoredPosition=new Vector2(46,108);health.rectTransform.sizeDelta=new Vector2(650,54);}
+            else {health.fontSize=23;health.rectTransform.anchoredPosition=new Vector2(46,95);health.rectTransform.sizeDelta=new Vector2(650,36);}
             if(previousHealth!=session.combat.Integrity || !Mathf.Approximately(previousResonance,session.combat.Resonance))resourcePulse=.25f;
             previousHealth=session.combat.Integrity;previousResonance=session.combat.Resonance;
             resourcePulse=Mathf.Max(0,resourcePulse-Time.unscaledDeltaTime);
