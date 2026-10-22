@@ -2,6 +2,8 @@
 
 Analysis date: 2026-10-03. This document preserves the initial analysis and phased plan.
 
+Phase 8 continuation (2026-10-22): [Phase8-OpeningExperience.md](Phase8-OpeningExperience.md) refines the existing Wake opening with a title, contextual teaching, narrative landmarks and a more legible choice/transfer/consequence sequence. [Phase8-ExperienceAudit.md](Phase8-ExperienceAudit.md) records verified findings; [Phase8-IdentityGuide.md](Phase8-IdentityGuide.md) defines the visual/narrative direction and remaining custom-art requirements. Existing world, combat and memory rules are preserved. This is an opening-focused milestone, not a claim that the full game's art or onboarding has passed human acceptance.
+
 Phase 7 continuation (2026-10-12): [Phase7-ReleasePolish.md](Phase7-ReleasePolish.md) records settings/accessibility, audio continuity, transient-object cleanup, release build tooling and standalone validation. Phase 6 gameplay and progression remain the baseline; no new world or combat systems are added.
 
 Phase 6 continuation (2026-10-11): the Phase 5 baseline now connects the existing King, the implemented Mother and the noncombat Child to RESET, BREAK, REMEMBER and SHARE. Memory-shaped recalls, ending eligibility, outcome records and replay use the existing archive/checkpoint model. See [Phase6-LateGame.md](Phase6-LateGame.md) for internal conditions, source adaptations, validation and remaining release work. Earlier deferrals below are historical; Mother and the four main endings are now implemented.

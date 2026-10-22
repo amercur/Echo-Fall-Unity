@@ -14,6 +14,9 @@ namespace EchoFall.Movement
         RectTransform bossHealth;
         RectTransform root;
         RectTransform safeFrame;
+        GameObject gameplayChrome;
+        Text lesson,utility;
+        Image titleWitness;
         Image transition;
         GameObject modal, shade;
         readonly Button[] buttons = new Button[9];
@@ -40,6 +43,8 @@ namespace EchoFall.Movement
             gameObject.AddComponent<GraphicRaycaster>(); root = GetComponent<RectTransform>();
             var safe=new GameObject("Camera safe frame",typeof(RectTransform)); safe.transform.SetParent(root,false);
             safeFrame=safe.GetComponent<RectTransform>(); safeFrame.anchorMin=Vector2.zero; safeFrame.anchorMax=Vector2.one; safeFrame.offsetMin=safeFrame.offsetMax=Vector2.zero; root=safeFrame;
+            gameplayChrome=new GameObject("Gameplay information",typeof(RectTransform));gameplayChrome.transform.SetParent(root,false);
+            var chrome=gameplayChrome.GetComponent<RectTransform>();chrome.anchorMin=Vector2.zero;chrome.anchorMax=Vector2.one;chrome.offsetMin=chrome.offsetMax=Vector2.zero;root=chrome;
             if (FindAnyObjectByType<EventSystem>() == null) new GameObject("Slice UI input", typeof(EventSystem), typeof(InputSystemUIInputModule));
             Panel("Title backing", root, new Vector2(0,1), new Vector2(0,1), new Vector2(24,-24), new Vector2(680,96), new Color(.03f,.05f,.075f,.72f));
             title = Label(root,"THE WAKE",28,Color.white, new Vector2(0,1),new Vector2(48,-40),new Vector2(670,38));
@@ -55,7 +60,11 @@ namespace EchoFall.Movement
             status = Label(root,"",13,new Color(.65f,.73f,.8f),Vector2.zero,new Vector2(46,56),new Vector2(650,25));
             prompt = Label(root,"",18,gold,new Vector2(.5f,0),new Vector2(-480,175),new Vector2(960,38)); prompt.alignment = TextAnchor.MiddleCenter;
             message = Label(root,"",15,new Color(.68f,.78f,.8f),new Vector2(0,1),new Vector2(49,-121),new Vector2(760,58)); message.alignment = TextAnchor.UpperLeft;
-            var hint = Label(root,"E  INTERACT    ESC  CONTROLS\nM  MAP    R  TRANSFER",13,new Color(.56f,.67f,.72f),new Vector2(1,0),new Vector2(-340,84),new Vector2(290,55)); hint.alignment = TextAnchor.MiddleRight;
+            utility = Label(root,"",13,new Color(.56f,.67f,.72f),new Vector2(1,0),new Vector2(-340,84),new Vector2(290,55)); utility.alignment = TextAnchor.MiddleRight;
+            var teaching=Panel("Field guide cue",root,new Vector2(0,1),new Vector2(0,1),new Vector2(24,-275),new Vector2(690,88),new Color(.028f,.046f,.068f,.86f));
+            Panel("Split signal",teaching,Vector2.zero,Vector2.zero,new Vector2(0,12),new Vector2(2,50),cyan);
+            lesson=Label(teaching,"",17,new Color(.78f,.85f,.83f),new Vector2(0,1),new Vector2(20,-14),new Vector2(650,65));
+            root=safeFrame;
             shade = Panel("Modal shade",root,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero,new Color(.015f,.025f,.04f,.83f)).gameObject;
             modal = Panel("Memory panel",root,new Vector2(.5f,.5f),new Vector2(.5f,.5f),new Vector2(-450,-265),new Vector2(900,530),ink).gameObject;
             var panel = modal.GetComponent<RectTransform>();
@@ -72,6 +81,8 @@ namespace EchoFall.Movement
                 var text = Label(rect,"",17,cyan,new Vector2(0,1),new Vector2(16,-6),new Vector2(780,32)); text.alignment=TextAnchor.MiddleLeft;
                 choiceLabels[i]=text;
             }
+            titleWitness=Panel("The hand at the glass",root,new Vector2(.5f,.5f),new Vector2(.5f,.5f),new Vector2(270,-245),new Vector2(420,530),new Color(.64f,.82f,.82f,.8f)).GetComponent<Image>();
+            titleWitness.sprite=PresentationArt.Frame("Transfer",.45f);titleWitness.preserveAspect=true;
             transition=Panel("Room transition",root,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero,new Color(.012f,.022f,.032f,1)).GetComponent<Image>();
         }
         public System.Collections.IEnumerator FadeRoom(float opacity,float duration)
@@ -101,6 +112,9 @@ namespace EchoFall.Movement
         void Update()
         {
             if(session==null)return;
+            bool titleScreen=session.Screen==SliceScreen.Title;
+            titleWitness.gameObject.SetActive(titleScreen);
+            gameplayChrome.SetActive(!titleScreen);
             if(Camera.main!=null && safeFrame!=null) { var viewport=Camera.main.rect; safeFrame.anchorMin=viewport.min; safeFrame.anchorMax=viewport.max; }
             if(session.Room!=null) { title.text=session.Room.title; subtitle.text=session.Room.subtitle; }
             loop.text="LIFE " + session.Archive.loop.ToString("00") + "   /   " + (MemoryRules.Name(session.Archive.active));
@@ -117,9 +131,12 @@ namespace EchoFall.Movement
             previousHealth=session.combat.Integrity;previousResonance=session.combat.Resonance;
             resourcePulse=Mathf.Max(0,resourcePulse-Time.unscaledDeltaTime);
             health.color=Color.Lerp(cyan,Color.white,resourcePulse*1.2f*preferences.flash);
-            status.text=preferences.Key("Attack","J")+" STRIKE   "+preferences.Key("Guard","F")+" DEFLECT   "+preferences.Key("Imprint","Q")+" IMPRINT   "+preferences.Key("Mend","H")+" MEND   "+preferences.Key("Memory","C")+" MEMORY" + (session.combat.Fracture>0?"   FRACTURE "+session.combat.Fracture:"");
+            status.text="ESC / START   FIELD GUIDE & CONTROLS" + (session.combat.Fracture>0?"   FRACTURE "+session.combat.Fracture:"");
+            lesson.text=session.Opening?.Guidance??"";
+            utility.text=preferences.Key("Interact","E")+" / Y  INTERACT\nM / RIGHT STICK  MAP";
             var king=SliceKing.Active;var mother=SliceMother.Active;
             bossPanel.SetActive(king!=null && king.Started && king.Alive || mother!=null && mother.Started && mother.Alive);
+            lesson.transform.parent.gameObject.SetActive(session.Playing && !bossPanel.activeSelf);
             if(king!=null)bossHealth.sizeDelta=new Vector2(800*Mathf.Clamp01(king.hp/king.MaxHealth),3);
             boss.text=king!=null && king.Started && king.Alive?"THE KING / "+king.hp.ToString("0.#")+" / "+king.MaxHealth+"     PHASE "+king.Stage+"     BREAKS "+king.Breaks+"\n"+(king.Exposed>0?"EXPOSED":king.State=="tell"?(king.Red?"RED SWEEP / JUMP OR CHARGED COUNTER":"WHITE CHARGE / DEFLECT"):"BREAK HIS PREDICTION"):"";
             if(mother!=null && mother.Started && mother.Alive){bossHealth.sizeDelta=new Vector2(800*Mathf.Clamp01(mother.hp/mother.MaxHealth),3);boss.text="THE MOTHER / "+mother.hp.ToString("0.#")+" / "+mother.MaxHealth+"     PHASE "+mother.Stage+"\n"+(mother.State=="tell"?(mother.Red?"RED SIGNAL / JUMP OR CHARGED COUNTER":"WHITE SIGNAL / DEFLECT"):"THE ARCHIVE ANSWERS");}
@@ -133,15 +150,18 @@ namespace EchoFall.Movement
                 if(shownTitle!=session.ModalTitle){shownTitle=session.ModalTitle;modalAge=0;}
                 modalAge+=Time.unscaledDeltaTime;
                 modalFade.alpha=Mathf.Lerp(.65f,1,Mathf.Clamp01(modalAge/.12f));
-                var accent=session.Screen==SliceScreen.Transfer?cyan:gold;
+                var accent=session.Screen==SliceScreen.Transfer||titleScreen?cyan:gold;
                 modalRule.color=accent;
                 modalTitle.text=session.ModalTitle; modalBody.text=session.ModalBody;
+                modalTitle.fontSize=titleScreen?64:30;modalTitle.rectTransform.sizeDelta=new Vector2(810,titleScreen?90:52);
                 modalBody.fontSize=PlayerPreferences.Current.largeText?23:19;
                 bool many=session.OptionLabels.Count>3;bool ending=session.Screen==SliceScreen.Ending;
                 modalBody.rectTransform.sizeDelta=new Vector2(810,many?160:ending?250:190);
                 modal.GetComponent<RectTransform>().sizeDelta=new Vector2(900,many?730:ending?650:530);
                 modal.GetComponent<RectTransform>().anchoredPosition=new Vector2(-450,many?-365:ending?-325:-265);
-                for(int n=0;n<buttons.Length;n++) choiceRects[n].anchoredPosition=new Vector2(44,-(many?300:ending?450:350)-n*(many?46:53));
+                if(titleScreen){modal.GetComponent<RectTransform>().sizeDelta=new Vector2(900,600);modal.GetComponent<RectTransform>().anchoredPosition=new Vector2(-630,-300);modalBody.rectTransform.anchoredPosition=new Vector2(44,-178);modalRule.color=cyan;}
+                else modalBody.rectTransform.anchoredPosition=new Vector2(44,-124);
+                for(int n=0;n<buttons.Length;n++) choiceRects[n].anchoredPosition=new Vector2(44,-(titleScreen?390:many?300:ending?450:350)-n*(many?46:53));
                 if(many)modalBody.text += "\n1-9 / click   |   D-pad + A";
                 for(int i=0;i<9;i++) { buttons[i].gameObject.SetActive(i<session.OptionLabels.Count); if(i<session.OptionLabels.Count) {choicePresentation[i].Focused=session.MemoryCursor==i;choicePresentation[i].Accent=accent;var label=choiceLabels[i];label.fontSize=PlayerPreferences.Current.largeText?20:17;label.text=(session.MemoryCursor==i?"> ":"")+(i+1)+"   "+session.OptionLabels[i];} }
             }

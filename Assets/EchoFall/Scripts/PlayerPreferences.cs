@@ -9,6 +9,7 @@ namespace EchoFall.Movement
     {
         public float master=.7f,music=.45f,sfx=.8f,shake=1,flash=1;
         public bool largeText;
+        public System.Collections.Generic.List<string> learned=new System.Collections.Generic.List<string>();
         [Serializable] public sealed class Binding{public string action,key;}
         public System.Collections.Generic.List<Binding> bindings=new System.Collections.Generic.List<Binding>();
         public static readonly string[] Rebindable={"Jump","Dash","Attack","Guard","Imprint","Mend","Memory","Interact"};

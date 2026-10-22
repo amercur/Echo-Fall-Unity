@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 namespace EchoFall.Movement
 {
-    public enum SliceScreen { Playing, Dialogue, Transfer, Pause, Loading, Map, Ending }
+    public enum SliceScreen { Playing, Dialogue, Transfer, Pause, Loading, Map, Ending, Title }
     public sealed partial class SliceSession : MonoBehaviour
     {
         public static SliceSession Instance { get; private set; }
@@ -20,6 +20,7 @@ namespace EchoFall.Movement
         public RoomCamera follow;
         public SliceCombat combat;
         public SliceHUD hud;
+        public OpeningExperience Opening {get;private set;}
         public SliceArchive Archive { get; private set; }
         public SliceRoom Room { get; private set; }
         public SliceScreen Screen { get; private set; } = SliceScreen.Loading;
@@ -56,6 +57,8 @@ namespace EchoFall.Movement
         {
             get
             {
+                if(Room?.id=="wake" && Decision!=null)return "The listening glass waits on the first ledge. Carry this deed into another life, or keep exploring.";
+                if(Room?.id=="wake" && Archive.loop>1 && (Archive.RootsOpen||Archive.Remembers("fire")))return "Return to the creature's resting place. Then follow the roots toward the Cistern.";
                 switch(Room?.id)
                 {
                     case "cradle": return "Rest at the anchor. Climb the suspended steps to the Lungs, or follow the engine east.";
@@ -77,6 +80,7 @@ namespace EchoFall.Movement
             string warning = null;
             Archive = EphemeralSave ? new SliceArchive() : SliceMemoryStore.Load(SavePath, out warning);
             if (warning != null) Notify(warning);
+            Opening=gameObject.AddComponent<OpeningExperience>();
             gameObject.AddComponent<WorldMap>();
             interact = Action("Interact", "<Keyboard>/e", "<Gamepad>/buttonNorth");
             PlayerPreferences.Current.Apply(interact);combat.ApplyBindings();
@@ -88,7 +92,7 @@ namespace EchoFall.Movement
             interact.performed += _ => interactPressed=true;
             pause.performed += _ => pausePressed=true;
             transfer.performed += _ => transferPressed=true;
-            select1.performed += context => pendingOption=context.control.device is Gamepad && OptionLabels.Count>3 ? MemoryCursor : 0;
+            select1.performed += context => pendingOption=context.control.device is Gamepad ? MemoryCursor : 0;
             select2.performed += _ => pendingOption=1;
             select3.performed += _ => pendingOption=2;
             InitializeMemoryInput();
@@ -118,9 +122,17 @@ namespace EchoFall.Movement
                 yield return LoadRoom("wake", "default");
                 if (!string.IsNullOrEmpty(Archive.currentEnding)) ShowEnding();
                 else if (Archive.pending.Count > 0) ShowExtraction();
-                else if (string.IsNullOrEmpty(CurrentMessage)) Notify("Find the wounded creature. Rest at a signal anchor to save this life.");
+                else if (string.IsNullOrEmpty(CurrentMessage)) Notify("A small breath waits beyond the warden. The glass behind you is listening.");
             }
+            Opening.Boot();
         }
+        public void ResumeOpening()
+        {
+            if(!string.IsNullOrEmpty(Archive.currentEnding))ShowEnding();
+            else if(Archive.pending.Count>0)ShowExtraction();
+            else SetScreen(SliceScreen.Playing);
+        }
+        public void ReturnFromOverlay(){if(Opening.WaitingAtTitle)Opening.ShowTitle();else SetScreen(SliceScreen.Playing);}
         void OnDestroy()
         {
             foreach (var a in new[] { interact, pause, transfer, select1, select2, select3 }) a?.Dispose();
@@ -136,13 +148,13 @@ namespace EchoFall.Movement
             if (!Playing)
             {
                 if (option >= 0) ChooseOption(option);
-                else if (menu && Screen != SliceScreen.Transfer && Screen != SliceScreen.Ending) SetScreen(SliceScreen.Playing);
+                else if (menu && Screen != SliceScreen.Transfer && Screen != SliceScreen.Ending && Screen != SliceScreen.Title) ReturnFromOverlay();
                 return;
             }
             Nearest = FindNearest();
             if (menu)
                 Show("THE WORLD WAITS", ControlsText, SliceScreen.Pause,
-                    ("RESUME", () => SetScreen(SliceScreen.Playing)), ("MEMORIES", ShowMemories), ("SETTINGS", ShowSettings));
+                    ("RESUME", () => SetScreen(SliceScreen.Playing)), ("MEMORIES", ShowMemories), ("SETTINGS", ShowSettings), ("FIELD GUIDE",()=>Opening.ShowLessons(0)));
             else if (leave)
                 Show("LEAVE THIS LIFE?", "The run ends. One decision may cross. Unfinished encounters will return.", SliceScreen.Dialogue,
                     ("TRANSFER", () => EndRun(false)), ("STAY", () => SetScreen(SliceScreen.Playing)));
@@ -199,15 +211,16 @@ namespace EchoFall.Movement
                     Show(item.label, string.IsNullOrEmpty(item.story) ? "A stored pulse. Integrity and Resonance restored." : item.story,
                         SliceScreen.Dialogue, ("CARRY ON", () => SetScreen(SliceScreen.Playing))); break;
                 case "creature":
+                    Opening.Learn("choice");
                     if (Decision != null) { Notify("Your decision is made. Carry it through the glass."); break; }
-                    if (Archive.Remembers("fire")) { Notify("A warm scar. The stones remember losing a life."); break; }
-                    if (Archive.Remembers("mercy")) { combat.Heal(1); Notify("It presses its head into your hand. Living roots now cross the Cistern."); break; }
-                    Show("A SMALL, WARM THING", "An injured creature curls around a living ember.\nGive two integrity to keep it alive, or take its fire into your blade.\nOnly a transferred decision survives this life.", SliceScreen.Dialogue,
-                        ("GIVE 2 INTEGRITY â€” MERCY", () => MakeDecision("mercy")),
+                    if (Archive.Remembers("fire")) { Show("THE SHAPE OF AN ABSENCE","Your hand is warm. The hollow in the stone is not.\nA black root descends toward the Cistern.",SliceScreen.Dialogue,("LEAVE YOUR HAND THERE",()=>SetScreen(SliceScreen.Playing))); break; }
+                    if (Archive.Remembers("mercy")) { combat.Heal(1); Show("IT KNOWS THE HAND","It presses its head into your palm.\nA thin root slips between the stones, down toward the Cistern.\nIt remembers the hand. It never asked why.",SliceScreen.Dialogue,("FOLLOW THE ROOTS",()=>SetScreen(SliceScreen.Playing))); break; }
+                    Show("A SMALL, WARM THING", "It curls around an ember too small to warm the room.\nWhen you reach out, it uncovers the flame.\n\nGive two integrity to keep it breathing, or take the ember.", SliceScreen.Dialogue,
+                        ("GIVE 2 INTEGRITY", () => MakeDecision("mercy")),
                         ("TAKE THE EMBER", () => MakeDecision("fire")), ("LEAVE", () => SetScreen(SliceScreen.Playing))); break;
                 case "mirror":
                     if (SliceComplete) EndRun(true);
-                    else Show("THE GLASS IS LISTENING", Objective + "\nYou may also leave this unfinished life and carry one decision.", SliceScreen.Dialogue,
+                    else Show("THE GLASS IS LISTENING", Decision!=null?"A handprint appears opposite yours.\nThe glass can carry the deed. It cannot carry the reason.\n\nTransfer to another life, or keep exploring this one.":"A handprint waits opposite yours.\nBeyond the warden, something small is still breathing.\nYou may return after choosing, or cross without a new deed.", SliceScreen.Dialogue,
                         ("CONTINUE EXPLORING", () => SetScreen(SliceScreen.Playing)), ("TRANSFER THIS LIFE", () => EndRun(false)));
                     break;
                 default: Show(item.label, item.story, SliceScreen.Dialogue, ("CONTINUE", () => SetScreen(SliceScreen.Playing))); break;
@@ -217,8 +230,9 @@ namespace EchoFall.Movement
         {
             if (Decision != null || (id != "mercy" && id != "fire")) return;
             Decision = id; RecordDecision(id); SetScreen(SliceScreen.Playing);
+            Opening.Learn("choice");OpeningScenery.PresentDecision(Room,this);
             if (id == "mercy") combat.PayIntegrity(2);
-            Notify(id == "mercy" ? "It limps into the dark. Return to the glass to remember MERCY." : "The warmth stays in your blade. The creature does not. Carry EMBER to the glass.");
+            Notify(id == "mercy" ? "It limps into the dark. The listening glass is on the first ledge behind you." : "The warmth stays in your blade. The creature does not. The glass is waiting behind you.");
         }
         public void EndRun(bool completed)
         {
@@ -285,7 +299,7 @@ namespace EchoFall.Movement
             var checkpoint = CaptureCheckpoint(bench);
             var next = Archive.Copy(); next.checkpoint = checkpoint;
             if (TrySave(next, "Integrity restored, but this life could not be saved. Rest again to retry."))
-            { Archive = next; Notify("Life saved at the signal anchor. Pause > Memories to change your active memory."); }
+            { Archive = next; Opening.Learn("anchor");Notify("Life saved at the signal anchor. Pause > Memories to change your active memory."); }
         }
         SliceCheckpoint CaptureCheckpoint(SliceInteraction bench)
         {

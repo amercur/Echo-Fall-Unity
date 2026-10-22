@@ -17,7 +17,7 @@ namespace EchoFall.Movement
                 ("HIT FLASH / "+Percent(p.flash),()=>ChangeSetting(()=>p.flash=PlayerPreferences.Next(p.flash))),
                 ("LARGER TEXT / "+(p.largeText?"ON":"OFF"),()=>ChangeSetting(()=>p.largeText=!p.largeText)),
                 ("KEYBOARD CONTROLS",ShowBindings),
-                ("RESUME",()=>SetScreen(SliceScreen.Playing)),
+                (Opening.WaitingAtTitle?"TITLE":"RESUME",ReturnFromOverlay),
                 ("QUIT GAME",()=>Show("LEAVE THE WORLD?","Progress resumes from your last completed signal anchor.\nUnsaved exploration after that anchor will be lost.",SliceScreen.Pause,("QUIT",()=>Application.Quit()),("STAY",ShowSettings))));
         }
         static string Percent(float v)=>Mathf.RoundToInt(v*100)+"%";

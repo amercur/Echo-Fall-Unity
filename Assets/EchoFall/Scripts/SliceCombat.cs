@@ -68,7 +68,7 @@ namespace EchoFall.Movement
             if(marked!=null&&!marked.Alive)ClearMark();
             if(marked!=null){markTime+=dt;if(markTime>=2)Detonate(true);}
             if(mend.IsPressed()&&motor.Grounded&&Mathf.Abs(motor.Velocity.x)<.2f&&Resonance>=1&&Integrity<6&&recovery<=0&&!holdingGuard)
-            {mendTime+=dt;if(mendTime>=1){Resonance--;Heal(1);Fracture=0;mendTime=0;SliceSound.Cue("mend");}}
+            {mendTime+=dt;if(mendTime>=1){Resonance--;Heal(1);Fracture=0;mendTime=0;SliceSound.Cue("mend");Session.Opening?.Learn("mend");}}
             else mendTime=0;
             if(c)MemoryAbility();
         }
@@ -90,6 +90,7 @@ namespace EchoFall.Movement
             Session.CancelRest();
             if(!charged&&recovery>0){buffer=Mathf.Min(.42f,recovery+.085f);return;}
             Combo=charged?3:comboWindow>0?Combo%3+1:1;comboWindow=.72f;recovery=CombatRules.Recovery(Combo,charged);AttackVisual=recovery;buffer=mendTime=0;
+            Session.Opening?.Learn("strike");
             presentation?.PlayAttack(charged,direction,Combo,recovery);SliceSound.Cue(charged?"charged":"slash");
             float damage=CombatRules.Damage(Combo,charged)+Session.RunPower;
             bool down=direction<-.4f&&!motor.Grounded;
@@ -106,7 +107,7 @@ namespace EchoFall.Movement
             {
                 foreach(var point in FindObjectsByType<SlicePogo>())if(area.Contains(point.transform.position))hit=true;
                 foreach(var hazard in Physics2D.OverlapAreaAll(area.min,area.max,motor.hazards))if(hazard!=null)hit=true;
-                if(hit){motor.Pogo();invulnerable=Mathf.Max(invulnerable,.12f);SliceSound.Cue("pogo");}
+                if(hit){motor.Pogo();invulnerable=Mathf.Max(invulnerable,.12f);SliceSound.Cue("pogo");Session.Opening?.Learn("pogo");}
             }
             if(hit)GainResonance(.25f);
         }
@@ -125,7 +126,7 @@ namespace EchoFall.Movement
                 presentation?.PlayDeflect(charged);SliceEffects.Dust(motor.Position+Vector2.up*.3f,Vector2.up*.5f,6);
                 if(attacker!=null)attacker.Deflected(charged);
                 SliceEffects.Ring(motor.Position+Vector2.up*.2f,Color.white,.85f);SliceSound.Cue(charged?"counter":"deflect");
-                Session.Notify(charged?"RESONANT COUNTER / strain fractures the attacker":"PERFECT DEFLECT / +1 Resonance");return CombatHitResult.Deflected;
+                Session.Opening?.Learn("deflect");Session.Notify(charged?"RESONANT COUNTER / strain fractures the attacker":attacker!=null&&attacker.training?"Its oath was to meet your blade. You answered, and it can rest.":"PERFECT DEFLECT / +1 Resonance");return CombatHitResult.Deflected;
             }
             if(!bypass&&!red&&faces&&guardTime>0)
             {Fracture=Mathf.Min(Integrity-1,Fracture+.5f);guardTime=perfectTime=0;invulnerable=.2f;mendTime=0;Session.Notify("LATE BLOCK / fracture debt");return CombatHitResult.Blocked;}
@@ -161,6 +162,7 @@ namespace EchoFall.Movement
             if(marked!=null){Detonate(false);return;}
             var target=Closest(1.32f);if(target==null||Resonance<1){Session.Notify("Imprint needs Resonance and a nearby enemy.");return;}
             marked=target;charge=Mathf.FloorToInt(Resonance);Resonance-=charge;markTime=mendTime=0;invulnerable=Mathf.Max(invulnerable,.15f);
+            Session.Opening?.Learn("imprint");
             SliceEffects.Ring(target.HitRect.center,Color.cyan,.6f);SliceSound.Cue("imprint");
         }
         void Detonate(bool mature)

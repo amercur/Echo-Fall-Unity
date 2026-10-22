@@ -10,6 +10,8 @@ The current chapter contains thirteen connected rooms, three regular enemy arche
 
 ## Implemented gameplay
 
+The [Phase 8 opening](Docs/Phase8-OpeningExperience.md) adds a title screen, contextual field guide, an oath-bound practice encounter, and a clearer first choice/transfer/return sequence. The [experience audit](Docs/Phase8-ExperienceAudit.md) separates verified problems from remaining review, and the [identity guide](Docs/Phase8-IdentityGuide.md) establishes the art and narrative direction. Custom character acting and first-time player acceptance remain unfinished.
+
 The [advanced presentation pass](Docs/PresentationPass.md) adds render-cadence camera following, player silhouette easing and menu feedback. The [presentation follow-up](Docs/FinishedPresentation.md) adds dedicated player poses, NPC and regional art, material footsteps, original synthesized music/ambience, broader text scaling and Echo dissolution, with validation and remaining acceptance work.
 
 - Movement with variable-height jumps, wall jumps, dashes, and one-way platforms.

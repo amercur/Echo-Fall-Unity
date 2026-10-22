@@ -19,6 +19,7 @@ namespace EchoFall.Movement
         {
             MemoryWorld.Apply(this, session);
             PresentationArt.Apply(this,session);
+            OpeningScenery.Apply(this,session);
             if (rootBridge != null) rootBridge.gameObject.SetActive(session.Archive.RootsOpen);
             if (returnedCreature != null) returnedCreature.gameObject.SetActive(session.Archive.RootsOpen);
             if (emberScar != null) emberScar.gameObject.SetActive(session.Archive.Remembers("fire"));
@@ -38,6 +39,7 @@ namespace EchoFall.Movement
                     item.label = session.Archive.Remembers("fire") ? "THE EMBER SCAR" : "THE RETURNED CREATURE";
                 }
             }
+            OpeningScenery.PresentDecision(this,session);
         }
     }
 }

@@ -19,8 +19,8 @@ namespace EchoFall.Movement
         {
             extraction = new List<string>(candidates ?? Archive.pending);
             var choices = new List<(string, Action)>();
-            foreach (var id in extraction) { string chosen = id; choices.Add(("REMEMBER " + MemoryRules.Name(id), () => CommitTransfer(chosen))); }
-            Show(completed ? "THE GLASS ACCEPTS YOU" : "ONE THING CAN CROSS", "Choose one decision from this life. The others will fade.\n" + Archive.memories.Count + " / 5 memories retained. A full archive asks what to forget.\nThe world will be rebuilt around what remains.", SliceScreen.Transfer, choices.ToArray());
+            foreach (var id in extraction) { string chosen = id; string deed=id=="mercy"?"THE LIFE I SPARED / MERCY":id=="fire"?"THE EMBER I TOOK / EMBER":MemoryRules.Name(id);choices.Add(("REMEMBER " + deed, () => CommitTransfer(chosen))); }
+            Show(completed ? "THE GLASS ACCEPTS YOU" : "ONE THING CAN CROSS", "The glass keeps the shape of your hand, not the reason it reached.\nChoose one deed to carry into the next life.\n" + Archive.memories.Count + " / 5 memories retained. When full, choose one to release.", SliceScreen.Transfer, choices.ToArray());
         }
         void TransferSelected(string memory, string forget)
         {
@@ -77,7 +77,7 @@ namespace EchoFall.Movement
             foreach(int direction in new[]{-1,1})
             {
                 int step=direction;var action=new InputAction("Memory navigation "+direction,InputActionType.Button,"<Gamepad>/dpad/"+(direction>0?"down":"up"));
-                action.performed+=_=>{if(!Playing && Screen!=SliceScreen.Loading && OptionLabels.Count>3)MemoryCursor=(MemoryCursor+OptionLabels.Count+step)%OptionLabels.Count;};
+                action.performed+=_=>{if(!Playing && Screen!=SliceScreen.Loading && OptionLabels.Count>0)MemoryCursor=(MemoryCursor+OptionLabels.Count+step)%OptionLabels.Count;};
                 action.Enable();memoryInputs.Add(action);
             }
         }

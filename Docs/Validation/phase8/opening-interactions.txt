@@ -1,0 +1,7 @@
+rest-wake | bench | (1.45, 0.27, 0.00) | 
+creature | creature | (9.00, 0.30, 0.00) | 
+wake-east | gate | (10.60, 0.35, 0.00) | 
+wake-high | gate | (7.45, 3.05, 0.00) | 
+wake-drain | gate | (7.00, 0.35, 0.00) | 
+wake-return | gate | (9.35, 0.35, 0.00) | Beyond this threshold lies another chapter. Explore the five open rooms, then return to the transfer glass.
+first-transfer | mirror | (3.40, 1.25, 0.00) | 
